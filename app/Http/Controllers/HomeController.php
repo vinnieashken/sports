@@ -70,7 +70,7 @@ class HomeController extends Controller
         $videos = new Videos();
         $article = $articles->getArticle($id);
         $stories = new \stdClass();
-        $stories->related = $articles->getRelatedArticles($id,10,0);
+        $stories->related = $articles->getRelatedArticles($id,2,0);
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
