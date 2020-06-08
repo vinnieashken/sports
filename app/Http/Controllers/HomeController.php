@@ -124,7 +124,7 @@ class HomeController extends Controller
         $videos = new Videos();
         $stories = new \stdClass();
         $stories->player = $videos->getVideo($id);
-        $stories->videos = $videos->getRelatedVideos($id,4,1);
+        $stories->videos = $videos->getRelatedVideos($id,4,0);
 
         return view('video',['categories'=>$categories,'videos'=> $videos,'stories' => $stories]);
     }
@@ -138,7 +138,7 @@ class HomeController extends Controller
         //$article = $articles->getArticle($id);
         $stories = new \stdClass();
         //$stories->related = $articles->getRelatedArticles($id,10,0);
-        $stories->sidevideos = $videos->getFromCategory('sports',0,4);
+        //$stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
         return view('search',['articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
