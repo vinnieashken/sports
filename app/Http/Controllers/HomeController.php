@@ -59,7 +59,7 @@ class HomeController extends Controller
 
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
-        return view('index',['articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
+        return view('index',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
 
     public function article($id,$slug)
@@ -74,7 +74,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
-        return view('article',['article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
+        return view('article',['videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
 
     public function category($id,$slug)
@@ -99,7 +99,7 @@ class HomeController extends Controller
         //return;
 
 
-        return view('category',['articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
+        return view('category',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
     }
 
     public function videos()
