@@ -25,7 +25,7 @@
 
                 @foreach($stories->videos as $video)
                 <div class="card">
-
+                    <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }} >
                     <div class="single-standard">
 
                         <div class="standard-image">
@@ -36,11 +36,12 @@
                     </div>
                     <div class="card-body p-3 bg-white">
                         <h4 class="black py-2">
-                            <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }}"class="text-color">
+                            <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }}" class="text-color">
                                 {{ $video->title }}
                             </a>
                         </h4>
                     </div>
+                    </a>
                 </div>
                 @endforeach
 
