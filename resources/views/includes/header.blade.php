@@ -55,7 +55,7 @@
             <a href="{{ url('category/'.$category->id.'/'.Str::slug($category->name,'-')) }}">{{$category->name}}</a>
         @endforeach
         <a href="#" class="bg-danger text-white">
-            E-Paper @Ksh.10 per day</a>
+            E-Paper @Ksh.20 per day</a>
     </div>
     <!--sidenav phone ipad & tablet-->
     <!--added none-->
@@ -140,7 +140,7 @@
                             </li>
                             <li class="nav-item ctabg ">
                                 <a class="nav-link" target="_blank" href="https://newsstand.standardmedia.co.ke/"> E-Paper
-                                    @Ksh.10 per day</a>
+                                    @Ksh.20 per day</a>
                             </li>
                         </ul>
                     </div>
