@@ -93,6 +93,7 @@
                                 @php
                                     $i++;
                                 @endphp
+                                @if($i < count($items))
                                 <div class="card bg-white mb-4 single-standard">
 
                                     <div class="standard-image">
@@ -113,10 +114,14 @@
                                         </p>
                                     </div>
                                     <div class="card-footer bg-white">
-                                        <small class="byline">BY KARION WASEE</small>
+                                        @php
+                                            $poster = $videos->getVideoPoster($video['createdBy']);
+                                        @endphp
+                                        <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                                         <small class="byline-two float-right">{{ $items[$i]['publishdate'] }}</small>
                                     </div>
                                 </div>
+                                @endif
                             </div>
                         @endfor
 
