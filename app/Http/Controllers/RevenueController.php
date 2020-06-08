@@ -100,7 +100,7 @@ class RevenueController extends Controller
 
         if(property_exists($objbody ,'message'))
         {
-            $request->session()->flash('loginerror', $objbody->message);
+            $request->session()->flash('registrationerror', $objbody->message);
 
             return redirect($url);
         }
