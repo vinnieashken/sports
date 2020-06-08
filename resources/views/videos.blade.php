@@ -40,7 +40,7 @@
                                  src="https://i.ytimg.com/vi/{{ $video['videoURL'] }}/hqdefault.jpg"
                                  alt="Card image cap"></div>
                         <div class="card-body pt-4">
-                            <p class="catertitleb">FOOTBALL</p>
+{{--                            <p class="catertitleb">FOOTBALL</p>--}}
                             <h5 class="card-title tit">
                                 {{ $video['title'] }}
                             </h5>
