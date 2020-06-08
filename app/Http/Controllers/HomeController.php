@@ -124,7 +124,7 @@ class HomeController extends Controller
         $videos = new Videos();
         $stories = new \stdClass();
         $stories->player = $videos->getVideo($id);
-        $stories->videos = $videos->getRelatedVideos($id,4,0);
+        $stories->videos = $videos->getRelatedVideos($id,4,1);
 
         return view('video',['categories'=>$categories,'videos'=> $videos,'stories' => $stories]);
     }
