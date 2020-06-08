@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h3 class="card-title titles">{{ $article->title }}</h3>
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted"> </small>
                             </p>
                         </div>
                         <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
