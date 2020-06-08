@@ -18,6 +18,7 @@
         @foreach($categories->more as $category)
         <a href="{{ url('category/'.$category->id.'/'.Str::slug($category->name,'-')) }}">{{$category->name}}</a>
         @endforeach
+        <a href="{{ url('/videos') }}">videos</a>
 
         <a class="navheading">TV Stations</a>
         <a href="https://www.standardmedia.co.ke/ktn">KTN Home</a>
@@ -54,6 +55,8 @@
         @foreach($categories->more as $category)
             <a href="{{ url('category/'.$category->id.'/'.Str::slug($category->name,'-')) }}">{{$category->name}}</a>
         @endforeach
+        <a href="{{ url('/videos') }}">videos</a>
+
         <a href="#" class="bg-danger text-white">
             E-Paper @Ksh.20 per day</a>
     </div>

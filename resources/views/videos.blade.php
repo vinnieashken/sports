@@ -122,7 +122,7 @@
 
                     @include('includes.mostread')
 
-                    @include('includes.social)
+                    @include('includes.social')
 
                     <div class="my-4">
                         <div class="text-center">
