@@ -34,11 +34,12 @@ class HomeController extends Controller
         $stories = new \stdClass();
         $stories->top = $articles->getLatest(1,0);
 
-        $stories->top_side1 = $articles->getFromCategory('athletics',0,1);
-        $stories->top_side2 = $articles->getFromCategory('football',1,1);
-        $stories->top_bottom = $articles->getFromCategory('football',1,1)
-            ->merge($articles->getFromCategory('boxing',0,1))
-            ->merge($articles->getFromCategory('rugby',0,1));
+        $stories->top_side1 = $articles->getLatest(1,1);
+        $stories->top_side2 = $articles->getLatest(1,2);
+        $stories->top_bottom = $articles->getLatest(3,3);
+//            $articles->getFromCategory('football',1,1)
+//            ->merge($articles->getFromCategory('boxing',0,1))
+//            ->merge($articles->getFromCategory('rugby',0,1));
 
         $stories->checkpoint1 = $articles->getFromCategory('boxing',1,1)
             ->merge($articles->getFromCategory('rugby',1,1))
