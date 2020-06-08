@@ -70,7 +70,7 @@
                                              src="https://i.ytimg.com/vi/{{ $items[$i]['videoURL'] }}/hqdefault.jpg"
                                              alt="Card image cap">
                                     </div>
-                                    <p class="catertitle">ARCHERY</p>
+{{--                                    <p class="catertitle">ARCHERY</p>--}}
                                     <div class="card-body pt-4">
                                         <h5 class="card-title">
                                             {{ $items[$i]['title'] }}
@@ -95,7 +95,9 @@
                                              src="https://i.ytimg.com/vi/{{ $items[$i]['videoURL'] }}/hqdefault.jpg"
                                              alt="Card image cap">
                                     </div>
-                                    <p class="catertitle">ARCHERY</p>
+
+{{--                                    <p class="catertitle">ARCHERY</p>--}}
+
                                     <div class="card-body pt-4">
                                         <h5 class="card-title">
                                             {{ $items[$i]['title'] }}
