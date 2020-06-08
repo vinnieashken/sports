@@ -58,10 +58,10 @@ class Videos
 
         foreach(array_slice($keywords,1,count($keywords) - 1 ) as $keyword){
 
-            $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%')->whereNotIn('id',[$id]);
+            $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','videoURL','description','publishdate','keywords','createdBy']);
+        return $related->whereNotIn('id',[$id])->offset($offset)->limit($size)->get(['id','categoryid','title','videoURL','description','publishdate','keywords','createdBy']);
     }
 
     public function getVideoPoster($id)
