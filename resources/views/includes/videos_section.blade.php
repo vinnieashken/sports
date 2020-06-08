@@ -18,7 +18,8 @@
                         <div class="black-two">
                             {{ $video->title }}
                         </div>
-                        <div class="byline mt-2">By Anastacia Mwenda</div>
+                        @php($poster = $videos->getVideoPoster($video->createdBy))
+                        <div class="byline mt-2">By {{ $poster->firstname }} {{ $poster->lastname }}</div>
                     </div>
                 </div>
             </a>
