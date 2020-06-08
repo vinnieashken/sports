@@ -98,7 +98,7 @@
                                     <div class="owl-carousel slideShow py-1">
                                         @foreach($stories->related as $article)
                                         <div class="card bg-dark text-white">
-                                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
+
                                             <img class="card-img px300" style="height: 300px !important;"
                                                  src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
                                             <div class="card-img-overlay">
@@ -111,7 +111,7 @@
                                                     </span> <span class="byln">BY {{ $article->author }} | {{ $article->publishdate }} </span>
                                                 </p>
                                             </div>
-                                            </a>
+
                                         </div>
                                         @endforeach
 
