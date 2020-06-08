@@ -13,7 +13,7 @@
 @section('content')
     <section id="standard" class="standard-area pt-10">
         {!! $videos->player($stories->player) !!}
-        <p class="vititle">ATHLETICS</p></section>
+{{--        <p class="vititle">ATHLETICS</p></section>--}}
 
     <section class="opinions mt-5">
         <div class="container">
@@ -27,17 +27,16 @@
                 <div class="card">
 
                     <div class="single-standard">
-                        <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }}">
+
                         <div class="standard-image">
                             <img src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
                                  class="card-img-top" alt="{{ $video->title }}">
                         </div>
                             <i class="fa fa-play relv"></i>
-                        </a>
                     </div>
                     <div class="card-body p-3 bg-white">
                         <h4 class="black py-2">
-                            <a href="#"class="text-color">
+                            <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }}"class="text-color">
                                 {{ $video->title }}
                             </a>
                         </h4>
