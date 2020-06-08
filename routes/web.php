@@ -24,3 +24,5 @@ Route::post('/sports/login','RevenueController@login');
 Route::get('/sports/logout','RevenueController@logout');
 Route::get('/sports/user','RevenueController@getUser');
 Route::get('/popular','RevenueController@getMostRead');
+
+Route::get('/search','HomeController@search');

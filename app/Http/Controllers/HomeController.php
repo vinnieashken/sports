@@ -127,4 +127,19 @@ class HomeController extends Controller
 
         return view('video',['categories'=>$categories,'videos'=> $videos,'stories' => $stories]);
     }
+
+    public function search(Request $request)
+    {
+        $menu = new Menu();
+        $categories = $menu->getCategories();
+        $articles = new Articles();
+        $videos = new Videos();
+        //$article = $articles->getArticle($id);
+        $stories = new \stdClass();
+        //$stories->related = $articles->getRelatedArticles($id,10,0);
+        $stories->sidevideos = $videos->getFromCategory('sports',0,4);
+        $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
+
+        return view('search',['articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
+    }
 }

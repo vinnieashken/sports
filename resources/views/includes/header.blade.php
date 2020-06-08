@@ -2,8 +2,8 @@
 <div id="myOverlay" class="overlay">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
     <div class="overlay-content">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search The Standard.." name="search">
+        <form action="{{ url('/search') }}" method="GET">
+            <input type="text" placeholder="Search The Standard.." name="q">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
