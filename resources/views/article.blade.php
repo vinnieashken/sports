@@ -93,26 +93,32 @@
                                 <section>
 
                                     <div class="container py-2 my-1">
+                                        @if(count($stories->related) == 1 && $stories->related->first()->id !== $article->id)
                                         <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
+                                        @elseif(count($stories->related) > 1 )
+                                            <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
+                                        @endif
 
                                         <div class="owl-carousel slideShow py-1">
-                                            @foreach($stories->related as $article)
+                                            @foreach($stories->related as $rarticle)
+                                                @if($rarticle->id !== $article->id)
                                                 <div class="card bg-dark text-white">
-                                                    <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
+                                                    <a href="{{ url('article/'.$rarticle->id.'/'.Str::slug($rarticle->title,'-')) }}">
                                                         <img class="card-img px300" style="height: 300px !important;"
-                                                             src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
+                                                             src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                         <div class="card-img-overlay">
                                                             <h5 class="card-title text-white">
-                                                                {{ $article->title }}
+                                                                {{ $rarticle->title }}
                                                             </h5>
                                                             <p class="card-text">
                                                     <span class="catebtn mr-1">
-                                                       {{ $articles->getCategory($article->categoryid)->name }}
-                                                    </span> <span class="byln">BY {{ $article->author }} | {{ $article->publishdate }} </span>
+                                                       {{ $articles->getCategory($rarticle->categoryid)->name }}
+                                                    </span> <span class="byln">BY {{ $rarticle->author }} | {{ $rarticle->publishdate }} </span>
                                                             </p>
                                                         </div>
                                                     </a>
                                                 </div>
+                                                @endif
                                             @endforeach
 
                                         </div>
