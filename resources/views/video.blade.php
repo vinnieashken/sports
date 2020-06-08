@@ -25,7 +25,7 @@
 
                 @foreach($stories->videos as $video)
                 <div class="card">
-                    <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }} >
+                    <a href="{{ url('video/'.$video->id.'/'.Str::slug($video->title,'-')) }}" >
                     <div class="single-standard">
 
                         <div class="standard-image">
