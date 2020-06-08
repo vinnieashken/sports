@@ -155,12 +155,14 @@ class RevenueController extends Controller
             return redirect($redirect_url);
         }
 
-        return url('/');
+        return redirect('/');
     }
 
     public function logout()
     {
         Auth::logout();
+
+        return redirect(URL::previous());
     }
 
     public function getUser()
