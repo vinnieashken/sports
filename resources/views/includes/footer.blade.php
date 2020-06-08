@@ -91,9 +91,11 @@
                 </div>
                 <div class="form-title text-center">
                     <h4>Login</h4>
+                    <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('loginerror') }}</h5>
                 </div>
+
                 <div class="d-flex flex-column text-center">
-                    <form method="post" action="{{ url('/sports/login') }}">
+                    <form method="post" action="{{ url('/login') }}">
                         {{ csrf_field() }}
                         <input type="hidden" name="url" value="{{ URL::full() }}">
                         <div class="form-group my-2">
@@ -137,10 +139,12 @@
                 </div>
                 <div class="form-title text-center">
                     <h4>Register</h4>
+                    <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('registrationerror') }}</h5>
                 </div>
                 <div class="d-flex flex-column text-center">
-                    <form method="post" action="{{ url('/sports/register') }}">
+                    <form method="post" action="{{ url('/register') }}">
                         {{ csrf_field() }}
+                        <input type="hidden" name="url" value="{{ URL::full() }}">
                         <div class="form-group my-2">
                             <input type="text" required class="form-control" name="name" id="name"
                                    placeholder="Enter your full name...">

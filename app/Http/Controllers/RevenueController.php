@@ -48,12 +48,67 @@ class RevenueController extends Controller
 
         if(property_exists($objbody ,'message'))
         {
+            $request->session()->flash('loginerror', $objbody->message);
+
             return redirect($url);
         }
 
         $user->id = $objbody->id;
         $user->email = $objbody->email;
         $user->name = $objbody->name;
+
+        $existing = $user->find($objbody->id);
+
+        if(is_null($existing))
+            $user->save();
+
+        Auth::setUser($user);
+        Auth::login($user);
+
+        return redirect($url);
+    }
+
+    public function register(Request $request)
+    {
+        $username = $request->email;
+        $password = $request->password;
+        $password_confirmation = $request->password_confirmation;
+        $phone = $request->phone;
+        $url = $request->url;
+
+        $user =  new User();
+
+        $params = ["body"=>json_encode(['username'=> $username, 'password'=>$password,'password_confirmation'=>$password_confirmation,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk"])];
+
+        $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
+        try {
+
+            $response = $client->request('POST', $this->api . 'register', $params);
+
+        }catch (Exception $e)
+        {
+
+        }
+
+        $headers = $response->getHeaders();
+        $body = $response->getBody()->getContents();
+        $objbody = json_decode($body);
+
+        //dump($objbody);
+
+        //return ;
+
+        if(property_exists($objbody ,'message'))
+        {
+            $request->session()->flash('loginerror', $objbody->message);
+
+            return redirect($url);
+        }
+
+        $user->id = $objbody->id;
+        $user->email = $objbody->email;
+        $user->name = $objbody->name;
+        $user->phone = $phone;
 
         $existing = $user->find($objbody->id);
 

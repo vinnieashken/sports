@@ -39,16 +39,15 @@
                             <div id="contact" class="contact-area">
                                 <div class="container">
                                     <div class="contact-box mt-70">
-                                        <strong class="text-dark">Leave a reply</strong>
-                                        <p>Your email address will not be Published</p>
+                                        <strong class="text-dark"> </strong>
+                                        <p> </p>
                                         <div class="row">
 
                                             <div class="mx-auto">
+                                                <div id="fb-root"></div>
+                                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+                                                <div class="fb-comments" data-href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
                                                 <div class="contact-form">
-                                                    <div id="fb-root"></div>
-                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-                                                    <div class="fb-comments" data-href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
-
 {{--                                                    <form id="contact-form" action="assets/contact.php" method="post" data-toggle="validator">--}}
 {{--                                                        <div class="row">--}}
 {{--                                                            <div class="col-lg-6">--}}
@@ -99,6 +98,7 @@
                                     <div class="owl-carousel slideShow py-1">
                                         @foreach($stories->related as $article)
                                         <div class="card bg-dark text-white">
+                                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                                             <img class="card-img px300" style="height: 300px !important;"
                                                  src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
                                             <div class="card-img-overlay">
@@ -111,6 +111,7 @@
                                                     </span> <span class="byln">BY {{ $article->author }} | {{ $article->publishdate }} </span>
                                                 </p>
                                             </div>
+                                            </a>
                                         </div>
                                         @endforeach
 
@@ -146,5 +147,7 @@
 @endsection
 
 @section('js')
+
+
 
 @endsection

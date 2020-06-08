@@ -20,9 +20,11 @@ Route::get('/category/{id}/{slug}','HomeController@category');
 Route::get('/videos','HomeController@videos');
 Route::get('/video/{id}/{slug}','HomeController@video');
 
-Route::post('/sports/login','RevenueController@login');
-Route::get('/sports/logout','RevenueController@logout');
-Route::get('/sports/user','RevenueController@getUser');
+Route::post('/login','RevenueController@login');
+Route::post('/register','RevenueController@register');
+
+Route::get('/logout','RevenueController@logout');
+Route::get('/user','RevenueController@getUser');
 Route::get('/popular','RevenueController@getMostRead');
 
 Route::get('/search','HomeController@search');

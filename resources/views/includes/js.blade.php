@@ -227,5 +227,34 @@
             }
         });
     });
+
+    $('.modal').on('hidden.bs.modal', function () {
+        // do something…
+        $('.feedbackmsg').text('');
+    });
+
 </script>
+
+
+
+    @if(\Illuminate\Support\Facades\Session::has('loginerror'))
+        <script>
+            $(document).ready(function () {
+                //alert('Hello');
+
+                $("#loginModal").modal('show');
+            });
+
+        </script>
+    @endif
+    @if(\Illuminate\Support\Facades\Session::has('registrationerror'))
+        <script>
+            $(document).ready(function () {
+                //alert('Hello');
+
+                $("#regModal").modal('show');
+            });
+
+        </script>
+    @endif
 
