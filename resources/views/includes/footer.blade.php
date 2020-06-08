@@ -194,10 +194,12 @@
                 </div>
                 <div class="form-title text-center">
                     <h4>Forgot Password</h4>
+                    <h5 class="feedbackmsg mt-2" style=""> {{ \Illuminate\Support\Facades\Session::get('resetmsg') }}</h5>
                 </div>
                 <div class="d-flex flex-column text-center">
-                    <form method="post" action="https://standardmedia.co.ke/stories/public/reset-password">
-                        <input type="hidden" name="_token" value="KsHWsOe1swKlLeUzZ6gICC4pTSLU79UZ56U1Z4ZF">
+                    <form method="post" action="{{ url('/reset') }}">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="url" value="{{ URL::full() }}">
                         <div class="form-group my-2">
                             <input type="email" required class="form-control" name="email" id="email1"
                                    placeholder="Your email address...">

@@ -258,3 +258,14 @@
         </script>
     @endif
 
+    @if(\Illuminate\Support\Facades\Session::has('resetmsg'))
+    <script>
+        $(document).ready(function () {
+            //alert('Hello');
+
+            $("#forgotModal").modal('show');
+        });
+
+    </script>
+@endif
+

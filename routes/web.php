@@ -22,8 +22,9 @@ Route::get('/video/{id}/{slug}','HomeController@video');
 
 Route::post('/login','RevenueController@login');
 Route::post('/register','RevenueController@register');
-
+Route::post('/reset','RevenueController@resetPassword');
 Route::get('/logout','RevenueController@logout');
+
 Route::get('/user','RevenueController@getUser');
 Route::get('/popular','RevenueController@getMostRead');
 

@@ -7,6 +7,7 @@ use App\Utils\Articles;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 
 class RevenueController extends Controller
 {
@@ -70,7 +71,8 @@ class RevenueController extends Controller
 
     public function register(Request $request)
     {
-        $username = $request->email;
+        $name = $request->name;
+        $email = $request->email;
         $password = $request->password;
         $password_confirmation = $request->password_confirmation;
         $phone = $request->phone;
@@ -78,7 +80,7 @@ class RevenueController extends Controller
 
         $user =  new User();
 
-        $params = ["body"=>json_encode(['username'=> $username, 'password'=>$password,'password_confirmation'=>$password_confirmation,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk"])];
+        $params = ["body"=>json_encode(['name'=> $name,'email'=> $email ,'password'=>$password,'password_confirmation'=>$password_confirmation,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk"])];
 
         $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
         try {
@@ -119,6 +121,41 @@ class RevenueController extends Controller
         Auth::login($user);
 
         return redirect($url);
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $email = $request->email;
+        $redirect_url = $request->url;
+
+        $url = \url('/');
+
+        $params = ["body"=>json_encode(['email'=> $email, 'redirect_url'=> $url ,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk" ])];
+
+        //return $params;
+
+        $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
+        try {
+
+            $response = $client->request('POST', $this->api . 'email/password', $params);
+
+        }catch (Exception $e)
+        {
+
+        }
+
+        $headers = $response->getHeaders();
+        $body = $response->getBody()->getContents();
+        $objbody = json_decode($body);
+
+        if(property_exists($objbody ,'message'))
+        {
+            $request->session()->flash('resetmsg', $objbody->message);
+
+            return redirect($redirect_url);
+        }
+
+        return url('/');
     }
 
     public function logout()
