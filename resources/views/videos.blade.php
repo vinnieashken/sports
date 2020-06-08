@@ -34,6 +34,7 @@
 
                     @foreach( array_slice($stories->videos,0,1) as $video )
                     <div class="card bg-white mb-4 single-standard">
+                        <a href="{{ url('video/'.$video->id.'/'.Str::slug($items[$i]['title'],'-')) }}">
                         <div class="standard-image">
                             <i class="fa fa-play bigblack"></i>
                             <img class="card-img-top h345"
@@ -55,6 +56,7 @@
                             <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                             <small class="byline-two float-right"> </small>
                         </div>
+                        </a>
                     </div>
                     @endforeach
                         @php
@@ -66,7 +68,7 @@
                         @for($i=1; $i < count($items); $i++)
                             <div class="card-deck categ">
                                 <div class="card bg-white mb-4 single-standard">
-
+                                    <a href="{{ url('video/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                                     <div class="standard-image">
                                         <i class="fa fa-play smallblack"></i>
                                         <img class="card-img-top"
@@ -89,13 +91,14 @@
                                         <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                                         <small class="byline-two float-right">{{ $items[$i]['publishdate'] }}</small>
                                     </div>
+                                    </a>
                                 </div>
                                 @php
                                     $i++;
                                 @endphp
                                 @if($i < count($items))
                                 <div class="card bg-white mb-4 single-standard">
-
+                                    <a href="{{ url('video/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                                     <div class="standard-image">
                                         <i class="fa fa-play smallblack"></i>
                                         <img class="card-img-top"
@@ -120,6 +123,7 @@
                                         <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                                         <small class="byline-two float-right">{{ $items[$i]['publishdate'] }}</small>
                                     </div>
+                                    </a>
                                 </div>
                                 @endif
                             </div>
