@@ -61,7 +61,7 @@ class Videos
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->whereNotIn('id',[$id])->offset($offset)->limit($size)->get(['id','categoryid','title','videoURL','description','publishdate','keywords','createdBy']);
+        return $related->where('id','!=',$id )->offset($offset)->limit($size)->get(['id','categoryid','title','videoURL','description','publishdate','keywords','createdBy']);
     }
 
     public function getVideoPoster($id)
