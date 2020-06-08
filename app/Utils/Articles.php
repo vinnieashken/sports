@@ -63,14 +63,14 @@ class Articles
 
         $keywords = explode(';',$article->keywords);
 
-        $related->orderBy('publishdate','DESC')->whereNotIn('id',[$id])->where('keywords', 'LIKE', '%'.$keywords[0].'%');
+        $related->orderBy('publishdate','DESC')->where('keywords', 'LIKE', '%'.$keywords[0].'%');
 
         foreach(array_slice($keywords,1,count($keywords) - 1 ) as $keyword){
 
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','story','keywords','thumbURL','publishday','author']);
+        return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','story','keywords','thumbURL','publishday','author']);
     }
 
     public function renderInAds($story)
