@@ -54,7 +54,7 @@ class Videos
         $related = Video::query();
         $keywords = explode(';',$video->keywords);
 
-        $related->orderBy('publishdate','DESC')->whereNotIn('id',[$id])->where('keywords', 'LIKE', '%'.$keywords[0].'%');
+        $related->orderBy('publishdate','DESC')->where('keywords', 'LIKE', '%'.$keywords[0].'%')->whereNotIn('id',[$id]);
 
         foreach(array_slice($keywords,1,count($keywords) - 1 ) as $keyword){
 
