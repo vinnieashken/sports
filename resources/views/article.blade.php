@@ -96,24 +96,47 @@
                                     <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
 
                                     <div class="owl-carousel slideShow py-1">
-                                        @foreach($stories->related as $article)
+
                                         <div class="card bg-dark text-white">
-
-                                            <img class="card-img px300" style="height: 300px !important;"
-                                                 src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
+                                            <img class="card-img px300" style="
+      height: 300px !important;"  src="https://www.standardmedia.co.ke/images/wednesday/african_champ_yego_h5ea9c7ea77d8d.jpg" alt="Card image px300">
                                             <div class="card-img-overlay">
-                                                <h5 class="card-title text-white">
-                                                    {{ $article->title }}
-                                                </h5>
-                                                <p class="card-text">
-                                                    <span class="catebtn mr-1">
-                                                       {{ $articles->getCategory($article->categoryid)->name }}
-                                                    </span> <span class="byln">BY {{ $article->author }} | {{ $article->publishdate }} </span>
-                                                </p>
+                                                <h5 class="card-title text-white">  American sprinter Gabrielle Thomas said </h5>
+                                                <p class="card-text"><span class="catebtn mr-1">Athletics</span> <span class="byln">BY TAUSI KIOO | AUGUST 32, 2039</span> </p>
                                             </div>
-
                                         </div>
-                                        @endforeach
+                                        <div class="card bg-dark text-white">
+                                            <img class="card-img px300" style="
+      height: 300px !important;"  src="https://www.standardmedia.co.ke/images/friday/new_york_marathon_ch5eac7c95c2811.jpg" alt="Card image">
+                                            <div class="card-img-overlay">
+                                                <h5 class="card-title text-white">  American sprinter Gabrielle Thomas said on Friday she expected </h5>
+                                                <p class="card-text"><span class="catebtn mr-1">Athletics</span> <span class="byln">BY TAUSI KIOO | AUGUST 32, 2039</span> </p>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-dark text-white">
+                                            <img class="card-img px300" style="
+      height: 300px !important;"  src="https://www.standardmedia.co.ke/images/sunday/rotich_habours_big_o5eaf2ef98ee9b.jpg" alt="Card image">
+                                            <div class="card-img-overlay">
+                                                <h5 class="card-title text-white">  American sprinter Gabrielle Thomas said on Friday she expected </h5>
+                                                <p class="card-text"><span class="catebtn mr-1">Athletics</span> <span class="byln">BY TAUSI KIOO | AUGUST 32, 2039</span> </p>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-dark text-white">
+                                            <img class="card-img px300" style="
+      height: 300px !important;"  src="https://www.standardmedia.co.ke/images/sunday/rudisha_shakes_off_i5eaf2a5f70f52.jpg" alt="Card image">
+                                            <div class="card-img-overlay">
+                                                <h5 class="card-title text-white">  American sprinter Gabrielle Thomas said on Friday she expected </h5>
+                                                <p class="card-text"><span class="catebtn mr-1">Athletics</span> <span class="byln">BY TAUSI KIOO | AUGUST 32, 2039</span> </p>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-dark text-white">
+                                            <img class="card-img px300" style="
+      height: 300px !important;" src="https://www.standardmedia.co.ke/images/sunday/rudisha_shakes_off_i5eaf2a5f70f52.jpg" alt="Card image">
+                                            <div class="card-img-overlay">
+                                                <h5 class="card-title text-white">  American sprinter Gabrielle Thomas said on Friday she expected </h5>
+                                                <p class="card-text"><span class="catebtn mr-1">Athletics</span> <span class="byln">BY TAUSI KIOO | AUGUST 32, 2039</span> </p>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
