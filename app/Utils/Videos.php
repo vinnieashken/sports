@@ -6,6 +6,7 @@ namespace App\Utils;
 
 use App\Models\Video;
 use App\Models\VideoCategory;
+use App\Models\VideoPoster;
 
 class Videos
 {
@@ -18,13 +19,13 @@ class Videos
         $cat = VideoCategory::on('mysql')->whereNull('inactive')->where('name',$category)->get(['id','name'])->first();
 
         return Video::on('mysql')->orderBy('publishdate','DESC')->orderBy('listorder','ASC')->where('categoryid',$cat->id)->offset($offset)->limit($size)
-            ->get(['id','categoryid','title','videoURL','description','publishdate']);
+            ->get(['id','categoryid','title','videoURL','description','publishdate','createdBy']);
     }
 
     public function getVideo($id)
     {
         return Video::on('mysql')->where('id',$id)
-            ->get(['id','categoryid','title','videoURL','description','publishdate','platform','vimeoembed','producer','reporter'])->first();
+            ->get(['id','categoryid','title','videoURL','description','publishdate','platform','vimeoembed','createdBy'])->first();
     }
 
     public function player($video)
@@ -60,6 +61,14 @@ class Videos
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','videoURL','description','publishdate','keywords']);
+        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','videoURL','description','publishdate','keywords','createdBy']);
+    }
+
+    public function getVideoPoster($id)
+    {
+        $model = new VideoPoster();
+
+        $poster = $model->where('id',$id)->get(['firstname','lastname'])->first();
+        return $poster;
     }
 }

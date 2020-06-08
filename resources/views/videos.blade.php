@@ -49,7 +49,10 @@
                             </p>
                         </div>
                         <div class="card-footer bg-white">
-                            <small class="byline">BY KARION WASEE</small>
+                            @php
+                              $poster = $videos->getVideoPoster($video['createdBy']);
+                            @endphp
+                            <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                             <small class="byline-two float-right"> </small>
                         </div>
                     </div>
@@ -80,7 +83,10 @@
                                         </p>
                                     </div>
                                     <div class="card-footer bg-white">
-                                        <small class="byline">BY KARION WASEE</small>
+                                        @php
+                                            $poster = $videos->getVideoPoster($video['createdBy']);
+                                        @endphp
+                                        <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                                         <small class="byline-two float-right">{{ $items[$i]['publishdate'] }}</small>
                                     </div>
                                 </div>

@@ -113,7 +113,7 @@ class HomeController extends Controller
         $stories->videos = $videos->getFromCategory('sports',0,13)->toArray();
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
-        return view('videos',['articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
+        return view('videos',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
     }
 
     public function video($id,$slug)
