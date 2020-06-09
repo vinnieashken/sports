@@ -1,7 +1,7 @@
 @extends('includes.layout')
 
 @section('title')
-    | home
+    | {{ $article->long_title }}
 @endsection
 
 @section('metas')
@@ -9,6 +9,26 @@
 @endsection
 
 @section('content')
+    <script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "NewsArticle",
+   "url": "{{ \Illuminate\Support\Facades\URL::full() }}",
+   "publisher":{
+      "@type":"Organization",
+      "name":"Standard Sports",
+      "logo":"{{ url('/assets/images/logo.png') }}"
+   },
+   "headline": "{{ $article->long_title }}",
+   "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
+   "articleBody": "{{ $article->story }}",
+   "image":[
+      "https://cdn.standardmedia.co.ke{{ $article->thumbURL }}",
+   ],
+   "datePublished":"{{ $article->publishday }}"
+}
+</script>
+
 
     <section id="standard" class="standard-area pt-100 mt-md-3 mt-lg-3 first">
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
@@ -18,9 +38,9 @@
 
                         <div class="card bg-white art">
                             <div class="card-body">
-                                <h3 class="card-title titles">{{ $article->title }}</h3>
+                                <h3 class="card-title titles">{{ $article->long_title }}</h3>
                                 <p class="card-text">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <small class="text-muted">Last updated {{ $timeutil->ago($article->publishdate) }}</small>
                                 </p>
                             </div>
                             <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">

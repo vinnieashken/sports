@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Utils\Articles;
 use App\Utils\Menu;
 use App\Utils\SlideShows;
+use App\Utils\TimeUtil;
 use App\Utils\Videos;
 use Illuminate\Http\Request;
 
@@ -65,6 +66,7 @@ class HomeController extends Controller
     public function article($id,$slug)
     {
         $menu = new Menu();
+        $timeutil = new TimeUtil();
         $categories = $menu->getCategories();
         $articles = new Articles();
         $videos = new Videos();
@@ -74,7 +76,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
-        return view('article',['videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
+        return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
 
     public function category($id,$slug)

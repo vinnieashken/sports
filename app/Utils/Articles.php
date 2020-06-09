@@ -46,10 +46,10 @@ class Articles
         $article = Article::where('id',$id)->get(['id','title','story','keywords','thumbURL','publishday','author'])->first();
         if(is_null($article))
         {
-            $article = Article::on('mysql2')->where('id',$id)->get(['id','title','story','thumbURL','keywords','publishday','author'])->first();
+            $article = Article::on('mysql2')->where('id',$id)->get(['id','title','long_title','story','thumbURL','keywords','publishday','publishdate','author'])->first();
             if(is_null($article))
             {
-                $article = Article::on('mysql3')->where('id',$id)->get(['id','title','story','thumbURL','keywords','publishday','author'])->first();
+                $article = Article::on('mysql3')->where('id',$id)->get(['id','title','long_title','story','thumbURL','keywords','publishday','publishdate','author'])->first();
             }
         }
         return $article;
