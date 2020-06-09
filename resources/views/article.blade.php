@@ -21,7 +21,11 @@
    "articleSection":"News",
    "author":["{{ $article->author }}"],
    "keywords": {!! json_encode(explode(';',$article->keywords)) !!},
-   "publisher":"{{ 'Standard Sports' }}",
+   "publisher":{
+      "@type":"Organization",
+      "name":"Standard Sports",
+      "logo":"{{ url('/assets/images/logo.png') }}"
+   },
    "datePublished":"{{ $article->publishday }}",
    "dateModified":"{{ $article->updateddate }}"
 }
