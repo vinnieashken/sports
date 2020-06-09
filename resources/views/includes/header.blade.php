@@ -151,3 +151,79 @@
             </div></div>
     </div>
 </header>
+
+<script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": "{{ url('/') }}",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.standardmedia.co.ke/sports/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+</script>
+
+<script type="application/ld+json">
+        {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "url": "{{ url('/') }}",
+              "logo": "{{url('/assets/images/logo.png')}}"
+        }
+
+</script>
+
+<script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Standard Digital - Your Gateway",
+          "url": "https://www.standardmedia.co.ke",
+          "sameAs": [
+                        "https://www.facebook.com/GameYetu/",
+                        "https://www.instagram.com/game_yetu/?hl=en",
+                        "https://t.me/gameyetu",
+                        "https://twitter.com/gameyetu?lang=en"
+                    ]
+        }
+</script>
+
+
+{{--<script type="application/ld+json">--}}
+{{--            {--}}
+{{--             "@context": "http://schema.org",--}}
+{{--             "@type": "BreadcrumbList",--}}
+{{--             "itemListElement":--}}
+{{--             [--}}
+{{--              {--}}
+{{--               "@type": "ListItem",--}}
+{{--               "position": 1,--}}
+{{--               "item":--}}
+{{--               {--}}
+{{--                "@id": "https://news9.co.ke/",--}}
+{{--                "name": "Home"--}}
+{{--                }--}}
+{{--              },--}}
+{{--              {--}}
+{{--               "@type": "ListItem",--}}
+{{--              "position": 2,--}}
+{{--              "item":--}}
+{{--               {--}}
+{{--                 "@id": "https://news9.co.ke/category/413/news",--}}
+{{--                 "name": "News"--}}
+{{--               }--}}
+{{--              },--}}
+{{--              {--}}
+{{--               "@type": "ListItem",--}}
+{{--              "position": 3,--}}
+{{--              "item":--}}
+{{--               {--}}
+{{--                 "@id": "https://news9.co.ke/article/1487/covid-19-county-infections-shoot-to-38-as-nyeri-marsabit-records-cases",--}}
+{{--                 "name": "Covid-19: County infections shoot to 38 as Nyeri, Marsabit records cases"--}}
+{{--               }--}}
+{{--              }--}}
+{{--             ]--}}
+{{--            }--}}
+{{--</script>--}}

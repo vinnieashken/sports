@@ -22,9 +22,10 @@
    "headline": "{{ $article->long_title }}",
    "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
    "articleBody": "{{ $article->story }}",
-   "image":[
-      "https://cdn.standardmedia.co.ke{{ $article->thumbURL }}",
-   ],
+   "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }},"height":500,"width":800},
+   "articleSection":"News",
+   "creator":["{{ $article->author }}"],
+   "keywords": {{ json_encode(explode(';',$article->keywords)) }},
    "datePublished":"{{ $article->publishday }}"
 }
 </script>
@@ -68,40 +69,7 @@
                                                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
                                                     <div class="fb-comments" data-href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
                                                     <div class="contact-form">
-                                                        {{--                                                    <form id="contact-form" action="assets/contact.php" method="post" data-toggle="validator">--}}
-                                                        {{--                                                        <div class="row">--}}
-                                                        {{--                                                            <div class="col-lg-6">--}}
-                                                        {{--                                                                <div class="single-form form-group">--}}
-                                                        {{--                                                                    <input type="text" name="name" placeholder="Enter Your Name" data-error="Name is required." required="required">--}}
-                                                        {{--                                                                    <div class="help-block with-errors"></div>--}}
-                                                        {{--                                                                </div>--}}
-                                                        {{--                                                            </div>--}}
-                                                        {{--                                                            <div class="col-lg-6">--}}
-                                                        {{--                                                                <div class="single-form form-group">--}}
-                                                        {{--                                                                    <input type="email" name="email" placeholder="Enter Your Email" data-error="Valid email is required." required="required">--}}
-                                                        {{--                                                                    <div class="help-block with-errors"></div>--}}
-                                                        {{--                                                                </div>--}}
-                                                        {{--                                                            </div>--}}
-                                                        {{--                                                            <div class="col-lg-12">--}}
-                                                        {{--                                                                <div class="single-form form-group">--}}
-                                                        {{--                                                                    <input type="email" name="email" placeholder="Enter Your Website" data-error="Valid email is required." required="required">--}}
-                                                        {{--                                                                    <div class="help-block with-errors"></div>--}}
-                                                        {{--                                                                </div>--}}
-                                                        {{--                                                            </div>--}}
-                                                        {{--                                                            <div class="col-lg-12">--}}
-                                                        {{--                                                                <div class="single-form form-group">--}}
-                                                        {{--                                                                    <textarea name="message" placeholder="Enter Your Message" data-error="Please,leave us a message." required="required"></textarea>--}}
-                                                        {{--                                                                    <div class="help-block with-errors"></div>--}}
-                                                        {{--                                                                </div>--}}
-                                                        {{--                                                            </div>--}}
-                                                        {{--                                                            <p class="form-message"></p>--}}
-                                                        {{--                                                            <div class="col-lg-12">--}}
-                                                        {{--                                                                <div class="single-form form-group">--}}
-                                                        {{--                                                                    <button class="main-btn" type="submit">LEAVE A COMMENT</button>--}}
-                                                        {{--                                                                </div>--}}
-                                                        {{--                                                            </div>--}}
-                                                        {{--                                                        </div>--}}
-                                                        {{--                                                    </form>--}}
+
                                                     </div>
 
                                                 </div>

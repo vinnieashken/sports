@@ -5,19 +5,19 @@
         <div>
             <div class="socialmedia-buttons btn-group text-center mx-auto">
 
-                <a href=""
+                <a href="https://www.facebook.com/GameYetu/"
                    class="btn btn-facebook rounded-0 text-white" style="
                                 background: #3b5998;"><span class="fa fa-facebook texu-white"></span></a>
 
-                <a href=""
+                <a href="https://twitter.com/gameyetu?lang=en"
                    class="btn btn-facebook rounded-0 text-white" style="
                                 background: rgb(0, 126, 196);"><span class="fa fa-twitter texu-white"></span></a>
 
-                <a href=""
+                <a href="https://t.me/gameyetu"
                    class="btn btn-facebook rounded-0 text-white" style="
                                 background: #0088cc;"><span class="fa fa-telegram texu-white"></span></a>
 
-                <a href=""
+                <a href="https://www.instagram.com/game_yetu/?hl=en"
                    class="btn btn-facebook rounded-0 text-white" style="
                                 background: #d72978;"><span class="fa fa-instagram texu-white"></span></a>
 
