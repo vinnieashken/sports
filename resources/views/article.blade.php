@@ -21,6 +21,7 @@
    "articleSection":"News",
    "author":["{{ $article->author }}"],
    "keywords": {!! json_encode(explode(';',$article->keywords)) !!},
+   "publisher":"{{ 'Standard Sports' }}",
    "datePublished":"{{ $article->publishday }}",
    "dateModified":"{{ $article->updateddate }}"
 }
