@@ -43,7 +43,7 @@ class Articles
 
     public function getArticle($id)
     {
-        $article = Article::where('id',$id)->get(['id','title','story','keywords','thumbURL','publishday','author'])->first();
+        $article = Article::where('id',$id)->get(['id','title','long_title','story','keywords','thumbURL','publishday','publishdate','author'])->first();
         if(is_null($article))
         {
             $article = Article::on('mysql2')->where('id',$id)->get(['id','title','long_title','story','thumbURL','keywords','publishday','publishdate','author'])->first();
