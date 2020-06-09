@@ -191,39 +191,4 @@
 </script>
 
 
-{{--<script type="application/ld+json">--}}
-{{--            {--}}
-{{--             "@context": "http://schema.org",--}}
-{{--             "@type": "BreadcrumbList",--}}
-{{--             "itemListElement":--}}
-{{--             [--}}
-{{--              {--}}
-{{--               "@type": "ListItem",--}}
-{{--               "position": 1,--}}
-{{--               "item":--}}
-{{--               {--}}
-{{--                "@id": "https://news9.co.ke/",--}}
-{{--                "name": "Home"--}}
-{{--                }--}}
-{{--              },--}}
-{{--              {--}}
-{{--               "@type": "ListItem",--}}
-{{--              "position": 2,--}}
-{{--              "item":--}}
-{{--               {--}}
-{{--                 "@id": "https://news9.co.ke/category/413/news",--}}
-{{--                 "name": "News"--}}
-{{--               }--}}
-{{--              },--}}
-{{--              {--}}
-{{--               "@type": "ListItem",--}}
-{{--              "position": 3,--}}
-{{--              "item":--}}
-{{--               {--}}
-{{--                 "@id": "https://news9.co.ke/article/1487/covid-19-county-infections-shoot-to-38-as-nyeri-marsabit-records-cases",--}}
-{{--                 "name": "Covid-19: County infections shoot to 38 as Nyeri, Marsabit records cases"--}}
-{{--               }--}}
-{{--              }--}}
-{{--             ]--}}
-{{--            }--}}
-{{--</script>--}}
+

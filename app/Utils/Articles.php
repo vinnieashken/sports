@@ -43,13 +43,13 @@ class Articles
 
     public function getArticle($id)
     {
-        $article = Article::where('id',$id)->get(['id','title','long_title','story','keywords','thumbURL','publishday','publishdate','updateddate','author'])->first();
+        $article = Article::where('id',$id)->get(['id','categoryid','title','long_title','story','keywords','thumbURL','publishday','publishdate','updateddate','author'])->first();
         if(is_null($article))
         {
-            $article = Article::on('mysql2')->where('id',$id)->get(['id','title','long_title','story','thumbURL','keywords','publishday','updateddate','publishdate','author'])->first();
+            $article = Article::on('mysql2')->where('id',$id)->get(['id','categoryid','title','long_title','story','thumbURL','keywords','publishday','updateddate','publishdate','author'])->first();
             if(is_null($article))
             {
-                $article = Article::on('mysql3')->where('id',$id)->get(['id','title','long_title','story','thumbURL','keywords','publishday','publishdate','updateddate','author'])->first();
+                $article = Article::on('mysql3')->where('id',$id)->get(['id','categoryid','title','long_title','story','thumbURL','keywords','publishday','publishdate','updateddate','author'])->first();
             }
         }
         return $article;

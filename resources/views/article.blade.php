@@ -7,6 +7,9 @@
 @section('metas')
     <meta name="keywords" content="Man kyura,Toma, dick, harry">
 @endsection
+@section('amp')
+    <link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
+@endsection
 
 @section('content')
     <script type="application/ld+json">
@@ -30,6 +33,35 @@
    "dateModified":"{{ $article->updateddate }}"
 }
 </script>
+<script type="application/ld+json">
+            {
+             "@context": "http://schema.org",
+             "@type": "BreadcrumbList",
+             "itemListElement":
+             [
+              {
+               "@type": "ListItem",
+               "position": 1,
+               "item":
+               {
+                "@id": "{{url('/')}}",
+                "name": "Home"
+                }
+              },
+              {
+               "@type": "ListItem",
+              "position": 2,
+              "item":
+               {
+                 "@id": "{{ url('category/'.$articles->getCategory($article->categoryid)->id.'/'.Str::slug( $articles->getCategory($article->categoryid)->name,'-') ) }}",
+                 "name": "{{ $articles->getCategory($article->categoryid)->name }}"
+               }
+              },
+
+              }
+             ]
+            }
+</script>
 
 
 
@@ -38,19 +70,20 @@
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
 
             <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <nav aria-label="breadcrumb ">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
-                </div>
+
             </div>
 
 
             <div class="row justify-content-center mt-5">
+
+                <div class="col-md-12 col-sm-12">
+                    <nav aria-label="breadcrumb ">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href=" ">{{ $articles->getCategory($article->categoryid)->name }}</a></li>
+                        </ol>
+                    </nav>
+                </div>
                 @if(!is_null($article))
                     <div class="col span_2_of_3 aut">
 
@@ -84,8 +117,8 @@
                                                 <div class="mx-auto w-100">
                                                     <div id="fb-root"></div>
                                                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-                                                    <div class="fb-comments" data-href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
-                                                    <div class="contact-form">
+                                                    <div class="fb-comments w-100" data-href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
+                                                    <div class="contact-form w-100">
 
                                                     </div>
 
