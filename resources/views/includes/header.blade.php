@@ -180,7 +180,7 @@
           "@context": "http://schema.org",
           "@type": "Person",
           "name": "Standard Digital - Your Gateway",
-          "url": "https://www.standardmedia.co.ke",
+          "url": "{{ url('/') }}",
           "sameAs": [
                         "https://www.facebook.com/GameYetu/",
                         "https://www.instagram.com/game_yetu/?hl=en",

@@ -14,19 +14,15 @@
    "@context": "http://schema.org",
    "@type": "NewsArticle",
    "url": "{{ \Illuminate\Support\Facades\URL::full() }}",
-   "publisher":{
-      "@type":"Organization",
-      "name":"Standard Sports",
-      "logo":"{{ url('/assets/images/logo.png') }}"
-   },
-   "headline": "{{ $article->long_title }}",
+   "headline": "{{ substr($article->long_title,0,110) }}",
    "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
    "articleBody": "{{ $article->story }}",
    "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }}","height":500,"width":800},
    "articleSection":"News",
-   "creator":["{{ $article->author }}"],
+   "author":["{{ $article->author }}"],
    "keywords": {!! json_encode(explode(';',$article->keywords)) !!},
-   "datePublished":"{{ $article->publishday }}"
+   "datePublished":"{{ $article->publishday }}",
+   "dateModified":"{{ $article->updateddate }}"
 }
 </script>
 
