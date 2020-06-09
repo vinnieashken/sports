@@ -11,6 +11,7 @@
 @endsection
 
 @section('content')
+
     <section id="standard" class="standard-area pt-10">
         {!! $videos->player($stories->player) !!}
 {{--        <p class="vititle">ATHLETICS</p></section>--}}
@@ -49,6 +50,8 @@
 
         </div>
     </section>
+    </section>
+
 @endsection
 
 @section('js')
