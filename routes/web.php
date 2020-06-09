@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 Route::get('/article/{id}/{slug}','HomeController@article');
+//Route::get('/{category_slug}/{id}/{slug}','HomeController@article');
 Route::get('/category/{id}/{slug}','HomeController@category');
 
 Route::get('/videos','HomeController@videos');

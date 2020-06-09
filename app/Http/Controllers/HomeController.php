@@ -10,6 +10,7 @@ use App\Utils\SlideShows;
 use App\Utils\TimeUtil;
 use App\Utils\Videos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -61,6 +62,28 @@ class HomeController extends Controller
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
         return view('index',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
+    }
+
+    public function oldarticle($id,$slug)
+    {
+        $articles = new Articles();
+        $article = $articles->getArticle($id);
+
+        dump($article);
+
+        if(is_null($article))
+        {
+            return;
+        }
+        $url = url('/').$articles->getCategory($article->id)->name.'/'.$article->id.'/'.Str::slug($article->title);
+        dump($url);
+        return;
+        redirect($url);
+    }
+
+    public function oldarticleslugless($id)
+    {
+
     }
 
     public function article($id,$slug)
