@@ -24,7 +24,7 @@
    "publisher":{
       "@type":"Organization",
       "name":"Standard Sports",
-      "logo":"{{ url('/assets/images/logo.png') }}"
+      "logo":{"@type":"ImageObject","url":"{{ url('/assets/images/logo.png') }}","height":64,"width":376}
    },
    "datePublished":"{{ $article->publishday }}",
    "dateModified":"{{ $article->updateddate }}"
