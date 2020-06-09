@@ -22,7 +22,7 @@
    "headline": "{{ $article->long_title }}",
    "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
    "articleBody": "{{ $article->story }}",
-   "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }},"height":500,"width":800},
+   "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }}","height":500,"width":800},
    "articleSection":"News",
    "creator":["{{ $article->author }}"],
    "keywords": {{ json_encode(explode(';',$article->keywords)) }},
