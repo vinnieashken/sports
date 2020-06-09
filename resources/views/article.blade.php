@@ -31,17 +31,20 @@
 }
 </script>
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
-        </ol>
-    </nav>
+
 
 
     <section id="standard" class="standard-area pt-100 mt-md-3 mt-lg-3 first">
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+
             <div class="row justify-content-center mt-5">
                 @if(!is_null($article))
                     <div class="col span_2_of_3 aut">
