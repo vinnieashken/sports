@@ -25,7 +25,7 @@
    "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }}","height":500,"width":800},
    "articleSection":"News",
    "creator":["{{ $article->author }}"],
-   "keywords": {{ json_encode(explode(';',$article->keywords)) }},
+   "keywords": {!! json_encode(explode(';',$article->keywords)) !!},
    "datePublished":"{{ $article->publishday }}"
 }
 </script>
