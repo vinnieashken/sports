@@ -78,7 +78,7 @@
 
 
             <div class="row justify-content-center mt-5">
-                <div class="col-md-12 col-sm-12 mt-5">
+                <div class="col-md-12 col-sm-12 mt-3">
                     @include('includes.alert')
                 </div>
 
