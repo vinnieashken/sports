@@ -7,10 +7,13 @@
                 <div class="mx-auto col-md-5 text-center ">
                     <div class="footer-logo text-left mt-40 ">
                         <h3>Get Our Newsletter</h3>
-                        <p class="mt-10 mb-4">Subscribe to our newsletter and stay updated on the latest developments
-                            and special offers!</p>
-                        <input type="text" class="w-75" placeholder="Enter your email"><i
+                        <p class="mt-10 mb-4">
+                            Subscribe to our newsletter and stay updated on the latest developments and special offers!
+                        </p>
+                        <form action="{{ url('/subscribe') }}" method="post">
+                        <input type="text" class="w-75" name="email" placeholder="Enter your email"><i
                             class="fa fa-chevron-right newslettericon ml-2"></i>
+                        </form>
                     </div>
                 </div>
             </div>

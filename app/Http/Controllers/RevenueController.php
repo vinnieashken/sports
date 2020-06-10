@@ -165,6 +165,12 @@ class RevenueController extends Controller
         return redirect(URL::previous());
     }
 
+    public function subscribe(Request $request)
+    {
+        $email = $request->email;
+        dump($email);
+    }
+
     public function getUser()
     {
         //return Auth::user() ?? 'not logged in';
