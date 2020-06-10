@@ -118,6 +118,8 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,6);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
+        $stories->category = $articles->getCategory($id);
+
         $stories->opinion = $articles->getFromCategory('gossip & rumours',0,4);
 
         //dump($stories->top);

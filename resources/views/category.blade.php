@@ -1,11 +1,19 @@
 @extends('includes.layout')
 
 @section('title')
-    | home
+    {{ $stories->category->name }}
 @endsection
 
-@section('metas')
-    <meta name="keywords" content="Man kyura,Toma, dick, harry">
+@section('description')
+    {{ trim('The best sports news website in kenya and africa') }}
+@endsection
+
+@section('keywords')
+    {{ trim( implode(',', $categories->top->pluck('name')).','.implode(',', $categories->more->pluck('name')) ) }}
+@endsection
+
+@section('author')
+    {{ trim('Standard Group PLC') }}
 @endsection
 
 @section('content')

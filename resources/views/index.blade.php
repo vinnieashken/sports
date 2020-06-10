@@ -1,7 +1,19 @@
 @extends('includes.layout')
 
 @section('title')
-    | home
+    home
+@endsection
+
+@section('description')
+    {{ trim('The best sports news website in kenya and africa') }}
+@endsection
+
+@section('keywords')
+    {{ trim( implode(',', $categories->top->pluck('name')).','.implode(',', $categories->more->pluck('name')) ) }}
+@endsection
+
+@section('author')
+    {{ trim('Standard Group PLC') }}
 @endsection
 
 @section('metas')
