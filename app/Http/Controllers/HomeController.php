@@ -28,10 +28,9 @@ class HomeController extends Controller
         $videos = new Videos();
         $slideshow = new SlideShows();
 
-        //->articles->list
-        //dump($articles->getMostRead());
-        //dump( $articles->getIoArticles($articles->getMostRead()) );
-        //return;
+
+        dump( $categories->top->pluck('name') );
+        return;
 
         $stories = new \stdClass();
         $stories->top = $articles->getLatest(1,0);
