@@ -14,7 +14,7 @@
 
     <section id="standard" class="standard-area pt-10">
         <div class="row">
-            <div class="col-md-10 col-sm-12 mt-5">
+            <div class="col-md-10 col-sm-12 mt-5 mx-auto">
                 @include('includes.alert')
             </div>
         </div>
