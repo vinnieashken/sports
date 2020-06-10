@@ -68,16 +68,17 @@ class HomeController extends Controller
         $articles = new Articles();
         $article = $articles->getArticle($id);
 
-        dump($article);
+        //dump($article);
+        //return;
 
         if(is_null($article))
         {
-            return;
+            //return;
         }
-        $url = url('/').$articles->getCategory($article->id)->name.'/'.$article->id.'/'.Str::slug($article->title);
-        dump($url);
-        return;
-        redirect($url);
+        $url = url('/'.strtolower($articles->getCategory($article->categoryid)->name).'/'.$article->id.'/'.Str::slug($article->title));
+        //dump($url);
+        //return;
+        return redirect()->to($url);
     }
 
     public function oldarticleslugless($id)
@@ -85,7 +86,7 @@ class HomeController extends Controller
 
     }
 
-    public function article($id,$slug)
+    public function article($category_slug,$id,$slug)
     {
         $menu = new Menu();
         $timeutil = new TimeUtil();

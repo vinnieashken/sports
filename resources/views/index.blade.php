@@ -46,12 +46,12 @@
                         <div class="col-lg-7 col-md-7 mb-4 mb-md-0">
                             <div class="single-standard mainimg">
                                 <h3 class="heading ">
-                                    <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="pt-0 px-0 titles">
+                                    <a href="{{ url( Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="pt-0 px-0 titles">
                                         {{ $article->title }} </a>
                                 </h3>
                                 @if($article->thumbURL != null)
                                 <div class="standard-image">
-                                    <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
 
                                         <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
                                              class="" alt="{{ $article->title }}"></a>
@@ -60,7 +60,7 @@
                                 <div class="standard-content">
                                     <div class="content">
                                         <h4 class="card-text title mt-2">
-                                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}"><font class="green">{{$articles->getCategory($article->categoryid)->name}}: </font> {{ $article->summary }} </a>
+                                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"><font class="green">{{$articles->getCategory($article->categoryid)->name}}: </font> {{ $article->summary }} </a>
                                         </h4>
                                     </div>
 
@@ -74,7 +74,7 @@
                             @foreach($stories->top_side1 as $article)
                             <div class="card minicard">
                                 <h4 class="title pb-2">
-                                    <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                 </h4>
 
                                 <div class="row no-gutters">
@@ -94,7 +94,7 @@
                             @foreach($stories->top_side2 as $article)
                             <div class="card minicard">
                                 <h4 class="title mt-5 pb-2">
-                                    <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                 </h4>
 
                                 <div class="row no-gutters">
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="card-body px-0">
                                     <h4 class="black py-2">
-                                        <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                        <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                     </h4>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@
                     <div class="col-md-6 mb-3">
                         @foreach($stories->checkpoint1 as $article)
                         <div class="card">
-                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
+                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                             <div class="media my-2 ">
                                 <div class="single-standard">
                                     <div class="standard-image mr-3">
@@ -178,7 +178,7 @@
                     <div class="col-md-6 mb-3">
                         @foreach($stories->checkpoint2 as $article)
                             <div class="card">
-                                <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
+                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                                 <div class="media my-2 ">
                                     <div class="single-standard">
                                         <div class="standard-image mr-3">
@@ -301,7 +301,7 @@
                         @foreach($stories->volley as $article)
 
                         <div class="card mb-4">
-                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
+                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                             <div class="single-standard">
                                 <div class="standard-image">
                                     <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
@@ -327,7 +327,7 @@
                         @foreach($stories->unique as $article)
 
                         <div class="card mb-4">
-                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
+                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                             <div class="single-standard">
                                 <div class="standard-image">
                                     <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
@@ -387,7 +387,7 @@
                     </div>
                     <div class="card-body p-3 bg-white">
                         <h4 class="black py-2">
-                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
+                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
                                 <font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
                                 {{ $article->title }}
                             </a>
