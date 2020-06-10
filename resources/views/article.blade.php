@@ -1,14 +1,18 @@
 @extends('includes.layout')
 
 @section('title')
-    | {{ $article->long_title }}
+     {{ trim($article->long_title) }}
+@endsection
+
+@section('description')
+    {{ trim($article->summary) }}
 @endsection
 
 @section('keywords')
-    {{ str_replace(';',',',$article->keywords) }}
+    {{ trim(str_replace(';',',',$article->keywords)) }}
 @endsection
 @section('author')
-    {{ $article->author }}
+    {{ trim($article->author) }}
 @endsection
 @section('amp')
     <link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
