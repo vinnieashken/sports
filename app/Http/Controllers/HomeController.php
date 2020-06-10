@@ -181,9 +181,12 @@ class HomeController extends Controller
         $articles = new Articles();
         $sitemap = $articles->getTodays();
 
-        //dump($sitemap);
+        $menu = new Menu();
+        $categories = $menu->getCategories();
+
+        $categories = $categories->top->merge($categories->more);
         //return;
-        return response()->view('sitemap',['sitemap' => $sitemap,'articles'=>$articles])
+        return response()->view('sitemap',['sitemap' => $sitemap,'articles'=>$articles,'categories'=> $categories])
             ->header('Content-Type', 'text/xml');
     }
 }

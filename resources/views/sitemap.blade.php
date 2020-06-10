@@ -1,6 +1,22 @@
 
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+        <loc>{{ url('/') }}</loc>
+
+        <lastmod>{{ date('now') }}</lastmod>
+    </url>;
+
+    @foreach($categories as $category)
+        <url>
+            <loc>{{ url('/category/'.$category->id.'/'.\Illuminate\Support\Str::slug($category->name,'-')) }}</loc>
+
+            <lastmod>{{ date('now') }}</lastmod>
+        </url>;
+    @endforeach
+
+
     @foreach ($sitemap as $value)
         <url>
             <loc>{{ url('/'.Str::slug($articles->getCategory($value->categoryid)->name,'-').'/'.$value->id.'/'.Str::slug($value->title,'-')) }}</loc>
@@ -13,4 +29,5 @@
             <lastmod>{{ $value->publishday }}</lastmod>
         </url>;
     @endforeach
+
 </urlset>
