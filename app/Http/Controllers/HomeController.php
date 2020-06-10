@@ -177,7 +177,7 @@ class HomeController extends Controller
 
         //dump($sitemap);
         //return;
-        return response()->view('sitemap',['sitemap' => $sitemap])
+        return response()->view('sitemap',['sitemap' => $sitemap,'articles'=>$articles])
             ->header('Content-Type', 'text/xml');
     }
 }
