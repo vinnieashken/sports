@@ -174,6 +174,9 @@ class HomeController extends Controller
     {
         $articles = new Articles();
         $sitemap = $articles->getTodays();
+
+        //dump($sitemap);
+        //return;
         return response()->view('sitemap',['sitemap' => $sitemap])
             ->header('Content-Type', 'text/xml');
     }
