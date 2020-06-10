@@ -28,7 +28,7 @@ class RevenueController extends Controller
 
         $user =  new User();
 
-        $params = ["body"=>json_encode(['username'=> $username, 'password'=>$password,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk"])];
+        $params = ["body"=>json_encode(['username'=> $username, 'password'=>$password,"app_id"=> 9,"app_secret"=>"pFvwrdA3ycw6VKq3"])];
 
         $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
         try {
@@ -81,7 +81,7 @@ class RevenueController extends Controller
 
         $user =  new User();
 
-        $params = ["body"=>json_encode(['name'=> $name,'email'=> $email ,'password'=>$password,'password_confirmation'=>$password_confirmation,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk"])];
+        $params = ["body"=>json_encode(['name'=> $name,'email'=> $email ,'password'=>$password,'password_confirmation'=>$password_confirmation,"app_id"=> 9,"app_secret"=>"pFvwrdA3ycw6VKq3"])];
 
         $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
         try {
@@ -131,7 +131,7 @@ class RevenueController extends Controller
 
         $url = \url('/');
 
-        $params = ["body"=>json_encode(['email'=> $email, 'redirect_url'=> $url ,"app_id"=> 5,"app_secret"=>"7Gv2qYEFYQDErPCk" ])];
+        $params = ["body"=>json_encode(['email'=> $email, 'redirect_url'=> $url ,"app_id"=> 9,"app_secret"=>"pFvwrdA3ycw6VKq3" ])];
 
         //return $params;
 
@@ -188,15 +188,15 @@ class RevenueController extends Controller
 
         $headers = $response->getHeaders();
         $body = $response->getBody()->getContents();
-        $objbody = json_decode($body,true);
-        //$message = $objbody->message;
+        $objbody = json_decode($body);
+
+        $message = $objbody->message;
 
         $response = "Thank you for subscribing to our newsletter. A subscription email has been sent to your account";
 
         $request->session()->flash('subscribemsg', $response);
 
-        return $objbody;
-        dump($email);
+        return redirect(URL::previous());
     }
 
     public function getUser()

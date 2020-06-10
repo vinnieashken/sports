@@ -13,9 +13,11 @@
                         <form action="{{ url('/subscribe') }}" method="post">
                             {{ csrf_field() }}
                         <input type="text" class="w-75" name="email" placeholder="Enter your email">
-                            <button class="btn btn-light" type="submit">
-                                <i class="fa fa-chevron-right newslettericon ml-2"></i>
-                            </button>
+                            <span class="input-group-append">
+                                <button class="btn btn-light" type="submit">
+                                    <i class="fa fa-chevron-right newslettericon ml-2"></i>
+                                </button>
+                            </span>
                         </form>
                     </div>
                 </div>

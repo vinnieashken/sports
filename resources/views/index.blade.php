@@ -25,6 +25,10 @@
         <div class="container mx-auto mt-4 mt-lg-0 mt-md-5">
 
             <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    @include('includes.alert')
+                </div>
+
                 <div class="ad-728-90 offset-md-2 col-md-8 mb-3 d-none d-md-block d-lg-block">
                     <div style=" width:100%;  padding: 0px;">
 
