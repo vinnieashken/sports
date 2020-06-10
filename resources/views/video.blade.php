@@ -3,11 +3,11 @@
 @extends('includes.layout')
 
 @section('title')
-    | home
+    {{ $stories->player->title }}
 @endsection
 
-@section('metas')
-    <meta name="keywords" content="Man kyura,Toma, dick, harry">
+@section('description')
+    {{ $stories->player->description  }}
 @endsection
 
 @section('content')
