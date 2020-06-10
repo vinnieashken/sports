@@ -148,7 +148,7 @@
                                             @foreach($stories->related as $rarticle)
                                                 @if($rarticle->id !== $article->id)
                                                 <div class="card bg-dark text-white">
-                                                    <a href="{{ url('article/'.$rarticle->id.'/'.Str::slug($rarticle->title,'-')) }}">
+                                                    <a href="{{ url('article/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
                                                         <img class="card-img px300" style="height: 300px !important;"
                                                              src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                         <div class="card-img-overlay">
