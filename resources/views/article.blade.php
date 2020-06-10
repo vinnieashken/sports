@@ -76,12 +76,11 @@
     <section id="standard" class="standard-area pt-100 mt-md-3 mt-lg-3 first">
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
 
-            <div class="row">
-
-            </div>
-
 
             <div class="row justify-content-center mt-5">
+                <div class="col-md-12 col-sm-12 mt-5">
+                    @include('includes.alert')
+                </div>
 
                 <div class="col-md-12 col-sm-12">
                     <nav aria-label="breadcrumb ">

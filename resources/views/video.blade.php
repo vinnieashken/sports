@@ -13,6 +13,11 @@
 @section('content')
 
     <section id="standard" class="standard-area pt-10">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 mt-5">
+                @include('includes.alert')
+            </div>
+        </div>
         {!! $videos->player($stories->player) !!}
 {{--        <p class="vititle">ATHLETICS</p></section>--}}
 

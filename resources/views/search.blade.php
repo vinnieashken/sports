@@ -15,6 +15,10 @@
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
             <div class="row justify-content-center mt-5">
 
+                <div class="col-md-12 col-sm-12 mt-5">
+                    @include('includes.alert')
+                </div>
+
                     <div class="col span_2_of_3 aut">
 
                         <div class="card bg-white art">
