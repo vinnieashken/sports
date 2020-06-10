@@ -68,22 +68,27 @@ class HomeController extends Controller
         $articles = new Articles();
         $article = $articles->getArticle($id);
 
-        //dump($article);
-        //return;
+        if(is_null($article))
+        {
+            //return;
+        }
+        $url = url('/'.strtolower($articles->getCategory($article->categoryid)->name).'/'.$article->id.'/'.Str::slug($article->title));
+
+        return redirect()->to($url);
+    }
+
+    public function oldarticleslugless($id)
+    {
+        $articles = new Articles();
+        $article = $articles->getArticle($id);
 
         if(is_null($article))
         {
             //return;
         }
         $url = url('/'.strtolower($articles->getCategory($article->categoryid)->name).'/'.$article->id.'/'.Str::slug($article->title));
-        //dump($url);
-        //return;
+
         return redirect()->to($url);
-    }
-
-    public function oldarticleslugless($id)
-    {
-
     }
 
     public function article($category_slug,$id,$slug)

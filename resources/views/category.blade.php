@@ -70,7 +70,7 @@
 
                         @if($i < count($items))
                         <div class="card bg-white mb-4 single-standard">
-                            <a href="{{ url('article/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
+                            <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                             <div class="standard-image">
                                 <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="Card image cap">
                             </div>
@@ -144,7 +144,7 @@
                         <div class="card-deck categ">
 
                             <div class="card bg-white mb-4 single-standard">
-                                <a href="{{ url('article/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
+                                <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                                 <div class="standard-image">
                                     <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="Card image cap">
                                 </div>
@@ -169,7 +169,7 @@
 
                             @if($i < count($items))
                             <div class="card bg-white mb-4 single-standard">
-                                <a href="{{ url('article/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
+                                <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                                 <div class="standard-image">
                                     <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="Card image cap">
                                 </div>
@@ -228,7 +228,7 @@
                         </div>
                         <div class="card-body p-3 bg-white">
                             <h4 class="black py-2">
-                                <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
+                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
                                     <font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
                                     {{ $article->title }}
                                 </a>
