@@ -9,7 +9,7 @@
 @endsection
 
 @section('keywords')
-    {{ trim( implode(',', $categories->top->pluck('name')).','.implode(',', $categories->more->pluck('name')) ) }}
+    {{ trim( implode(',', $categories->top->pluck('name')->toArray()).','.implode(',', $categories->more->pluck('name')->toArray() ) ) }}
 @endsection
 
 @section('author')

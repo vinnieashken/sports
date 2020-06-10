@@ -29,8 +29,8 @@ class HomeController extends Controller
         $slideshow = new SlideShows();
 
 
-        dump( $categories->top->pluck('name')->toArray() );
-        return;
+        //dump( $categories->top->pluck('name')->toArray() );
+        //return;
 
         $stories = new \stdClass();
         $stories->top = $articles->getLatest(1,0);
