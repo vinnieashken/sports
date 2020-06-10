@@ -30,3 +30,4 @@ Route::get('/user','RevenueController@getUser');
 Route::get('/popular','RevenueController@getMostRead');
 
 Route::get('/search','HomeController@search');
+Route::get('/sitemap','HomeController@sitemap');

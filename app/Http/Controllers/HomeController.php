@@ -169,4 +169,16 @@ class HomeController extends Controller
 
         return view('search',['articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
+
+    public function sitemap(Request $request)
+    {
+        $sitemap = Article::where('publishday',date('Y-m-d'))
+            ->active()
+            ->source()
+            ->publishdate()
+            ->orderBy('publishdate','DESC')
+            ->get();
+        return response()->view('sitemap',$sitemap)
+            ->header('Content-Type', 'text/xml');
+    }
 }
