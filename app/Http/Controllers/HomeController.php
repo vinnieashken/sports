@@ -29,7 +29,7 @@ class HomeController extends Controller
         $slideshow = new SlideShows();
 
 
-        dump( $categories->top->pluck('name') );
+        dump( $categories->top->pluck('name')->toArray() );
         return;
 
         $stories = new \stdClass();
