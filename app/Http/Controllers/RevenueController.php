@@ -188,12 +188,12 @@ class RevenueController extends Controller
 
         $headers = $response->getHeaders();
         $body = $response->getBody()->getContents();
-        $objbody = json_decode($body);
+        $objbody = json_decode($body,true);
         $message = $objbody->message;
 
         $response = "Thank you for subscribing to our newsletter. A subscription email has been sent to your account";
 
-        $request->session()->flash('subscribemsg', $objbody->message);
+        $request->session()->flash('subscribemsg', );
 
         return $objbody;
         dump($email);
