@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Utils\Articles;
+use Exception;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -168,6 +169,31 @@ class RevenueController extends Controller
     public function subscribe(Request $request)
     {
         $email = $request->email;
+
+        $params = ["body"=>json_encode(['email'=> $email, 'category_id'=> 20 ])];
+        //return $params;
+
+        $client = new GuzzleHttp\Client(['headers' => [ 'Content-Type' => 'application/json',
+            "appkey"=> "VHV1VElESjRMNklTYnNubGJlZVY0WkRieVNiZU9vendsSm5mRU56NDdYR2w2WXBESEF2UnVQWU9MdXhm5eaa84f9ba4bc"
+        ],
+            'verify'=> BASEPATH.'cacert.pem','http_errors'=>false]);
+        try {
+
+            $response = $client->request('POST', 'https://mail.standarddigitalworld.co.ke/api/subscription', $params);
+
+        }catch (Exception $e)
+        {
+
+        }
+
+        $headers = $response->getHeaders();
+        $body = $response->getBody()->getContents();
+        $objbody = json_decode($body);
+        $message = $objbody->message;
+
+        $response = "Thank you for subscribing to our newsletter. A subscription email has been sent to your account";
+
+        $this->session->set_flashdata('subscribe_msg', $response);
         dump($email);
     }
 
