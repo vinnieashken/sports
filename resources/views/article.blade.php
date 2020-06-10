@@ -124,7 +124,7 @@
                                                 <div class="mx-auto w-100">
                                                     <div id="fb-root"></div>
                                                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-                                                    <div class="fb-comments w-100" data-href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
+                                                    <div class="fb-comments w-100" data-href="{{ url(Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
                                                     <div class="contact-form w-100">
 
                                                     </div>
@@ -148,7 +148,7 @@
                                             @foreach($stories->related as $rarticle)
                                                 @if($rarticle->id !== $article->id)
                                                 <div class="card bg-dark text-white">
-                                                    <a href="{{ url('article/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
+                                                    <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
                                                         <img class="card-img px300" style="height: 300px !important;"
                                                              src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                         <div class="card-img-overlay">
