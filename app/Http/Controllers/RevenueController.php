@@ -173,10 +173,10 @@ class RevenueController extends Controller
         $params = ["body"=>json_encode(['email'=> $email, 'category_id'=> 20 ])];
         //return $params;
 
-        $client = new GuzzleHttp\Client(['headers' => [ 'Content-Type' => 'application/json',
+        $client = new Client(['headers' => [ 'Content-Type' => 'application/json',
             "appkey"=> "VHV1VElESjRMNklTYnNubGJlZVY0WkRieVNiZU9vendsSm5mRU56NDdYR2w2WXBESEF2UnVQWU9MdXhm5eaa84f9ba4bc"
         ],
-            'verify'=> BASEPATH.'cacert.pem','http_errors'=>false]);
+            'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
         try {
 
             $response = $client->request('POST', 'https://mail.standarddigitalworld.co.ke/api/subscription', $params);
@@ -193,7 +193,9 @@ class RevenueController extends Controller
 
         $response = "Thank you for subscribing to our newsletter. A subscription email has been sent to your account";
 
-        $this->session->set_flashdata('subscribe_msg', $response);
+        $request->session()->flash('subscribemsg', $objbody->message);
+
+        return $objbody;
         dump($email);
     }
 
