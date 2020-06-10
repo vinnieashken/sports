@@ -4,7 +4,7 @@
 <ul class="list-unstyled">
 
     @foreach($stories->mostread as $article)
-     <a href=" {{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }} " >
+     <a href=" {{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} " >
         <li class="media border-design">
             <div class="big-text mr-3">{{ $loop->index + 1 }}</div>
             <div class="black">
