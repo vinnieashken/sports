@@ -15,7 +15,7 @@
     {{ trim($article->author) }}
 @endsection
 @section('amp')
-    <link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
+<link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
 @endsection
 
 @section('content')
