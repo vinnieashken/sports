@@ -172,12 +172,8 @@ class HomeController extends Controller
 
     public function sitemap(Request $request)
     {
-        $sitemap = Article::where('publishday',date('Y-m-d'))
-            ->active()
-            ->source()
-            ->publishdate()
-            ->orderBy('publishdate','DESC')
-            ->get();
+        $articles = new Articles();
+        $sitemap = $articles->getTodays();
         return response()->view('sitemap',$sitemap)
             ->header('Content-Type', 'text/xml');
     }
