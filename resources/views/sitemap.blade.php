@@ -5,14 +5,14 @@
     <url>
         <loc>{{ url('/') }}</loc>
 
-        <lastmod>{{ date('now') }}</lastmod>
+        <lastmod>{{ date('d-m-Y') }}</lastmod>
     </url>;
 
     @foreach($categories as $category)
         <url>
             <loc>{{ url('/category/'.$category->id.'/'.\Illuminate\Support\Str::slug($category->name,'-')) }}</loc>
 
-            <lastmod>{{ date('now') }}</lastmod>
+            <lastmod>{{ date('d-m-Y') }}</lastmod>
         </url>;
     @endforeach
 
