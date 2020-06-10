@@ -25,7 +25,7 @@
         <div class="container mx-auto mt-4 mt-lg-0 mt-md-5">
 
             <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-12 col-sm-12 mt-5">
                     @include('includes.alert')
                 </div>
 
