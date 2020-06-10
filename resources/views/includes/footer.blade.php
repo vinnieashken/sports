@@ -11,6 +11,7 @@
                             Subscribe to our newsletter and stay updated on the latest developments and special offers!
                         </p>
                         <form action="{{ url('/subscribe') }}" method="post">
+                            {{ csrf_field() }}
                         <input type="text" class="w-75" name="email" placeholder="Enter your email"><i
                             class="fa fa-chevron-right newslettericon ml-2"></i>
                         </form>
