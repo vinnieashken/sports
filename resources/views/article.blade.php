@@ -4,8 +4,11 @@
     | {{ $article->long_title }}
 @endsection
 
-@section('metas')
-    <meta name="keywords" content="Man kyura,Toma, dick, harry">
+@section('keywords')
+    {{ str_replace(';',',',$article->keywords) }}
+@endsection
+@section('author')
+    {{ $article->author }}
 @endsection
 @section('amp')
     <link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
