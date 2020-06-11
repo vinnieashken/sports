@@ -18,20 +18,19 @@
                     @include('includes.alert')
                 </div>
             </div>
-            <!--        <div class="row">-->
-            <!--            <div class="ad-728-90 offset-md-2 col-md-8 mb-3 d-none d-md-block d-lg-block">-->
-            <!--                <div style=" width:100%;  padding: 0px;">-->
 
-            <!--                    <div id='div-gpt-ad-1486010480522-0' style='height:90px; width:728px;margin:0px auto 0px auto'>-->
-            <!--                        <script>-->
-            <!--                            googletag.cmd.push(function () {-->
-            <!--                                googletag.display('div-gpt-ad-1486010480522-0');-->
-            <!--                            });-->
-            <!--                        </script>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--        </div>-->
+            <div class="row">
+                <div class="offset-md-2 col-md-8 mb-3">
+                    <div style="width:100%;  padding: 0px;">
+                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row justify-content-center mt-5">
                 <div class="col-md-8 col-sm-12 ">
 
@@ -137,7 +136,11 @@
 
                 <div class="col-lg-4 col-md-4 text-left">
                     <div class="text-center">
-                        <img src="https://tpc.googlesyndication.com/simgad/68460162182615902" class="mediumad my-4 mt-md-0">
+                        <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
+                            </script>
+                        </div>
                     </div>
 
                     @include('includes.mostread')
@@ -146,8 +149,11 @@
 
                     <div class="my-4">
                         <div class="text-center">
-                            <img src="https://tpc.googlesyndication.com/simgad/68460162182615902"
-                                 class="mediumad my-4  mt-5">
+                            <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837098208-0'); });
+                                </script>
+                            </div>
                         </div>
                         <h4 class="section-heading mx-0 mt-2">TWITTER FEEDS</h4>
                         <div class="card check">
@@ -161,24 +167,23 @@
             <hr class="my-4">
         </div>
     </section>
-    <!--<section class="d-none d-md-block d-lg-block my-4 mx-0">-->
-    <!--    <div class="container">-->
-    <!--        <div class="ad">-->
-    <!--            <div class="row py-5">-->
-    <!--                <div class="ad-728-90 offset-md-2 col-md-8 ">-->
 
-    <!--                    <div id='div-gpt-ad-1486968612976-0' style='margin: auto; width: 728px; height: 90px;'>-->
-    <!--                        <script>-->
-    <!--                            googletag.cmd.push(function () {-->
-    <!--                                googletag.display('div-gpt-ad-1486968612976-0');-->
-    <!--                            });-->
-    <!--                        </script>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</section>-->
+    <section class="my-4 mx-0">
+        <div class="container">
+            <div class="ad">
+                <div class="row py-5">
+                    <div class="offset-md-2 col-md-8">
+                        <div id='div-gpt-ad-1487330276546-0' style='width:100%;margin:auto;'>
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1487330276546-0'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="opinions">
         <div class="container">
             <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">OPINIONS</h4>
