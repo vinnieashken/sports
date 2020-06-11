@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="offset-md-2 col-md-8 mb-3">
-                    <div style=" width:100%;  padding: 0px;">
+                    <div style="width:100%;  padding: 0px;">
                         <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
@@ -253,7 +253,7 @@
       <div class="container">
            <div class="ad">
                <div class="row py-5">
-                  <div class="offset-md-2">
+                  <div class="offset-md-2 col-md-8">
                       <div id='div-gpt-ad-1487330276546-0' style='width:100%;margin:auto;'>
                           <script>
                               googletag.cmd.push(function() { googletag.display('div-gpt-ad-1487330276546-0'); });
