@@ -49,6 +49,39 @@
             </div>
         </div>
     </section>
+    <!--lightbox modal-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+
+            @foreach($pictures as $picture)
+            <div class="mySlides bigg">
+                <div class="numbertext">{{ $loop->index + 1 }} / {{ $pictures->count() }}</div>
+                <img src="{{ env('IMAGECDN').$picture->imgURL }}" style="width:100%" alt="{{ $picture->description }}">
+            </div>
+            @endforeach
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="row lower">
+
+                @foreach($pictures as $picture)
+                <div class="col">
+                    <img class="demo cursor" src="{{ env('IMAGECDN').$picture->imgURL }}" style="width:100%"
+                         onclick="currentSlide({{ $loop->index + 1 }})" alt="{{ $picture->description }}">
+                </div>
+                @endforeach
+
+            </div>
+
+        </div>
+    </div>
+    <!--lightbox-->
 @endsection
 
 @section('js')
