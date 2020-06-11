@@ -36,7 +36,8 @@
                         <div class="col-md-4">
                             <div class="card mb-4 single-standard">
                                 <div class="standard-image">
-                                    <img class="card-img-top" src="{{ env('IMAGECDN').$picture->imgURL }}" alt="Card image cap" onclick="openModal();currentSlide(1)">
+                                    <img class="card-img-top" src="{{ env('IMAGECDN').$picture->imgURL }}"
+                                         alt="{{ $picture->description }}" onclick="openModal();currentSlide({{ $loop->index + 1 }})">
                                 </div>
                             </div>
                         </div>
