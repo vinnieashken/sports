@@ -136,8 +136,8 @@
                     </div>
                 </div>
                 <!---- advert 2 ---->
-                <div class="col-12 col-md-4 mb-2">
-                    <div class="text-center">
+                <div class="col-12 col-md-4 mb-md-4">
+                    <div class="text-center mb-2">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
