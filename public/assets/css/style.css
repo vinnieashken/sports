@@ -6699,7 +6699,7 @@ iframe{
 
     @media (min-width: 1251px) and (max-width: 1350px) {
         .header-area .navbar .navbar-nav .nav-item a {
-            font-size: .75em !important;
+            font-size: 15px !important;
         }
     }
 
