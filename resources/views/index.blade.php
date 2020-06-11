@@ -273,7 +273,7 @@
                 @foreach($stories->slideshows as $slideshow)
                 <div class="card rounded-0 border-0 ">
                     <div class="single-standard">
-                        <a href="{{ url('pictures/'.$slideshow->id.'/'.Str::slug($slideshow->title,'-')) }}">
+                        <a href="{{ url('/slideshow/pictures/'.$slideshow->id.'/'.Str::slug($slideshow->title,'-')) }}">
                             <div style="height:245px; overflow:hidden;">
                                 <img src="https://cdn.standardmedia.co.ke{{ $slideshow->imgURL}}"
                                      data-src="https://cdn.standardmedia.co.ke{{ $slideshow->imgURL}}"
