@@ -15,6 +15,17 @@
                     @include('includes.alert')
                 </div>
 
+                    <div class="offset-md-2 col-md-8 mb-3">
+                        <div style="width:100%;  padding: 0px;">
+                            <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="col span_2_of_3 aut">
 
                         <div class="card bg-white art">
