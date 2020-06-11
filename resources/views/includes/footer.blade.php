@@ -14,7 +14,7 @@
                             {{ csrf_field() }}
                         <input type="text" class="w-75" name="email" placeholder="Enter your email">
 
-                                <button class="btn btn-light subscribe-btn" type="submit">
+                                <button class="btn p-0" type="submit">
                                     <i class="fa fa-chevron-right newslettericon ml-2"></i>
                                 </button>
                         </form>
