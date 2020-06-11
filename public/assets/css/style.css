@@ -2812,6 +2812,15 @@ height: 600px !important;
         top: 246px !important;
     }
 
+    .categ .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+        height: 265px !important;
+        object-fit: cover;
+        width: max-content;
+    }
+
 .sectionhead {
     padding: 1px 8px;
     border: 1px solid grey;
