@@ -76,6 +76,17 @@
     <section id="standard" class="standard-area pt-100 mt-md-3 mt-lg-3 first">
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
 
+            <div class="row">
+                <div class="offset-md-2 col-md-8 mb-3">
+                    <div style="width:100%;  padding: 0px;">
+                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-12 col-sm-12 mt-3">
@@ -176,13 +187,21 @@
                 <div class="col span_1_of_3 text-left">
                     <div class="bg-white p-3">
                         <div class="text-left">
-                            <img src="https://tpc.googlesyndication.com/simgad/68460162182615902" class="mediumad my-4 mt-md-0">
+                            <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
+                                </script>
+                            </div>
                         </div>
 
                         @include('includes.mostread')
 
                         <div class="text-center">
-                            <img src="https://tpc.googlesyndication.com/simgad/68460162182615902" class="mediumad my-4 mt-md-0">
+                            <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837098208-0'); });
+                                </script>
+                            </div>
                         </div>
 
                         @include('includes.videos_section')
