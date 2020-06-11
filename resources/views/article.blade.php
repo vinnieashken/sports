@@ -106,7 +106,7 @@
                 @if(!is_null($article))
                     <div class="col span_2_of_3 aut">
 
-                        <div class="card bg-white art">
+                        <div class="card bg-white art p-3">
                             <div class="card-body">
                                 <h3 class="card-title titles">{{ $article->long_title }}</h3>
                                 <p class="card-text">
