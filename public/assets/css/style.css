@@ -2808,6 +2808,11 @@ height: 600px !important;
     text-align: center !important;
 }
 
+    .catertitle{
+        top: 246px !important;
+
+    }
+
 .sectionhead {
     padding: 1px 8px;
     border: 1px solid grey;
@@ -4678,7 +4683,7 @@ p, body{
         font-size: 25px;
     }
     .logo{
-        width: 100px !important;
+        width: 190px !important;
     }
     .span_4_of_5 {
         width: 100%;
@@ -4793,6 +4798,7 @@ header .nav-link {
 }
 header .fa-home, header .fa-search{
     color: black;
+    font-size: 18px !important;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
     .product-items-active .slick-arrow.next {
@@ -6261,7 +6267,7 @@ iframe{
         font-weight: 600 !important;
         line-height: 1.2 !important;
         margin-bottom: 11px !important;
-        font-size: 22px !important;
+        font-size: 15px !important;
         font-family: caput;
     }
 

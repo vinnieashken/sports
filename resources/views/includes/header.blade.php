@@ -98,7 +98,7 @@
                          alt="Standardmedia logo" class="w140">
                 </a>
                 <a class="nav-link mr-3 ml-auto d-lg-none d-block" onclick="openSearch()"><i
-                        class="fa fa-search mt-1"></i></a>
+                        class="fa fa-search mt-2"></i></a>
                 <button class="navbar-toggler" type="button" onclick="openNavMob()">
                     <i class="fa fa-bars"></i>
                 </button>
