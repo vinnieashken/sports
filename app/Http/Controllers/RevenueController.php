@@ -116,18 +116,19 @@ class RevenueController extends Controller
         $existing = $user->find($objbody->id);
 
         if(is_null($existing))
+        {
             $user->save();
+            Auth::setUser($user);
+            Auth::login($user);
+        }
 
-        dump($objbody);
 
-        dump(( (int) $response->getStatusCode()));
-
-        dump($user);
-
-        return ;
-
-        Auth::setUser($user);
-        Auth::login($user);
+//        dump($objbody);
+//        dump(( (int) $response->getStatusCode()));
+//        dump($user);
+//        return ;
+//
+//
 
         return redirect($url);
     }
