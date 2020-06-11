@@ -118,8 +118,9 @@ class RevenueController extends Controller
         if(is_null($existing))
         {
             $user->save();
-            Auth::setUser($user);
-            Auth::login($user);
+//            Auth::setUser($user);
+//            Auth::login($user);
+            $this->login($request);
         }
 
 

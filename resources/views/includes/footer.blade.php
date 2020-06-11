@@ -14,7 +14,7 @@
                             {{ csrf_field() }}
                         <input type="text" class="w-75" name="email" placeholder="Enter your email">
 
-                                <button class="btn btn-light" type="submit">
+                                <button class="btn btn-light subscribe-btn" type="submit">
                                     <i class="fa fa-chevron-right newslettericon ml-2"></i>
                                 </button>
                         </form>
@@ -154,7 +154,7 @@
                         <input type="hidden" name="url" value="{{ URL::full() }}">
 
                         <div class="form-group my-2">
-                            <input type="text" required class="form-control" name="name" id="name"
+                            <input type="text" required class="form-control custom-input" name="name" id="name"
                                    placeholder="Enter your full name...">
                         </div>
 
@@ -164,7 +164,7 @@
                         </div>
 
                         <div class="form-group my-2">
-                            <input type="text" class="form-control" name="phone" id="phone"
+                            <input type="text" class="form-control custom-input" name="phone" id="phone"
                                    placeholder="Enter your phone number...">
                         </div>
 
