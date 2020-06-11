@@ -6848,7 +6848,20 @@ iframe{
     border: 1px solid;
 }
 
-.breadcrumb{padding:0;background:0 0}
-.page-banner .breadcrumb .breadcrumb-item a{font-size:16px;font-weight:600;color:#fff}
-.page-banner .breadcrumb .breadcrumb-item.active{font-size:16px;font-weight:600;color:#ee2e24}
-.page-banner .breadcrumb .breadcrumb-item+.breadcrumb-item::before{color:#fff}
+.breadcrumb{
+    padding:0;
+    background:0 0
+}
+.page-banner .breadcrumb .breadcrumb-item a{
+    font-size:16px;
+    font-weight:600;
+    color:#fff
+}
+.page-banner .breadcrumb .breadcrumb-item.active{
+    font-size:16px;
+    font-weight:600;
+    color:#ee2e24
+}
+.page-banner .breadcrumb .breadcrumb-item+.breadcrumb-item::before{
+    color:#fff
+}
