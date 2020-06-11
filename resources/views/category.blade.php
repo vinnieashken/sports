@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="col span_1_of_3 group text-left">
-                    <div class="text-center">
+                    <div class="text-center mb-2">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
