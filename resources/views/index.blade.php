@@ -287,7 +287,7 @@
                             <a style="color: #000;" href="#">{{ $slideshow->title }} </a>
                         </h4>
                         <small class="text-muted mt-2">
-                            <span class="text-danger fa fa-calender"></span>21<sup>st</sup> April 2020
+                            <span class="text-danger fa fa-calender"></span>{{ date_create($slideshow->publishdate)->format('d-F-Y') }}
                         </small>
                     </div>
                 </div>

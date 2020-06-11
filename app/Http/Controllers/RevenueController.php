@@ -101,7 +101,7 @@ class RevenueController extends Controller
 
         //return ;
 
-        if(property_exists($objbody ,'message'))
+        if(property_exists($objbody ,'message') && (int)($response->getStatusCode()) > 250)
         {
             $request->session()->flash('registrationerror', $objbody->message);
 
