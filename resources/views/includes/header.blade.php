@@ -132,7 +132,7 @@
                                    href="{{ url('/') }}"><i class="fa fa-home"></i></a>
                             </li>
                             <li class="nav-item  d-none d-md-block d-lg-block">
-                                <a class="nav-link" href="" onclick="openSearch()"><i
+                                <a class="nav-link" onclick="openSearch()"><i
                                         class="fa fa-search"></i></a>
                             </li>
 
