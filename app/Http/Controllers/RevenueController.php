@@ -111,16 +111,20 @@ class RevenueController extends Controller
         $user->name = $objbody->name;
         $user->phone = $phone;
 
-        dump($objbody);
 
-        dump(( (int) $response->getStatusCode()));
-
-        return ;
 
         $existing = $user->find($objbody->id);
 
         if(is_null($existing))
             $user->save();
+
+        dump($objbody);
+
+        dump(( (int) $response->getStatusCode()));
+
+        dump($user);
+
+        return ;
 
         Auth::setUser($user);
         Auth::login($user);
