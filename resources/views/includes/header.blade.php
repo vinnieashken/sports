@@ -133,7 +133,7 @@
                             </li>
                             <li class="nav-item  d-none d-md-block d-lg-block">
                                 <a class="nav-link" onclick="openSearch()"><i
-                                        class="fa fa-search"></i></a>
+                                        class="fa fa-search pointer"></i></a>
                             </li>
 
                             @foreach($categories->top as $category)

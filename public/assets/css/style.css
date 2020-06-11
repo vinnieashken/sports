@@ -6888,3 +6888,7 @@ iframe{
 .subscribe-btn :hover{
     background: none !important;
 }
+
+.pointer{
+    cursor: pointer !important;
+}
