@@ -134,8 +134,8 @@
                 </div>
 
 
-                <div class="col-lg-4 col-md-4 text-left mb-2">
-                    <div class="text-center">
+                <div class="col-lg-4 col-md-4 text-left ">
+                    <div class="text-center mb-2">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
@@ -148,7 +148,7 @@
                     @include('includes.social')
 
                     <div class="my-4">
-                        <div class="text-center">
+                        <div class="text-center mb-2">
                             <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;'>
                                 <script>
                                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837098208-0'); });
