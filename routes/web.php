@@ -22,6 +22,7 @@ Route::get('/videos','HomeController@videos');
 Route::get('/video/{id}/{slug}','HomeController@video');
 
 Route::get('/{category_slug}/{id}/{slug}','HomeController@article');
+Route::get('/slideshow/pictures/{id}/{slug}','HomeController@pictures');
 
 Route::post('/login','RevenueController@login');
 Route::post('/register','RevenueController@register');

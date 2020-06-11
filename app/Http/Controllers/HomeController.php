@@ -161,6 +161,15 @@ class HomeController extends Controller
         return view('video',['categories'=>$categories,'videos'=> $videos,'stories' => $stories]);
     }
 
+    public function pictures($id,$slug)
+    {
+        $menu = new Menu();
+        $categories = $menu->getCategories();
+        $slideshows = new SlideShows();
+        $pictures = $slideshows->getPictures($id);
+        return view('slideshow',['categories'=>$categories,'pictures'=> $pictures]);
+    }
+
     public function search(Request $request)
     {
         $menu = new Menu();
