@@ -27,14 +27,14 @@
         <nav class="text-center bg-success">
             <ul class="navbar-nav justify-content-center p-3">
                 <li class="nav-item from">
-                    GameYetu from <img src="{{ asset('assets/images/logo.png') }}"
+                    Sports from <img src="{{ asset('assets/images/logo.png') }}"
                                        class="ml-2 w-25">
                 </li>
             </ul>
         </nav>
         <div class=" bg-grey pl-3 w-100">
             <div class="container">
-                <div class="row  bg-grey w-100">
+                <div class="row  bg-grey w-100 p-2">
                     <div class="mx-auto col-xs-12">
                         <ul class="nav nav-inline ">
                             <li class="nav-item">
