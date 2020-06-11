@@ -16,12 +16,11 @@
             <div class="row my-2">
             </div>
             <div class="row">
-                <div class="ad-728-90 offset-md-2 col-md-8 mb-3 d-none d-md-block d-lg-block">
+                <div class="offset-md-2 col-md-8 mb-3">
                     <div style=" width:100%;  padding: 0px;">
-
-                        <div id='div-gpt-ad-1486010480522-0' style='height:90px; width:728px;margin:0px auto 0px auto'>
+                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
                             <script>
-                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1486010480522-0'); });
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
                             </script>
                         </div>
                     </div>
@@ -29,7 +28,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-sm-12 aut">
-                    <h2 class="d-none text-succes mb-3 w-75">Has Paul Pogba changed his mind on leaving Man United?</h2>
+                    <h2 class="text-succes mb-3 w-75">{{ $show->title }}</h2>
                     <!--                <div class="justify-content-around"><span>uytguytguy</span><span>uytguytguy</span><span>uytguytguy</span></div>-->
                     <div class="row">
 

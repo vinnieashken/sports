@@ -167,7 +167,8 @@ class HomeController extends Controller
         $categories = $menu->getCategories();
         $slideshows = new SlideShows();
         $pictures = $slideshows->getPictures($id);
-        return view('slideshow',['categories'=>$categories,'pictures'=> $pictures]);
+        $slideshow = $slideshows->getSlideShow($id);
+        return view('slideshow',['categories'=>$categories,'pictures'=> $pictures,'show'=> $slideshow]);
     }
 
     public function search(Request $request)

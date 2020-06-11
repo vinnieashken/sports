@@ -15,6 +15,11 @@ class SlideShows
             ->get(['id','title','imgURL','publishdate']);
     }
 
+    public function getSlideShow($id)
+    {
+        return SlideShow::on('mysql')->where('id',$id)->get(['id','title','imgURL','publishdate'])->first();
+    }
+
     public function getPictures($slideshowid)
     {
         return SlideShowPicture::on('mysql')->orderBy('listorder','ASC')->where('slideshowid',$slideshowid)->get(['id','title','imgURL','description']);
