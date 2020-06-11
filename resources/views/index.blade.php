@@ -29,7 +29,7 @@
                     @include('includes.alert')
                 </div>
 
-                <div class="col-md-8 mb-3 d-none d-md-block d-lg-block">
+                <div class="col-md-8 mb-3">
                     <div style=" width:100%;  padding: 0px;">
                         <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
                             <script>
@@ -135,9 +135,14 @@
 
                     </div>
                 </div>
+                <!---- advert 2 ---->
                 <div class="col-12 col-md-4">
                     <div class="text-center">
-                        <img src="https://tpc.googlesyndication.com/simgad/68460162182615902" class="mediumad my-4 mt-md-0">
+                        <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
+                            <script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
+                            </script>
+                        </div>
                     </div>
                     @include('includes.mostread')
 
