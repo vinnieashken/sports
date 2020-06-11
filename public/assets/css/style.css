@@ -6866,7 +6866,7 @@ iframe{
     color:#fff
 }
 
-.media-body input[type=text] {
+ input[type=text] {
     padding: 15px;
     font-size: 17px;
     border: 1px solid #d8d8d8;

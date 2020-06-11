@@ -152,22 +152,27 @@
                     <form method="post" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <input type="hidden" name="url" value="{{ URL::full() }}">
+
                         <div class="form-group my-2">
                             <input type="text" required class="form-control" name="name" id="name"
                                    placeholder="Enter your full name...">
                         </div>
+
                         <div class="form-group my-2">
                             <input type="email" required class="form-control" name="email" id="email"
                                    placeholder="Enter your email address...">
                         </div>
+
                         <div class="form-group my-2">
                             <input type="text" class="form-control" name="phone" id="phone"
                                    placeholder="Enter your phone number...">
                         </div>
+
                         <div class="form-group my-2">
                             <input type="password" required class="form-control" name="password" id="password"
                                    placeholder="Enter your password...">
                         </div>
+
                         <div class="form-group my-2">
                             <input type="password" required class="form-control" name="password_confirmation"
                                    id="password_confirmation" placeholder="Confirm your password...">
