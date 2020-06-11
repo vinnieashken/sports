@@ -13,7 +13,7 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNav()">&times;</a>
-        <a class="navheading">Game Yetu</a>
+        <a class="navheading">Sports</a>
 
         @foreach($categories->more as $category)
         <a href="{{ url('category/'.$category->id.'/'.Str::slug($category->name,'-')) }}">{{$category->name}}</a>
@@ -48,7 +48,26 @@
     </div>
     <!--sidenav phone ipad & tablet-->
     <div id="mySidenavMob" class="sidenav sidenavMob">
-        <a href="#" class="profile"><i class="fa fa-user-circle-o"></i> Hi Nicodemus</a>
+
+        @if(\Illuminate\Support\Facades\Auth::check())
+            <li class="nav-item dropdown active">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre="">
+                    {{ Auth::user()->name }}
+                    <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-right" href="{{ url('/logout') }}">
+                        Logout
+                    </a>
+                </div>
+            </li>
+        @else
+            <a data-scroll-nav="0" class="nav-link sectionborder" data-toggle="modal"
+               data-dismiss="modal" data-target="#loginModal" href="#">Login</a>
+        @endif
+
+{{--        <a href="#" class="profile"><i class="fa fa-user-circle-o"></i> Hi Nicodemus</a>--}}
+
         <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNavMob()">&times;</a>
         <a class="bg-dark text-white" onclick="openNav()"><i class="fa fa-bars text-white"></i> Sections</a>
 
@@ -131,7 +150,7 @@
                                         <span class="caret"></span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('/logout') }}">
+                                        <a class="dropdown-item text-right" href="{{ url('/logout') }}">
                                             Logout
                                         </a>
                                     </div>
