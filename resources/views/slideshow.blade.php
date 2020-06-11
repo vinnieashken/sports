@@ -3,11 +3,11 @@
 @extends('includes.layout')
 
 @section('title')
-    {{ ' ' }}
+    {{ $show->title }}
 @endsection
 
 @section('description')
-    {{ ' '  }}
+    {{ $pictures->first()->description }}
 @endsection
 
 @section('content')
