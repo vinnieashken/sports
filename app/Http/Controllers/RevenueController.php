@@ -127,8 +127,7 @@ class RevenueController extends Controller
 //        dump(( (int) $response->getStatusCode()));
 //        dump($user);
 //        return ;
-//
-//
+        $request->session()->flash('loginerror', 'success! Login to continue');
 
         return redirect($url);
     }
