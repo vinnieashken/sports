@@ -77,6 +77,11 @@
         <div class="container mx-auto mt-5 mt-lg-0 mt-md-5">
 
             <div class="row">
+
+            </div>
+
+            <div class="row justify-content-center mt-5">
+
                 <div class="offset-md-2 col-md-8 mb-3">
                     <div style="width:100%;  padding: 0px;">
                         <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
@@ -86,9 +91,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row justify-content-center mt-5">
                 <div class="col-md-12 col-sm-12 mt-3">
                     @include('includes.alert')
                 </div>
