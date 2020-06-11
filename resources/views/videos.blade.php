@@ -2,11 +2,11 @@
 @extends('includes.layout')
 
 @section('title')
-    | home
+    Videos
 @endsection
 
-@section('metas')
-    <meta name="keywords" content="Man kyura,Toma, dick, harry">
+@section('description')
+
 @endsection
 
 @section('content')
