@@ -97,11 +97,7 @@ class RevenueController extends Controller
         $body = $response->getBody()->getContents();
         $objbody = json_decode($body);
 
-        dump($objbody);
 
-        dump(( (int) $response->getStatusCode()));
-
-        return ;
 
         if(property_exists($objbody ,'message') && ( (int) $response->getStatusCode()) > 250)
         {
@@ -114,6 +110,12 @@ class RevenueController extends Controller
         $user->email = $objbody->email;
         $user->name = $objbody->name;
         $user->phone = $phone;
+
+        dump($objbody);
+
+        dump(( (int) $response->getStatusCode()));
+
+        return ;
 
         $existing = $user->find($objbody->id);
 
