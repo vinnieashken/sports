@@ -188,7 +188,7 @@
                 @endif
                 <div class="col span_1_of_3 text-left">
                     <div class="bg-white p-3">
-                        <div class="text-left">
+                        <div class="text-left mb-2">
                             <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
                                 <script>
                                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });

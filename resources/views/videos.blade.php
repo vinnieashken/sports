@@ -134,7 +134,7 @@
                 </div>
 
 
-                <div class="col-lg-4 col-md-4 text-left">
+                <div class="col-lg-4 col-md-4 text-left mb-2">
                     <div class="text-center">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
                             <script>
