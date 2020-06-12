@@ -298,9 +298,10 @@
     </section>
 
     <section class="whitecards">
+
         <div class="container">
-            <div class="section group">
-                <div class="span_3_of_4 col">
+            <div class="row">
+                <div class="col-md-8">
                     <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">WOMEN IN SPORTS</h4>
                     <div class="card-deck p-0">
                         @foreach($stories->volley as $article)
@@ -354,7 +355,7 @@
                     </div>
 
                 </div>
-                <div class="span_1_of_4_diff mb-4 col group">
+                <div class="col-md-4">
                     <div class="span_1_of_2_diff col">
                         <div class="text-center">
                             <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;'>
@@ -374,7 +375,6 @@
                     </div>
 
                 </div>
-
 
                 <hr class="my-4">
             </div>
