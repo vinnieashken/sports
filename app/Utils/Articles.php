@@ -90,7 +90,7 @@ class Articles
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->where('id','!=',$id)->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+        return $related->whereKeyNot((int)$id)->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
     public function renderInAds($story,$collection)
