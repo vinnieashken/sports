@@ -118,8 +118,8 @@ class HomeController extends Controller
             }
 
         }
-        dump($stories->related->count());
-        return;
+//        dump($stories->related->count());
+//        return;
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 

@@ -193,15 +193,10 @@
                                 <section>
 
                                     <div class="container py-2 my-1">
-                                        @if(count($stories->related) == 1 && $stories->related->first()->id !== $article->id)
                                         <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
-                                        @elseif(count($stories->related) > 1 )
-                                            <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
-                                        @endif
 
                                         <div class="owl-carousel slideShow py-1">
                                             @foreach($stories->related as $rarticle)
-                                                @if($rarticle->id !== $article->id)
                                                 <div class="card bg-dark text-white">
                                                     <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
                                                         <img class="card-img px300" style="height: 300px !important;"
@@ -218,7 +213,6 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                @endif
                                             @endforeach
 
                                         </div>
