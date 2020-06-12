@@ -111,7 +111,7 @@ class HomeController extends Controller
 
             foreach ($latest as $item)
             {
-                if($item->id !== $id)
+                if((int)$item->id !== (int)$id)
                 {
                     $stories->related->push($item);
                 }
