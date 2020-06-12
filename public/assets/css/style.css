@@ -6862,6 +6862,7 @@ iframe{
     border: 1px solid;
 }
 
+/********** Additions   */
 .breadcrumb{
     padding:0;
     background:0 0
@@ -6905,4 +6906,96 @@ iframe{
 
 .pointer{
     cursor: pointer !important;
+}
+
+.mainimg h3 a {
+    color: #000000 !important;
+    padding: 4%;
+    font-size: 32px;
+    font-weight: 800;
+}
+.single-standard .standard-content .content .title a {
+    padding-left: 0px;
+    color: #6f6f6f;
+    font-size: 17px!important;
+    font-family: Caput;
+    line-height: 36px;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+.mainimg h4 a:hover {
+    font-size: 17px !important;
+    color: #313131;
+    line-height: 1.3 !important;
+    font-weight: 400;
+    padding: 0% 1% 3%;
+}
+.mainimg h4 a {
+    font-size: 18px !important;
+    color: #313131;
+    line-height: 1.3 !important;
+    font-weight: 400;
+    padding: 0% 1% 3%;
+}
+.national img {
+    height: 150px;
+    object-fit: cover;
+}
+.newslettericon {
+    color: black;
+    border: 2px solid black;
+    padding: 8px 11px;
+}
+.vida {
+    position: absolute;
+    color: #31b114;
+    background: #fbfbfbde;
+    padding: 3% 4%;
+    font-size: 17px;
+    top: 205px;
+}
+.videos .black-two {
+    color: #31b114;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 11px !important;
+    font-size: 21px !important;
+    font-family: caput;
+}
+@media (max-width: 768px){
+    .national img {
+        height: 131px !important;
+        object-fit: cover;
+    }
+}
+
+@media (width: 768px){
+    .border-design .black {
+        color: #3b3b3b;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+        padding-top: 0 !important;
+        font-size: 15px !important;
+        font-family: Periodico!important;
+        margin: -36px 0 0 45px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 600px){
+    .whitecards .card img {
+        height: 240px !important;
+    }
+    .w140 {
+        width: 238px;
+        margin: 3px 0 3% 0;
+    }
+}
+
+.gsc-selected-option-container {
+
+    max-width: 100%;
+    min-width: 54px;
+
 }

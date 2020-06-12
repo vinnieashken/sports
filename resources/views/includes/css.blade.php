@@ -52,6 +52,7 @@
         var gameyetuleaderboard = googletag.defineSlot('/24409412/gameyetu_home_leaderboard2', [728, 90], 'div-gpt-ad-1487330276546-0').defineSizeMapping(leaderboard1).addService(googletag.pubads());
 
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
         googletag.enableServices();
     });
 </script>

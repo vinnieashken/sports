@@ -206,8 +206,14 @@
 
                 <div class="col span_1_of_3 mb-4 group">
                     <div class="span_1_of_2_diff col">
-                        <div class="text-center">
-                            <img src="https://tpc.googlesyndication.com/simgad/68460162182615902" class="mediumad my-4 mt-md-0">
+                        <div class="text-center mb-2">
+
+                            <div id='div-gpt-ad-1485837217066-0' style='width:100%;margin:auto;'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837217066-0'); });
+                                </script>
+                            </div>
+
                         </div></div>
                     <div class="span_1_of_2_diff col">
                         <h4 class="section-heading  mt-4">TWITTER FEEDS</h4>
