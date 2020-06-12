@@ -104,17 +104,11 @@ class HomeController extends Controller
 
         if($stories->related->count() < 4)
         {
-
-            $latest = $articles->getLatest( (4 - $stories->related->count()),0);
-            //dump($stories->related->count());
-            //return;
+            $latest = $articles->getLatestExcept($id, (4 - $stories->related->count()),0);
 
             foreach ($latest as $item)
             {
-                if((int)$item->id !== (int)$id)
-                {
-                    $stories->related->push($item);
-                }
+                $stories->related->push($item);
             }
 
         }
