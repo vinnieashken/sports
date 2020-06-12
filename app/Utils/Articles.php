@@ -67,7 +67,7 @@ class Articles
 
     public function getRelatedArticles($id,$size,$offset = 0)
     {
-        $article = Article::where('id',$id)->get(['id','title','story','keywords','thumbURL','publishday','author'])->first();
+        $article = Article::where('id',$id)->get(['id','title','keywords','thumbURL','publishday','author'])->first();
 
         $related = Article::query();
 
@@ -80,7 +80,7 @@ class Articles
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','story','keywords','thumbURL','publishday','author']);
+        return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
     }
 
     public function renderInAds($story,$collection)
