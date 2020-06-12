@@ -126,32 +126,32 @@
                     <div class="col span_2_of_3 aut">
 
                         <div class="card bg-white art p-3">
-                            <div class="d-flex justify-content-between my-1">
-                                <div>
-                                    <div class="socialmedia-buttons btn-group">
-                                        <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="btn btn-facebook rounded-0 text-white">
-                                            <span class="fa fa-facebook"></span>
-                                        </a>
-                                        <a href="https://twitter.com/share?url={{ url()->current() }}&hashtags={{ ' ' }}&text={{ urlencode($article->title) }}" class="btn btn-twitter rounded-0 text-white">
-                                            <span class="fa fa-twitter texu-white"></span>
-                                        </a>
-                                        <a href="https://telegram.me/share/url?url={{ url()->current() }}&text={{  $article->title }}" class="btn btn-telegram rounded-0 text-white">
-                                            <span class="fa fa-telegram"></span>
-                                        </a>
-                                        <a href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
-                                            <span class="fa fa-whatsapp"></span>
-                                        </a>
-                                        <a href="" class="btn btn-linkedin rounded-0 text-white">
-                                            <span  class="fa fa-linkedin"></span>
-                                        </a>
-                                        <a href="" class="btn btn-email rounded-0 text-white">
-                                            <span  class="fa fa-envelope"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="card-body">
                                 <h3 class="card-title titles">{{ $article->long_title }}</h3>
+                                <div class="d-flex justify-content-between my-1">
+                                    <div>
+                                        <div class="socialmedia-buttons btn-group">
+                                            <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="btn btn-facebook rounded-0 text-white">
+                                                <span class="fa fa-facebook"></span>
+                                            </a>
+                                            <a href="https://twitter.com/share?url={{ url()->current() }}&hashtags={{ ' ' }}&text={{ urlencode($article->title) }}" class="btn btn-twitter rounded-0 text-white">
+                                                <span class="fa fa-twitter texu-white"></span>
+                                            </a>
+                                            <a href="https://telegram.me/share/url?url={{ url()->current() }}&text={{  $article->title }}" class="btn btn-telegram rounded-0 text-white">
+                                                <span class="fa fa-telegram"></span>
+                                            </a>
+                                            <a href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
+                                                <span class="fa fa-whatsapp"></span>
+                                            </a>
+                                            <a href="" class="btn btn-linkedin rounded-0 text-white">
+                                                <span  class="fa fa-linkedin"></span>
+                                            </a>
+                                            <a href="" class="btn btn-email rounded-0 text-white">
+                                                <span  class="fa fa-envelope"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="card-text">
                                     <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }}</small>
                                 </p>
@@ -179,7 +179,7 @@
                                                 <div class="mx-auto w-100">
                                                     <div id="fb-root"></div>
                                                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
-                                                    <div class="fb-comments w-100" data-href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
+                                                    <div class="fb-comments w-100" data-href="{{ urlencode(url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'))) }}" data-width="100%" data-numposts="30"></div>
                                                     <div class="contact-form w-100">
 
                                                     </div>
