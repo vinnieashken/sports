@@ -97,7 +97,7 @@ class Articles
             if($x%3==0){
 
                 if($key < $size)
-                    $result .= $adbegin.$collection->nth($key)->title.$adend;
+                    $result .= $adbegin.$collection->nth($key+1)->title.$adend;
             }
             $x++;
         }
