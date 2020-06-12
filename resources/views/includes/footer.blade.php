@@ -27,7 +27,7 @@
         <nav class="text-center bg-success">
             <ul class="navbar-nav justify-content-center p-3">
                 <li class="nav-item from">
-                    Sports from <img src="{{ asset('assets/images/logo.png') }}"
+                    Sports from <img src="{{ asset('assets/images/footerlogo.jpeg') }}"
                                        class="ml-2 w-25">
                 </li>
             </ul>
