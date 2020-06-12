@@ -106,20 +106,17 @@ class HomeController extends Controller
         {
 
             $latest = $articles->getLatest( (4 - $stories->related->count()),0);
-            //dump($latest);
+            //dump($stories->related->count());
+            //return;
 
-            foreach ($latest as $key => $item)
+            foreach ($latest as $item)
             {
-                //if($item->id == $id)
-                   //$latest->forget($key);
+                if($item->id !== $id)
+                {
+                    $stories->related->push($item);
+                }
             }
 
-            $latest->merge($stories->related);
-
-            $stories->related->merge($latest);
-            dump($latest);
-            dump($stories->related);
-            return;
         }
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
