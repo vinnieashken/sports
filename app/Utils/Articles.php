@@ -84,7 +84,7 @@ class Articles
 
     public function renderInAds($story,$collection)
     {
-        dump($collection->nth(0));
+        dump($collection->nth(1));
         return;
 
         $adbegin ='<p class="card-text">   SEE ALSO: ';
