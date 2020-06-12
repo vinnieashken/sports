@@ -6993,9 +6993,21 @@ iframe{
     }
 }
 
+@media (min-width: 1200px) {
+    .diff .vidasmall {
+        position: absolute;
+        color: #31b114;
+        background: #fbfbfbde;
+        padding: 1% 2%;
+        font-size: 17px;
+        margin-top: 22%;
+    }
+}
+
 .gsc-selected-option-container {
 
     max-width: 100%;
     min-width: 54px;
 
 }
+
