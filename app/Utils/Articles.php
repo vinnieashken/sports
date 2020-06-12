@@ -96,6 +96,8 @@ class Articles
         return $related->whereIn('categoryid',$categories)->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday'])
             ->reject(function ($item) use ($id) {
                 return $item->id == $id;
+            })->reject(function ($item) use ($categories){
+                return !in_array($item->categoryid,$categories);
             });
     }
 
