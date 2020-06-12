@@ -108,10 +108,10 @@ class HomeController extends Controller
             $latest = $articles->getLatest( (4 - $stories->related->count()),0);
             //dump($latest);
 
-            foreach ($latest as $item)
+            foreach ($latest as $key => $item)
             {
                 if($item->id == $id)
-                   $latest->forget($loop->index);
+                   $latest->forget($key->index);
             }
 
             $stories->related->merge($latest);
