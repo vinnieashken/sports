@@ -163,7 +163,7 @@
                             <div class="card-body">
 
                                 <div>
-                                    {!! $articles->renderInAds($article->story) !!}
+                                    {!! $articles->renderInAds($article->story,$stories->related) !!}
                                 </div>
                             </div>
 

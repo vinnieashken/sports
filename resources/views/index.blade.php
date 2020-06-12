@@ -16,10 +16,6 @@
     {{ trim('Standard Group PLC') }}
 @endsection
 
-@section('metas')
-    <meta name="keywords" content="Man kyura,Toma, dick, harry">
-@endsection
-
 @section('content')
     <section id="standard" class="standard-area pt-100 mt-md-2 mt-lg-3 homept home first">
         <div class="container mx-auto mt-4 mt-lg-0 mt-md-5">

@@ -82,9 +82,12 @@ class Articles
         return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','story','keywords','thumbURL','publishday','author']);
     }
 
-    public function renderInAds($story)
+    public function renderInAds($story,$collection)
     {
-        $ad ='<p class="card-text">   SEE ALSO: Ashken Rocks (^_^) !!!!</p>';
+        $adbegin ='<p class="card-text">   SEE ALSO: ';
+        $adend = ' </p>';
+        $size = $collection->count();
+
         $story = explode('</p>',$story);
         $x = 0;
         $result ='';
@@ -92,7 +95,9 @@ class Articles
         {
             $result .= $value;
             if($x%3==0){
-                $result .= '';
+
+                if($loop->index < $size)
+                    $result .= $adbegin.$collection->nth($loop->index)->title.$adend;
             }
             $x++;
         }
