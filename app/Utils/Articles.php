@@ -87,8 +87,9 @@ class Articles
         //dump($collection->nth(1));
         //return;
 
-        $adbegin ='<p class="card-text">   SEE ALSO: ';
-        $adend = ' </p>';
+        $adbegin ='<p class="card-text"> <a href="';
+        $middle = '"> SEE ALSO: ';
+        $adend = ' </a>  </p>';
         $size = $collection->count();
 
         $story = explode('</p>',$story);
@@ -100,7 +101,12 @@ class Articles
             if($x%3==0){
 
                 if($key < $size)
-                    $result .= $adbegin.$collection->get($key)->title.$adend;
+                {
+                    $article = $collection->get($key);
+                    $url = url(Str::slug($this->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'))
+                    $result .= $adbegin.$url.$middle.$article->title.$adend;
+                }
+
             }
             $x++;
         }
