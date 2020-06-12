@@ -84,6 +84,7 @@ class Articles
 
     public function renderInAds($story)
     {
+        $ad ='<p class="card-text">   SEE ALSO: Ashken Rocks (^_^) !!!!</p>';
         $story = explode('</p>',$story);
         $x = 0;
         $result ='';
@@ -91,7 +92,7 @@ class Articles
         {
             $result .= $value;
             if($x%3==0){
-                $result .= '<p class="card-text">   SEE ALSO: Ashken Rocks (^_^) !!!!</p>';
+                $result .= '';
             }
             $x++;
         }
