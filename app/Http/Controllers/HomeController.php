@@ -110,11 +110,12 @@ class HomeController extends Controller
 
             foreach ($latest as $key => $item)
             {
-                if($item->id == $id)
-                   $latest->forget($key);
+                //if($item->id == $id)
+                   //$latest->forget($key);
             }
 
             $stories->related->merge($latest);
+            dump($latest);
             dump($stories->related);
             return;
         }
