@@ -83,9 +83,7 @@ class Articles
 
         $keywords = explode(';',$article->keywords);
 
-        $related->orderBy('publishdate','DESC')
-            ->whereNotIn('id',[(int)$id])
-            ->where('keywords', 'LIKE', '%'.$keywords[0].'%');
+        $related->orderBy('publishdate','DESC')->where('keywords', 'LIKE', '%'.$keywords[0].'%');
 
         foreach(array_slice($keywords,1,count($keywords) - 1 ) as $keyword){
 
@@ -98,7 +96,7 @@ class Articles
             });
     }
 
-    public function renderInAds($story,$collection)
+    public function renderInAds($story,$collection,$count = 3)
     {
         //dump($collection->nth(1));
         //return;
@@ -114,7 +112,7 @@ class Articles
         foreach($story as $key => $value)
         {
             $result .= $value;
-            if($x%3==0){
+            if($x % $count == 0){
 
                 if($key < $size)
                 {
