@@ -79,6 +79,9 @@ class Articles
     {
         $article = Article::where('id',$id)->get(['id','title','keywords','thumbURL','publishday','author'])->first();
 
+        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
+        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
+
         $related = Article::query();
 
         $keywords = explode(';',$article->keywords);
@@ -90,7 +93,7 @@ class Articles
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday'])
+        return $related->whereIn('categoryid',$categories)->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday'])
             ->reject(function ($item) use ($id) {
                 return $item->id == $id;
             });
