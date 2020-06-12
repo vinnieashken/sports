@@ -97,7 +97,7 @@
 
                 <div class="col-md-12 col-sm-12">
                     <nav aria-label="breadcrumb ">
-                        <ol class="breadcrumb">
+                        <ol class="breadcrumb pl-2">
                             <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                             <li class="breadcrumb-item"><a href="{{ url('/category/'.$articles->getCategory($article->categoryid)->id.'/'.\Illuminate\Support\Str::slug($articles->getCategory($article->categoryid)->name)) }}">{{ $articles->getCategory($article->categoryid)->name }}</a></li>
                         </ol>
