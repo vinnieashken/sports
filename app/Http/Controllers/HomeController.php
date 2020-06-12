@@ -100,7 +100,22 @@ class HomeController extends Controller
         $videos = new Videos();
         $article = $articles->getArticle($id);
         $stories = new \stdClass();
-        $stories->related = $articles->getRelatedArticles($id,2,0);
+        $stories->related = $articles->getRelatedArticles($id,4,0);
+
+        if($stories->related->count() < 4)
+        {
+
+            $latest = $articles->getLatest( (4 - $stories->related->count()),0);
+            dump($latest);
+            return;
+
+            foreach ($latest as $item)
+            {
+                //if($item->id == $id)
+                   // $latest->forget($loop->index);
+            }
+            $stories->related->merge($latest);
+        }
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
