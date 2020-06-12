@@ -91,13 +91,13 @@ class Articles
         $story = explode('</p>',$story);
         $x = 0;
         $result ='';
-        foreach($story as $value)
+        foreach($story as $key => $value)
         {
             $result .= $value;
             if($x%3==0){
 
-                if($loop->index < $size)
-                    $result .= $adbegin.$collection->nth($loop->index)->title.$adend;
+                if($key < $size)
+                    $result .= $adbegin.$collection->nth($key)->title.$adend;
             }
             $x++;
         }
