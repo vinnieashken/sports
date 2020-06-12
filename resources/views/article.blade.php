@@ -19,6 +19,25 @@
 @endsection
 
 @section('content')
+
+    <script>
+        window._io_config = window._io_config || {};
+        window._io_config["0.2.0"] = window._io_config["0.2.0"] || [];
+        window._io_config["0.2.0"].push({
+            page_url: "{{ URL::full() }}",
+            page_url_canonical: "{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}",
+            page_title: "{{ $article->title }}",
+            page_type: "article",
+            page_language: "en",
+            article_authors: ["{{ $article->author }}","100"],
+            article_categories: ["SPORTS"],
+            article_subcategories: ["{{ $articles->getCategory($article->categoryid)->name }} "],
+            article_type: "longread",
+            article_word_count: "{{ str_word_count($article->story) }}",
+            article_publication_date: "{{ $article->publishdate }}"
+        });
+    </script>
+
     <script type="application/ld+json">
 {
    "@context": "http://schema.org",
