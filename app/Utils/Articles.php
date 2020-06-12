@@ -80,7 +80,7 @@ class Articles
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
+        return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday');
     }
 
     public function renderInAds($story,$collection)
