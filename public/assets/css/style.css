@@ -7004,6 +7004,10 @@ iframe{
     }
 }
 
+figcaption {
+    padding-top: 2%;
+}
+
 .gsc-selected-option-container {
 
     max-width: 100%;
