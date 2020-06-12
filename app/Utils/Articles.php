@@ -82,8 +82,11 @@ class Articles
         return $related->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)->get(['id','categoryid','title','story','keywords','thumbURL','publishday','author']);
     }
 
-    public function renderInAds($story,&$collection)
+    public function renderInAds($story,$collection)
     {
+        dump($collection);
+        return;
+
         $adbegin ='<p class="card-text">   SEE ALSO: ';
         $adend = ' </p>';
         $size = $collection->count();
