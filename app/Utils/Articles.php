@@ -103,7 +103,7 @@ class Articles
                 if($key < $size)
                 {
                     $article = $collection->get($key);
-                    $url = url(Str::slug($this->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'))
+                    $url = url(Str::slug($this->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'));
                     $result .= $adbegin.$url.$middle.$article->title.$adend;
                 }
 
