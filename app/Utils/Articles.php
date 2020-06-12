@@ -8,6 +8,7 @@ use App\Models\Article;
 use App\Models\Category;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class Articles
 {
