@@ -92,7 +92,10 @@ class Articles
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+        return $related->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday'])
+            ->reject(function ($item) use ($id) {
+                return $item->id == $id;
+            });
     }
 
     public function renderInAds($story,$collection)
