@@ -114,6 +114,8 @@ class HomeController extends Controller
                    //$latest->forget($key);
             }
 
+            $latest->merge($stories->related);
+
             $stories->related->merge($latest);
             dump($latest);
             dump($stories->related);
