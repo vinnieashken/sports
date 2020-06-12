@@ -84,8 +84,8 @@ class Articles
 
     public function renderInAds($story,$collection)
     {
-        dump($collection->nth(1));
-        return;
+        //dump($collection->nth(1));
+        //return;
 
         $adbegin ='<p class="card-text">   SEE ALSO: ';
         $adend = ' </p>';
@@ -100,7 +100,7 @@ class Articles
             if($x%3==0){
 
                 if($key < $size)
-                    $result .= $adbegin.$collection->nth($key+1)->title.$adend;
+                    $result .= $adbegin.$collection->get($key)->title.$adend;
             }
             $x++;
         }
