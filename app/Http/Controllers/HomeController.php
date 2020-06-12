@@ -108,7 +108,7 @@ class HomeController extends Controller
 
             foreach ($latest as $item)
             {
-                $stories->related->push($item);
+                //$stories->related->push($item);
             }
 
         }
