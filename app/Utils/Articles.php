@@ -122,8 +122,12 @@ class Articles
                 if($key < $size)
                 {
                     $article = $collection->get($key);
-                    $url = url(Str::slug($this->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'));
-                    $result .= $adbegin.$url.$middle.$article->title.$adend;
+                    if(!is_null($article))
+                    {
+                        $url = url(Str::slug($this->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'));
+                        $result .= $adbegin.$url.$middle.$article->title.$adend;
+                    }
+
                 }
 
             }
