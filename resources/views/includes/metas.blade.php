@@ -36,7 +36,7 @@
 <meta name="developer:email" content="vinnieashken@gmail.com" >
 <meta name="designer" content="Prestone Otieno">
 <meta name="designer:email" content="prestone@gmail.com" >
-<meta name="site-live" content="02:00:45 11-12-2018" />
+<meta name="site-live" content="02:00:45 11-06-2020" />
 
 
 

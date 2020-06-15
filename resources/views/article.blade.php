@@ -14,9 +14,7 @@
 @section('author')
     {{trim($article->author)}}
 @endsection
-@section('image')
-    {{'https://cdn.standardmedia.co.ke'.$article->thumbURL}}
-@endsection
+@section('image','https://cdn.standardmedia.co.ke'.$article->thumbURL)
 
 @section('amp')
 <link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
