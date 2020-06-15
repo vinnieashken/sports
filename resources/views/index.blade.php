@@ -1,7 +1,7 @@
 @extends('includes.layout')
 
 @section('title')
-    home
+    {{ trim( implode(',', $categories->top->pluck('name')->toArray()).','.implode(',', $categories->more->pluck('name')->toArray() ) ) }}
 @endsection
 
 @section('description')
