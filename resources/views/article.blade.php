@@ -12,10 +12,10 @@
     {{ trim(str_replace(';',',',$article->keywords)) }}
 @endsection
 @section('author')
-    {{ trim($article->author) }}
+    {{trim($article->author)}}
 @endsection
 @section('image')
-    {{ 'https://cdn.standardmedia.co.ke'.$article->thumbURL }}
+    {{'https://cdn.standardmedia.co.ke'.$article->thumbURL}}
 @endsection
 
 @section('amp')
