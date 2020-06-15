@@ -132,29 +132,28 @@
                                 <p class="card-text">
                                     <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }}</small>
                                 </p>
-
-                                <div class="d-flex justify-content-between my-1">
-                                    <div>
-                                        <div class="socialmedia-buttons btn-group">
-                                            <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="btn btn-facebook rounded-0 text-white">
-                                                <span class="fa fa-facebook"></span>
-                                            </a>
-                                            <a href="https://twitter.com/share?url={{ url()->current() }}&hashtags={{ ' ' }}&text={{ urlencode($article->title) }}" class="btn btn-twitter rounded-0 text-white">
-                                                <span class="fa fa-twitter texu-white"></span>
-                                            </a>
-                                            <a href="https://telegram.me/share/url?url={{ url()->current() }}&text={{  $article->title }}" class="btn btn-telegram rounded-0 text-white">
-                                                <span class="fa fa-telegram"></span>
-                                            </a>
-                                            <a href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
-                                                <span class="fa fa-whatsapp"></span>
-                                            </a>
-                                            <a href="" class="btn btn-linkedin rounded-0 text-white">
-                                                <span  class="fa fa-linkedin"></span>
-                                            </a>
-                                            <a href="" class="btn btn-email rounded-0 text-white">
-                                                <span  class="fa fa-envelope"></span>
-                                            </a>
-                                        </div>
+                            </div>
+                            <div class="d-flex justify-content-between my-1">
+                                <div>
+                                    <div class="socialmedia-buttons btn-group">
+                                        <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="btn btn-facebook rounded-0 text-white">
+                                            <span class="fa fa-facebook"></span>
+                                        </a>
+                                        <a href="https://twitter.com/share?url={{ url()->current() }}&hashtags={{ ' ' }}&text={{ urlencode($article->title) }}" class="btn btn-twitter rounded-0 text-white">
+                                            <span class="fa fa-twitter texu-white"></span>
+                                        </a>
+                                        <a href="https://telegram.me/share/url?url={{ url()->current() }}&text={{  $article->title }}" class="btn btn-telegram rounded-0 text-white">
+                                            <span class="fa fa-telegram"></span>
+                                        </a>
+                                        <a href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
+                                            <span class="fa fa-whatsapp"></span>
+                                        </a>
+                                        <a href="" class="btn btn-linkedin rounded-0 text-white">
+                                            <span  class="fa fa-linkedin"></span>
+                                        </a>
+                                        <a href="" class="btn btn-email rounded-0 text-white">
+                                            <span  class="fa fa-envelope"></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
