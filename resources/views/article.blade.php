@@ -133,7 +133,7 @@
                                     <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }}</small>
                                 </p>
                             </div>
-                            <div class="d-flex justify-content-between my-1">
+                            <div class="d-flex justify-content-between my-1 mb-2">
                                 <div>
                                     <div class="socialmedia-buttons btn-group">
                                         <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="btn btn-facebook rounded-0 text-white">
