@@ -16,6 +16,19 @@
     {{ trim('Standard Group PLC') }}
 @endsection
 
+<style>
+    @media (min-width: 1200px) {
+        .diff .vidasmall {
+            position: absolute;
+            color: #31b114;
+            background: #fbfbfbde;
+            padding: 1% 2%;
+            font-size: 17px;
+            margin-top: 19%;
+        }
+    }
+</style>
+
 @section('content')
     <section id="standard" class="standard-area pt-100 homept mt-md-2 mt-lg-3 first">
         <div class="container mx-auto mt-4 mt-lg-0 mt-md-5">
