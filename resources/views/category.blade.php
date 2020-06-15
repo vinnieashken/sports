@@ -24,7 +24,7 @@
             background: #fbfbfbde;
             padding: 1% 2%;
             font-size: 17px;
-            margin-top: 19%;
+            margin-top: 19% !important;
         }
     }
 </style>
