@@ -7059,14 +7059,6 @@ figcaption {
         margin: -8px 0 0;
     }
 }
-@media (min-width: 1450px){
-    .navbar-expand-md .navbar-collapse {
-        display: flex!important;
-        flex-basis: auto;
-        height: 100px;
-        padding: 9px;
-    }
-}
 
 .art p {
     font-size: 17px;
