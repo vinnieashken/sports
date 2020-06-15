@@ -15,7 +15,7 @@
     {{ trim($article->author) }}
 @endsection
 @section('image')
-    {{ 'https://cdn.standardmedia.co.ke{{ $article->thumbURL }}' }}
+    {{ 'https://cdn.standardmedia.co.ke'.$article->thumbURL }}
 @endsection
 
 @section('amp')
