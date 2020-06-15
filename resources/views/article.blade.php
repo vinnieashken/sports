@@ -128,6 +128,11 @@
                         <div class="card bg-white art p-3">
                             <div class="card-body">
                                 <h3 class="card-title titles">{{ $article->long_title }}</h3>
+
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }}</small>
+                                </p>
+
                                 <div class="d-flex justify-content-between my-1">
                                     <div>
                                         <div class="socialmedia-buttons btn-group">
@@ -152,9 +157,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="card-text">
-                                    <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }}</small>
-                                </p>
                             </div>
                             <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
                             <h5 class="caption pb-0 mx-5 p-2 mb-2">
