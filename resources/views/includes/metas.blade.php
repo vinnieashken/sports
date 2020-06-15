@@ -14,7 +14,7 @@
 <meta name="keywords"  content="@yield('keywords')" />
 <meta name="author"  content="@yield('author')" />
 <meta name="description" content="@yield('description')"/>
-<link rel="image_src" href="@yield('image_src')">
+<link rel="image_src" href="@yield('image')">
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@StandardKenya"/>
