@@ -7046,3 +7046,17 @@ figcaption {
     border: 0;
 }
 
+@media (max-width: 1250px) and (min-width: 1000px){
+    .header-area .navbar .navbar-nav .nav-item a {
+        font-size: 1em !important;
+    }
+}
+
+@media (max-width: 1239px) and (min-width: 1000px){
+    .logo {
+        width: 188px!important;
+        padding: 0;
+        margin: -8px 0 0;
+    }
+}
+
