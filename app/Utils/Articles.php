@@ -133,7 +133,7 @@ class Articles
             }
             $x++;
         }
-        return str_replace('/images',env('IMAGECDN').'/images',str_replace($removeurl,'',$result));
+        return str_replace('/images',env('IMAGECDN').'/images',str_replace_first('/images/*','',$result));
     }
 
     public function getMostRead($size=4)
@@ -202,5 +202,12 @@ class Articles
 
         //return $ids;
         return Article::whereIn('id',$ids)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
+    }
+
+    function str_replace_first($from, $to, $content)
+    {
+        $from = '/'.preg_quote($from, '/').'/';
+
+        return preg_replace($from, $to, $content, 1);
     }
 }
