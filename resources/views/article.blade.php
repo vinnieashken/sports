@@ -1,19 +1,9 @@
 @extends('includes.layout')
 
-@section('title')
-     {{ trim($article->long_title) }}
-@endsection
-
-@section('description')
-    {{ trim($article->summary) }}
-@endsection
-
-@section('keywords')
-    {{ trim(str_replace(';',',',$article->keywords)) }}
-@endsection
-@section('author')
-    {{trim($article->author)}}
-@endsection
+@section('title',trim($article->long_title))
+@section('description',trim($article->summary))
+@section('keywords',trim(str_replace(';',',',$article->keywords)))
+@section('author',trim($article->author))
 @section('image','https://cdn.standardmedia.co.ke'.$article->thumbURL)
 
 @section('amp')
