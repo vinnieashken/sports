@@ -101,7 +101,7 @@ class Articles
             });
     }
 
-    public function renderInAds($story,$collection,$count = 3)
+    public function renderInAds($story,$collection,$count = 3,$removeurl=null)
     {
         //dump($collection->nth(1));
         //return;
@@ -133,7 +133,7 @@ class Articles
             }
             $x++;
         }
-        return str_replace('/images',env('IMAGECDN').'/images',$result);
+        return str_replace('/images',env('IMAGECDN').'/images',str_replace($removeurl,'',$result));
     }
 
     public function getMostRead($size=4)
