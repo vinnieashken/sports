@@ -101,7 +101,7 @@ class Articles
             });
     }
 
-    public function renderInAds($story,$collection,$count = 3,$removeurl=null)
+    public function renderInAds($story,$collection,$count = 3)
     {
         //dump($collection->nth(1));
         //return;
