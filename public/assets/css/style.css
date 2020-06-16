@@ -7151,3 +7151,55 @@ figcaption {
         padding-top: 6px;
     }
 }
+
+.mainimg h3 a {
+    color: #000000 !important;
+    padding: 4%;
+    font-size: 30px;
+    font-weight: 700;
+}
+#standard h4 {
+    font-size: 18px;
+    font-family: Helvetica;
+}
+.whitecards .black {
+    color: #101010;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    font-size: 18px !important;
+}
+.opinions .green {
+    color: #ffffff !important;
+    position: absolute;
+    top: 187px;
+    background: #38ab44;
+    padding: 5px 10px;
+}
+.whitecards .green {
+    color: #ffffff !important;
+    position: absolute;
+    top: 160px;
+    background: #38ab44;
+    padding: 5px 10px;
+}
+
+.whitecards .green:hover,
+.opinions .green:hover {
+    color: #38ab44 !important;
+    background: #fbf9f9;
+}
+.whitecards P{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #636363;
+    margin: 0;
+}
+.owl-carousel .black  a {
+    display: inline-block;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 10px 0;
+}
