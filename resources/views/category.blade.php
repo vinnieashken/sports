@@ -288,7 +288,10 @@
 @section('js')
     <script>
         $(document).ready(function () {
+            alert('')
             $('#btn-more').on('click',function () {
+
+                alert('hello');
                 var offset = $('#offset').val();
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
