@@ -71,9 +71,9 @@
                             @foreach($stories->top_side1 as $article)
                             <div class="card minicard">
                                 <h4 class="title pb-2">
-                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                 </h4>
-
+                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                                 <div class="row no-gutters">
                                     <div class="col-md-12 col-sm-12">
                                         <div class="single-standard ">
@@ -86,14 +86,15 @@
                                     </div>
 
                                 </div>
+                                </a>
                             </div>
                             @endforeach
                             @foreach($stories->top_side2 as $article)
                             <div class="card minicard">
                                 <h4 class="title mt-5 pb-2">
-                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                 </h4>
-
+                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                                 <div class="row no-gutters">
                                     <div class="col-md-12 col-sm-12">
                                         <div class="single-standard ">
@@ -106,12 +107,14 @@
                                     </div>
 
                                 </div>
+                                </a>
                             </div>
                             @endforeach
                         </div>
                     </div>
                     <div class="row mt-4 halves">
                         @foreach($stories->top_bottom as $article)
+                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                         <div class="col-md-4 mb-4 col-sm-12">
                             <div class="card national">
                                 <div class="single-standard">
@@ -127,6 +130,7 @@
                                 </div>
                             </div>
                         </div>
+                            </a>
                         @endforeach
 
                     </div>
@@ -382,6 +386,7 @@
             <div class="section group">
 
                 @foreach($stories->opinion as $article)
+                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                 <div class="span_1_of_4 col">
                     <div class="single-standard">
                         <div class="standard-image">
@@ -398,6 +403,7 @@
                         </h4>
                     </div>
                 </div>
+                    </a>
                 @endforeach
 
             </div>
