@@ -238,7 +238,7 @@
 
                 </div>
             </div>
-            <div>
+            <div class="text-center">
                 <button id="btn-more">More</button>
                 <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
                 <input type="hidden" value="{{ $stories->category->id }}" id="category">
