@@ -302,11 +302,12 @@
                     url: url,
                     type: 'GET',
                     success: function(data) {
+                        alert(data);
                         if(!$.trim(data))
                             return;
 
                         $("#more").append(data);
-                        //alert(data);
+
                         //var doc = jQuery.parseHTML(data);
                         //var item = $(doc).find('#new_offset');
                         var regex = /value="[0-9]+"/i;
