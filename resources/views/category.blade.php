@@ -216,11 +216,6 @@
 
                     @endfor
                 </div>
-                <div>
-                    <button id="btn-more">More</button>
-                    <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
-                    <input type="hidden" value="{{ $stories->category->id }}" id="category">
-                </div>
                 <div class="col span_1_of_3 mb-4 group">
                     <div class="span_1_of_2_diff col">
                         <div class="text-center mb-2">
@@ -242,6 +237,11 @@
                     @include('includes.social')
 
                 </div>
+            </div>
+            <div>
+                <button id="btn-more">More</button>
+                <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
+                <input type="hidden" value="{{ $stories->category->id }}" id="category">
             </div>
             <hr class="my-4">
         </div>
@@ -283,7 +283,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            alert('')
+            //alert('')
             $('#btn-more').on('click',function () {
 
                 var offset = $('#offset').val();
