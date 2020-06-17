@@ -32,8 +32,8 @@ class Articles
     {
         $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
         $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
-
-        return Article::on('mysql')->orderBy('publishday','DESC')->orderBy('homepagelistorder','ASC')->orderBy('listorder','ASC')->whereNull('inactive')->whereNotNull('homepagelistorder')->where('listorder','>',0)->whereIn('categoryid',$categories)->offset($offset)->limit($size)
+        //->whereNotNull('homepagelistorder')->where('listorder','>',0)
+        return Article::on('mysql')->orderBy('publishday','DESC')->orderBy('homepagelistorder','ASC')->orderBy('listorder','ASC')->whereNull('inactive')->whereIn('categoryid',$categories)->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
