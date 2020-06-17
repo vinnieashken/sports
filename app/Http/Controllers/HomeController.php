@@ -142,7 +142,7 @@ class HomeController extends Controller
 
         //dump($stories->top);
         //return;
-        $offset = 13;
+        $offset = 12;
 
         return view('category',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
     }

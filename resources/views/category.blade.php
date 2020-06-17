@@ -290,13 +290,13 @@
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
                 var url = contextPath + "/category/more/"+category+"/"+offset;
-                alert(offset+" "+url);
+                //alert(offset+" "+url);
 
                 $.ajax({
                     url: url,
                     type: 'GET',
                     success: function(data) {
-                        alert(data);
+                        //alert(data);
                         if(!$.trim(data))
                             return;
 
