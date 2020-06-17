@@ -142,18 +142,21 @@ class HomeController extends Controller
 
         //dump($stories->top);
         //return;
+        $offset = 13;
 
-
-        return view('category',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
+        return view('category',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
     }
 
     public function categorymore($id,$offset)
     {
         $articles = new Articles();
+        $size = 8;
 
-        $items = $articles->getLatestFromCategory($id,$offset,4)->toArray();
+        $items = $articles->getLatestFromCategory($id,$offset,$size)->toArray();
 
-        return view('includes.more_category',['articles'=> $articles,'items'=>$items]);
+        $newoffset = $offset + $size;
+
+        return view('includes.more_category',['articles'=> $articles,'items'=>$items,'offset'=>$newoffset]);
     }
 
     public function videos()

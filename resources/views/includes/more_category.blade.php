@@ -51,3 +51,5 @@
 </div>
 
 @endfor
+
+<input type="hidden" id="new_offset" name="newoffset" value="{{ $offset }}">

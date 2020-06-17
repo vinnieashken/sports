@@ -215,8 +215,13 @@
                         </div>
 
                     @endfor
+                    <div>
 
-                    <button>More</button>
+                        <button id="btn-more">More</button>
+                        <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
+                        <input type="hidden" value="{{ $category }}" id="category">
+                    </div>
+
                 </div>
 
 
@@ -281,5 +286,35 @@
 @endsection
 
 @section('js')
+    <script>
+        $(document).ready(function () {
+            $('#btn-more').on('click',function () {
+                var offset = $('#offset').val();
+                var category = $('#category').val();
+                var contextPath = '{{ url('/') }}';
+                //alert(offset+" "+contextPath);
 
+                $.ajax({
+                    url: contextPath+"category/more/"+category+"/"+offset,
+                    type: 'GET',
+                    success: function(data) {
+                        if(!$.trim(data))
+                            return;
+
+                        $("#more").append(data);
+                        //alert(data);
+                        //var doc = jQuery.parseHTML(data);
+                        //var item = $(doc).find('#new_offset');
+                        var regex = /value="[0-9]+"/i;
+                        var regex2 = /[0-9]+/i;
+                        var result = ""+ data.match(regex);
+                        var new_offset = result.match(regex2);
+                        $('#offset').val(new_offset);
+                        //alert(new_offset);
+                        $('#new_offset').remove();
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
