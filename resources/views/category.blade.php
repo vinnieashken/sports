@@ -247,6 +247,7 @@
             <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">OPINIONS</h4>
             <div class="section group">
                 @foreach($stories->opinion as $article)
+                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                     <div class="span_1_of_4 col">
                         <div class="single-standard">
                             <div class="standard-image">
@@ -257,13 +258,14 @@
                         </div>
                         <div class="card-body p-3 bg-white px-3 pb-3">
                             <h4 class="black py-2">
-                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
+                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color">
                                     <font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
                                     {{ $article->title }}
                                 </a>
                             </h4>
                         </div>
                     </div>
+                    </a>
                 @endforeach
 
             </div>
