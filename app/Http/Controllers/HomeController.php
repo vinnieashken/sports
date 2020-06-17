@@ -147,6 +147,15 @@ class HomeController extends Controller
         return view('category',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
     }
 
+    public function categorymore($id,$offset)
+    {
+        $articles = new Articles();
+
+        $items = $articles->getLatestFromCategory($id,$offset,4)->toArray();
+
+        return view('includes.more_category',['articles'=> $articles,'items'=>$items]);
+    }
+
     public function videos()
     {
         $menu = new Menu();
