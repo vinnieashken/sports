@@ -215,18 +215,12 @@
                         </div>
 
                     @endfor
-                    <div>
-
-                        <button id="btn-more">More</button>
-                        <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
-                        <input type="hidden" value="{{ $stories->category->id }}" id="category">
-                    </div>
-
                 </div>
-
-
-
-
+                <div>
+                    <button id="btn-more">More</button>
+                    <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
+                    <input type="hidden" value="{{ $stories->category->id }}" id="category">
+                </div>
                 <div class="col span_1_of_3 mb-4 group">
                     <div class="span_1_of_2_diff col">
                         <div class="text-center mb-2">
@@ -292,7 +286,6 @@
             alert('')
             $('#btn-more').on('click',function () {
 
-                alert('hello');
                 var offset = $('#offset').val();
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
