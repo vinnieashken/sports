@@ -295,10 +295,11 @@
                 var offset = $('#offset').val();
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
-                alert(offset+" "+contextPath);
+                var url = contextPath + "/category/more/"+category+"/"+offset
+                alert(offset+" "+url);
 
                 $.ajax({
-                    url: contextPath+"/category/more/"+category+"/"+offset,
+                    url: url,
                     type: 'GET',
                     success: function(data) {
                         if(!$.trim(data))
