@@ -150,9 +150,7 @@
                                 </div>
                             </div>
                             <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
-                            <h5 class="caption pb-0 mx-5 p-2 mb-2">
-                                {{ $article->title }}
-                            </h5>
+
                             <div class="card-body">
 
                                 <div>
