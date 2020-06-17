@@ -32,7 +32,7 @@ class Videos
     {
         if($video->platform == 'youtube')
         {
-            return '<iframe frameborder="0" width="640" height="660" src="https://www.youtube.com/watch?v='.$video->videoURL.'?autoplay=1" allowfullscreen="" allow="autoplay"></iframe>';
+            return '<iframe frameborder="0" width="640" height="660" src="https://www.youtube.com/embed/'.$video->videoURL.'?autoplay=1" allowfullscreen="" allow="autoplay"></iframe>';
         }
         if($video->platform == 'dailymotion')
             {

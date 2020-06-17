@@ -209,7 +209,7 @@
 
                 <div class="card videos">
                     @foreach($stories->videos->slice(0,1)->all() as $video)
-                        <a href="#">
+                        <a href="{{ url('/video/'.$video->id.'/'.Str::slug($video->title)) }}">
                         <div class="single-standard">
 
                             <div class="black-two">
@@ -218,7 +218,7 @@
                             <i class="fa fa-play vida"></i>
                             <img src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
                                  class="vidimg" alt="{{ $video->title }}">
-                            <div class="byline mt-2">By Elizabeth Njoki</div>
+                            <div class="byline mt-2">{{ $videos->getVideoPoster($video->createdBy) }}</div>
                         </div>
                         </a>
                     @endforeach
@@ -234,7 +234,7 @@
                             </div>
                             <div class="media-body ml-3 ml-md-0 black">
                                     {{ $video->title }}
-                                <div class="byline mt-2">By Anastacia Mwenda</div>
+                                <div class="byline mt-2">{{ $videos->getVideoPoster($video->createdBy) }}</div>
                             </div>
                         </div>
                         </a>
@@ -267,7 +267,7 @@
 
     <section>
         <div class="container py-2 my-1">
-            <h4 class="section-heading my-2 mx-0">PICTURE POWER</h4>
+            <h4 class="section-heading my-2 mx-0">GALLERY</h4>
             <div class="owl-carousel slideShow py-1">
 
                 @foreach($stories->slideshows as $slideshow)
