@@ -295,7 +295,7 @@
                 var offset = $('#offset').val();
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
-                var url = contextPath + "/category/more/"+category+"/"+offset
+                var url = contextPath + "/category/more/"+category+"/"+offset;
                 alert(offset+" "+url);
 
                 $.ajax({
@@ -317,6 +317,9 @@
                         $('#offset').val(new_offset);
                         //alert(new_offset);
                         $('#new_offset').remove();
+                    },
+                    error:function (jqXHR, exception) {
+                        alert(jqXHR.status)
                     }
                 });
             });
