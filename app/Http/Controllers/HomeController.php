@@ -72,7 +72,7 @@ class HomeController extends Controller
         {
             //return;
         }
-        $url = url('/'.strtolower($articles->getCategory($article->categoryid)->name).'/'.$article->id.'/'.Str::slug($article->title));
+        $url = url('/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
 
         return redirect()->to($url);
     }
@@ -86,7 +86,7 @@ class HomeController extends Controller
         {
             //return;
         }
-        $url = url('/'.strtolower($articles->getCategory($article->categoryid)->name).'/'.$article->id.'/'.Str::slug($article->title));
+        $url = url('/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
 
         return redirect()->to($url);
     }
