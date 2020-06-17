@@ -191,11 +191,12 @@
                 @foreach($stories->opinion as $article)
                     <div class="span_1_of_4 col">
                         <div class="single-standard">
+                            <a href="{{ url('article/'.$article->id.'/'.Str::slug($article->title,'-')) }} " >
                             <div class="standard-image">
                                 <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
                                      class="card-img-top" alt="{{ $article->title }}">
                             </div>
-
+                            </a>
                         </div>
                         <div class="card-body p-3 bg-white">
                             <h4 class="black py-2">
