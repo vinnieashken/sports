@@ -158,7 +158,7 @@
             <div class="row my-2">
             </div>
             <div class="section group justify-content-center">
-                <div class="col span_2_of_3">
+                <div class="col span_2_of_3" id="more">
                     @php
                         //$count = 0;
                         $items = $stories->bottom;
@@ -215,7 +215,12 @@
                         </div>
 
                     @endfor
+
+                    <button>More</button>
                 </div>
+
+
+
 
                 <div class="col span_1_of_3 mb-4 group">
                     <div class="span_1_of_2_diff col">
