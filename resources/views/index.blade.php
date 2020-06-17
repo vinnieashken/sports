@@ -218,7 +218,7 @@
                             <i class="fa fa-play vida"></i>
                             <img src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
                                  class="vidimg" alt="{{ $video->title }}">
-                            <div class="byline mt-2">{{ $videos->getVideoPoster($video->createdBy) }}</div>
+                            <div class="byline mt-2">{{ $videos->getVideoPoster($video->createdBy)->firstname.' '.$videos->getVideoPoster($video->createdBy)->lastname }}</div>
                         </div>
                         </a>
                     @endforeach
@@ -234,7 +234,7 @@
                             </div>
                             <div class="media-body ml-3 ml-md-0 black">
                                     {{ $video->title }}
-                                <div class="byline mt-2">{{ $videos->getVideoPoster($video->createdBy) }}</div>
+                                <div class="byline mt-2">{{ $videos->getVideoPoster($video->createdBy)->firstname.' '.$videos->getVideoPoster($video->createdBy)->lastname }}</div>
                             </div>
                         </div>
                         </a>
