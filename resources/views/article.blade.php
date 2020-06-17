@@ -122,7 +122,7 @@
                                 <h3 class="card-title titles">{{ $article->long_title }}</h3>
 
                                 <p class="card-text">
-                                    <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }}</small>
+                                    <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }} | By {{ $article->author }}</small>
                                 </p>
                             </div>
                             <div class="d-flex justify-content-between my-2">
