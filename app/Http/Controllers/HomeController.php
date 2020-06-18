@@ -42,18 +42,30 @@ class HomeController extends Controller
 //            ->merge($articles->getFromCategory('boxing',0,1))
 //            ->merge($articles->getFromCategory('rugby',0,1));
 
-        $default1 = $articles->getFromCategory('boxing',1,1)
-            ->merge($articles->getFromCategory('rugby',1,1))
-            ->merge($articles->getFromCategory('athletics',1,1))
-            ->merge($articles->getFromCategory('rugby',2,2));
+//        $default1 = $articles->getFromCategory('boxing',1,1)
+//            ->merge($articles->getFromCategory('rugby',1,1))
+//            ->merge($articles->getFromCategory('athletics',1,1))
+//            ->merge($articles->getFromCategory('rugby',2,2));
+//
+//        $default2 = $articles->getFromCategory('Basketball',0,2)
+//            ->merge($articles->getFromCategory('premier league',1,1))
+//            ->merge($articles->getFromCategory('hockey',2,2));
 
-        $default2 = $articles->getFromCategory('Basketball',0,2)
-            ->merge($articles->getFromCategory('premier league',1,1))
-            ->merge($articles->getFromCategory('hockey',2,2));
+        $checkpoint = $articles->getCheckpoint('local',0,10);
 
-        $stories->checkpoint1 = $articles->getCheckpoint('kenya',0,5) ?? $default1 ;
+        if($checkpoint->count() < 10)
+        {
+            $others = $articles->getCheckpoint('kenya',0, (10 - $checkpoint->count()) );
+            foreach ($others as  $item)
+            {
+                $checkpoint->push($item);
+            }
+        }
 
-        $stories->checkpoint2 = $articles->getCheckpoint('kenya',4,5) ?? $default2 ;
+
+        $stories->checkpoint1 = $checkpoint->slice(0,5);
+
+        $stories->checkpoint2 = $checkpoint->slice(4,5);
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
         $stories->slideshows = $slideshow->get(0,10);
