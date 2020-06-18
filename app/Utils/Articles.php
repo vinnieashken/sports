@@ -12,6 +12,11 @@ use Illuminate\Support\Str;
 
 class Articles
 {
+    public function __construct()
+    {
+        date_default_timezone_set('Africa/Nairobi');
+    }
+
     public function getFromCategory($category,$offset,$size)
     {
         $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
@@ -38,7 +43,7 @@ class Articles
             ->whereNull('inactive')
             ->where('listorder',">",0)
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->orderBy('publishday','DESC')
+            ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
 
@@ -77,7 +82,7 @@ class Articles
                 ->whereNotIn('id',$except)
                 ->whereNull('inactive')
                 ->where('keywords','like','%'.$keyword.'%')
-                ->where('publishdate',"<=",date("Y-m-d H:i:s"))
+                ->where('publishday',"<=",date("Y-m-d H:i:s"))
                 ->orderBy('publishdate','DESC')
                 //->orderBy('homepagelistorder','ASC')
                 //->orderBy('listorder','ASC')
