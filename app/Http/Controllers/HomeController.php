@@ -51,9 +51,9 @@ class HomeController extends Controller
             ->merge($articles->getFromCategory('premier league',1,1))
             ->merge($articles->getFromCategory('hockey',2,2));
 
-        $stories->checkpoint1 = $articles->getCheckpoint('local',0,4) ?? $default1 ;
+        $stories->checkpoint1 = $articles->getCheckpoint('kenya',0,5) ?? $default1 ;
 
-        $stories->checkpoint2 = $articles->getCheckpoint('local',0,4) ?? $default2 ;
+        $stories->checkpoint2 = $articles->getCheckpoint('kenya',0,5) ?? $default2 ;
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
         $stories->slideshows = $slideshow->get(0,10);
