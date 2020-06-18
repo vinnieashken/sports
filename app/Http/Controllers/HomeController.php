@@ -53,7 +53,7 @@ class HomeController extends Controller
 
         $stories->checkpoint1 = $articles->getCheckpoint('kenya',0,5) ?? $default1 ;
 
-        $stories->checkpoint2 = $articles->getCheckpoint('kenya',0,5) ?? $default2 ;
+        $stories->checkpoint2 = $articles->getCheckpoint('kenya',4,5) ?? $default2 ;
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
         $stories->slideshows = $slideshow->get(0,10);
