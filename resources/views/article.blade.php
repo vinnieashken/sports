@@ -114,8 +114,9 @@
                         </ol>
                     </nav>
                 </div>
+                <div class="row">
                 @if(!is_null($article))
-                    <div class="col span_2_of_3 aut">
+                    <div class="col-md-8">
 
                         <div class="card bg-white art p-3">
                             <div class="card-body">
@@ -214,7 +215,8 @@
                         </div>
                     </div>
                 @endif
-                <div class="col span_1_of_3 text-left">
+
+                <div class="col-md-4 text-left">
                     <div class="bg-white p-3">
                         <div class="text-left mb-2">
                             <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
@@ -238,6 +240,7 @@
 
                         @include('includes.social')
                     </div>
+                </div>
                 </div>
             </div>
         </div>
