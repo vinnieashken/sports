@@ -53,8 +53,8 @@ class HomeController extends Controller
 
         $checkpointexempt = $articles->getLatest(6,0)->pluck('id') ;
 
-        dump($checkpointexempt);
-        return;
+        //dump($checkpointexempt);
+        //return;
 
 
         $checkpoint = $articles->getCheckpoint('local',0,10);
