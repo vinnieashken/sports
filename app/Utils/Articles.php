@@ -36,7 +36,7 @@ class Articles
     public function getLatest($size,$offset=0)
     {
         $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
+        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
         array_push($categories,$parent->id);
 
         return Article::on('mysql')
