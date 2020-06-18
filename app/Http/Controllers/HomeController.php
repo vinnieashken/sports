@@ -28,11 +28,13 @@ class HomeController extends Controller
         $videos = new Videos();
         $slideshow = new SlideShows();
 
-
-        //dump( $categories->top->pluck('name')->toArray() );
-        //return;
-
         $stories = new \stdClass();
+
+        $query = str_replace(array('?'), array('\'%s\''), $articles->getLatest(6,0)->toSql());
+        $query = vsprintf($query, $articles->getLatest(6,0)->getBindings());
+        dump($query);
+        return;
+
         $stories->top = $articles->getLatest(1,0);
 
         $stories->top_side1 = $articles->getLatest(1,1);
@@ -52,6 +54,10 @@ class HomeController extends Controller
 //            ->merge($articles->getFromCategory('hockey',2,2));
 
         $checkpointexempt = $articles->getLatest(6,0)->pluck('id') ;
+
+
+
+        //$result = $builder->get();
 
 
         //dump(array_merge($categories->top->pluck('id')->toArray(),$categories->more->pluck('id')->toArray()));

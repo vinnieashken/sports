@@ -39,20 +39,19 @@ class Articles
         $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
         array_push($categories,$parent->id);
 
+        $categories = $parent->id;
+
         return Article::on('mysql')
             ->whereIn('categoryid',$categories)
-//            ->where( function($query)use ($categories) {
-//                $query->where("std_category.id","=", $categories)
-//                    ->orWhere("std_category.parentid","=",$categories);
-//            })
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
 
-            ->offset($offset)->limit($size)
-            ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+            ->offset($offset)->limit($size);
+
+            //->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
     public function getLatestExcept($id,$size,$offset=0)
