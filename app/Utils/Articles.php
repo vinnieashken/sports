@@ -40,7 +40,7 @@ class Articles
             //->whereNotNull('homepagelistorder')
             ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
-            //->orderBy('listorder','ASC')
+            ->orderBy('listorder','ASC')
 
             ->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
