@@ -39,8 +39,6 @@ class Articles
         $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
         array_push($categories,$parent->id);
 
-        $categories = $parent->id;
-
         return Article::on('mysql')
             ->whereIn('categoryid',$categories)
             ->whereNull('inactive')
