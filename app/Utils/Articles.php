@@ -34,10 +34,10 @@ class Articles
         $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
         //->where('listorder','>',0)
         return Article::on('mysql')
+            ->whereIn('categoryid',$categories)
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            //->whereNotNull('homepagelistorder')
-            ->whereIn('categoryid',$categories)
+            ->whereNotNull('homepagelistorder')
             ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
