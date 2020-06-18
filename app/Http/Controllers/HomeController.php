@@ -51,11 +51,14 @@ class HomeController extends Controller
 //            ->merge($articles->getFromCategory('premier league',1,1))
 //            ->merge($articles->getFromCategory('hockey',2,2));
 
+        $checkpointexempt = $articles->getLatest(6,0)->pluck('id') ;
+
+
         $checkpoint = $articles->getCheckpoint('local',0,10);
 
         if($checkpoint->count() < 10)
         {
-            $others = $articles->getCheckpoint('kenya',0, (10 - $checkpoint->count()) ,[2001375563]);
+            $others = $articles->getCheckpoint('kenya',0, (10 - $checkpoint->count()) ,$checkpointexempt);
             foreach ($others as  $item)
             {
                 $checkpoint->push($item);
