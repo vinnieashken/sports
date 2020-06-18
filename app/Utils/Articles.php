@@ -39,7 +39,7 @@ class Articles
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             //->whereNotNull('homepagelistorder')
             ->orderBy('publishdate','DESC')
-            ->orderBy('homepagelistorder','DESC')
+            ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
 
             ->offset($offset)->limit($size)
