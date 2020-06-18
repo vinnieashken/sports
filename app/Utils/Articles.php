@@ -64,11 +64,26 @@ class Articles
             ->where('publishday',date('Y-m-d'))->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
-    public function getCheckpoint($keyword,$offset,$size)
+    public function getCheckpoint($keyword,$offset,$size,$except=array())
     {
         $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
         $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
 
+        if(!empty($except))
+        {
+            return Article::on('mysql')
+                ->whereIn('categoryid',$categories)
+                ->whereNotIn('id',$except)
+                ->whereNull('inactive')
+                ->where('keywords','like','%'.$keyword.'%')
+                ->where('publishdate',"<=",date("Y-m-d H:i:s"))
+                ->orderBy('publishdate','DESC')
+                //->orderBy('homepagelistorder','ASC')
+                //->orderBy('listorder','ASC')
+
+                ->offset($offset)->limit($size)
+                ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+        }
         return Article::on('mysql')
             ->whereIn('categoryid',$categories)
             ->whereNull('inactive')

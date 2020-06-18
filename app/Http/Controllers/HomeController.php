@@ -55,16 +55,14 @@ class HomeController extends Controller
 
         if($checkpoint->count() < 10)
         {
-            $others = $articles->getCheckpoint('kenya',0, (10 - $checkpoint->count()) );
+            $others = $articles->getCheckpoint('kenya',0, (10 - $checkpoint->count()) ,[2001375563]);
             foreach ($others as  $item)
             {
                 $checkpoint->push($item);
             }
         }
 
-
         $stories->checkpoint1 = $checkpoint->slice(0,5);
-
         $stories->checkpoint2 = $checkpoint->slice(5,5);
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
