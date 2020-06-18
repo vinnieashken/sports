@@ -42,14 +42,18 @@ class HomeController extends Controller
 //            ->merge($articles->getFromCategory('boxing',0,1))
 //            ->merge($articles->getFromCategory('rugby',0,1));
 
-        $stories->checkpoint1 = $articles->getFromCategory('boxing',1,1)
+        $default1 = $articles->getFromCategory('boxing',1,1)
             ->merge($articles->getFromCategory('rugby',1,1))
             ->merge($articles->getFromCategory('athletics',1,1))
             ->merge($articles->getFromCategory('rugby',2,2));
 
-        $stories->checkpoint2 = $articles->getFromCategory('Basketball',0,2)
+        $default2 = $articles->getFromCategory('Basketball',0,2)
             ->merge($articles->getFromCategory('premier league',1,1))
             ->merge($articles->getFromCategory('hockey',2,2));
+
+        $stories->checkpoint1 = $articles->getCheckpoint('local',0,4) ;
+
+        $stories->checkpoint2 = $articles->getCheckpoint('local',0,4) ;
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
         $stories->slideshows = $slideshow->get(0,10);
