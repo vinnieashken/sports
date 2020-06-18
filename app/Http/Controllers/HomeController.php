@@ -30,11 +30,10 @@ class HomeController extends Controller
 
         $stories = new \stdClass();
 
-        $query = str_replace(array('?'), array('\'%s\''), $articles->getLatest(6,0)->toSql());
-
-        $query = vsprintf($query, $articles->getLatest(6,0)->getBindings());
-        dd($query);
-        return;
+//        $query = str_replace(array('?'), array('\'%s\''), $articles->getLatest(6,0)->toSql());
+//        $query = vsprintf($query, $articles->getLatest(6,0)->getBindings());
+//        dd($query);
+//        return;
 
         $stories->top = $articles->getLatest(1,0);
 

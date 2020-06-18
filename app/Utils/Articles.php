@@ -47,9 +47,8 @@ class Articles
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
 
-            ->offset($offset)->limit($size);
-
-            //->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+            ->offset($offset)->limit($size)
+            ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
     public function getLatestExcept($id,$size,$offset=0)
