@@ -54,8 +54,8 @@ class HomeController extends Controller
         $checkpointexempt = $articles->getLatest(6,0)->pluck('id') ;
 
 
-        dump(array_merge($categories->top->pluck('id')->toArray(),$categories->more->pluck('id')->toArray()));
-        return;
+        //dump(array_merge($categories->top->pluck('id')->toArray(),$categories->more->pluck('id')->toArray()));
+        //return;
 
 
         $checkpoint = $articles->getCheckpoint('local',0,10);
