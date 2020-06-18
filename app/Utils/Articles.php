@@ -37,11 +37,15 @@ class Articles
     {
         $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
         $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
-        //->where('listorder','>',0)
+        array_push($categories,$parent->id);
+
         return Article::on('mysql')
             ->whereIn('categoryid',$categories)
+//            ->where( function($query)use ($categories) {
+//                $query->where("std_category.id","=", $categories)
+//                    ->orWhere("std_category.parentid","=",$categories);
+//            })
             ->whereNull('inactive')
-            //->where('listorder',">",0)
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
