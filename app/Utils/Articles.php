@@ -43,7 +43,7 @@ class Articles
             ->whereNull('inactive')
             ->where('listorder',">",0)
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->orderBy('publishdate','DESC')
+            ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
 
