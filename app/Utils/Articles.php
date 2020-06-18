@@ -36,7 +36,7 @@ class Articles
         return Article::on('mysql')
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->whereNotNull('homepagelistorder')
+            //->whereNotNull('homepagelistorder')
             ->whereIn('categoryid',$categories)
             ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
