@@ -39,8 +39,9 @@ class Articles
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             //->whereNotNull('homepagelistorder')
             ->orderBy('publishdate','DESC')
-            ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
+            ->orderBy('homepagelistorder','ASC')
+
             ->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
