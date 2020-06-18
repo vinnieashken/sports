@@ -7203,3 +7203,20 @@ figcaption {
     line-height: 22px;
     margin: 0 0 10px 0;
 }
+
+.btn-more{
+    padding: 5px 25px;
+    border: 1px solid #e91a22;
+    background: #e91a22;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.btn-more:hover{
+    padding: 5px 25px;
+    border: 1px solid #e91a22;
+    background: #fff;
+    color: #e91a22;
+    font-weight: 600;
+    text-transform: uppercase;
+}

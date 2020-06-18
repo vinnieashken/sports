@@ -41,9 +41,9 @@ class Articles
         return Article::on('mysql')
             ->whereIn('categoryid',$categories)
             ->whereNull('inactive')
-            ->where('listorder',">",0)
+            //->where('listorder',">",0)
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->orderBy('publishday','DESC')
+            ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
 
