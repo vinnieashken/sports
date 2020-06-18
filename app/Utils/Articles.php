@@ -37,7 +37,7 @@ class Articles
             ->whereIn('categoryid',$categories)
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->whereNotNull('homepagelistorder')
+            //->whereNotNull('homepagelistorder')
             ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
