@@ -65,7 +65,7 @@ class HomeController extends Controller
 
         $stories->checkpoint1 = $checkpoint->slice(0,5);
 
-        $stories->checkpoint2 = $checkpoint->slice(4,5);
+        $stories->checkpoint2 = $checkpoint->slice(5,5);
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
         $stories->slideshows = $slideshow->get(0,10);
