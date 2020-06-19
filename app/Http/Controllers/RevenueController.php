@@ -108,6 +108,9 @@ class RevenueController extends Controller
         {
             $request->session()->flash('registrationerror', $objbody->message);
 
+            dump($response->getStatusCode());
+            dump($objbody->message);
+            return;
             return redirect($url);
         }
 
