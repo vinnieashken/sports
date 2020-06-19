@@ -98,6 +98,11 @@ class RevenueController extends Controller
         $objbody = json_decode($body);
 
 
+        if($response->getStatusCode() >= 500)
+        {
+            $request->session()->flash('registrationerror', $objbody->message);
+            redirect( \url('/'));
+        }
 
         if(property_exists($objbody ,'message') && ( (int) $response->getStatusCode()) > 250)
         {
