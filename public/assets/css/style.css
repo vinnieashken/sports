@@ -7015,6 +7015,11 @@ figcaption {
 
 }
 
+.gsc-selected-option {
+    position: relative;
+    width: 124% !important;
+}
+
 .btn-facebook {
     background: #3b5998;
     color: #fff;
