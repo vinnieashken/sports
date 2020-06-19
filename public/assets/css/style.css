@@ -7220,3 +7220,8 @@ figcaption {
     font-weight: 600;
     text-transform: uppercase;
 }
+
+.sidenav a{
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
