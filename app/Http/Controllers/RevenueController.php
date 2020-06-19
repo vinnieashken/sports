@@ -107,7 +107,7 @@ class RevenueController extends Controller
 
         if(property_exists($objbody ,'message') && ( (int) $response->getStatusCode()) > 250)
         {
-            $request->session()->flash('registrationerror', $objbody->message.' Login into your account or reset your password if you have forgotten it.);
+            $request->session()->flash('registrationerror', $objbody->message.'Login into your account or reset your password if you have forgotten it.');
 
             return redirect($url);
         }
