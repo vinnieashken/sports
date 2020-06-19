@@ -7220,6 +7220,25 @@ figcaption {
         object-fit: cover;
     }
 }
+@media only screen and (max-width: 480px){
+    .vidimg {
+        height: 244px !important;
+        object-fit: cover;
+        width: 100%;
+    }
+    .sectionborder:first-child{
+        position: absolute;
+        top: 20px;
+        border: none;
+    }
+    .vida {
+        position: absolute;
+        color: #31b114;
+        background: #fbfbfbde;
+        padding: 3% 4%;
+        font-size: 17px;
+        top: 290px;
+    }}
 .owl-carousel .black  a {
     display: inline-block;
     font-family: Helvetica;
