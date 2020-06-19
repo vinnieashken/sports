@@ -43,6 +43,7 @@ class Articles
             ->whereIn('categoryid',Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
+            ->where('listorder','>',0)
             ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
