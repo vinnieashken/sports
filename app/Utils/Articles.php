@@ -54,8 +54,8 @@ class Articles
 
     public function getLatestExcept($id,$size,$offset=0)
     {
-        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
+
+        $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')->orderBy('publishday','DESC')->orderBy('homepagelistorder','ASC')->orderBy('listorder','ASC')->whereNull('inactive')->whereNotNull('homepagelistorder')->where('listorder','>',0)
             ->whereIn('categoryid',$categories)->whereNotIn('id',[(int)$id])->offset($offset)->limit($size)
@@ -64,8 +64,8 @@ class Articles
 
     public function getTodays()
     {
-        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
+
+        $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')->orderBy('publishday','DESC')->whereNull('inactive')->whereIn('categoryid',$categories)
             ->where('publishday',date('Y-m-d'))->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
@@ -73,8 +73,7 @@ class Articles
 
     public function getCheckpoint($keyword,$offset,$size,$except=array())
     {
-        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id');
+        $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         if(!empty($except))
         {
@@ -128,8 +127,8 @@ class Articles
     {
         $article = Article::where('id',$id)->get(['id','title','keywords','thumbURL','publishday','author'])->first();
 
-        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
+
+        $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         $related = Article::query();
 
