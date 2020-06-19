@@ -40,7 +40,7 @@ class Articles
         //array_push($categories,$parent->id);
 
         return Article::on('mysql')
-            ->whereIn('categoryid',Category::on('mysql')->where('id',6)->where('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
+            ->whereIn('categoryid',Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             ->orderBy('publishdate','DESC')
