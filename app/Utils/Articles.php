@@ -35,12 +35,12 @@ class Articles
 
     public function getLatest($size,$offset=0)
     {
-        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        $categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
-        array_push($categories,$parent->id);
+        //$parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
+        //$categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
+        //array_push($categories,$parent->id);
 
         return Article::on('mysql')
-            ->whereIn('categoryid',$categories)
+            ->whereIn('categoryid',Category::where('id',6)->where('parentid',6)->whereNull('inactive')->get(['id'])->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             ->orderBy('publishdate','DESC')
