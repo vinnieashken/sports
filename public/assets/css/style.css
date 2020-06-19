@@ -7268,3 +7268,7 @@ figcaption {
     text-transform: lowercase;
     text-transform: capitalize;
 }
+.feedback-msg{
+    color: black;
+    font-size: 16px;
+}
