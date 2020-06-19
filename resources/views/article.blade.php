@@ -169,7 +169,7 @@
                                             <div class="row">
 
                                                 <div class="col-md-12 mx-auto w-100">
-                                                    <div id="fb-root"></div>
+                                                    <div id="fb-root" class="w-100"></div>
                                                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
                                                     <div class="fb-comments w-100" data-href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" data-width="100%" data-numposts="30"></div>
                                                     <div class="contact-form w-100">
