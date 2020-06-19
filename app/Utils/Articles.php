@@ -39,6 +39,16 @@ class Articles
         //$categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
         //array_push($categories,$parent->id);
 
+        $alt = Article::on('mysql')->whereNull('std_article.inactive')
+            ->where('std_article.publishdate',"<=",date("Y-m-d H:i:s"))
+            ->where('std_category.parentid',6)
+            ->leftJoin('std_category','std_category.id','=','std_article.categoryid')
+            ->orderBy('std_article.publishdate','DESC')
+            ->orderBy('std_article.id','DESC')
+            ->select('std_article.id','std_article.categoryid','std_article.title','std_article.thumbURL','std_article.summary','std_article.author','std_article.publishday')
+            ->offset($offset)->limit($size)->get();
+
+        return $alt;
 
 
         return Article::on('mysql')
