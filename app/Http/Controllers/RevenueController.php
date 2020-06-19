@@ -100,7 +100,7 @@ class RevenueController extends Controller
 
         if($response->getStatusCode() >= 500)
         {
-            $request->session()->flash('registrationerror', $objbody->message);
+            //$request->session()->flash('registrationerror', '');
             redirect( \url('/'));
         }
 
