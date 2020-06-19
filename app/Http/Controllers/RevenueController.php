@@ -101,6 +101,10 @@ class RevenueController extends Controller
         if($response->getStatusCode() >= 500)
         {
             //$request->session()->flash('registrationerror', '');
+            dump($response->getStatusCode());
+            dump($objbody->message);
+            return;
+
             return redirect( \url('/'));
         }
 
@@ -108,9 +112,7 @@ class RevenueController extends Controller
         {
             $request->session()->flash('registrationerror', $objbody->message);
 
-            dump($response->getStatusCode());
-            dump($objbody->message);
-            return;
+
             return redirect($url);
         }
 
