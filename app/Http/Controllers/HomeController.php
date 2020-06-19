@@ -35,8 +35,9 @@ class HomeController extends Controller
 //        dd($query);
 //        return;
 
-        dump(Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
-        return;
+        //dump(Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
+        //return;
+
         $stories->top = $articles->getLatest(1,0);
 
         $stories->top_side1 = $articles->getLatest(1,1);
