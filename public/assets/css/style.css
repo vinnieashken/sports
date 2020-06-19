@@ -7201,6 +7201,25 @@ figcaption {
     color: #636363;
     margin: 0;
 }
+
+@media (max-width: 767px) {
+    .whitecards .card img {
+        height: 220px !important;
+        object-fit: cover;
+    }
+    .whitecards .green {
+        color: #ffffff !important;
+        position: absolute;
+        top: 195px;
+        background: #38ab44;
+        padding: 5px 10px;
+    }
+    .opinions img {
+        height: 210px !important;
+        width: max-content;
+        object-fit: cover;
+    }
+}
 .owl-carousel .black  a {
     display: inline-block;
     font-family: Helvetica;
