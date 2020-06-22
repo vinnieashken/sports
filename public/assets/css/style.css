@@ -7272,3 +7272,27 @@ figcaption {
     color: black !important;
     font-size: 16px !important;
 }
+
+.black {
+    color: #3b3b3b;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    font-size: 17px !important;
+    font-family: Solido !important;
+}.big-text {
+     font-size: 54px;
+     font-weight: 600;
+     font-family: Caput;
+     color: #5dad49;
+     background: #f0e1e0;
+     width: 37px;
+     height: 38px;
+     padding: 3px;
+ }.art p {
+      font-size: 17px;
+      line-height: 1.5;
+      color: #0c0c0ce0;
+      letter-spacing: normal;
+      font-family: sans-serif;
+  }
