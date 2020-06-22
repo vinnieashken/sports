@@ -11,7 +11,7 @@ class Menu
     public $top;
     public function __construct()
     {
-        $this->top = ['football','rugby','athletics','basketball','boxing','tennis'];
+        $this->top = ['football','rugby','athletics','basketball','boxing','tennis','Golf'];
     }
     public function getCategories()
     {

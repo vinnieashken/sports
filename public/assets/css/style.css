@@ -7343,3 +7343,16 @@ a {
          font-family: Solido;
          font-weight: 800;
      }
+
+.black-two {
+    font-size: 18px !important;
+    font-family: Solido;
+}.black {
+     font-size: 18px !important;
+     font-family: Solido !important;
+ }p, body {
+      font-family: Solido;
+      color: #777676;
+      font-size: 16px;
+
+  }
