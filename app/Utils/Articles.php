@@ -271,9 +271,9 @@ class Articles
         return preg_replace($from, $to, $content, 1);
     }
 
-    public function shorten($text, $limit)
+    public function shorten($category,$text, $limit)
     {
-        if(strlen($text) > $limit)
+        if(strlen($category.$text) > $limit)
             return substr($text,0,$limit).'...';
         return $text;
     }
