@@ -270,4 +270,11 @@ class Articles
 
         return preg_replace($from, $to, $content, 1);
     }
+
+    public function shorten($text, $limit)
+    {
+        if(strlen($text) > $limit)
+            return substr($text,0,$limit).'...';
+        return $text;
+    }
 }

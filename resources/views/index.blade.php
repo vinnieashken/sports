@@ -172,7 +172,7 @@
                                 </div>
                                 <div class="media-body ml-3 ml-md-0">
                                     <h6 class="greentext mb-1">{{$articles->getCategory($article->categoryid)->name}}</h6>
-                                    {{ $article->title }}
+                                    {{ $articles->shorten($article->title, 63)}}
                                 </div>
 
                             </div>
@@ -194,7 +194,7 @@
                                     </div>
                                     <div class="media-body ml-3 ml-md-0">
                                         <h6 class="greentext mb-1">{{$articles->getCategory($article->categoryid)->name}}</h6>
-                                        {{ $article->title }}
+                                        {{ $articles->shorten($article->title, 63)}}
                                     </div>
                                 </div>
                                 </a>
