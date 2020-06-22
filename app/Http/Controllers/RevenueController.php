@@ -185,6 +185,12 @@ class RevenueController extends Controller
     {
         $email = $request->email;
 
+        if(empty($email))
+        {
+            $request->session()->flash('subscriberror', 'Please provide a valid email address');
+            return redirect(URL::previous());
+        }
+
         $params = ["body"=>json_encode(['email'=> $email, 'category_id'=> 20 ])];
         //return $params;
 
