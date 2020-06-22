@@ -124,7 +124,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body px-0">
-                                    <h4 class="black py-2">
+                                    <h4 class="black py-0">
                                         <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                     </h4>
                                 </div>
