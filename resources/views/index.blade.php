@@ -57,7 +57,7 @@
                                 <div class="standard-content">
                                     <div class="content">
                                         <h4 class="card-text title mt-2">
-                                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"><font class="green">{{$articles->getCategory($article->categoryid)->name}}: </font> {{ $article->summary }} </a>
+                                            <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}"> {{ $article->summary }} </a>
                                         </h4>
                                     </div>
 
