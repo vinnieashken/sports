@@ -7299,3 +7299,8 @@ figcaption {
 .black-two {
     color: #000000;
 }
+a {
+    color: #0ea20c;
+    text-decoration: none;
+    background-color: transparent;
+}
