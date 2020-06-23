@@ -2580,7 +2580,7 @@ p.form-message.error {
     z-index: 10000;
     top: 0;
     left: 0;
-    background-color: #313131;
+    background-color: #5dad49;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -2625,9 +2625,8 @@ nav .active {
 }
 
 .sidenav a {
-
     margin-left: 20px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #1f1d1d;
 }
 
 .story h3 a {
@@ -4912,7 +4911,7 @@ header .nav-link {
     padding: 0rem .3rem !important;
 }
 .navheading{
-    color: red !important;
+    color: #0a0a0a !important;
 }
 header .fa-home, header .fa-search{
     color: black;
@@ -6512,7 +6511,7 @@ iframe{
     }
 
     #mySidenav a {
-        color: #d2d0d0;
+        color: #ffffff;
     }
 
     #mySidenavMob .insibg {
