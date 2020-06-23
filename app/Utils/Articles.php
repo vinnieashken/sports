@@ -26,6 +26,19 @@ class Articles
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
+    public function getFromCategoryExclude($filter,$category,$offset,$size)
+    {
+        $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
+        $cat = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->where('name',$category)->get(['id','name','shortname'])->first();
+
+        return Article::on('mysql')->orderBy('publishday','DESC')
+            ->orderBy('parentcategorylistorder','ASC')
+            ->where('categoryid',$cat->id)
+            ->whereNotIn('id',$filter)
+            ->offset($offset)->limit($size)
+            ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+    }
+
     public function getLatestFromCategory($category,$offset,$size)
     {
 

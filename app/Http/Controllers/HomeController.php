@@ -86,7 +86,7 @@ class HomeController extends Controller
 
         $stories->volley = $articles->getFromCategory('volleyball and handball',0,2);
         $stories->unique = $articles->getFromCategory('sports',0,2);
-        $stories->opinion = $articles->getFromCategory('gossip & rumours',0,4);
+        $stories->opinion = $articles->getFromCategoryExclude($checkpointexempt,'gossip & rumours',0,4);
 
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
