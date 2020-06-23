@@ -32,7 +32,7 @@
             </div>
 
             <div class="row justify-content-center mt-5">
-                <div class="col-md-8 col-sm-12 ">
+                <div class="col-md-8 col-sm-12 " id="more">
 
                     @foreach( array_slice($stories->videos,0,1) as $video )
                     <div class="card bg-white mb-4 single-standard">
