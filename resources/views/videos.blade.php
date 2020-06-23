@@ -164,6 +164,11 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <button id="btn-more" class="btn-more">More</button>
+                <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
+{{--                <input type="hidden" value="{{ $stories->category->id }}" id="category">--}}
+            </div>
             <hr class="my-4">
         </div>
     </section>
@@ -218,6 +223,43 @@
 @endsection
 
 @section('js')
+    <script>
+        $(document).ready(function () {
+            //alert('')
+            $('#btn-more').on('click',function () {
 
+                var offset = $('#offset').val();
+                //var category = $('#category').val();
+                var contextPath = '{{ url('/') }}';
+                var url = contextPath + "/videos/more/"+offset;
+                //alert(offset+" "+url);
+
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function(data) {
+                        //alert(data);
+                        if(!$.trim(data))
+                            return;
+
+                        $("#more").append(data);
+
+                        //var doc = jQuery.parseHTML(data);
+                        //var item = $(doc).find('#new_offset');
+                        var regex = /value="[0-9]+"/i;
+                        var regex2 = /[0-9]+/i;
+                        var result = ""+ data.match(regex);
+                        var new_offset = result.match(regex2);
+                        $('#offset').val(new_offset);
+                        //alert(new_offset);
+                        $('#new_offset').remove();
+                    },
+                    error:function (jqXHR, exception) {
+                        alert(jqXHR.status)
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
 

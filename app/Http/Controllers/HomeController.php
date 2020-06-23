@@ -199,8 +199,21 @@ class HomeController extends Controller
         $stories->opinion = $articles->getFromCategory('gossip & rumours',0,4);
         $stories->videos = $videos->getFromCategory('sports',0,13)->toArray();
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
+        $offset = 13;
 
-        return view('videos',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories]);
+        return view('videos',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
+    }
+
+    public function videosmore($offset)
+    {
+        $videos = new Videos();
+        $size = 8;
+
+        $items = $videos->getFromCategory('sports',13,$size)->toArray();
+
+        $newoffset = $offset + $size;
+
+        return view('includes.morevideos',['videos'=> $videos,'items'=>$items,'offset'=> $newoffset]);
     }
 
     public function video($id,$slug)

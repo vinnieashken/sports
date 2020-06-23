@@ -21,6 +21,7 @@ Route::get('/article/{id}/{slug}','HomeController@oldarticle');
 Route::get('/article/{id}','HomeController@oldarticleslugless');
 Route::get('/videos','HomeController@videos');
 Route::get('/video/{id}/{slug}','HomeController@video');
+Route::get('/videos/more/{offset}','HomeController@videosmore');
 
 Route::get('/{category_slug}/{id}/{slug}','HomeController@article');
 Route::get('/slideshow/pictures/{id}/{slug}','HomeController@pictures');
