@@ -156,7 +156,7 @@
         <div class="section group">
             <div class=" span_3_of_5 col">
 
-                <h4 class="section-heading my-2">CHECKPOINT</h4>
+                <h4 class="section-heading my-2">LOCAL STORIES</h4>
 
                 <div class="row greenimages">
                     <div class="col-md-6 mb-3">
