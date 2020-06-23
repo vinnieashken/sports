@@ -21,7 +21,7 @@
                 </div>
                 <div class="card-footer bg-white">
                     @php
-                        $poster = $videos->getVideoPoster($video['createdBy']);
+                        $poster = $videos->getVideoPoster($items[$i]['createdBy']);
                     @endphp
                     <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                     <small class="byline-two float-right">{{ $items[$i]['publishdate'] }}</small>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="card-footer bg-white">
                         @php
-                            $poster = $videos->getVideoPoster($video['createdBy']);
+                            $poster = $videos->getVideoPoster($items[$i]['createdBy']);
                         @endphp
                         <small class="byline">BY {{ $poster->firstname }} {{ $poster->lastname }}</small>
                         <small class="byline-two float-right">{{ $items[$i]['publishdate'] }}</small>
