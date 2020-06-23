@@ -34,6 +34,115 @@ CSS INDEX
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
 
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 100;
+    src: local("solido"), url("../fonts/solido/Solido-UltraLight.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 100;
+    src: local("solido"), url("../fonts/solido/Solido-UltraLightItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 200;
+    src: local("solido"), url("../fonts/solido/Solido-Hairline.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 200;
+    src: local("solido"), url("../fonts/solido/Solido-HairlineItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 300;
+    src: local("solido"), url("../fonts/solido/Solido-Light.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 300;
+    src: local("solido"), url("../fonts/solido/Solido-LightItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 400;
+    src: local("solido"), url("../fonts/solido/Solido-Medium.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 400;
+    src: local("solido"), url("../fonts/solido/Solido-MediumItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 500;
+    src: local("solido"), url("../fonts/solido/Solido-Book.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 500;
+    src: local("solido"), url("../fonts/solido/Solido-BookItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 600;
+    src: local("solido"), url("../fonts/solido/Solido-Bold.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 600;
+    src: local("solido"), url("../fonts/solido/Solido-BoldItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 700;
+    src: local("solido"), url("../fonts/solido/Solido-ExtraBold.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 700;
+    src: local("solido"), url("../fonts/solido/Solido-ExtraBoldItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 800;
+    src: local("solido"), url("../fonts/solido/Solido-Heavy.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 800;
+    src: local("solido"), url("../fonts/solido/Solido-HeavyItalic.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: normal;
+    font-weight: 900;
+    src: local("solido"), url("../fonts/solido/Solido-Black.otf");
+}
+@font-face {
+    font-family: solido;
+    font-style: italic;
+    font-weight: 900;
+    src: local("solido"), url("../fonts/solido/Solido-BlackItalic.otf");
+}
+
 body {
     font-family: Solido;
     font-weight: normal;
@@ -7365,4 +7474,18 @@ p, body {
     color: #777676;
     font-size: 16px;
 
+}
+.modals .btn-info {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    background: #ee2e24;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+a.text-info:focus, a.text-info:hover {
+    color: #5dad49!important;
 }

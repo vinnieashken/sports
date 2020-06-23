@@ -119,11 +119,11 @@
             </div>
             <div class="modal-footer d-flex justify-content-center">
                 <div class="signup-section">Not a member yet? <a href="#" data-dismiss="modal" data-toggle="modal"
-                                                                 data-target="#regModal" class="register text-info">
+                                                                 data-target="#regModal" class="register text-danger">
                         Sign Up</a>.
                 </div>
                 <div class="signup-section"><a href="#" data-dismiss="modal" data-toggle="modal"
-                                               data-target="#forgotModal" class="register text-info"> Forgot
+                                               data-target="#forgotModal" class="register text-danger"> Forgot
                         Password</a>.
                 </div>
             </div>
@@ -184,7 +184,7 @@
             <div class="modal-footer d-flex justify-content-center">
                 <div class="signup-section">I have an account? <a
                         href="https://standardmedia.co.ke/stories/public/subscription/sign-in" data-dismiss="modal"
-                        data-toggle="modal" data-target="#loginModal" class="login text-info"> Sign In</a>.
+                        data-toggle="modal" data-target="#loginModal" class="login text-danger"> Sign In</a>.
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@
             </div>
             <div class="modal-footer d-flex justify-content-center">
                 <div class="signup-section"><a href="#" data-dismiss="modal" data-toggle="modal"
-                                               data-target="#loginModal" class="register text-info"> Log In</a>.
+                                               data-target="#loginModal" class="register text-danger"> Log In</a>.
                 </div>
             </div>
         </div>
