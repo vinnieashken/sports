@@ -106,7 +106,7 @@
                     @include('includes.alert')
                 </div>
 
-                <div class="col-md-12 col-sm-12 ml-md-5 ml-lg-5">
+                <div class="col-md-12 col-sm-12 ">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
