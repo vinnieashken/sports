@@ -167,7 +167,7 @@
 
                                 <div id="contact" class="contact-area">
                                     <div class="container">
-                                        <div class="contact-box mt-70">
+                                        <div class="contact-box mt-70 px-0">
                                             <strong class="text-dark"> </strong>
                                             <p> </p>
                                             <div class="row">
