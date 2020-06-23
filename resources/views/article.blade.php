@@ -138,7 +138,10 @@
                                         <a href="https://telegram.me/share/url?url={{ url()->current() }}&text={{  $article->title }}" class="btn btn-telegram rounded-0 text-white">
                                             <span class="fa fa-telegram"></span>
                                         </a>
-                                        <a href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
+                                        <a  class="d-none d-md-block" href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
+                                            <span class="fa fa-whatsapp"></span>
+                                        </a>
+                                        <a class="d-block d-md-none" href="javascript:;" data-href="whatsapp://send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white" >
                                             <span class="fa fa-whatsapp"></span>
                                         </a>
                                         <a href="" class="btn btn-linkedin rounded-0 text-white">
@@ -147,6 +150,7 @@
                                         <a href="" class="btn btn-email rounded-0 text-white">
                                             <span  class="fa fa-envelope"></span>
                                         </a>
+
                                     </div>
                                 </div>
                             </div>
