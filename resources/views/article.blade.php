@@ -210,7 +210,7 @@
                                                     </a>
                                                 </div>
                                             @endforeach
-
+                                        </div>
                                         <style>.card-img-overlay {
                                                 position: absolute;
                                                 top: auto;
@@ -218,7 +218,7 @@
                                                 bottom: 0;
                                                 left: 0;
                                                 padding: 1.25rem;
-                                            }</style>
+                                            }</style>s
                                         <div id="carouselExampleControls" class="carousel slide d-md-none d-lg-none d-block" data-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active"><div class="card bg-dark text-white">
@@ -278,8 +278,6 @@
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="sr-only">Next</span>
                                             </a>
-                                        </div>
-
                                         </div>
                                     </div>
 
