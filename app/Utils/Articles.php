@@ -101,8 +101,8 @@ class Articles
                 ->where('keywords','like','%'.$keyword.'%')
                 ->where('publishday',"<=",date("Y-m-d H:i:s"))
                 ->orderBy('publishdate','DESC')
-                //->orderBy('homepagelistorder','ASC')
-                //->orderBy('listorder','ASC')
+                ->orderBy('homepagelistorder','ASC')
+                ->orderBy('listorder','ASC')
 
                 ->offset($offset)->limit($size)
                 ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
@@ -112,10 +112,9 @@ class Articles
             ->whereNull('inactive')
             ->where('keywords','like','%'.$keyword.'%')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            //->whereNotNull('homepagelistorder')
             ->orderBy('publishdate','DESC')
-            //->orderBy('homepagelistorder','ASC')
-            //->orderBy('listorder','ASC')
+            ->orderBy('homepagelistorder','ASC')
+            ->orderBy('listorder','ASC')
 
             ->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
