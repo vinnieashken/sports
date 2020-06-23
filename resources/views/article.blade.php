@@ -211,6 +211,75 @@
                                                 </div>
                                             @endforeach
 
+                                        <style>.card-img-overlay {
+                                                position: absolute;
+                                                top: auto;
+                                                right: 0;
+                                                bottom: 0;
+                                                left: 0;
+                                                padding: 1.25rem;
+                                            }</style>
+                                        <div id="carouselExampleControls" class="carousel slide d-md-none d-lg-none d-block" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active"><div class="card bg-dark text-white">
+                                                        <a href="https://sports.standardmedia.co.ke/sports/2001376162/why-you-have-food-allergies-and-what-you-need-to-know">
+                                                            <img class="card-img px300" style="height: 300px !important;" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png" alt="Why you have food allergies and what you need to know ">
+                                                            <div class="card-img-overlay">
+                                                                <h5 class="card-title text-white">
+                                                                    Why you have food allergies and what you need to know
+                                                                </h5>
+                                                                <p class="card-text">
+      <span class="catebtn mr-1">
+      Sports
+      </span> <span class="byln">BY Rachel Murugi | </span>
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item"><div class="card bg-dark text-white">
+                                                        <a href="https://sports.standardmedia.co.ke/sports/2001376162/why-you-have-food-allergies-and-what-you-need-to-know">
+                                                            <img class="card-img px300" style="height: 300px !important;" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png" alt="Why you have food allergies and what you need to know ">
+                                                            <div class="card-img-overlay">
+                                                                <h5 class="card-title text-white">
+                                                                    Why you have food allergies and what you need to know
+                                                                </h5>
+                                                                <p class="card-text">
+      <span class="catebtn mr-1">
+      Sports
+      </span> <span class="byln">BY Rachel Murugi | </span>
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item"><div class="card bg-dark text-white">
+                                                        <a href="https://sports.standardmedia.co.ke/sports/2001376162/why-you-have-food-allergies-and-what-you-need-to-know">
+                                                            <img class="card-img px300" style="height: 300px !important;" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png" alt="Why you have food allergies and what you need to know ">
+                                                            <div class="card-img-overlay">
+                                                                <h5 class="card-title text-white">
+                                                                    Why you have food allergies and what you need to know
+                                                                </h5>
+                                                                <p class="card-text">
+      <span class="catebtn mr-1">
+      Sports
+      </span> <span class="byln">BY Rachel Murugi | </span>
+                                                                </p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+
                                         </div>
                                     </div>
 
