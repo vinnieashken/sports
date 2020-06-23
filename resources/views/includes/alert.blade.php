@@ -18,7 +18,7 @@
                 {{ \Illuminate\Support\Facades\Session::get('loginerror') }}
             </strong></p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true" style="font-family:SansSerif !important; font-size: 16px">&times;</span>
+            <span aria-hidden="true" style="font-family:SansSerif !important; font-size: 32px">&times;</span>
         </button>
     </div>
 @endif
