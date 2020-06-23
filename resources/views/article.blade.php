@@ -227,7 +227,7 @@
                                                 <div class="carousel-item active">
                                                     <div class="card bg-dark text-white">
                                                         <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                            <img class="card-img px300" style="height: 300px !important;" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
+                                                            <img class="card-img px300" style="height: 300px !important;object-fit: cover;" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                             <div class="card-img-overlay">
                                                                 <h5 class="card-title text-white">
                                                                     {{ $rarticle->title }}
@@ -246,7 +246,7 @@
                                                         <div class="carousel-item ">
                                                             <div class="card bg-dark text-white">
                                                                 <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                                    <img class="card-img px300" style="height: 300px !important;" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
+                                                                    <img class="card-img px300" style="height: 300px !important;object-fit: cover;" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                                     <div class="card-img-overlay">
                                                                         <h5 class="card-title text-white">
                                                                             {{ $rarticle->title }}
