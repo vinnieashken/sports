@@ -191,7 +191,27 @@
                                     <div class="container py-2 my-1">
                                         <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
 
+                                        <div class="owl-carousel slideShow py-1 d-none d-md-block d-lg-block">
+                                            @foreach($stories->related as $rarticle)
+                                                <div class="card bg-dark text-white">
+                                                    <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
+                                                        <img class="card-img px300" style="height: 300px !important;"
+                                                             src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
+                                                        <div class="card-img-overlay">
+                                                            <h5 class="card-title text-white">
+                                                                {{ $rarticle->title }}
+                                                            </h5>
+                                                            <p class="card-text">
+                                                    <span class="catebtn mr-1">
+                                                       {{ $articles->getCategory($rarticle->categoryid)->name }}
+                                                    </span> <span class="byln">BY {{ $rarticle->author }} | {{ $rarticle->publishdate }} </span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            @endforeach
 
+                                        </div>
                                     </div>
 
                                 </section>
