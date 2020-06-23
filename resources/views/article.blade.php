@@ -242,7 +242,7 @@
                                                     </div>
                                                 </div>
                                                 @endforeach
-                                                    @foreach($stories->related as $rarticle)
+                                                    @foreach($stories->related->slice(1,count($stories->related) - 1) as $rarticle)
                                                         <div class="carousel-item ">
                                                             <div class="card bg-dark text-white">
                                                                 <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
