@@ -12,7 +12,7 @@
 <header class="header-area">
 
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNav()">x</a>
         <a class="navheading">Sports</a>
 
         @foreach($categories->more as $category)
@@ -68,7 +68,7 @@
 
 {{--        <a href="#" class="profile"><i class="fa fa-user-circle-o"></i> Hi Nicodemus</a>--}}
 
-        <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNavMob()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNavMob()">x</a>
         <a class="bg-dark text-white" onclick="openNav()"><i class="fa fa-bars text-white"></i> Sections</a>
 
         @foreach($categories->more as $category)
