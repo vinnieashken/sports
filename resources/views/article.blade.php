@@ -141,7 +141,7 @@
                                         <a   href="https://web.whatsapp.com/send?text={{ url()->current() }}" class="btn btn-whatsapp rounded-0 text-white d-none d-md-block" >
                                             <span class="fa fa-whatsapp"></span>
                                         </a>
-                                        <a href="javascript:;" data-href="whatsapp://send?text={{ $article->title.' – '.( url()->current()) }}&utm-source=whatsapp&utm-medium=share&utm-campaign={{ $article->title }}" class="btn btn-whatsapp rounded-0 text-white d-block d-md-none" >
+                                        <a href="whatsapp://send?text={{ $article->title.' – '.( url()->current()) }}&utm-source=whatsapp&utm-medium=share&utm-campaign={{ $article->title }}" class="btn btn-whatsapp rounded-0 text-white d-block d-md-none" >
                                             <span class="fa fa-whatsapp"></span>
                                         </a>
                                         <a href="" class="btn btn-linkedin rounded-0 text-white">
