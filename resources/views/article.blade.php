@@ -189,7 +189,9 @@
                                 <section>
 
                                     <div class="container py-2 my-1">
+                                        @if(count($stories->related ) > 0)
                                         <h4 class="section-heading my-2 mx-0">RELATED NEWS </h4>
+
 
                                         <div class="owl-carousel slideShow py-1 d-none d-md-block d-lg-block">
                                             @foreach($stories->related as $rarticle)
@@ -272,6 +274,7 @@
                                                 <span class="sr-only">Next</span>
                                             </a>
                                         </div>
+                                        @endif
                                     </div>
 
                                 </section>
