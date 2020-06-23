@@ -6,7 +6,7 @@
                 {{ \Illuminate\Support\Facades\Session::get('subscribemsg') }}
             </strong></p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" style="font-family: Caput !important;">&times;</span>
         </button>
     </div>
 @endif
@@ -18,7 +18,7 @@
                 {{ \Illuminate\Support\Facades\Session::get('loginerror') }}
             </strong></p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" style="font-family: Caput !important;">&times;</span>
         </button>
     </div>
 @endif
@@ -30,7 +30,7 @@
                 {{ \Illuminate\Support\Facades\Session::get('registrationerror') }}
             </strong></p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" style="font-family: Caput !important;">&times;</span>
         </button>
     </div>
 @endif
@@ -42,7 +42,7 @@
                 {{ \Illuminate\Support\Facades\Session::get('subscriberror') }}
             </strong></p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" style="font-family: Caput !important;">&times;</span>
         </button>
     </div>
 @endif
