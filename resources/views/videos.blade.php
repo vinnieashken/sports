@@ -12,9 +12,9 @@
 @section('content')
 
     <section id="standard" class="standard-area pt-100 mt-md-2 mt-lg-3 first">
-        <div class="container mx-auto mt-4 mt-lg-0 mt-md-5">
+        <div class="container mx-auto mt-lg-0 mt-md-5">
             <div class="row my-2">
-                <div class="col-md-12 col-sm-12 mt-5">
+                <div class="col-md-12 col-sm-12 mt-md-5">
                     @include('includes.alert')
                 </div>
             </div>
