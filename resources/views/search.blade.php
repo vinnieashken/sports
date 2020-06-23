@@ -15,8 +15,8 @@
                     @include('includes.alert')
                 </div>
 
-                    <div class="offset-md-2 col-md-10 mb-3">
-                        <div style="width:100%;  padding: 0px;">
+                    <div class="offset-md-2 col-md-10 col-sm-12 mb-3">
+                        <div style="width:100%;  padding: 0px;" class="mx-auto">
                             <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
                                 <script>
                                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });

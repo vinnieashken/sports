@@ -93,9 +93,9 @@
 
             <div class="row justify-content-center mt-5">
 
-                <div class="col-md-8 mb-3">
-                    <div style="width:100%;  padding: 0px;">
-                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
+                <div class="col-md-8 mb-3 col-sm-12">
+                    <div style="width:100%;  padding: 0px;" class="mx-auto">
+                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;' >
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
                             </script>

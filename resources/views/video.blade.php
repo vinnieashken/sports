@@ -20,8 +20,8 @@
         </div>
 
         <div class="row">
-            <div class="offset-md-3 col-md-8 mb-3">
-                <div style="width:100%;  padding: 0px;">
+            <div class="offset-md-3 col-md-8 col-sm-12 mb-3">
+                <div style="width:100%;  padding: 0px;" class="mx-auto">
                     <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
                         <script>
                             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });

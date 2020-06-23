@@ -2392,6 +2392,7 @@ p.form-message.error {
 
 .pt-100 {
     padding-top: 9%;
+    overflow: hidden;
 }
 
 .categoryname {

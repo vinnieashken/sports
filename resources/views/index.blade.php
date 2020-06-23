@@ -25,9 +25,9 @@
                     @include('includes.alert')
                 </div>
 
-                <div class="offset-md-2 col-md-8 mb-3">
-                    <div style="width:100%;  padding: 0px;">
-                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;'>
+                <div class="offset-md-2 col-md-8 col-sm-12 mb-3">
+                    <div style="width:100%;  padding: 0px;" class="mx-auto">
+                        <div id='div-gpt-ad-1506941653033-0' style='width:100%;' >
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506941653033-0'); });
                             </script>
@@ -138,7 +138,7 @@
                 <!---- advert 2 ---->
                 <div class="col-12 col-md-4 mb-md-4">
                     <div class="text-center mb-2">
-                        <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
+                        <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;' class="mx-auto">
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
                             </script>
@@ -253,8 +253,8 @@
       <div class="container">
            <div class="ad">
                <div class="row py-5">
-                  <div class="offset-md-2 col-md-8">
-                      <div id='div-gpt-ad-1487330276546-0' style='width:100%;margin:auto;'>
+                  <div class="offset-md-2 col-md-8 col-sm-12">
+                      <div id='div-gpt-ad-1487330276546-0' style='width:100%;margin:auto;' class="mx-auto">
                           <script>
                               googletag.cmd.push(function() { googletag.display('div-gpt-ad-1487330276546-0'); });
                           </script>
@@ -358,7 +358,7 @@
                 <div class="col-md-4">
                     <div class="span_1_of_2_diff col">
                         <div class="text-center">
-                            <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;'>
+                            <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;' class="mx-auto">
                                 <script>
                                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837098208-0'); });
                                 </script>
