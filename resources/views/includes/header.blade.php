@@ -1,6 +1,6 @@
 
 <div id="myOverlay" class="overlay">
-    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
     <div class="overlay-content">
         <form action="{{ url('/search') }}" method="GET">
             <input type="text" placeholder="Search The Standard.." name="q">
