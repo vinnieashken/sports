@@ -7488,3 +7488,8 @@ p, body {
 a.text-info:focus, a.text-info:hover {
     color: #5dad49!important;
 }
+
+.fixclose{
+    font-family: sans-serif;
+    font-size: 24px;
+}
