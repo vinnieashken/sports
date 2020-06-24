@@ -247,6 +247,7 @@
             <div class="text-center d-none d-md-block">
                 <button id="btn-more" class="btn-more">More</button>
                 <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
+                <input type="hidden" value="{{ Str::slug($stories->author) }}" id="category">
             </div>
             <hr class="my-4">
         </div>
@@ -263,7 +264,7 @@
                 var offset = $('#offset').val();
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
-                var url = contextPath + "/category/more/"+category+"/"+offset;
+                var url = contextPath + "/author/"+category+"/more/"+offset;
                 //alert(offset+" "+url);
 
                 $.ajax({
