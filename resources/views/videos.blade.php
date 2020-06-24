@@ -178,7 +178,7 @@
         </div>
     </section>
 
-    <section class="my-2 mx-0">
+    <section class="my-1 mx-0">
         <div class="container">
             <div class="ad">
                 <div class="row py-1">
