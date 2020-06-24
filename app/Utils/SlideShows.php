@@ -20,8 +20,7 @@ class SlideShows
         return SlideShow::on('mysql')
             ->orderBy('publishdate','DESC')
             ->whereNull('inactive')
-            ->where('source','main')
-            ->where('title','like','%'.$name.'%')
+            ->where('source',$name)
             ->offset($offset)->limit($size)
             ->get(['id','title','imgURL','publishdate']);
     }
