@@ -257,7 +257,7 @@ class HomeController extends Controller
         $size = 8;
         $name = str_replace('-',' ',$slug);
 
-        $items = $articles->getAuthorStories($name,$offset,$size)->toArray();
+        $items = $articles->getAuthorStories($name,$size,$offset)->toArray();
 
         $newoffset = $offset + $size;
 
