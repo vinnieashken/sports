@@ -220,7 +220,6 @@
                 <div class="text-center d-md-none d-lg-none">
                     <button id="btn-more-m" class="btn-more">More</button>
                     <input type="hidden" name="offset" value="{{ $offset }}" id="offsetm">
-                    <input type="hidden" value="{{ $stories->category->id }}" id="categorym">
                 </div>
                 <div class="col span_1_of_3 mb-4 group">
 
@@ -248,7 +247,6 @@
             <div class="text-center d-none d-md-block">
                 <button id="btn-more" class="btn-more">More</button>
                 <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
-                <input type="hidden" value="{{ $stories->category->id }}" id="category">
             </div>
             <hr class="my-4">
         </div>
