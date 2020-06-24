@@ -229,6 +229,27 @@ class HomeController extends Controller
         return view('video',['categories'=>$categories,'videos'=> $videos,'stories' => $stories]);
     }
 
+    public function author($slug)
+    {
+        $menu = new Menu();
+        $categories = $menu->getCategories();
+        $articles = new Articles();
+        $videos = new Videos();
+        $stories = new \stdClass();
+        $name = str_replace('-',' ',$slug);
+        $stories->top = $articles->getAuthorStories($name,8,0)->toArray();
+        $stories->bottom = $articles->getAuthorStories($name,4,8)->toArray();
+
+        $stories->sidevideos = $videos->getFromCategory('sports',0,6);
+        $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
+
+        $stories->category = $articles->getCategory($id);
+
+        $offset = 12;
+
+        return view('author',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
+    }
+
     public function pictures($id,$slug)
     {
         $menu = new Menu();
