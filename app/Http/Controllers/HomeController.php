@@ -243,8 +243,6 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,6);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
-        $stories->category = $articles->getCategory($id);
-
         $offset = 12;
 
         return view('author',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
