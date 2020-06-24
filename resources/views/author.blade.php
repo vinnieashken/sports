@@ -1,7 +1,7 @@
 @extends('includes.layout')
 
 @section('title')
-    {{ $stories->category->name }}
+    {{ $stories->author }}
 @endsection
 
 @section('description')

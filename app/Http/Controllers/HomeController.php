@@ -239,7 +239,7 @@ class HomeController extends Controller
         $name = str_replace('-',' ',$slug);
         $stories->top = $articles->getAuthorStories($name,8,0)->toArray();
         $stories->bottom = $articles->getAuthorStories($name,4,8)->toArray();
-
+        $stories->author = $name;
         $stories->sidevideos = $videos->getFromCategory('sports',0,6);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
