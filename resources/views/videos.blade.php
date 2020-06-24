@@ -174,7 +174,7 @@
                 <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
 {{--                <input type="hidden" value="{{ $stories->category->id }}" id="category">--}}
             </div>
-            <hr class="my-1">
+            <hr class="my-2">
         </div>
     </section>
 
