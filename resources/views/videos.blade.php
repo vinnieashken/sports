@@ -174,11 +174,11 @@
                 <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
 {{--                <input type="hidden" value="{{ $stories->category->id }}" id="category">--}}
             </div>
-            <hr class="my-4">
+            <hr class="my-1">
         </div>
     </section>
 
-    <section class="my-1 mx-0">
+    <section class="my-2 mx-0">
         <div class="container">
             <div class="ad">
                 <div class="row py-1">
