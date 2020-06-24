@@ -95,7 +95,7 @@ class HomeController extends Controller
 
         }
 
-        $stories->slideshows =
+        $stories->slideshows = $gallery;
 
         $stories->volley = $articles->getFromCategory('volleyball and handball',0,2);
         $stories->unique = $articles->getFromCategory('sports',0,2);
