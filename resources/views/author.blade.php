@@ -266,7 +266,7 @@
                 var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
                 var url = contextPath + "/author/"+category+"/more/"+offset;
-                //alert(offset+" "+url);
+                alert(offset+" "+url);
 
                 $.ajax({
                     url: url,
