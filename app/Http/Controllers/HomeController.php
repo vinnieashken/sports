@@ -209,7 +209,7 @@ class HomeController extends Controller
         $videos = new Videos();
         $size = 8;
 
-        $items = $videos->getFromCategory('sports',13,$size)->toArray();
+        $items = $videos->getFromCategory('sports',$offset,$size)->toArray();
 
         $newoffset = $offset + $size;
 
