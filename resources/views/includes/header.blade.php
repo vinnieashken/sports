@@ -71,6 +71,9 @@
         <a href="javascript:void(0)" class="closebtn border-0" onclick="closeNavMob()">x</a>
         <a class="bg-dark text-white" onclick="openNav()"><i class="fa fa-bars text-white"></i> Sections</a>
 
+        @foreach($categories->top as $category)
+            <a href="{{ url('category/'.$category->id.'/'.Str::slug($category->name,'-')) }}">{{$category->name}}</a>
+        @endforeach
         @foreach($categories->more as $category)
             <a href="{{ url('category/'.$category->id.'/'.Str::slug($category->name,'-')) }}">{{$category->name}}</a>
         @endforeach
