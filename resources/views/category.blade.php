@@ -218,7 +218,7 @@
                 </div>
 
                 <div class="text-center d-md-none d-lg-none">
-                    <button id="btn-more" class="btn-more">More</button>
+                    <button id="btn-more-m" class="btn-more">More</button>
                     <input type="hidden" name="offset" value="{{ $offset }}" id="offsetm">
                     <input type="hidden" value="{{ $stories->category->id }}" id="categorym">
                 </div>
@@ -326,5 +326,41 @@
                 });
             });
         });
+
+        $('#btn-more-m').on('click',function () {
+
+            var offset = $('#offsetm').val();
+            var category = $('#categorym').val();
+            var contextPath = '{{ url('/') }}';
+            var url = contextPath + "/category/more/"+category+"/"+offset;
+            //alert(offset+" "+url);
+
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function(data) {
+                    //alert(data);
+                    if(!$.trim(data))
+                        return;
+
+                    $("#more").append(data);
+
+                    //var doc = jQuery.parseHTML(data);
+                    //var item = $(doc).find('#new_offset');
+                    var regex = /value="[0-9]+"/i;
+                    var regex2 = /[0-9]+/i;
+                    var result = ""+ data.match(regex);
+                    var new_offset = result.match(regex2);
+                    $('#offsetm').val(new_offset);
+                    //$('')
+                    //alert(new_offset);
+                    $('#new_offset').remove();
+                },
+                error:function (jqXHR, exception) {
+                    alert(jqXHR.status)
+                }
+            });
+        });
+
     </script>
 @endsection
