@@ -295,7 +295,7 @@
 
                         @include('includes.mostread')
 
-                        @include('includes.mostread')
+{{--                        @include('includes.mostread')--}}
 
                         <div class="text-center">
                             <div id='div-gpt-ad-1485837098208-0' style='width:100%;margin:auto;'>
