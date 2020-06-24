@@ -1,5 +1,5 @@
 <h4 class="section-heading mb-5">LATEST</h4>
-<ul class="list-unstyled">
+<ul class="list-unstyled mb-md-5">
 
     @foreach($stories->latest as $article)
         <a href=" {{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} " >
