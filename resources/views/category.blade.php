@@ -119,6 +119,7 @@
                         </div>
                     </div>
 
+                    @include('includes.latest')
                     @include('includes.mostread')
 
                     <div class="text-center mt-4">

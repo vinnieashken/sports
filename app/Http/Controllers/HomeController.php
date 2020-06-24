@@ -145,6 +145,7 @@ class HomeController extends Controller
 //        dump($stories->related->count());
 //        return;
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
+        $stories->latest = $articles->getLatest(5,0);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
         return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
@@ -164,6 +165,7 @@ class HomeController extends Controller
         //return;
 
         $stories->sidevideos = $videos->getFromCategory('sports',0,6);
+        $stories->latest = $articles->getLatest(5,0);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
         $stories->category = $articles->getCategory($id);
@@ -198,6 +200,7 @@ class HomeController extends Controller
         $stories = new \stdClass();
         $stories->opinion = $articles->getFromCategory('gossip & rumours',0,4);
         $stories->videos = $videos->getFromCategory('sports',0,13)->toArray();
+        $stories->latest = $articles->getLatest(5,0);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
         $offset = 13;
 
@@ -241,6 +244,7 @@ class HomeController extends Controller
         $stories->bottom = $articles->getAuthorStories($name,4,8)->toArray();
         $stories->author = $name;
         $stories->sidevideos = $videos->getFromCategory('sports',0,6);
+        $stories->latest = $articles->getLatest(5,0);
         $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
 
         $offset = 12;

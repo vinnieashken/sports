@@ -147,6 +147,7 @@
                         </div>
                     </div>
 
+                    @include('includes.latest')
                     @include('includes.mostread')
 
                     @include('includes.social')
