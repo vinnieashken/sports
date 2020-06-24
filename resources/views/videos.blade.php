@@ -133,7 +133,11 @@
 
                 </div>
 
-
+                <div class="text-center d-md-none">
+                    <button id="btn-more-m" class="btn-more">More</button>
+                    <input type="hidden" name="offset" value="{{ $offset }}" id="offsetm">
+                    {{--                <input type="hidden" value="{{ $stories->category->id }}" id="category">--}}
+                </div>
                 <div class="col-lg-4 col-md-4 text-left ">
                     <div class="text-center mb-2">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;'>
@@ -164,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center">
+            <div class="text-center d-none d-md-block">
                 <button id="btn-more" class="btn-more">More</button>
                 <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
 {{--                <input type="hidden" value="{{ $stories->category->id }}" id="category">--}}
@@ -251,6 +255,40 @@
                         var result = ""+ data.match(regex);
                         var new_offset = result.match(regex2);
                         $('#offset').val(new_offset);
+                        //alert(new_offset);
+                        $('#new_offset').remove();
+                    },
+                    error:function (jqXHR, exception) {
+                        alert(jqXHR.status)
+                    }
+                });
+            });
+
+            $('#btn-more-m').on('click',function () {
+
+                var offset = $('#offsetm').val();
+                //var category = $('#category').val();
+                var contextPath = '{{ url('/') }}';
+                var url = contextPath + "/videos/more/"+offset;
+                //alert(offset+" "+url);
+
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function(data) {
+                        //alert(data);
+                        if(!$.trim(data))
+                            return;
+
+                        $("#more").append(data);
+
+                        //var doc = jQuery.parseHTML(data);
+                        //var item = $(doc).find('#new_offset');
+                        var regex = /value="[0-9]+"/i;
+                        var regex2 = /[0-9]+/i;
+                        var result = ""+ data.match(regex);
+                        var new_offset = result.match(regex2);
+                        $('#offsetm').val(new_offset);
                         //alert(new_offset);
                         $('#new_offset').remove();
                     },
