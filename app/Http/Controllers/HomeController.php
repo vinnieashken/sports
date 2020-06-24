@@ -247,6 +247,18 @@ class HomeController extends Controller
 
         return view('author',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
     }
+    public function authormore($slug,$offset)
+    {
+        $articles = new Articles();
+        $size = 8;
+        $name = str_replace('-',' ',$slug);
+
+        $items = $articles->getAuthorStories($name,$offset,$size)->toArray();
+
+        $newoffset = $offset + $size;
+
+        return view('includes.more_author',['articles'=> $articles,'items'=>$items,'offset'=>$newoffset]);
+    }
 
     public function pictures($id,$slug)
     {
