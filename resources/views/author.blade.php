@@ -155,7 +155,7 @@
     </section>
 
     <section class="standard-area mt-md-2 mt-lg-3 first">
-        <div class="container mx-auto mt-4 mt-lg-0 mt-md-5">
+        <div class="container mx-auto mt-lg-5 mt-md-5">
             <div class="row my-2">
             </div>
             <div class="section group justify-content-center">
