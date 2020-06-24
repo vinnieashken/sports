@@ -82,7 +82,20 @@ class HomeController extends Controller
         $stories->checkpoint2 = $checkpoint->slice(5,5);
 
         $stories->videos = $videos->getFromCategory('sports',0,4);
-        $stories->slideshows = $slideshow->get(0,10);
+
+        $gallery = $slideshow->getFromcategory('sports',0,10);
+
+        if($gallery->count() < 5)
+        {
+            $others = $slideshow->get(0,( 5 - $gallery->count() ));
+            foreach ($others as $item)
+            {
+                $gallery->push($item);
+            }
+
+        }
+
+        $stories->slideshows =
 
         $stories->volley = $articles->getFromCategory('volleyball and handball',0,2);
         $stories->unique = $articles->getFromCategory('sports',0,2);
