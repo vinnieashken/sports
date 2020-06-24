@@ -134,7 +134,7 @@
 
                 </div>
             </div>
-            <hr class="my-2">
+            <hr class="my-1">
         </div>
     </section>
 
