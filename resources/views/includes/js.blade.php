@@ -158,15 +158,17 @@
             });
         }
     });
-    var sc = $(".secondnav").position().top;
-    $(window).scroll(function () {
-        var height = $(window).scrollTop();
-        if (height >= sc) {
-            $(".secondnav").addClass("fixed-top");
-        } else {
-            $(".secondnav").removeClass("fixed-top");
-        }
-    });
+
+    // var sc = $(".secondnav").position().top;
+    //
+    // $(window).scroll(function () {
+    //     var height = $(window).scrollTop();
+    //     if (height >= sc) {
+    //         $(".secondnav").addClass("fixed-top");
+    //     } else {
+    //         $(".secondnav").removeClass("fixed-top");
+    //     }
+    // });
 
 </script>
 <script type="text/javascript">window.NREUM || (NREUM = {});
