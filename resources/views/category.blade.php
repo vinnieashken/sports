@@ -216,6 +216,12 @@
 
                     @endfor
                 </div>
+
+                <div class="text-center d-none d-md-block">
+                    <button id="btn-more" class="btn-more">More</button>
+                    <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
+                    <input type="hidden" value="{{ $stories->category->id }}" id="category">
+                </div>
                 <div class="col span_1_of_3 mb-4 group">
                     <div class="span_1_of_2_diff col">
                         <div class="text-center mb-2">
@@ -227,7 +233,7 @@
                             </div>
 
                         </div></div>
-                    <div class="span_1_of_2_diff col">
+                    <div class="span_1_of_2_diff col ">
                         <h4 class="section-heading  mt-4">TWITTER FEEDS</h4>
                         <div class="card check">
                             <a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/GameYetu?ref_src=twsrc%5Etfw">Tweets by GameYetu</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -238,11 +244,7 @@
 
                 </div>
             </div>
-            <div class="text-center">
-                <button id="btn-more" class="btn-more">More</button>
-                <input type="hidden" name="offset" value="{{ $offset }}" id="offset">
-                <input type="hidden" value="{{ $stories->category->id }}" id="category">
-            </div>
+
             <hr class="my-4">
         </div>
     </section>
