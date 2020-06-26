@@ -44,28 +44,9 @@ class HomeController extends Controller
         $stories->top_side2 = $articles->getLatest(1,2);
         $stories->top_bottom = $articles->getLatest(3,3);
 //            $articles->getFromCategory('football',1,1)
-//            ->merge($articles->getFromCategory('boxing',0,1))
-//            ->merge($articles->getFromCategory('rugby',0,1));
-
-//        $default1 = $articles->getFromCategory('boxing',1,1)
-//            ->merge($articles->getFromCategory('rugby',1,1))
-//            ->merge($articles->getFromCategory('athletics',1,1))
-//            ->merge($articles->getFromCategory('rugby',2,2));
-//
-//        $default2 = $articles->getFromCategory('Basketball',0,2)
-//            ->merge($articles->getFromCategory('premier league',1,1))
-//            ->merge($articles->getFromCategory('hockey',2,2));
+//            ->merge($articles->getFromCategory('boxing',0,1));
 
         $checkpointexempt = $articles->getLatest(6,0)->pluck('id') ;
-
-
-
-        //$result = $builder->get();
-
-
-        //dump(array_merge($categories->top->pluck('id')->toArray(),$categories->more->pluck('id')->toArray()));
-        //return;
-
 
         $checkpoint = $articles->getCheckpoint('local',0,10);
 

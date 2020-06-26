@@ -42,27 +42,13 @@ class Articles
     public function getLatestFromCategory($category,$offset,$size)
     {
 
-        return Article::on('mysql')->orderBy('publishday','DESC')->orderBy('parentcategorylistorder','ASC')->where('categoryid',$category)->offset($offset)->limit($size)
+        return Article::on('mysql')->orderBy('publishday','DESC')
+            ->orderBy('parentcategorylistorder','ASC')->where('categoryid',$category)->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
     public function getLatest($size,$offset=0)
     {
-        //$parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
-        //$categories = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->get(['id'])->pluck('id')->toArray();
-        //array_push($categories,$parent->id);
-
-//        $alt = Article::on('mysql')->whereNull('std_article.inactive')
-//            ->where('std_article.publishdate',"<=",date("Y-m-d H:i:s"))
-//            ->where('std_category.parentid',6)
-//            ->leftJoin('std_category','std_category.id','=','std_article.categoryid')
-//            ->orderBy('std_article.publishdate','DESC')
-//            ->orderBy('std_article.id','DESC')
-//            ->select('std_article.id','std_article.categoryid','std_article.title','std_article.thumbURL','std_article.summary','std_article.author','std_article.publishday')
-//            ->offset($offset)->limit($size)->get();
-
-        //return $alt;
-
 
         return Article::on('mysql')
             ->whereIn('categoryid',Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
