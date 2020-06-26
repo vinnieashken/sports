@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css?'.date('ymdhis'))}}">
 
-<link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css?'.date('ymdhis'))}}">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
       integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous"/>
