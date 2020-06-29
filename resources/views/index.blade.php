@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div class=" span_2_of_5 col">
-                <h4 class="section-heading my-2">GAMEYETU VIDEOS</h4>
+                <h4 class="section-heading my-2">SPORTS VIDEOS</h4>
 
                 <div class="card videos">
                     @foreach($stories->videos->slice(0,1)->all() as $video)
