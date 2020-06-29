@@ -197,9 +197,9 @@ class Articles
         foreach($story as $key => $value)
         {
             $result .= $value;
+            $result .= '<p>'.$x.'</p>';
             if($x % $count){
 
-                $result .= '<p>'.$x.'</p>';
                 if($key < $size)
                 {
                     $article = $collection->get($key);
