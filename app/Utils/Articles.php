@@ -279,7 +279,7 @@ class Articles
 
         $sports = [];
 
-        if(is_null( $objbody))
+        if(! property_exists($objbody,'articles'))
             return [];
 
         foreach ($objbody->articles->list as $article)
