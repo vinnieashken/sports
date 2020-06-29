@@ -193,7 +193,7 @@ class Articles
 
         $story = explode('</p>',$story);
         $x = 0;
-        $result ='';
+        $result =''.$size;
         foreach($story as $key => $value)
         {
             $result .= $value;
