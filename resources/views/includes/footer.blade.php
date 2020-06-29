@@ -83,7 +83,7 @@
 
 <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
 
-<div class="modal fade modals overlay" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade modals overlay align-content-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -131,7 +131,7 @@
     </div>
 </div>
 
-<div class="modal fade modals overlay" id="regModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade modals overlay align-content-center" id="regModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="background:#fff !important">
@@ -191,7 +191,7 @@
     </div>
 </div>
 
-<div class="modal fade modals overlay" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade modals overlay align-content-center" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" style="background:#fff !important">
