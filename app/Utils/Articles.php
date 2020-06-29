@@ -277,6 +277,8 @@ class Articles
 
         $sports = [];
 
+        if(is_null( $objbody))
+            return [];
 
         foreach ($objbody->articles->list as $article)
         {
