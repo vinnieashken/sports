@@ -94,7 +94,7 @@
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
-                    <img src="{{ url('/assets/images/logo.png') }}" alt="Standard Digital Logo">
+{{--                    <img src="{{ url('/assets/images/logo.png') }}" alt="Standard Digital Logo">--}}
                 </div>
                 <div class="form-title text-center">
                     <h4>Login</h4>
@@ -142,7 +142,7 @@
             </div>
             <div class="modal-body" style="z-index: 10000;">
                 <div class="text-center auth-logo mb-1">
-                    <img src="{{ url('/assets/images/logo.png') }}" alt="Standard Digital Logo">
+{{--                    <img src="{{ url('/assets/images/logo.png') }}" alt="Standard Digital Logo">--}}
                 </div>
                 <div class="form-title text-center">
                     <h4>Register</h4>
@@ -202,7 +202,7 @@
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
-                    <img src="{{ url('/assets/images/logo.png') }}" alt="Standard Digital Logo">
+{{--                    <img src="{{ url('/assets/images/logo.png') }}" alt="Standard Digital Logo">--}}
                 </div>
                 <div class="form-title text-center">
                     <h4>Forgot Password</h4>
