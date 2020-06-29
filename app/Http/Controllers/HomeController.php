@@ -86,9 +86,11 @@ class HomeController extends Controller
         $stories->unique = $articles->getFromCategory('sports',0,2);
         $stories->opinion = $articles->getFromCategoryExclude($checkpointexempt,'gossip & rumours',0,4);
 
-        $mostRead = Cache::remember("trending.articles", now()->addSeconds(1800), function () use($articles) {
+        $mostRead = Cache::remember("trending.articles", now()->addSeconds(1800),
+            function () use( $articles ) {
             return $articles->getMostRead();
         });
+
         $stories->mostread = $articles->getLocalArticles($mostRead);
 
         return view('index',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
