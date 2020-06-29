@@ -210,6 +210,16 @@ class Articles
                 }
 
             }
+            if($x == 1)
+            {
+                $result .= '<div class="text-left mb-2">
+                            <div id=\'div-gpt-ad-1485837036191-0\' style=\'width:100%;margin:auto;\'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display(\'div-gpt-ad-1485837036191-0\'); });
+                                </script>
+                            </div>
+                        </div>';
+            }
             $x++;
         }
         return str_replace('/images',env('IMAGECDN').'/images',$this->str_replace_first('/images','',$result));
