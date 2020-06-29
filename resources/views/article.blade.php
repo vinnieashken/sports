@@ -199,10 +199,10 @@
 
                                         <div class="row">
                                             @foreach($stories->related as $rarticle)
-                                                <div class="col-md-4 col-sm-12 mb-2">
+                                                <div class="col-md-4 col-sm-12 mb-3">
                                                 <div class="card bg-dark text-white">
                                                     <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                        <img class="card-img px300" style="height: 230px !important;"
+                                                        <img class="card-img px300" style="height: 230px !important;object-fit: cover;"
                                                              src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                         <div class="card-img-overlay">
                                                             <h5 class="card-title text-white">
