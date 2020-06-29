@@ -220,6 +220,10 @@ class Articles
                             </div>
                         </div>';
             }
+            if($x == 7)
+            {
+                $result .= '';
+            }
             $x++;
         }
         return str_replace('/images',env('IMAGECDN').'/images',$this->str_replace_first('/images','',$result));
