@@ -351,7 +351,7 @@ class HomeController extends Controller
                 'period' => [
                     'name' => 'today'
                 ],
-                'per_page' => 3000,
+                'per_page' => 2300,
             ]
         ];
         $url = 'https://api.onthe.io/ata6CLk8UhmPPvS3PfZYx5wKAloQz24K';
