@@ -199,6 +199,7 @@ class Articles
             $result .= $value;
             if($x % $count){
 
+                $result .= '<p>'.$x.'</p>';
                 if($key < $size)
                 {
                     $article = $collection->get($key);
