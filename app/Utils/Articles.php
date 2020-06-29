@@ -244,7 +244,7 @@ class Articles
             'entities' => [
                 'articles' => [
                     'entity' => 'articles',
-                    'details' => ['pageviews', 'readability', 'count_pub'],
+                    'details' => ['pageviews', 'readability', 'count_pub']
                 ]
             ],
             'options' => [
