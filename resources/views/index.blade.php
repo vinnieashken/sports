@@ -85,7 +85,7 @@
 
                                 </div>
                                 </a>
-                                <h4 class="title mt-5 pb-2">
+                                <h4 class="title mt-3 pb-2">
                                     <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                 </h4>
                             </div>
@@ -107,7 +107,7 @@
 
                                 </div>
                                 </a>
-                                <h4 class="title mt-5 pb-2">
+                                <h4 class="title mt-3 pb-2">
                                     <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
                                 </h4>
                             </div>
