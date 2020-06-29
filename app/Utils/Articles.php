@@ -273,6 +273,8 @@ class Articles
         $headers = $response->getHeaders();
         $statusCode = $response->getStatusCode();
         $body = $response->getBody()->getContents();
+        dump($body);
+        return;
         $objbody = json_decode($body);
 
         $sports = [];
