@@ -251,7 +251,7 @@ class Articles
                 'period' => [
                     'name' => 'today'
                 ],
-                'per_page' => 2000
+                'per_page' => $size
             ]
         ];
         $url = 'https://api.onthe.io/ata6CLk8UhmPPvS3PfZYx5wKAloQz24K';
