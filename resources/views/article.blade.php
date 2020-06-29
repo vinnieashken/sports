@@ -223,6 +223,13 @@
                                                 padding: 1.25rem;
                                             }
                                         </style>
+
+                                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript"></script>
+                                            <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-2204615711705377" data-ad-slot="7206855923"></ins>
+                                            <script type="text/javascript">
+                                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                            </script>
+
                                         <div id="carouselExampleControls" class="carousel slide d-md-none d-lg-none d-block" data-ride="carousel">
                                             <div class="carousel-inner">
                                                 @foreach($stories->related->slice(0,1) as $rarticle)
