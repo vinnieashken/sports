@@ -9,7 +9,9 @@ use App\Utils\Menu;
 use App\Utils\SlideShows;
 use App\Utils\TimeUtil;
 use App\Utils\Videos;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
 
@@ -331,7 +333,65 @@ class HomeController extends Controller
 
     public function test()
     {
-        $articles = new Articles();
-        dump($articles->getMostRead(4));
+
+        dump($this->getMostRead(4));
+    }
+
+    public function getMostRead($size=4)
+    {
+        $params=[
+            'key' => "ae48488c6ef1ea95354d3ffb5c496ca8",
+            'entities' => [
+                'articles' => [
+                    'entity' => 'articles',
+                    'details' => ['pageviews', 'readability', 'count_pub'],
+                ]
+            ],
+            'options' => [
+                'period' => [
+                    'name' => 'today'
+                ],
+                'per_page' => 3000,
+            ]
+        ];
+        $url = 'https://api.onthe.io/ata6CLk8UhmPPvS3PfZYx5wKAloQz24K';
+
+        $params = ["form_params" => $params ];
+
+        //return $params;
+
+        $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> false,'http_errors'=>false]);
+        try {
+
+            $response = $client->request('POST', $url, $params);
+
+        }catch (Exception $e)
+        {
+            Log::error("IO request error".$params['body'].' Details'.$e->getMessage());
+        }
+
+        $headers = $response->getHeaders();
+        $statusCode = $response->getStatusCode();
+        $body = $response->getBody()->getContents();
+        //dump($body);
+        //return;
+        $objbody = json_decode($body);
+
+        $sports = [];
+
+        if(is_null( $objbody))
+            return [];
+
+        foreach ($objbody->articles->list as $article)
+        {
+            if(preg_match('/\/sports\/article/',$article->url,$matches))
+            {
+                array_push($sports,$article);
+            }
+        }
+
+        return array_slice($sports,0,$size);
+
+        //return $this->getLocalArticles( array_slice($sports,0,$size) );
     }
 }
