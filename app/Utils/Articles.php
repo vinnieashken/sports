@@ -245,16 +245,13 @@ class Articles
                 'articles' => [
                     'entity' => 'articles',
                     'details' => ['pageviews', 'readability', 'count_pub'],
-                    "filters" => [
-                        "category" => "Sports"
-                    ]
                 ]
             ],
             'options' => [
                 'period' => [
                     'name' => 'today'
                 ],
-                'per_page' => $size
+                'per_page' => 3000
             ]
         ];
         $url = 'https://api.onthe.io/ata6CLk8UhmPPvS3PfZYx5wKAloQz24K';
