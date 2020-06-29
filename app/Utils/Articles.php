@@ -221,9 +221,15 @@ class Articles
                             </div>
                         </div>';
             }
-            if($x == 7)
+            if($x == 7 )
             {
-                $result .= '';
+                $result .= '<div class="text-center">
+                            <div id=\'div-gpt-ad-1485837098208-0\' style=\'width:100%;margin:auto;\'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display(\'div-gpt-ad-1485837098208-0\'); });
+                                </script>
+                            </div>
+                        </div>';
             }
             $x++;
         }
