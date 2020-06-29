@@ -377,9 +377,11 @@ class HomeController extends Controller
         //return;
         $objbody = json_decode($body);
 
+        return $objbody;
+
         $sports = [];
 
-        if(is_null( $objbody))
+        if(! property_exists($objbody,'articles'))
             return [];
 
         foreach ($objbody->articles->list as $article)
