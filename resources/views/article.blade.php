@@ -199,10 +199,10 @@
 
                                         <div class="row">
                                             @foreach($stories->related as $rarticle)
-                                                <div class="col-md-4">
+                                                <div class="col-md-4 col-sm-12 mb-2">
                                                 <div class="card bg-dark text-white">
                                                     <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                        <img class="card-img px300" style="height: 300px !important;"
+                                                        <img class="card-img px300" style="height: 230px !important;"
                                                              src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                         <div class="card-img-overlay">
                                                             <h5 class="card-title text-white">
@@ -230,57 +230,6 @@
                                             }
                                         </style>
 
-                                        <div id="carouselExampleControls" class="carousel slide d-md-none d-lg-none d-block" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                                @foreach($stories->related->slice(0,1) as $rarticle)
-                                                <div class="carousel-item active">
-                                                    <div class="card bg-dark text-white">
-                                                        <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                            <img class="card-img px300" style="height: 300px !important;object-fit: cover;" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
-                                                            <div class="card-img-overlay">
-                                                                <h5 class="card-title text-white">
-                                                                    {{ $rarticle->title }}
-                                                                </h5>
-                                                                <p class="card-text">
-                                                                    <span class="catebtn mr-1">
-                                                                           {{ $articles->getCategory($rarticle->categoryid)->name }}
-                                                                    </span> <span class="byln">BY {{ $rarticle->author }} | {{ $rarticle->publishdate }} </span>
-                                                                </p>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                @endforeach
-                                                    @foreach($stories->related->slice(1,count($stories->related) - 1) as $rarticle)
-                                                        <div class="carousel-item ">
-                                                            <div class="card bg-dark text-white">
-                                                                <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                                    <img class="card-img px300" style="height: 300px !important;object-fit: cover;" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
-                                                                    <div class="card-img-overlay">
-                                                                        <h5 class="card-title text-white">
-                                                                            {{ $rarticle->title }}
-                                                                        </h5>
-                                                                        <p class="card-text">
-                                                                    <span class="catebtn mr-1">
-                                                                           {{ $articles->getCategory($rarticle->categoryid)->name }}
-                                                                    </span> <span class="byln">BY {{ $rarticle->author }} | {{ $rarticle->publishdate }} </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    @endforeach
-
-                                            </div>
-                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div>
                                         @endif
                                     </div>
 
