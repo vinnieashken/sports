@@ -328,4 +328,10 @@ class HomeController extends Controller
         return response()->view('sitemap',['sitemap' => $sitemap,'articles'=>$articles,'categories'=> $categories])
             ->header('Content-Type', 'text/xml');
     }
+
+    public function test()
+    {
+        $articles = new Articles();
+        dump($articles->getMostRead(4));
+    }
 }
