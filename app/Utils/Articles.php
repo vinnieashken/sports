@@ -197,7 +197,7 @@ class Articles
         foreach($story as $key => $value)
         {
             $result .= $value;
-            $result .= '<p>'.$x.' '.$count.'</p>';
+            //$result .= '<p>'.$x.' '.$count.'</p>';
             if($x % $count){
 
                 if($key < $size)
