@@ -7025,9 +7025,11 @@ iframe{
     font-weight: 800;
 }
 .single-standard .standard-content .content .title a {
-    padding-left: 0px;
-    color: #6f6f6f;
-    font-size: 17px!important;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 2px;
+    /*color: #6f6f6f;*/
+    font-size: 18px!important;
     font-family: Solido;
     line-height: 36px;
     -webkit-transition: all 0.4s ease-out 0s;

@@ -25,7 +25,7 @@
                     @include('includes.alert')
                 </div>
 
-                <div class="offset-md-2 col-md-8 col-sm-12 mb-3">
+                <div class="offset-md-2 col-md-8 col-sm-12 my-4">
                     <div style="width:100%;  padding: 0px;" class="mx-auto">
                         <div id='div-gpt-ad-1506941653033-0' style='width:100%;' >
                             <script>
@@ -70,9 +70,7 @@
 
                             @foreach($stories->top_side1 as $article)
                             <div class="card minicard">
-                                <h4 class="title pb-2">
-                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
-                                </h4>
+
                                 <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                                 <div class="row no-gutters">
                                     <div class="col-md-12 col-sm-12">
@@ -87,13 +85,14 @@
 
                                 </div>
                                 </a>
+                                <h4 class="title pb-2">
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                </h4>
                             </div>
                             @endforeach
                             @foreach($stories->top_side2 as $article)
                             <div class="card minicard">
-                                <h4 class="title mt-5 pb-2">
-                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
-                                </h4>
+
                                 <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                                 <div class="row no-gutters">
                                     <div class="col-md-12 col-sm-12">
@@ -108,6 +107,9 @@
 
                                 </div>
                                 </a>
+                                <h4 class="title mt-5 pb-2">
+                                    <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" class="text-color"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>{{ $article->title }}</a>
+                                </h4>
                             </div>
                             @endforeach
                         </div>
@@ -137,7 +139,7 @@
                 </div>
                 <!---- advert 2 ---->
                 <div class="col-12 col-md-4 mb-md-4">
-                    <div class="text-center mb-2">
+                    <div class="text-center mb-2 mt-4">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;' class="mx-auto">
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
