@@ -164,7 +164,6 @@
                         <div class="card check">
                             <a class="twitter-timeline" data-height="600"
                                href="https://twitter.com/GameYetu?ref_src=twsrc%5Etfw">Tweets by GameYetu</a>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                     </div>
                 </div>
