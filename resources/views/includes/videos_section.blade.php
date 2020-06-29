@@ -1,6 +1,6 @@
 
 
-<h4 class="section-heading my-4 mx-0 text-left">GAMEYETU VIDEOS</h4>
+<h4 class="section-heading my-4 mx-0 text-left">SPORTS VIDEOS</h4>
 <div class="card diff ">
 
     <div class="card-body vedeos vids p-0">
