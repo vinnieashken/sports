@@ -9,6 +9,7 @@ use App\Models\Category;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use Jenssegers\Agent\Agent;
 
 class Articles
 {
@@ -210,7 +211,7 @@ class Articles
                 }
 
             }
-            if($x == 1)
+            if($x == 1 && \Jenssegers\Agent\Facades\Agent::isMobile())
             {
                 $result .= '<div class="text-left mb-2">
                             <div id=\'div-gpt-ad-1485837036191-0\' style=\'width:100%;margin:auto;\'>
