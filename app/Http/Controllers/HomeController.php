@@ -11,6 +11,7 @@ use App\Utils\TimeUtil;
 use App\Utils\Videos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -85,7 +86,10 @@ class HomeController extends Controller
         $stories->unique = $articles->getFromCategory('sports',0,2);
         $stories->opinion = $articles->getFromCategoryExclude($checkpointexempt,'gossip & rumours',0,4);
 
-        $stories->mostread = $articles->getLocalArticles($articles->getMostRead());
+        $mostRead = Cache::remember("trending.articles", now()->addSeconds(1800), function () use($articles) {
+            return $articles->getMostRead();
+        });
+        $stories->mostread = $articles->getLocalArticles($mostRead);
 
         return view('index',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }

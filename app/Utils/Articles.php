@@ -249,7 +249,7 @@ class Articles
             ],
             'options' => [
                 'period' => [
-                    'name' => 'hour'
+                    'name' => 'today'
                 ],
                 'per_page' => 2000
             ]
