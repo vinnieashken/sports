@@ -35,6 +35,9 @@ class HomeController extends Controller
 //        dd($query);
 //        return;
 
+        dump($articles->getMostRead());
+        return;
+
         //dump(Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
         //return;
 
