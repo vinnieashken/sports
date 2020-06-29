@@ -88,7 +88,7 @@ class HomeController extends Controller
 
         $mostRead = Cache::remember("mostread.articles", now()->addSeconds(1800),
             function () use( $articles ) {
-            return $articles->getMostRead();
+            return $articles->getMostRead(4);
         });
 
         $stories->mostread = $articles->getLocalArticles($mostRead);
