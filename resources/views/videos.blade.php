@@ -39,9 +39,9 @@
                         <a href="{{ url('video/'.$video['id'].'/'.Str::slug($video['title'],'-')) }}">
                         <div class="standard-image">
                             <i class="fa fa-play bigblack"></i>
-                            <img class="card-img-top h345"
+                            <img class="card-img-top h345 "
                                  src="https://i.ytimg.com/vi/{{ $video['videoURL'] }}/hqdefault.jpg"
-                                 alt="Card image cap"></div>
+                                 alt="{{ $video['title'] }}"></div>
                         <div class="card-body pt-4">
 {{--                            <p class="catertitleb">FOOTBALL</p>--}}
                             <h5 class="card-title tit">
@@ -73,9 +73,10 @@
                                     <a href="{{ url('video/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                                     <div class="standard-image">
                                         <i class="fa fa-play smallblack"></i>
-                                        <img class="card-img-top"
-                                             src="https://i.ytimg.com/vi/{{ $items[$i]['videoURL'] }}/hqdefault.jpg"
-                                             alt="Card image cap">
+                                        <img class="card-img-top lazy"
+                                             src="{{ asset('assets/images/pic.jpg') }}"
+                                             data-src="https://i.ytimg.com/vi/{{ $items[$i]['videoURL'] }}/hqdefault.jpg"
+                                             alt="{{ $items[$i]['title'] }}">
                                     </div>
 {{--                                    <p class="catertitle">ARCHERY</p>--}}
                                     <div class="card-body pt-4">
@@ -103,9 +104,10 @@
                                     <a href="{{ url('video/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                                     <div class="standard-image">
                                         <i class="fa fa-play smallblack"></i>
-                                        <img class="card-img-top"
-                                             src="https://i.ytimg.com/vi/{{ $items[$i]['videoURL'] }}/hqdefault.jpg"
-                                             alt="Card image cap">
+                                        <img class="card-img-top lazy"
+                                             src="{{ asset('assets/images/pic.jpg') }}"
+                                             data-src="https://i.ytimg.com/vi/{{ $items[$i]['videoURL'] }}/hqdefault.jpg"
+                                             alt="{{ $items[$i]['title'] }}">
                                     </div>
 
 {{--                                    <p class="catertitle">ARCHERY</p>--}}
