@@ -135,7 +135,7 @@ class HomeController extends Controller
         $videos = new Videos();
         $article = $articles->getArticle($id);
         $stories = new \stdClass();
-        $stories->related = $articles->getRelatedArticles($id,4,0);
+        $stories->related = $articles->getRelatedArticles($id,6,0);
 
         if($stories->related->count() < 6)
         {
