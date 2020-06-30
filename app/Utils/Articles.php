@@ -26,7 +26,9 @@ class Articles
         $parent = Category::on('mysql')->where('site','main')->whereNull('inactive')->where('parentid',0)->where('name','like','%sports%')->first();
         $cat = Category::on('mysql')->whereNull('inactive')->where('parentid',$parent->id)->where('name',$category)->get(['id','name','shortname'])->first();
 
-        return Article::on('mysql')->orderBy('publishday','DESC')->orderBy('parentcategorylistorder','ASC')->where('categoryid',$cat->id)->offset($offset)->limit($size)
+        return Article::on('mysql')->orderBy('publishday','DESC')->orderBy('parentcategorylistorder','ASC')
+            ->where('source','main')
+            ->where('categoryid',$cat->id)->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
@@ -37,6 +39,7 @@ class Articles
 
         return Article::on('mysql')->orderBy('publishday','DESC')
             ->orderBy('parentcategorylistorder','ASC')
+            ->where('source','main')
             ->where('categoryid',$cat->id)
             ->whereNotIn('id',$filter)
             ->offset($offset)->limit($size)
@@ -47,7 +50,9 @@ class Articles
     {
 
         return Article::on('mysql')->orderBy('publishday','DESC')
-            ->orderBy('parentcategorylistorder','ASC')->where('categoryid',$category)->offset($offset)->limit($size)
+            ->orderBy('parentcategorylistorder','ASC')
+            ->where('source','main')
+            ->where('categoryid',$category)->offset($offset)->limit($size)
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
@@ -59,7 +64,7 @@ class Articles
             ->whereIn('categoryid',Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->whereNotNull('homepagelistorder')
+            ->where('listorder','>',0)
             ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
@@ -72,6 +77,7 @@ class Articles
     {
 
         return Article::on('mysql')
+            ->where('source','main')
             ->whereIn('categoryid',Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
@@ -90,7 +96,7 @@ class Articles
         $categories = Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')
-
+            ->where('source','main')
             ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
@@ -106,6 +112,7 @@ class Articles
         $categories = Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')
+            ->where('source','main')
             ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
@@ -120,6 +127,7 @@ class Articles
         $categories = Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')
+            ->where('source','main')
             ->orderBy('publishday','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
@@ -136,7 +144,11 @@ class Articles
 
         $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
-        return Article::on('mysql')->orderBy('publishday','DESC')->whereNull('inactive')->whereIn('categoryid',$categories)
+        return Article::on('mysql')
+            ->orderBy('publishday','DESC')
+            ->where('source','main')
+            ->whereNull('inactive')
+            ->whereIn('categoryid',$categories)
             ->where('publishday',date('Y-m-d'))->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
@@ -147,6 +159,7 @@ class Articles
         if(!empty($except))
         {
             return Article::on('mysql')
+                ->where('source','main')
                 ->whereIn('categoryid',$categories)
                 ->whereNotIn('id',$except)
                 ->whereNull('inactive')
@@ -160,6 +173,7 @@ class Articles
                 ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
         }
         return Article::on('mysql')
+            ->where('source','main')
             ->whereIn('categoryid',$categories)
             ->whereNull('inactive')
             ->where('keywords','like','%'.$keyword.'%')
@@ -208,7 +222,7 @@ class Articles
             $related->orWhere('keywords', 'LIKE', '%'.$keyword.'%');
         }
 
-        return $related->whereIn('categoryid',$categories)->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday'])
+        return $related->where('source','main')->whereIn('categoryid',$categories)->offset($offset)->limit($size)->get(['id','categoryid','title','thumbURL','summary','author','publishday'])
             ->reject(function ($item) use ($id) {
                 return $item->id == $id;
             })->reject(function ($item) use ($categories){
