@@ -201,7 +201,7 @@
                                 <div class="single-standard">
                                     <div class="standard-image mr-3">
                                         <img src="{{ asset('assets/images/pic.jpg') }}"
-                                             data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
+                                             data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                                     </div>
                                 </div>
                                 <div class="media-body ml-3 ml-md-0">
@@ -223,7 +223,7 @@
                                     <div class="single-standard">
                                         <div class="standard-image mr-3">
                                             <img src="{{ asset('assets/images/pic.jpg') }}"
-                                                 data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
+                                                 data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                                         </div>
                                     </div>
                                     <div class="media-body ml-3 ml-md-0">
@@ -346,7 +346,7 @@
                             <div class="single-standard">
                                 <div class="standard-image">
                                     <img src="{{ asset('assets/images/pic.jpg') }}"
-                                         data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
+                                         data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                                 </div>
                             </div>
                             <div class="card-body p-3 bg-white">
@@ -372,7 +372,7 @@
                             <div class="single-standard">
                                 <div class="standard-image">
                                     <img src="{{ asset('assets/images/pic.jpg') }}"
-                                         data-src="{{ $articles->getImageLocation().$article->thumbURL }}"  class="card-img-top" alt="{{ $article->title }}">
+                                         data-src="{{ $articles->getImageLocation().$article->thumbURL }}"  class="card-img-top lazy" alt="{{ $article->title }}">
                                 </div>
 
                             </div>
@@ -427,7 +427,7 @@
                         <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                         <div class="standard-image">
                             <img src="{{ asset('assets/images/pic.jpg') }}"
-                                 data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
+                                 data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                         </div>
                         </a>
                     </div>
