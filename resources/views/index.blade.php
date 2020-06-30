@@ -266,7 +266,7 @@
                                 <i class="fa fa-play vidasmall"></i>
                                 <img src="{{ asset('assets/images/pic.jpg') }}"
                                      data-src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
-                                     class="mr-md-3" alt="{{ $video->title }}">
+                                     class="mr-md-3 lazy" alt="{{ $video->title }}">
 
                             </div>
                             <div class="media-body ml-3 ml-md-0 black">

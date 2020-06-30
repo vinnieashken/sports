@@ -10,8 +10,9 @@
                 <div class="media my-2 mt-3">
                     <div class="single-standard">
                         <i class="fa fa-play vidasmall"></i>
-                        <img src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
-                             class="mr-md-3" alt="{{ $video->title }}">
+                        <img src="{{ asset('assets/images/pic.jpg') }}"
+                             data-src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
+                             class="mr-md-3 lazy" alt="{{ $video->title }}">
                     </div>
                     <div class="media-body ml-3 ml-md-0 black">
 
