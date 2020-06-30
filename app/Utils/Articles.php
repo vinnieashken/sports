@@ -281,6 +281,7 @@ class Articles
                             </div>
                         </div>';
             }
+
             $x++;
         }
         //$this->str_replace_first('/images','',$result)

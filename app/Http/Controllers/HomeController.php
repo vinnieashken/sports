@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
+use Jenssegers\Agent\Agent;
 
 class HomeController extends Controller
 {
@@ -340,8 +341,9 @@ class HomeController extends Controller
     {
 
         //dump($this->getMostRead(4));
-        $articles = new Articles();
-        dump($articles->getImageLocation());
+        //$articles = new Articles();
+        $agent = new Agent();
+        dump($agent->isPhone());
     }
 
     public function getMostRead($size=4)
