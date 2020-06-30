@@ -157,8 +157,7 @@ class Articles
 
     public function getRelatedArticles($id,$size,$offset = 0)
     {
-        $article = Article::where('id',$id)->get(['id','title','keywords','thumbURL','publishday','author'])->first();
-
+        $article = $this->getArticle($id);
 
         $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
