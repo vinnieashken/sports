@@ -44,11 +44,15 @@ class HomeController extends Controller
         //dump(Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
         //return;
 
-        $stories->top = $articles->getHomepage(1,0);
+        $home = $articles->getHomepage(6,0);
+        $except = $home->pluck('id');
 
-        $stories->top_side1 = $articles->getHomepage(1,1);
-        $stories->top_side2 = $articles->getHomepage(1,2);
-        $stories->top_bottom = $articles->getHomepage(3,3);
+        $stories->top = $home->slice(0,1);
+
+        $stories->top_side1 = $home->slice(1,1);
+        $stories->top_side2 = $home->slice(2,1);
+        $stories->top_bottom = $home->slice(3,3);
+
         $stories->latest = $articles->getLatest(4,0);
 //            $articles->getFromCategory('football',1,1)
 //            ->merge($articles->getFromCategory('boxing',0,1));

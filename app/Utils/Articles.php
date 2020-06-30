@@ -95,6 +95,21 @@ class Articles
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
+    public function getLatestExceptArray($ids,$size,$offset=0)
+    {
+
+        $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
+
+        return Article::on('mysql')
+            ->orderBy('publishday','DESC')
+            ->orderBy('homepagelistorder','ASC')
+            ->orderBy('listorder','ASC')
+            ->whereNull('inactive')
+            ->where('publishdate',"<=",date("Y-m-d H:i:s"))
+            ->whereIn('categoryid',$categories)->whereNotIn('id',$ids)->offset($offset)->limit($size)
+            ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+    }
+
     public function getAuthorStories($name,$size,$offset=0)
     {
         $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
