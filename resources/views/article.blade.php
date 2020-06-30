@@ -74,7 +74,7 @@
                  "@id": "{{ url('category/'.$articles->getCategory($article->categoryid)->id.'/'.Str::slug( $articles->getCategory($article->categoryid)->name,'-') ) }}",
                  "name": "{{ $articles->getCategory($article->categoryid)->name }}"
                }
-              },
+              }
              ]
             }
 </script>
