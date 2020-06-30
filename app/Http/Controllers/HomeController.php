@@ -137,9 +137,9 @@ class HomeController extends Controller
         $stories = new \stdClass();
         $stories->related = $articles->getRelatedArticles($id,4,0);
 
-        if($stories->related->count() < 4)
+        if($stories->related->count() < 6)
         {
-            $latest = $articles->getLatestExcept($id, (4 - $stories->related->count()),0);
+            $latest = $articles->getLatestExcept($id, (6 - $stories->related->count()),0);
 
             foreach ($latest as $item)
             {
