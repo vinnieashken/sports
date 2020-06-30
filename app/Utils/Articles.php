@@ -48,6 +48,22 @@ class Articles
             ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
     }
 
+    public function getHomepage($size,$offset=0)
+    {
+
+        return Article::on('mysql')
+            ->whereIn('categoryid',Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
+            ->whereNull('inactive')
+            ->where('publishdate',"<=",date("Y-m-d H:i:s"))
+            ->where('homepagelistorder','>',0)
+            ->orderBy('publishdate','DESC')
+            ->orderBy('homepagelistorder','ASC')
+            ->orderBy('listorder','ASC')
+
+            ->offset($offset)->limit($size)
+            ->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+    }
+
     public function getLatest($size,$offset=0)
     {
 
