@@ -5,6 +5,10 @@
     Search
 @endsection
 
+@section('initialscripts')
+    <script async src="https://cse.google.com/cse.js?cx=011965659370381653902:7awkdkhs2_y" async defer></script>
+@endsection
+
 @section('content')
 
     <section id="standard" class="standard-area pt-100 mt-md-3 mt-lg-3 first">
