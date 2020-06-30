@@ -6,8 +6,7 @@
         <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
             <div class="standard-image">
                 <img class="card-img-top lazy"
-                     src="{{ asset('assets/images/pic.jpg') }}"
-                     data-src="{{ $articles->getImageLocation().$items[$i]['thumbURL'] }}"
+                     src="{{ $articles->getImageLocation().$items[$i]['thumbURL'] }}"
                      alt="{{ $items[$i]['title']  }}">
             </div>
             <p class="catertitle">{{ $articles->getCategory($items[$i]['categoryid'])->name }}</p>
@@ -34,8 +33,7 @@
         <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
             <div class="standard-image">
                 <img class="card-img-top lazy"
-                     src="{{ asset('assets/images/pic.jpg') }}"
-                     data-src="{{ $articles->getImageLocation().$items[$i]['thumbURL'] }}"
+                     src="{{ $articles->getImageLocation().$items[$i]['thumbURL'] }}"
                      alt="{{ $items[$i]['title']  }}">
             </div>
             <p class="catertitle">{{ $articles->getCategory($items[$i]['categoryid'])->name }}</p>
