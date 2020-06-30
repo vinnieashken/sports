@@ -49,7 +49,7 @@ class HomeController extends Controller
         $stories->top_side1 = $articles->getHomepage(1,1);
         $stories->top_side2 = $articles->getHomepage(1,2);
         $stories->top_bottom = $articles->getHomepage(3,3);
-        $stories->latest = $articles->getLatest(0,4);
+        $stories->latest = $articles->getLatest(4,0);
 //            $articles->getFromCategory('football',1,1)
 //            ->merge($articles->getFromCategory('boxing',0,1));
 
