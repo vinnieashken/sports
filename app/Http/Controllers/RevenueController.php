@@ -191,7 +191,7 @@ class RevenueController extends Controller
             return redirect(URL::previous());
         }
 
-        $params = ["body"=>json_encode(['email'=> $email, 'category_id'=> 20 ])];
+        $params = ["body"=>json_encode(['email'=> $email, 'category_id'=> 36 ])];
         //return $params;
 
         $client = new Client(['headers' => [ 'Content-Type' => 'application/json',
