@@ -264,6 +264,7 @@ class Articles
             }
             $x++;
         }
+        //$this->str_replace_first('/images','',$result)
         return str_replace('/images',env('IMAGECDN').'/images',$result);
     }
 
