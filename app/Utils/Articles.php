@@ -55,7 +55,7 @@ class Articles
     {
 
         return Article::on('mysql')
-            ->whereIn('categoryid',Category::on('mysql')->where('source','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
+            ->whereIn('categoryid',Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             ->whereNotNull('homepagelistorder')
@@ -71,7 +71,7 @@ class Articles
     {
 
         return Article::on('mysql')
-            ->whereIn('categoryid',Category::on('mysql')->where('source','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
+            ->whereIn('categoryid',Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             //->where('listorder','>',0)
@@ -86,7 +86,7 @@ class Articles
     public function getLatestExcept($id,$size,$offset=0)
     {
 
-        $categories = Category::on('mysql')->where('source','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
+        $categories = Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')
 
@@ -102,7 +102,7 @@ class Articles
     public function getLatestExceptArray($ids,$size,$offset=0)
     {
 
-        $categories = Category::on('mysql')->where('source','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
+        $categories = Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')
             ->orderBy('publishday','DESC')
@@ -116,7 +116,7 @@ class Articles
 
     public function getAuthorStories($name,$size,$offset=0)
     {
-        $categories = Category::on('mysql')->where('source','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
+        $categories = Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 
         return Article::on('mysql')
             ->orderBy('publishday','DESC')
