@@ -1,6 +1,6 @@
 
 <meta name="application-name" content="Standard Digital">
-<link rel="apple-touch-icon" sizes="57x57" href="https://www.standardmedia.co.ke/assets/apple-touch-icon-192x192">
+
 <link rel="dns-prefetch" href="https://www.gstatic.com" >
 <link rel="dns-prefetch" href="https://cdn.standardmedia.co.ke" >
 <link rel="dns-prefetch" href="https://tt.onthe.io" >
