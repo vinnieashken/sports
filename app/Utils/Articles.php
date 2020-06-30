@@ -14,11 +14,11 @@ use Jenssegers\Agent\Agent;
 class Articles
 {
     public $imagelocation;
-
     public function __construct()
     {
         date_default_timezone_set('Africa/Nairobi');
         $this->imagelocation = env('IMAGECDN');
+
     }
 
     public function getFromCategory($category,$offset,$size)
@@ -234,7 +234,7 @@ class Articles
     {
         //dump($collection->nth(1));
         //return;
-
+        $agent = new Agent();
         $adbegin ='<p class="card-text"> <a href="';
         $middle = '"> SEE ALSO: ';
         $adend = ' </a>  </p>';
@@ -261,7 +261,7 @@ class Articles
                 }
 
             }
-            if($x == 1 && \Jenssegers\Agent\Facades\Agent::isMobile())
+            if($x == 1 && $agent->isPhone())
             {
                 $result .= '<div class="text-left mb-2">
                             <div id=\'div-gpt-ad-1485837036191-0\' style=\'width:100%;margin:auto;\'>
@@ -271,7 +271,7 @@ class Articles
                             </div>
                         </div>';
             }
-            if($x == 7 && \Jenssegers\Agent\Facades\Agent::isMobile() )
+            if($x == 7 && $agent->isPhone() )
             {
                 $result .= '<div class="text-center">
                             <div id=\'div-gpt-ad-1485837098208-0\' style=\'width:100%;margin:auto;\'>
