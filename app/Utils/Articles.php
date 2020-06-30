@@ -53,19 +53,10 @@ class Articles
 
     public function getHomepage($size,$offset=0)
     {
-        $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->where('site','main')->whereNull('inactive')->get(['id','refer_id']);
-        $sportscategories = [];
-
-        foreach ($categories as $category)
-        {
-            if($category->referid == 0)
-                array_push($sportscategories,$category->id);
-            else
-                array_push($sportscategories,$category->refer_id);
-        }
 
         return Article::on('mysql')
-            ->whereIn('categoryid',$sportscategories)
+            ->where('source','main')
+            ->whereIn('categoryid',Category::on('mysql')->where('site','main')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
             ->whereNotNull('homepagelistorder')
