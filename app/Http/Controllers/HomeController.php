@@ -339,7 +339,9 @@ class HomeController extends Controller
     public function test()
     {
 
-        dump($this->getMostRead(4));
+        //dump($this->getMostRead(4));
+        $articles = new Articles();
+        dump($articles->getImageLocation());
     }
 
     public function getMostRead($size=4)

@@ -356,4 +356,9 @@ class Articles
             return substr($text,0,$limit).'...';
         return $text;
     }
+
+    public function getImageLocation()
+    {
+        return $this->imagelocation;
+    }
 }
