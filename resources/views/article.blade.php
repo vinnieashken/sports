@@ -75,7 +75,6 @@
                  "name": "{{ $articles->getCategory($article->categoryid)->name }}"
                }
               },
-
               }
              ]
             }
