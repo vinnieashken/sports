@@ -204,7 +204,7 @@
                                                     <div class="card bg-white mb-4 single-standard">
                                                         <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
                                                             <div class="standard-image">
-                                                                <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
+                                                                <img class="card-img-top related-img" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                             </div>
 
                                                             <div class="card-body pt-4 px-3 pb-3">
