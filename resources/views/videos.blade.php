@@ -162,6 +162,7 @@
                         </div>
                         <h4 class="section-heading mx-0 mt-2">TWITTER FEEDS</h4>
                         <div class="card check">
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             <a class="twitter-timeline" data-height="600"
                                href="https://twitter.com/GameYetu?ref_src=twsrc%5Etfw">Tweets by GameYetu</a>
                         </div>

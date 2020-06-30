@@ -156,6 +156,33 @@
 
     <div class="container">
         <div class="section group">
+
+            <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">LATEST</h4>
+            <div class="card-deck p-0">
+                @foreach($stories->unique as $article)
+
+                    <div class="card mb-4">
+                        <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
+                            <div class="single-standard">
+                                <div class="standard-image">
+                                    <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
+                                         class="card-img-top" alt="{{ $article->title }}">
+                                </div>
+
+                            </div>
+                            <div class="card-body p-3 bg-white">
+                                <p class="card-text black"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
+                                    {{ $article->title }}
+                                </p>
+                                <p class="card-text grey"> {{ $article->summary }}</p>
+                            </div>
+                        </a>
+                    </div>
+
+                @endforeach
+
+            </div>
+
             <div class=" span_3_of_5 col">
 
                 <h4 class="section-heading my-2">LOCAL STORIES</h4>
@@ -206,6 +233,7 @@
                     </div>
                 </div>
             </div>
+
             <div class=" span_2_of_5 col">
                 <h4 class="section-heading my-2">SPORTS VIDEOS</h4>
 
@@ -370,6 +398,7 @@
                     <div class="span_1_of_2_diff col">
                         <h4 class="section-heading mx-0 my-2">TWITTER FEEDS</h4>
                         <div class="card check">
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             <a class="twitter-timeline" data-width="400" data-height="500"
                                href="https://twitter.com/GameYetu?ref_src=twsrc%5Etfw">Tweets by GameYetu</a>
                         </div>

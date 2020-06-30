@@ -200,22 +200,25 @@
                                         <div class="row">
                                             @foreach($stories->related as $rarticle)
                                                 <div class="col-md-4 col-sm-12 mb-3">
-                                                <div class="card bg-dark text-white">
-                                                    <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
-                                                        <img class="card-img px300" style="height: 230px !important;object-fit: cover;"
-                                                             src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
-                                                        <div class="card-img-overlay">
-                                                            <h5 class="card-title text-white">
-                                                                {{ $rarticle->title }}
-                                                            </h5>
-                                                            <p class="card-text">
-                                                    <span class="catebtn mr-1">
-                                                       {{ $articles->getCategory($rarticle->categoryid)->name }}
-                                                    </span> <span class="byln">BY {{ $rarticle->author }} | {{ $rarticle->publishdate }} </span>
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                </div>
+
+                                                    <div class="card bg-white mb-4 single-standard">
+                                                        <a href="{{ url( Str::slug($articles->getCategory($rarticle->categoryid)->name,'-').'/'.$rarticle->id.'/'.str_replace(array('\'', '"'), '', Str::slug( $rarticle->title,'-') ) ) }}">
+                                                            <div class="standard-image">
+                                                                <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
+                                                            </div>
+                                                            <p class="catertitle">{{ $articles->getCategory($rarticle->categoryid)->name }}</p>
+                                                            <div class="card-body pt-4 px-3 pb-3">
+                                                                <h5 class="card-title">
+                                                                    {{ $rarticle->title  }}
+                                                                </h5>
+                                                            </div>
+                                                            <div class="card-footer bg-white">
+                                                                <small class="byline">{{ $rarticle->author }}</small>
+                                                                <small class="byline-two float-right">{{ $rarticle->publishday }}</small>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
                                                 </div>
                                             @endforeach
                                         </div>
