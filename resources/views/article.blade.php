@@ -206,9 +206,9 @@
                                                             <div class="standard-image">
                                                                 <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $rarticle->thumbURL }}" alt="{{ $rarticle->title }}">
                                                             </div>
-                                                            <p class="catertitle">{{ $articles->getCategory($rarticle->categoryid)->name }}</p>
+
                                                             <div class="card-body pt-4 px-3 pb-3">
-                                                                <h5 class="card-title">
+                                                                <h5 class="card-title" style="font-size: 15px !important;">
                                                                     {{ $rarticle->title  }}
                                                                 </h5>
                                                             </div>
