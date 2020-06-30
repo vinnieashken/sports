@@ -154,37 +154,41 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="section group">
+    <section class="opinions">
+        <div class="container">
+            <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">LATEST </h4>
+            <div class="section group">
 
+                @foreach($stories->opinion as $article)
 
-
-            <div class=" span_3_of_5 col">
-                <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">LATEST</h4>
-                <div class="card-deck p-0">
-                    @foreach($stories->unique as $article)
-
-                        <div class="card mb-4">
+                    <div class="span_1_of_4 col">
+                        <div class="single-standard">
                             <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
-                                <div class="single-standard">
-                                    <div class="standard-image">
-                                        <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                             class="card-img-top" alt="{{ $article->title }}">
-                                    </div>
-
-                                </div>
-                                <div class="card-body p-3 bg-white">
-                                    <p class="card-text black"><font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
-                                        {{ $article->title }}
-                                    </p>
-                                    <p class="card-text grey"> {{ $article->summary }}</p>
+                                <div class="standard-image">
+                                    <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
+                                         class="card-img-top" alt="{{ $article->title }}">
                                 </div>
                             </a>
                         </div>
+                        <div class="card-body p-3 bg-white">
+                            <h4 class="black py-2">
+                                <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
+                                    <font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
+                                    {{ $article->title }}
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                @endforeach
 
-                    @endforeach
+            </div>
 
-                </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section group">
+            <div class=" span_3_of_5 col">
 
                 <h4 class="section-heading my-2">LOCAL STORIES</h4>
 
