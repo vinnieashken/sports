@@ -159,7 +159,7 @@
             <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">LATEST </h4>
             <div class="section group">
 
-                @foreach($stories->opinion as $article)
+                @foreach($stories->latest as $article)
 
                     <div class="span_1_of_4 col">
                         <div class="single-standard">
