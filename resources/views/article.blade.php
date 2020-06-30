@@ -212,7 +212,6 @@
                                                             </div>
                                                             <div class="card-footer bg-white">
                                                                 <small class="byline">{{ $rarticle->author }}</small>
-                                                                <small class="byline-two float-right">{{ $rarticle->publishday }}</small>
                                                             </div>
                                                         </a>
                                                     </div>
