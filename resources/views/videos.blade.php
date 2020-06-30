@@ -205,8 +205,9 @@
                         <div class="single-standard">
                             <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                             <div class="standard-image">
-                                <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                     class="card-img-top" alt="{{ $article->title }}">
+                                <img src="{{ asset('assets/images/pic.jpg') }}"
+                                     data-src="{{ $articles->getImageLocation().$article->thumbURL }}"
+                                     class="card-img-top lazy" alt="{{ $article->title }}">
                             </div>
                             </a>
                         </div>
