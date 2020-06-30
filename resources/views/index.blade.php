@@ -166,7 +166,7 @@
                             <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                                 <div class="standard-image">
                                     <img src="{{ asset('assets/images/pic.jpg') }}"
-                                         data-src="{{ $stories->imagelocation.$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
+                                         data-src="{{ $article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                                 </div>
                             </a>
                         </div>
