@@ -47,8 +47,9 @@
                     <div class="single-standard">
 
                         <div class="standard-image">
-                            <img src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
-                                 class="card-img-top" alt="{{ $video->title }}">
+                            <img src="{{ asset('assets/images/pic.jpg') }}"
+                                 data-src="https://i.ytimg.com/vi/{{$video->videoURL}}/hqdefault.jpg"
+                                 class="card-img-top lazy" alt="{{ $video->title }}">
                         </div>
                             <i class="fa fa-play relv"></i>
                     </div>

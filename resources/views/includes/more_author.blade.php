@@ -5,7 +5,7 @@
         <div class="card bg-white mb-4 single-standard">
             <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                 <div class="standard-image">
-                    <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="Card image cap">
+                    <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="{{ $items[$i]['title']  }}">
                 </div>
                 <p class="catertitle">{{ $articles->getCategory($items[$i]['categoryid'])->name }}</p>
                 <div class="card-body pt-4 px-3 pb-3">
@@ -30,7 +30,7 @@
             <div class="card bg-white mb-4 single-standard">
                 <a href="{{ url(Str::slug($articles->getCategory($items[$i]['categoryid'])->name,'-').'/'.$items[$i]['id'].'/'.Str::slug($items[$i]['title'],'-')) }}">
                     <div class="standard-image">
-                        <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="Card image cap">
+                        <img class="card-img-top" src="https://cdn.standardmedia.co.ke{{ $items[$i]['thumbURL'] }}" alt="{{ $items[$i]['title']  }}">
                     </div>
                     <p class="catertitle">{{ $articles->getCategory($items[$i]['categoryid'])->name }}</p>
                     <div class="card-body pt-4 px-3 pb-3">
