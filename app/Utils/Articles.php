@@ -13,9 +13,12 @@ use Jenssegers\Agent\Agent;
 
 class Articles
 {
+    public $imagelocation;
+
     public function __construct()
     {
         date_default_timezone_set('Africa/Nairobi');
+        $this->imagelocation = env('IMAGECDN');
     }
 
     public function getFromCategory($category,$offset,$size)
@@ -55,7 +58,7 @@ class Articles
             ->whereIn('categoryid',Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray())
             ->whereNull('inactive')
             ->where('publishdate',"<=",date("Y-m-d H:i:s"))
-            ->where('homepagelistorder','>',0)
+            ->whereNotNull('homepagelistorder')
             ->orderBy('publishdate','DESC')
             ->orderBy('homepagelistorder','ASC')
             ->orderBy('listorder','ASC')
