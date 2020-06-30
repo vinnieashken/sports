@@ -200,8 +200,8 @@
                             <div class="media my-2 ">
                                 <div class="single-standard">
                                     <div class="standard-image mr-3">
-                                        <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                             class="card-img-top" alt="{{ $article->title }}">
+                                        <img src="{{ asset('assets/images/pic.jpg') }}"
+                                             data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
                                     </div>
                                 </div>
                                 <div class="media-body ml-3 ml-md-0">
@@ -222,8 +222,8 @@
                                 <div class="media my-2 ">
                                     <div class="single-standard">
                                         <div class="standard-image mr-3">
-                                            <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                                 class="card-img-top" alt="{{ $article->title }}">
+                                            <img src="{{ asset('assets/images/pic.jpg') }}"
+                                                 data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
                                         </div>
                                     </div>
                                     <div class="media-body ml-3 ml-md-0">
@@ -310,8 +310,8 @@
                     <div class="single-standard">
                         <a href="{{ url('/slideshow/pictures/'.$slideshow->id.'/'.Str::slug($slideshow->title,'-')) }}">
                             <div style="height:245px; overflow:hidden;">
-                                <img src="https://cdn.standardmedia.co.ke{{ $slideshow->imgURL}}"
-                                     data-src="https://cdn.standardmedia.co.ke{{ $slideshow->imgURL}}"
+                                <img src="{{ asset('assets/images/pic.jpg') }}"
+                                     data-src="{{ $articles->getImageLocation().$slideshow->imgURL }}"
                                      alt="{{ $slideshow->title }}"
                                      class="w-100 objectfit lazy">
                             </div>
@@ -345,8 +345,8 @@
                             <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                             <div class="single-standard">
                                 <div class="standard-image">
-                                    <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                         class="card-img-top" alt="{{ $article->title }}">
+                                    <img src="{{ asset('assets/images/pic.jpg') }}"
+                                         data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
                                 </div>
                             </div>
                             <div class="card-body p-3 bg-white">
@@ -371,8 +371,8 @@
                             <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                             <div class="single-standard">
                                 <div class="standard-image">
-                                    <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                         class="card-img-top" alt="{{ $article->title }}">
+                                    <img src="{{ asset('assets/images/pic.jpg') }}"
+                                         data-src="{{ $articles->getImageLocation().$article->thumbURL }}"  class="card-img-top" alt="{{ $article->title }}">
                                 </div>
 
                             </div>
@@ -426,8 +426,8 @@
                     <div class="single-standard">
                         <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}">
                         <div class="standard-image">
-                            <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                 class="card-img-top" alt="{{ $article->title }}">
+                            <img src="{{ asset('assets/images/pic.jpg') }}"
+                                 data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top" alt="{{ $article->title }}">
                         </div>
                         </a>
                     </div>
