@@ -264,7 +264,7 @@ class Articles
             }
             $x++;
         }
-        return str_replace('/images',env('IMAGECDN').'/images',$this->str_replace_first('/images','',$result));
+        return str_replace('/images',env('IMAGECDN').'/images',$result);
     }
 
     public function getMostRead($size=4)

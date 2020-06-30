@@ -152,7 +152,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">
+{{--                            <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">--}}
 
                             <div class="card-body">
 
