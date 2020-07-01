@@ -27,8 +27,10 @@
         <nav class="text-center bg-success">
             <ul class="navbar-nav justify-content-center p-3">
                 <li class="nav-item from">
+                    <a href="{{ url('/') }}" >
                     Sports from <img src="{{ asset('assets/images/footerlogo.jpeg') }}"
                                        class="ml-2 w-25">
+                    </a>
                 </li>
             </ul>
         </nav>
