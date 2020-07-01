@@ -7529,3 +7529,9 @@ a.text-info:focus, a.text-info:hover {
 .related-img{
     height: 150px !important;
 }
+
+@media (min-width:900px) and (max-width:1440px ) {
+    .pt-100{
+        padding-top: 4%;
+    }
+}
