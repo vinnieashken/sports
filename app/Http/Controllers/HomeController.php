@@ -354,7 +354,7 @@ class HomeController extends Controller
         {
             preg_match('/[0-9]+/',$item->url,$matches);
            // array_push($ids,(int)$matches[0]);
-            array_push($ids,$item->url);
+            array_push($ids,$matches);
         }
 
         dump($ids);
