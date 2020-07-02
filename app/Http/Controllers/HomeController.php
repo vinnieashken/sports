@@ -353,11 +353,12 @@ class HomeController extends Controller
         foreach ($items as $item)
         {
             preg_match('/[0-9]+/',$item->url,$matches);
-            array_push($ids,(int)$matches[0]);
+           // array_push($ids,(int)$matches[0]);
+            array_push($ids,$item->url);
         }
 
         dump($items);
-        return;
+        return 'hello';
 
         //return $ids;
         return Article::whereIn('id',$ids)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
