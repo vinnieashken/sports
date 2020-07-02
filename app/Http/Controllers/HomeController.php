@@ -341,9 +341,9 @@ class HomeController extends Controller
     {
 
         //dump($this->getMostRead(4));
-        //$articles = new Articles();
+        $articles = new Articles();
         $agent = new Agent();
-        dump($agent->isPhone());
+        dump($articles->getMostRead(4));
     }
 
     public function getMostRead($size=4)
