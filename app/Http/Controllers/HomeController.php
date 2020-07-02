@@ -94,7 +94,7 @@ class HomeController extends Controller
         $stories->unique = $articles->getFromCategory('sports',0,2);
         $stories->opinion = $articles->getFromCategoryExclude($checkpointexempt,'gossip & rumours',0,4);
 
-        $mostRead = Cache::remember("mostread.articles", now()->addSeconds(1800),
+        $mostRead = Cache::remember("mostread.articlesa", now()->addSeconds(1800),
             function () use( $articles ) {
             return $articles->getMostRead(4);
         });
@@ -158,7 +158,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articles", now()->addSeconds(1800),
+        $mostRead = Cache::remember("mostread.articlesa", now()->addSeconds(1800),
             function () use( $articles ) {
                 return $articles->getMostRead(4);
             });
@@ -184,7 +184,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,3);
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articles", now()->addSeconds(1800),
+        $mostRead = Cache::remember("mostread.articlesa", now()->addSeconds(1800),
             function () use( $articles ) {
                 return $articles->getMostRead(4);
             });
@@ -225,7 +225,7 @@ class HomeController extends Controller
         $stories->videos = $videos->getFromCategory('sports',0,13)->toArray();
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articles", now()->addSeconds(1800),
+        $mostRead = Cache::remember("mostread.articlesa", now()->addSeconds(1800),
             function () use( $articles ) {
                 return $articles->getMostRead(4);
             });
@@ -275,7 +275,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,3);
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articles", now()->addSeconds(1800),
+        $mostRead = Cache::remember("mostread.articlesa", now()->addSeconds(1800),
             function () use( $articles ) {
                 return $articles->getMostRead(4);
             });
@@ -386,7 +386,7 @@ class HomeController extends Controller
         //return;
         $objbody = json_decode($body);
 
-        return $objbody;
+        //return $objbody;
 
         $sports = [];
 
