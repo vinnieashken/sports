@@ -343,7 +343,24 @@ class HomeController extends Controller
         //dump($this->getMostRead(4));
         $articles = new Articles();
         $agent = new Agent();
-        dump($articles->getLocalArticles($articles->getMostRead(4)));
+        dump($this->getLocalArticles($articles->getMostRead(4)));
+    }
+
+    public function getLocalArticles($items)
+    {
+        $ids = [];
+
+        foreach ($items as $item)
+        {
+            preg_match('/[0-9]+/',$item->url,$matches);
+            array_push($ids,(int)$matches[0]);
+        }
+
+        dump($ids);
+        return;
+
+        //return $ids;
+        return Article::whereIn('id',$ids)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
     }
 
     public function getMostRead($size=4)
