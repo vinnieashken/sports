@@ -99,7 +99,7 @@ class HomeController extends Controller
             return $articles->getMostRead(4);
         });
 
-        $stories->mostread = $articles->getLocalArticles($mostRead);
+        $stories->mostread = $articles->getLocalArticles($articles->getMostRead(4));
 
         return view('index',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
