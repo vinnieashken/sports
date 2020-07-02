@@ -368,7 +368,7 @@ class HomeController extends Controller
             $item = $articles->getArticle($id);
             array_push($result,$item);
         }
-        return $result;
+        return collect($result);
     }
 
     public function getMostRead($size=4)
