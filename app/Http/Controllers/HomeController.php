@@ -356,7 +356,7 @@ class HomeController extends Controller
             array_push($ids,(int)$matches[0]);
         }
 
-        dump($ids);
+        dump($items);
         return;
 
         //return $ids;
