@@ -348,6 +348,7 @@ class HomeController extends Controller
 
     public function getLocalArticles($items)
     {
+        $articles = new Articles();
         $ids = [];
 
         foreach ($items as $item)
@@ -361,7 +362,13 @@ class HomeController extends Controller
 //        return 'hello';
 
         //return $ids;
-        return Article::whereIn('id',$ids)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
+        $result = [];
+        foreach ( $ids as $id)
+        {
+            $item = $articles->getArticle($id);
+            array_push($result,$item);
+        }
+        return $result;
     }
 
     public function getMostRead($size=4)
