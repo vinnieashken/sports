@@ -356,8 +356,13 @@ class Articles
             array_push($ids,(int)$matches[0]);
         }
 
-        //return $ids;
-        return Article::whereIn('id',$ids)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
+        $result = [];
+        foreach ( $ids as $id)
+        {
+            $item = $this->getArticle($id);
+            array_push($result,$item);
+        }
+        return collect($result);
     }
 
     function str_replace_first($from, $to, $content)
