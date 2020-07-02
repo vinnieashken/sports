@@ -357,8 +357,8 @@ class HomeController extends Controller
             array_push($ids,(int)$matches[0]);
         }
 
-        dump($ids);
-        return 'hello';
+//        dump($ids);
+//        return 'hello';
 
         //return $ids;
         return Article::whereIn('id',$ids)->get(['id','categoryid','title','keywords','thumbURL','publishday','author']);
