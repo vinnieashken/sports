@@ -232,6 +232,6 @@ class RevenueController extends Controller
         dump($articles->getMostRead());
 
 
-        return $articles->getLocalArticles($articles->getMostRead());
+        //return $articles->getLocalArticles($articles->getMostRead());
     }
 }
