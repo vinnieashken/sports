@@ -42,5 +42,6 @@ Route::get('/popular','RevenueController@getMostRead');
 
 Route::get('/search','HomeController@search');
 Route::get('/sitemap','HomeController@sitemap');
+Route::get('/googlenews','HomeController@googlenews');
 
 Route::get('/test','HomeController@test');

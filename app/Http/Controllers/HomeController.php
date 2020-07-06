@@ -337,6 +337,20 @@ class HomeController extends Controller
             ->header('Content-Type', 'text/xml');
     }
 
+    public function googlenews(Request $request)
+    {
+        $articles = new Articles();
+        $sitemap = $articles->getTodays();
+
+        $menu = new Menu();
+        $categories = $menu->getCategories();
+
+        $categories = $categories->top->merge($categories->more);
+        //return;
+        return response()->view('googlenews',['sitemap' => $sitemap,'articles'=>$articles,'categories'=> $categories])
+            ->header('Content-Type', 'text/xml');
+    }
+
     public function test()
     {
 
