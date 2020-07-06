@@ -4,11 +4,11 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
 
-<link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">--}}
 
-<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css')}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css')}}">--}}
 
-<link rel="stylesheet" href="{{ asset('assets/css/slick.css')}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/slick.css')}}">--}}
 
 <link rel="stylesheet" href="{{ asset('assets/css/LineIcons.css')}}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
