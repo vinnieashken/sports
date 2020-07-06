@@ -149,7 +149,7 @@ class Articles
             ->where('source','main')
             ->whereNull('inactive')
             ->whereIn('categoryid',$categories)
-            ->where('publishday',date('Y-m-d'))->get(['id','categoryid','title','thumbURL','summary','author','publishday']);
+            ->where('publishday',date('Y-m-d'))->get(['id','categoryid','title','thumbURL','summary','author','keywords','publishday']);
     }
 
     public function getCheckpoint($keyword,$offset,$size,$except=array())
