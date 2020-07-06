@@ -37,7 +37,6 @@
    "url": "{{ \Illuminate\Support\Facades\URL::full() }}",
    "headline": "{{ substr($article->long_title,0,110) }}",
    "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
-   "articleBody": "{{ $article->story }}",
    "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }}","height":500,"width":800},
    "articleSection":"News",
    "author":["{{ $article->author }}"],
