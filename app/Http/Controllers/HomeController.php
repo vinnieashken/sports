@@ -94,7 +94,7 @@ class HomeController extends Controller
         $stories->unique = $articles->getFromCategory('sports',0,2);
         $stories->opinion = $articles->getFromCategoryExclude($checkpointexempt,'gossip & rumours',0,4);
 
-        $mostRead = Cache::remember("mostread.articlesa", now()->addSeconds(1800),
+        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
             function () use( $articles ) {
             return $articles->getMostRead(4);
         });
