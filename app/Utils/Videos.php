@@ -24,8 +24,20 @@ class Videos
 
     public function getVideo($id)
     {
-        return Video::on('mysql')->where('id',$id)
+        $video = Video::on('mysql')->where('id',$id)
             ->get(['id','categoryid','title','videoURL','description','publishdate','platform','vimeoembed','createdBy'])->first();
+        if(is_null($video))
+        {
+            $video = Video::on('mysql2')->where('id',$id)
+                ->get(['id','categoryid','title','videoURL','description','publishdate','platform','vimeoembed','createdBy'])->first();
+            if (is_null($video))
+            {
+                $video = Video::on('mysql3')->where('id',$id)
+                    ->get(['id','categoryid','title','videoURL','description','publishdate','platform','vimeoembed','createdBy'])->first();
+            }
+        }
+
+        return $video;
     }
 
     public function player($video)
