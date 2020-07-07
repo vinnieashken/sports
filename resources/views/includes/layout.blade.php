@@ -15,6 +15,12 @@
 <!-- google adsense unit-->
 </head>
 <body class="">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNB7V35"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 <noscript>
     <h3>JavaScript is disabled! Please enable JavaScript in your web browser!</h3>
 
