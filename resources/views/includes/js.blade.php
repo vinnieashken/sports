@@ -25,6 +25,16 @@
 <noscript><img src="https://certify.alexametrics.com/atrk.gif?account=XVpWq1Y1Mn20Io" style="display:none" height="1" width="1" alt="" /></noscript>
 
 <script>
+    $(document).ready(function(){
+        $("#OpenForm").click(function(){
+            $(".feedback_form_area").animate({
+                width: "toggle"
+            });
+        });
+    });
+</script>
+
+<script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
     }

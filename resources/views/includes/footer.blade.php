@@ -56,15 +56,7 @@
             }
         }
     </style>
-    <script>
-        $(document).ready(function(){
-            $("#OpenForm").click(function(){
-                $(".feedback_form_area").animate({
-                    width: "toggle"
-                });
-            });
-        });
-    </script>
+
 </div>
 
 <section id="footer" class="footer-area pt-75">
