@@ -1,4 +1,72 @@
 
+<div id="feedback-form" class="feedback-form">
+
+    <a href="#" class="feedback-form-btn btn btn-danger btn-lg" id="OpenForm">Feedback</a>
+    <div class="feedback_form_area">
+        <div class="feedback_form_area_inner">
+            <h4 style="font-size: 18px;" class="my-2 p-1">Kindly click the button below to give us your feedback. Thank you!</h4>
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScEKE4aUSOGYNcYPoD3YzSmVDIplyA9195hoFWUFMM4yccptg/viewform?usp=sf_link"><button class="btn btn-outline-danger my-2 p-2">Feedback Form</button></a>
+        </div>
+    </div>
+    <style>
+        .feedback-form {
+            position:fixed;
+            top:15%;
+            right:0;
+            z-index:100;
+            min-height:300px;
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #ee2e25 !important;
+            border-color: #d51729 !important;
+        }
+        .feedback_form_area {
+            position:relative;
+            display:none;
+            overflow: hidden;
+            background: #f9f5f6;
+        }
+        .feedback_form_area_inner {
+            width:300px;
+            min-height:300px;
+            color:#fff;
+            padding:15px;
+        }
+        .feedback_form_area_inner h3 {
+            font-size: 20px !important;
+        }
+        .feedback_form_area_inner a {
+            margin: 5px!important;
+        }
+        .feedback-form-btn {
+            position: absolute;
+            left: -81px;
+            color: #fff;
+            transform: rotate(90deg);
+            top: 40%;
+            border-radius:0;
+        }
+        @media only screen and (max-width: 320px) {
+            .feedback_form_area_inner {
+                width:260px;
+                min-height:450px;
+                color:#fff;
+                padding:15px;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#OpenForm").click(function(){
+                $(".feedback_form_area").animate({
+                    width: "toggle"
+                });
+            });
+        });
+    </script>
+</div>
+
 <section id="footer" class="footer-area pt-75">
     <hr class="my-4">
     <div class="container ">
@@ -82,6 +150,8 @@
         </nav>
     </footer>
 </section>
+
+
 
 <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
 
