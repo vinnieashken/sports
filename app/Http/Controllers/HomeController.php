@@ -106,6 +106,9 @@ class HomeController extends Controller
 
     public function oldarticle($id,$slug)
     {
+        if(!is_numeric($id))
+            return redirect('/');
+
         $articles = new Articles();
         $article = $articles->getArticle($id);
 
@@ -120,6 +123,9 @@ class HomeController extends Controller
 
     public function oldarticleslugless($id)
     {
+        if(!is_numeric($id))
+            return redirect('/');
+
         $articles = new Articles();
         $article = $articles->getArticle($id);
 
@@ -173,6 +179,9 @@ class HomeController extends Controller
 
     public function category($id,$slug)
     {
+        if(!is_numeric($id))
+            return redirect('/');
+
         $menu = new Menu();
         $categories = $menu->getCategories();
         $articles = new Articles();
@@ -253,6 +262,9 @@ class HomeController extends Controller
 
     public function video($id,$slug)
     {
+        if(!is_numeric($id))
+            return redirect('/');
+
         $menu = new Menu();
         $categories = $menu->getCategories();
 
@@ -303,6 +315,9 @@ class HomeController extends Controller
 
     public function pictures($id,$slug)
     {
+        if(!is_numeric($id))
+            return redirect('/');
+
         $menu = new Menu();
         $categories = $menu->getCategories();
         $slideshows = new SlideShows();
