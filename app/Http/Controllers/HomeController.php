@@ -11,6 +11,7 @@ use App\Utils\TimeUtil;
 use App\Utils\Videos;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
@@ -462,4 +463,22 @@ class HomeController extends Controller
 
         //return $this->getLocalArticles( array_slice($sports,0,$size) );
     }
+
+    public function saveIOResults()
+    {
+        $items = $this->getMostRead(5);
+
+        foreach ($items as $item)
+        {
+            preg_match('/[0-9]+/',$item->url,$matches);
+            // array_push($ids,(int)$matches[0]);
+            $id = (int)$matches[0];
+            $data = [
+                'articleid'=> $id
+            ];
+            DB::table('io_cache')->insert($data);
+        }
+
+    }
+
 }

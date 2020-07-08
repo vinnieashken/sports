@@ -39,6 +39,7 @@ Route::post('/subscribe','RevenueController@subscribe');
 
 Route::get('/user','RevenueController@getUser');
 Route::get('/popular','RevenueController@getMostRead');
+Route::get('/populate','HomeController@saveIOResults');
 
 Route::get('/search','HomeController@search');
 Route::get('/sitemap','HomeController@sitemap');

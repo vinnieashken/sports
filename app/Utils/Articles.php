@@ -7,6 +7,7 @@ namespace App\Utils;
 use App\Models\Article;
 use App\Models\Category;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Jenssegers\Agent\Agent;
@@ -356,6 +357,18 @@ class Articles
             array_push($ids,(int)$matches[0]);
         }
 
+        $result = [];
+        foreach ( $ids as $id)
+        {
+            $item = $this->getArticle($id);
+            array_push($result,$item);
+        }
+        return collect($result);
+    }
+
+    public function getMostReadArticles($size)
+    {
+        $ids = DB::table('io_cache')->get(['id'])->toArray();
         $result = [];
         foreach ( $ids as $id)
         {
