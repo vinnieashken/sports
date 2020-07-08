@@ -206,6 +206,20 @@ class Articles
         return $article;
     }
 
+    public function getArticleSlim($id)
+    {
+        $article = Article::where('id',$id)->get(['id','categoryid','title','long_title','keywords','thumbURL','publishday','publishdate','updateddate','author'])->first();
+        if(is_null($article))
+        {
+            $article = Article::on('mysql2')->where('id',$id)->get(['id','categoryid','title','long_title','thumbURL','keywords','publishday','updateddate','publishdate','author'])->first();
+            if(is_null($article))
+            {
+                $article = Article::on('mysql3')->where('id',$id)->get(['id','categoryid','title','long_title','thumbURL','keywords','publishday','publishdate','updateddate','author'])->first();
+            }
+        }
+        return $article;
+    }
+
     public function getRelatedArticles($id,$size,$offset = 0)
     {
         $article = $this->getArticle($id);
@@ -372,7 +386,7 @@ class Articles
         $result = [];
         foreach ( $ids as $id)
         {
-            $item = $this->getArticle($id);
+            $item = $this->getArticleSlim($id);
             array_push($result,$item);
         }
         return collect($result);
