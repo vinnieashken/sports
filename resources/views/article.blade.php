@@ -7,7 +7,7 @@
 @section('image','https://cdn.standardmedia.co.ke'.$article->thumbURL)
 
 @section('amp')
-<link rel="amphtml" href="{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}">
+<link rel="amphtml" href="{{ url('mobile/amp/'.Str::slug( $articles->getCategory($article->categoryid)->name,'-')).'/'.$article->id.'/'.Str::slug($article->title) }}">
 @endsection
 
 @section('content')
@@ -17,7 +17,7 @@
         window._io_config["0.2.0"] = window._io_config["0.2.0"] || [];
         window._io_config["0.2.0"].push({
             page_url: "{{ URL::full() }}",
-            page_url_canonical: "{{ url('mobile/amp/article/').'/'.$article->id.'/'.Str::slug($article->title) }}",
+            page_url_canonical: "{{ url('mobile/amp/'.Str::slug( $articles->getCategory($article->categoryid)->name,'-')).'/'.$article->id.'/'.Str::slug($article->title) }}",
             page_title: "{{ $article->title }}",
             page_type: "article",
             page_language: "en",
