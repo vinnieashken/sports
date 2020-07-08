@@ -447,7 +447,8 @@ class HomeController extends Controller
 
     public function saveIOResults()
     {
-        $items = $this->getMostRead(5);
+        $articles = new Articles();
+        $items = $articles->getMostRead(5);
 
         foreach ($items as $item)
         {
