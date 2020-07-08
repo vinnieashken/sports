@@ -481,7 +481,8 @@ class HomeController extends Controller
             ];
             DB::table('io_cache')->insert($data);
         }
-
+        $articles = new Articles();
+        return $articles->getMostReadArticles(4);
     }
 
 }
