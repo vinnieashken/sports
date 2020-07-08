@@ -222,7 +222,7 @@ class Articles
 
     public function getRelatedArticles($id,$size,$offset = 0)
     {
-        $article = $this->getArticle($id);
+        $article = $this->getArticleSlim($id);
 
         $categories = Category::on('mysql')->where('id',6)->orWhere('parentid',6)->whereNull('inactive')->get(['id'])->pluck('id')->toArray();
 

@@ -95,12 +95,12 @@ class HomeController extends Controller
         $stories->unique = $articles->getFromCategory('sports',0,2);
         $stories->opinion = $articles->getFromCategoryExclude($checkpointexempt,'gossip & rumours',0,4);
 
-        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
-            function () use( $articles ) {
-            return $articles->getMostRead(4);
-        });
+//        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
+//            function () use( $articles ) {
+//            return $articles->getMostRead(4);
+//        });
 
-        $stories->mostread = $articles->getLocalArticles($mostRead);
+        $stories->mostread = $articles->getMostReadArticles(4);
 
         return view('index',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
@@ -168,12 +168,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
-            function () use( $articles ) {
-                return $articles->getMostRead(4);
-            });
-
-        $stories->mostread = $articles->getLocalArticles($mostRead);
+        $stories->mostread = $articles->getMostReadArticles(4);
 
         return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
@@ -197,12 +192,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,3);
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
-            function () use( $articles ) {
-                return $articles->getMostRead(4);
-            });
-
-        $stories->mostread = $articles->getLocalArticles($mostRead);
+        $stories->mostread = $articles->getMostReadArticles(4);
 
         $stories->category = $articles->getCategory($id);
 
@@ -238,12 +228,7 @@ class HomeController extends Controller
         $stories->videos = $videos->getFromCategory('sports',0,13)->toArray();
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
-            function () use( $articles ) {
-                return $articles->getMostRead(4);
-            });
-
-        $stories->mostread = $articles->getLocalArticles($mostRead);
+        $stories->mostread = $articles->getMostReadArticles(4);
         $offset = 13;
 
         return view('videos',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
@@ -291,11 +276,7 @@ class HomeController extends Controller
         $stories->sidevideos = $videos->getFromCategory('sports',0,3);
         $stories->latest = $articles->getLatest(5,0);
 
-        $mostRead = Cache::remember("mostread.articlesb", now()->addSeconds(1800),
-            function () use( $articles ) {
-                return $articles->getMostRead(4);
-            });
-        $stories->mostread = $articles->getLocalArticles($mostRead);
+        $stories->mostread = $articles->getMostReadArticles(4);
 
         $offset = 12;
 
@@ -481,8 +462,6 @@ class HomeController extends Controller
             ];
             DB::table('io_cache')->insert($data);
         }
-        $articles = new Articles();
-        return $articles->getMostReadArticles(4);
     }
 
 }
