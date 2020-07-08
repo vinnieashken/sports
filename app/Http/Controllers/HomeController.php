@@ -134,6 +134,9 @@ class HomeController extends Controller
 
     public function article($category_slug,$id,$slug)
     {
+        if(!is_numeric($id))
+            return redirect('/');
+
         $menu = new Menu();
         $timeutil = new TimeUtil();
         $categories = $menu->getCategories();
