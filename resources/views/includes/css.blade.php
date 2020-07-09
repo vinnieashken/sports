@@ -59,7 +59,8 @@
         googletag.defineSlot('/24409412/gameyetu_floating_banner', [[320, 50], [468, 60], [728, 90]], 'div-gpt-ad-1579702544837-0').defineSizeMapping(squarebanner).addService(googletag.pubads());
         var gameyetuleaderboard = googletag.defineSlot('/24409412/gameyetu_home_leaderboard2', [728, 90], 'div-gpt-ad-1487330276546-0').defineSizeMapping(leaderboard1).addService(googletag.pubads());
 
-        googletag.defineSlot('/24409412/profitButton', [1, 1], 'div-gpt-ad-1594193265072-0').addService(googletag.pubads());
+        //googletag.defineSlot('/24409412/profitButton', [1, 1], 'div-gpt-ad-1594193265072-0').addService(googletag.pubads());
+        googletag.defineOutOfPageSlot('/24409412/GameYetu_OutOfPage', 'div-gpt-ad-1594269348673-0').addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
         googletag.pubads().collapseEmptyDivs();
         googletag.enableServices();

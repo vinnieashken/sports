@@ -22,10 +22,17 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- /24409412/profitButton -->
-<div id='div-gpt-ad-1594193265072-0' style='width: 1px; height: 1px;'>
+{{--<!-- /24409412/profitButton -->--}}
+{{--<div id='div-gpt-ad-1594193265072-0' style='width: 1px; height: 1px;'>--}}
+{{--    <script>--}}
+{{--        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594193265072-0'); });--}}
+{{--    </script>--}}
+{{--</div>--}}
+
+<!-- /24409412/GameYetu_OutOfPage -->
+<div id='div-gpt-ad-1594269348673-0'>
     <script>
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594193265072-0'); });
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594269348673-0'); });
     </script>
 </div>
 
