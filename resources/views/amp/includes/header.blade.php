@@ -6,6 +6,7 @@
     <meta name="description" content="This is the AMP Boilerplate.">
 
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
