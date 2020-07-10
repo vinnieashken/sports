@@ -7,7 +7,7 @@
 @section('image','https://cdn.standardmedia.co.ke'.$article->thumbURL)
 
 @section('amp')
-<link rel="amphtml" href="{{ str_replace('sports','',url('')).'mobile/amp/article/'.$article->id.'/'.Str::slug($article->title) }}">
+<link rel="amphtml" href="{{ url('').'/amp/'.$articles->getCategory($article->categoryid)->name.'/'.$article->id.'/'.Str::slug($article->title) }}">
 @endsection
 
 @section('content')
