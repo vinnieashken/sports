@@ -306,7 +306,7 @@ class Articles
     public function renderAmp($story)
     {
         $data = preg_replace(
-            '/<img src="([^"]*)"\s*\/?>/',
+            '/<img .*? src="([^"]*)" .*?>/',
             '<amp-img src="$1" width="800" height="684" layout="responsive" alt="AMP"></amp-img>',
             $story
         );
