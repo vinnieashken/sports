@@ -5,8 +5,8 @@
     <article class="article-holder">
         <header>
 
-            <h1 class="mb1 px0">Egg sandwich breakfast hack goes viral and people can't wait to try it</h1>
-            <span class="mx1 author">Readers Lounge By Mirror</span>
+            <h1 class="mb1 px0">{{ $article->title }}</h1>
+            <span class="mx1 author">By {{ $article->author }}</span>
             <!-- Start byline -->
             <div class="btn-group float-right">
                 <a  href="https://www.facebook.com/sharer.php?u=https://www.standardmedia.co.ke/evewoman/crazy-monday/article/2001378124/five-reasons-your-child-is-acting-out-and-how-to-handle-it">
