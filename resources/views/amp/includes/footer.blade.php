@@ -8,7 +8,7 @@
                     <div class="mx-auto col-xs-12">
                         <ul class="nav nav-inline ">
                             <li class="nav-item">
-                                <a class="nav-link active" href="https://www.standardmedia.co.ke/"><b>Eve from</b>
+                                <a class="nav-link active" href="https://www.standardmedia.co.ke/"><b>Sports from</b>
                                     <amp-img src="https://www.standardmedia.co.ke/sports/assets/images/footerlogo.jpeg" width="120" height="30"></amp-img></a>
                             </li>
                         </ul>

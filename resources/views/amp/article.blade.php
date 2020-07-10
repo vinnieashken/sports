@@ -24,12 +24,6 @@
             <a href="https://telegram.me/share/url?url=https://www.standardmedia.co.ke/the-standard-insider/article/2001378263/retirement-blues-unlike-footballers-rugby-players-dont-omba-serikali&amp;text=Retirement blues: Unlike footballers, rugby players don’t ‘omba serikali’" class="btn btn-telegram rounded-0 text-white">
                 <span class="fa fa-telegram"></span>
             </a>
-            <a href="" class="btn btn-linkedin rounded-0 text-white">
-                <span class="fa fa-linkedin"></span>
-            </a>
-            <a href="" class="btn btn-email rounded-0 text-white">
-                <span class="fa fa-envelope"></span>
-            </a>
         </div>
 
         {!! $articles->renderAmp($article->story) !!}
