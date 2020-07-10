@@ -303,6 +303,12 @@ class Articles
         return str_replace('/images',env('IMAGECDN').'/images',$result);
     }
 
+    public function renderAmp($story)
+    {
+        $data = str_replace('img','amp-img',$story);
+        return str_replace('/images',env('IMAGECDN').'/images',$data);
+    }
+
     public function getMostRead($size=4)
     {
         $params=[

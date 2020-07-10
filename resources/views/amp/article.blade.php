@@ -25,6 +25,7 @@
             <!-- End byline -->
         </header>
 
+        {{ $articles->renderAmp($article->story) }}
 
         </section>
     </article>
