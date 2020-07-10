@@ -29,38 +29,8 @@
         body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <link rel="canonical" href=".">
-    <title>My AMP Page</title>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "NewsArticle",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://google.com/article"
-            },
-            "headline": "Article headline",
-            "image": [
-                "https://example.com/photos/1x1/photo.jpg",
-                "https://example.com/photos/4x3/photo.jpg",
-                "https://example.com/photos/16x9/photo.jpg"
-            ],
-            "datePublished": "2015-02-05T08:00:00+08:00",
-            "dateModified": "2015-02-05T09:20:00+08:00",
-            "author": {
-                "@type": "Person",
-                "name": "John Doe"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "AMP Project",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://google.com/logo.jpg"
-                }
-            },
-            "description": "A most wonderful article"
-        }
-    </script>
+    <title>@yield('title')</title>
+
 </head>
 <body>
 <amp-analytics type="googleanalytics">

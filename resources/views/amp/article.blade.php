@@ -1,7 +1,35 @@
 
 @include('amp.includes.header')
 
+@section('title',trim($article->long_title))
+@section('description',trim($article->summary))
+@section('keywords',trim(str_replace(';',',',$article->keywords)))
+@section('author',trim($article->author))
+@section('image','https://cdn.standardmedia.co.ke'.$article->thumbURL)
+
 <main id="content" role="main" class="">
+
+    <script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "NewsArticle",
+   "url": "{{ \Illuminate\Support\Facades\URL::full() }}",
+   "headline": "{{ substr($article->long_title,0,110) }}",
+   "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
+   "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }}","height":500,"width":800},
+   "articleSection":"News",
+   "author":["{{ $article->author }}"],
+   "keywords": {!! json_encode(explode(';',$article->keywords)) !!},
+   "publisher":{
+      "@type":"Organization",
+      "name":"Standard Sports",
+      "logo":{"@type":"ImageObject","url":"{{ url('/assets/images/logo.png') }}","height":64,"width":376}
+   },
+   "datePublished":"{{ $article->publishday }}",
+   "dateModified":"{{ $article->updateddate }}"
+}
+</script>
+
     <article class="article-holder">
         <header>
 
