@@ -305,7 +305,7 @@ class Articles
 
     public function renderAmp($story)
     {
-        $data = str_replace('img','amp-img',$story);
+        $data = preg_replace('/(<img[^>]+>(?:<\/img>)?)/i', '$1</amp-img>', $story);
         return str_replace('/images',env('IMAGECDN').'/images',$data);
     }
 
