@@ -26,6 +26,7 @@ class MobileController extends Controller
         $articles = new Articles();
         $article = $articles->getArticle($id);
         $stories = new \stdClass();
+        $stories->url = url()->current();
 
         return view('amp.article',['timeutil'=> $timeutil,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
