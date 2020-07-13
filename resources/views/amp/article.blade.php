@@ -71,6 +71,7 @@
             @foreach($stories->latest as $article)
                 <a href=" {{ url('/amp/'.Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} " >
                     <li class="media border-design">
+                        <div class="big-text mr-3">{{ $loop->index + 1 }}</div>
                         <div class="black">
                             <div class="redimages mb-1">{{ $articles->getCategory($article->categoryid)->name }}</div>
                             {{ $article->title }}
