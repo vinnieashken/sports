@@ -27,6 +27,18 @@ class MobileController extends Controller
         $article = $articles->getArticle($id);
         $stories = new \stdClass();
         $stories->url = str_replace('amp/','',url()->current());
+        $stories->related = $articles->getRelatedArticles($id,6,0);
+
+        if($stories->related->count() < 6)
+        {
+            $latest = $articles->getLatestExcept($id, (6 - $stories->related->count()),0);
+
+            foreach ($latest as $item)
+            {
+                $stories->related->push($item);
+            }
+
+        }
 
         return view('amp.article',['timeutil'=> $timeutil,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }

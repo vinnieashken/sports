@@ -303,15 +303,56 @@ class Articles
         return str_replace('/images',env('IMAGECDN').'/images',$result);
     }
 
-    public function renderAmp($story)
+    public function renderAmp($story,$collection,$count = 2)
     {
         $data = preg_replace(
             '/<img .*? src="([^"]*)" .*?>/',
             '<amp-img src="$1" width="800" height="684" layout="responsive" alt="AMP"></amp-img>',
             $story
         );
+
+        $adbegin ='<p class="card-text"> <a href="';
+        $middle = '"> SEE ALSO: ';
+        $adend = ' </a>  </p>';
+        $size = $collection->count();
+
+        $story = explode('</p>',$data);
+        $x = 0;
+        $result ='';  //$result.=$size;
+        foreach($story as $key => $value)
+        {
+            $result .= $value;
+            //$result .= '<p>'.$x.' '.$count.'</p>';
+            if($x % $count){
+
+                if($key < $size)
+                {
+                    $article = $collection->get($key);
+                    if(!is_null($article))
+                    {
+                        $url = url('/amp/'.Str::slug($this->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-'));
+                        $result .= $adbegin.$url.$middle.$article->title.$adend;
+                    }
+
+                }
+
+            }
+            if($x == 1 )
+            {
+                $result .= '<amp-ad width=300 height=250 layout="responsive" type="doubleclick" data-slot="/24409412/gameyetu_rightpanel_advert1" data-multi-size="336x280">
+                            </amp-ad>';
+            }
+            if($x == 7 )
+            {
+                $result .= '<amp-ad width=300 height=250 layout="responsive" type="doubleclick" data-slot="/24409412/gameyetu_rightpanel_advert2" data-multi-size="336x280">
+                            </amp-ad>';
+            }
+
+            $x++;
+        }
+
         //$data = str_replace('<img', '<amp-img', $data);
-        return str_replace('/images',env('IMAGECDN').'/images',$data);
+        return str_replace('/images',env('IMAGECDN').'/images',$result);
     }
 
     public function getMostRead($size=4)

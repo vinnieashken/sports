@@ -33,6 +33,9 @@
     <article class="article-holder">
         <header>
 
+            <amp-ad width=320 height=100 layout="responsive" type="doubleclick" data-slot="/24409412/gameyetu_top_advert" data-multi-size="320x50">
+            </amp-ad>
+
             <h1 class="mb1 px0">{{ $article->title }}</h1>
             <span class="mx1 author">By {{ $article->author }}</span>
             <!-- Start byline -->
@@ -54,9 +57,10 @@
             </a>
         </div>
 
-        {!! $articles->renderAmp($article->story) !!}
+        {!! $articles->renderAmp($article->story,$stories->related,2) !!}
 
-        </section>
+        <amp-ad width=300 height=250 layout="responsive" type="doubleclick" data-slot="/24409412/gameyetu_rightpanel_advert3" data-multi-size="336x280">
+        </amp-ad>
     </article>
 
 </main>
