@@ -39,6 +39,7 @@ class MobileController extends Controller
             }
 
         }
+        $stories->latest = $articles->getLatest(5,0);
 
         return view('amp.article',['timeutil'=> $timeutil,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
