@@ -59,11 +59,12 @@
 
         {!! $articles->renderAmp($article->story,$stories->related,2) !!}
 
-        <amp-ad width=300 height=250 layout="responsive" type="doubleclick" data-slot="/24409412/gameyetu_rightpanel_advert3" data-multi-size="336x280">
-        </amp-ad>
     </article>
 
     <div>
+        <amp-ad width=300 height=250 layout="responsive" type="doubleclick" data-slot="/24409412/gameyetu_rightpanel_advert3" data-multi-size="336x280">
+        </amp-ad>
+
         <h4 class="section-heading mb-5">LATEST</h4>
         <ul class="list-unstyled mb-md-5">
 
