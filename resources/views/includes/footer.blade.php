@@ -88,8 +88,9 @@
             <ul class="navbar-nav justify-content-center p-3">
                 <li class="nav-item from">
                     <a href="{{ url('/') }}" >
-                    Sports from <img src="{{ asset('assets/images/footerlogo.jpeg') }}"
-                                       class="ml-2 w-25" alt="Standard Digital logo">
+                    Sports from <img src=""
+                                     data-src="{{ asset('assets/images/footerlogo.jpeg') }}"
+                                       class="ml-2 w-25 lazy" alt="Standard Digital logo">
                     </a>
                 </li>
             </ul>
@@ -158,7 +159,9 @@
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
-                    <img class="auth-img" src="https://www.standardmedia.co.ke/assets/images/logo1.png" alt="Standard Digital Logo">
+                    <img class="auth-img lazy"
+                         data-src="https://www.standardmedia.co.ke/assets/images/logo1.png"
+                         alt="Standard Digital Logo">
                 </div>
                 <div class="form-title text-center">
                     <h4>Login</h4>
