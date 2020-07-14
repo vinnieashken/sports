@@ -9,11 +9,11 @@
 {{--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>--}}
 {{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous" ></script>
+        integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous" defer></script>
-<script src="{{ asset('assets/js/bootstrap.min.js')}}" async></script>
+<script src="{{ asset('assets/js/bootstrap.min.js')}}" defer></script>
 <script src="{{ asset('assets/js/lazy.js')}}" defer></script>
 
 
@@ -159,8 +159,6 @@
 
         $('.feedbackmsg').text('');
     });
-
-
 
 </script>
 
