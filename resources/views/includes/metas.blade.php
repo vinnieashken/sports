@@ -1,10 +1,16 @@
 
 <meta name="application-name" content="Standard Digital">
 
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin >
 <link rel="dns-prefetch" href="https://www.gstatic.com" >
+
 <link rel="dns-prefetch" href="https://cdn.standardmedia.co.ke" >
+<link rel="preconnect" href="https://tt.onthe.io" crossorigin >
 <link rel="dns-prefetch" href="https://tt.onthe.io" >
+<link rel="preconnect" href="https://www.googletagservices.com" crossorigin >
 <link rel="dns-prefetch" href="https://www.googletagservices.com" >
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin >
+
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" >
 <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com" >
 <link rel="dns-prefetch" href="https://code.jquery.com" >
