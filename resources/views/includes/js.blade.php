@@ -36,7 +36,7 @@
 
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-    };
+    }
 
     function openNavMob() {
         document.getElementById("mySidenavMob").style.width = "250px";
