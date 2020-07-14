@@ -59,7 +59,7 @@
 
         {!! $articles->renderAmp($article->story,$stories->related,2) !!}
 
-        <div class=" ">
+        <div class="">
             <h4 class="section-heading my-4">FOLLOW US ON</h4>
             <div class="d-flex mx-auto my-2 follow">
                 <div>
