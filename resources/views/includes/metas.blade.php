@@ -18,6 +18,7 @@
 <link rel="dns-prefetch" href="https://csi.gstatic.com" >
 <link rel="dns-prefetch" href="https://s0.2mdn.net" >
 <link rel="dns-prefetch" href="https://www.googletagmanager.com" >
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin="anonymous" >
 <link rel="dns-prefetch" href="https://connect.facebook.net" >
 <link rel="dns-prefetch" href="https://certify-js.alexametrics.com" >
 <link rel="dns-prefetch" href="https://pbs.twimg.com" >
