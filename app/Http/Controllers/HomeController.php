@@ -59,7 +59,7 @@ class HomeController extends Controller
 //            $articles->getFromCategory('football',1,1)
 //            ->merge($articles->getFromCategory('boxing',0,1));
 
-        $checkpointexempt = $articles->getHomepage(6,0)->pluck('id') ;
+        $checkpointexempt = $home->pluck('id') ;
 
         $checkpoint = $articles->getCheckpoint('local',0,10);
 
