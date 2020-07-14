@@ -9,7 +9,7 @@
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -17,12 +17,6 @@
         crossorigin="anonymous"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
 <script src="{{ asset('assets/js/lazy.js')}}"></script>
-
-{{--<script type="text/javascript">--}}
-{{--    _atrk_opts = { atrk_acct:"XVpWq1Y1Mn20Io", domain:"standardmedia.co.ke",dynamic: true};--}}
-{{--    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();--}}
-{{--</script>--}}
-{{--<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=XVpWq1Y1Mn20Io" style="display:none" height="1" width="1" alt="" /></noscript>--}}
 
 <script>
     $(document).ready(function(){
@@ -175,17 +169,6 @@
             });
         }
     });
-
-    // var sc = $(".secondnav").position().top;
-    //
-    // $(window).scroll(function () {
-    //     var height = $(window).scrollTop();
-    //     if (height >= sc) {
-    //         $(".secondnav").addClass("fixed-top");
-    //     } else {
-    //         $(".secondnav").removeClass("fixed-top");
-    //     }
-    // });
 
 </script>
 <script type="text/javascript">window.NREUM || (NREUM = {});
