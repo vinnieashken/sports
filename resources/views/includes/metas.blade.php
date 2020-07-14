@@ -16,6 +16,13 @@
 <link rel="dns-prefetch" href="https://code.jquery.com" >
 <link rel="dns-prefetch" href="https://ajax.googleapis.com" >
 
+<link rel="dns-prefetch" href="https://csi.gstatic.com" >
+<link rel="dns-prefetch" href="https://s0.2mdn.net" >
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" >
+<link rel="dns-prefetch" href="https://connect.facebook.net" >
+<link rel="dns-prefetch" href="https://certify-js.alexametrics.com" >
+<link rel="dns-prefetch" href="https://pbs.twimg.com" >
+
 <link rel="canonical" href="{{ URL::full() }}">
 <meta name="robots" content="index,follow" />
 <meta name="copyright" content="The Standard Group" />
