@@ -1,7 +1,6 @@
 
 <meta name="application-name" content="Standard Digital">
 
-<link rel="preconnect" href="https://www.gstatic.com" crossorigin >
 <link rel="dns-prefetch" href="https://www.gstatic.com" >
 
 <link rel="dns-prefetch" href="https://cdn.standardmedia.co.ke" >
