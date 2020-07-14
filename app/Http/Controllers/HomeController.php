@@ -150,6 +150,10 @@ class HomeController extends Controller
         $articles = new Articles();
         $videos = new Videos();
         $article = $articles->getArticle($id);
+        if(Agent::isPhone())
+        {
+            return redirect('/amp/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
+        }
         $stories = new \stdClass();
         $stories->related = $articles->getRelatedArticles($id,6,0);
 
