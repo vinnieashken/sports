@@ -17,10 +17,209 @@
         crossorigin="anonymous" defer></script>
 <script src="{{ asset('assets/js/bootstrap.min.js')}}" async></script>
 <script src="{{ asset('assets/js/lazy.js')}}" defer></script>
+
 <script>
-    function openNav(){document.getElementById("mySidenav").style.width="250px"}function closeNav(){document.getElementById("mySidenav").style.width="0"}function openNavMob(){document.getElementById("mySidenavMob").style.width="250px"}function closeNavMob(){document.getElementById("mySidenavMob").style.width="0"}function openSearch(){document.getElementById("myOverlay").style.display="block"}function closeSearch(){document.getElementById("myOverlay").style.display="none"}$(document).ready(function(){$("#OpenForm").click(function(){$(".feedback_form_area").animate({width:"toggle"})})}),$(document).ready(function(){$("#myImagese").show()}),$(document).scroll(function(){var e=$(document).scrollTop(),n=$("#myImagese"),o=$("#menu");e>=100?(o.removeClass("fixed"),n.hide()):(o.addClass("fixed"),n.show())}),$(document).ready(function(){$("#myImage").hide()}),$(document).scroll(function(){var e=$(document).scrollTop(),n=$("#myImage"),o=$("#menu");e>=100?(o.addClass("fixed"),n.show()):(o.removeClass("fixed"),n.hide())}),$(function(){var e=$("header");$(window).scroll(function(){$(this).scrollTop()?e.hasClass("small")||(e.addClass("small inhibit"),setTimeout(function(){e.removeClass("inhibit")},2e3)):e.removeClass("small")})}),$(document).ready(function(){$("#loadMore").on("click",function(e){e.preventDefault();var n=Number($("#row").val());if((n+=7)<=Number($("#all").val())){$("#row").val(n);var o=$("#id").val();console.log(o),$.ajax({url:"https://standardmedia.co.ke/stories/public/category-load-more",type:"post",data:{row:n,id:o},success:function(e){$(".post:last").after(e).show().fadeIn("slow")}})}}),$.ajaxSetup({headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr("content")}})}),jQuery(function(e){e(window).width>700&&(e(".navbar .dropdown").hover(function(){e(this).find(".dropdown-menu").first().stop(!0,!0).delay(250).slideDown()},function(){e(this).find(".dropdown-menu").first().stop(!0,!0).delay(100).slideUp()}),e(".navbar .dropdown > a").click(function(){location.href=this.href}))}),window.NREUM||(NREUM={}),NREUM.info={beacon:"bam.nr-data.net",licenseKey:"32869a221e",applicationID:"240832579",transactionName:"bgcBbRRRVkNWVUxfV1dNIloSWVdeGHdIRmRxFhdJOnNXXkNEV1pUXBAQZS5fVVV0WVZCSlYOD1wUcFFeU1NA",queueTime:0,applicationTime:180,atts:"QkACG1xLRU0=",errorBeacon:"bam.nr-data.net",agent:""},$(function(){var e=$("header");$(window).scroll(function(){$(this).scrollTop()?e.hasClass("small")||(e.addClass("small inhibit"),setTimeout(function(){e.removeClass("inhibit")},2e3)):e.removeClass("small")})}),$(".modal").on("hidden.bs.modal",function(){$(".feedbackmsg").text("")});
+    $(document).ready(function(){
+        $("#OpenForm").click(function(){
+            $(".feedback_form_area").animate({
+                width: "toggle"
+            });
+        });
+    });
+</script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    };
+
+    <!--added mobile sidenav-->
+    function openNavMob() {
+        document.getElementById("mySidenavMob").style.width = "250px";
+    }
+
+    function closeNavMob() {
+        document.getElementById("mySidenavMob").style.width = "0";
+    }
+
+    <!--added mobile sidenav-->
+</script>
+<script>
+    $(document).ready(function () {
+        //hides them logo when the page loads
+        $("#myImagese").show();
+    });
+
+    $(document).scroll(function () {
+        var y = $(document).scrollTop(),
+            image = $("#myImagese"),
+            header = $("#menu");
+
+
+        if (y >= 100) {
+            //show the image and make the header fixed
+            header.removeClass('fixed');
+            image.hide();
+        } else {
+            //put the header in original position and hide image
+            header.addClass('fixed');
+            image.show();
+        }
+    });
+    $(document).ready(function () {
+        //hides them logo when the page loads
+        $("#myImage").hide();
+    });
+
+    $(document).scroll(function () {
+        var y = $(document).scrollTop(),
+            image = $("#myImage"),
+            header = $("#menu");
+
+
+        if (y >= 100) {
+            //show the image and make the header fixed
+            header.addClass('fixed');
+            image.show();
+        } else {
+            //put the header in original position and hide image
+            header.removeClass('fixed');
+            image.hide();
+        }
+    });
+</script>
+<script>
+    $(function () {
+
+        var hub = $('header');
+
+        $(window).scroll(function () {
+
+            var current = $(this).scrollTop();
+
+            if (!current) hub.removeClass('small');
+            else if (!hub.hasClass('small')) {
+                hub.addClass('small inhibit');
+                setTimeout(function () {
+                    hub.removeClass('inhibit');
+                }, 2000);
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#loadMore").on('click', function (e) {
+            e.preventDefault();
+            var row = Number($('#row').val());
+            var allcount = Number($('#all').val());
+            var rowperpage = 7;
+            row = row + rowperpage;
+
+            if (row <= allcount) {
+                $('#row').val(row);
+                var id = $('#id').val();
+                console.log(id);
+                $.ajax({
+                    url: 'https://standardmedia.co.ke/stories/public/category-load-more',
+                    type: 'post',
+                    data: {
+                        row: row,
+                        id: id
+                    },
+                    success: function (response) {
+                        $(".post:last").after(response).show().fadeIn("slow");
+                    }
+
+                });
+            }
+        });
+
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+    });
+</script>
+<script>
+
+
+    jQuery(function ($) {
+        if ($(window).width > 700) {
+
+
+            $('.navbar .dropdown').hover(function () {
+
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+
+            }, function () {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+            });
+
+            $('.navbar .dropdown > a').click(function () {
+                location.href = this.href;
+            });
+        }
+    });
+
+</script>
+<script type="text/javascript">window.NREUM || (NREUM = {});
+    NREUM.info = {
+        "beacon": "bam.nr-data.net",
+        "licenseKey": "32869a221e",
+        "applicationID": "240832579",
+        "transactionName": "bgcBbRRRVkNWVUxfV1dNIloSWVdeGHdIRmRxFhdJOnNXXkNEV1pUXBAQZS5fVVV0WVZCSlYOD1wUcFFeU1NA",
+        "queueTime": 0,
+        "applicationTime": 180,
+        "atts": "QkACG1xLRU0=",
+        "errorBeacon": "bam.nr-data.net",
+        "agent": ""
+    }</script>
+
+<script>
+    function openSearch() {
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function closeSearch() {
+        document.getElementById("myOverlay").style.display = "none";
+    }
 </script>
 </body>
+
+<script>
+    $(function () {
+
+        var hub = $('header');
+
+        $(window).scroll(function () {
+
+            var current = $(this).scrollTop();
+
+            if (!current) hub.removeClass('small');
+            else if (!hub.hasClass('small')) {
+                hub.addClass('small inhibit');
+                setTimeout(function () {
+                    hub.removeClass('inhibit');
+                }, 2000);
+            }
+        });
+    });
+
+    $('.modal').on('hidden.bs.modal', function () {
+        // do something…
+        $('.feedbackmsg').text('');
+    });
+
+</script>
 
 
 
