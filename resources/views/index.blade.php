@@ -98,8 +98,8 @@
                                     <div class="col-md-12 col-sm-12">
                                         <div class="single-standard ">
                                             <div class="standard-image">
-                                                <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                                     class="card-img-top" alt="{{ $article->title }}">
+                                                <img src="{{ asset('assets/images/pic.jpg') }}"
+                                                     data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                                             </div>
 
                                         </div>
@@ -121,8 +121,8 @@
                             <div class="card national">
                                 <div class="single-standard">
                                     <div class="standard-image">
-                                        <img src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}"
-                                             class="card-img-top" alt="{{ $article->title }}">
+                                        <img src="{{ asset('assets/images/pic.jpg') }}"
+                                             data-src="{{ $articles->getImageLocation().$article->thumbURL }}" class="card-img-top lazy" alt="{{ $article->title }}">
                                     </div>
                                 </div>
                                 <div class="card-body px-0 py-0">
