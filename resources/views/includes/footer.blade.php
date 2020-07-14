@@ -89,7 +89,7 @@
                 <li class="nav-item from">
                     <a href="{{ url('/') }}" >
                     Sports from <img src="{{ asset('assets/images/footerlogo.jpeg') }}"
-                                       class="ml-2 w-25">
+                                       class="ml-2 w-25" alt="Standard Digital logo">
                     </a>
                 </li>
             </ul>
