@@ -4,6 +4,12 @@
 <link rel="dns-prefetch" href="https://www.gstatic.com" >
 <link rel="dns-prefetch" href="https://cdn.standardmedia.co.ke" >
 <link rel="dns-prefetch" href="https://tt.onthe.io" >
+<link rel="dns-prefetch" href="https://www.googletagservices.com" >
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" >
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com" >
+<link rel="dns-prefetch" href="https://code.jquery.com" >
+<link rel="dns-prefetch" href="https://ajax.googleapis.com" >
+
 <link rel="canonical" href="{{ URL::full() }}">
 <meta name="robots" content="index,follow" />
 <meta name="copyright" content="The Standard Group" />
