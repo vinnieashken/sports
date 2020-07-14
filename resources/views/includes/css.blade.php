@@ -42,7 +42,7 @@
 {{--    gtag('config', 'UA-9511843-1');--}}
 {{--</script>--}}
 
-<script defer src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script async src='https://www.googletagservices.com/tag/js/gpt.js'></script>
 <script>
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
