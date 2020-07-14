@@ -144,13 +144,14 @@ class HomeController extends Controller
         if(!is_numeric($id))
             return redirect('/');
 
+        $agent = new Agent();
         $menu = new Menu();
         $timeutil = new TimeUtil();
         $categories = $menu->getCategories();
         $articles = new Articles();
         $videos = new Videos();
         $article = $articles->getArticle($id);
-        if(Agent::isPhone())
+        if($agent->isPhone())
         {
             return redirect('/amp/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
         }
