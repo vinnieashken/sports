@@ -173,7 +173,7 @@
                         <div class="card-body p-3 bg-white">
                             <h4 class="black py-2">
                                 <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }} "class="text-color">
-                                    <font class="green"> {{$articles->getCategory($article->categoryid)->name}}: </font>
+                                    <font class="green"> <a href="{{ url('/category/'.$articles->getCategory($article->categoryid)->id.'/'.Str::slug($articles->getCategory($article->categoryid)->name,'-')) }}">{{$articles->getCategory($article->categoryid)->name}}: </a></font>
                                     {{ $article->title }}
                                 </a>
                             </h4>
