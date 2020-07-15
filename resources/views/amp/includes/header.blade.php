@@ -33,6 +33,10 @@
 
 </head>
 <body>
+<amp-analytics type="alexametrics">
+    <script type="application/json"> {"vars": { "atrk_acct": "XVpWq1Y1Mn20Io", "domain": "standardmedia.co.ke" }}</script>
+</amp-analytics>
+
 <amp-analytics type="googleanalytics">
     <script type="application/json">
             {
