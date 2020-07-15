@@ -66,7 +66,7 @@ class RevenueController extends Controller
 
         Auth::setUser($user);
         Auth::login($user);
-
+        $request->session()->flash('loginnotify', true);
         return redirect($url);
     }
 

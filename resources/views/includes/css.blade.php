@@ -24,6 +24,16 @@
 
 @yield('initialscripts')
 
+@if(\Illuminate\Support\Facades\Session::has('loginnotify'))
+    <script>
+        dataLayer = [{
+            'eventCategory': 'NTG subscription',
+            'eventAction': 'submit',
+            'eventLabel': 'success',
+            'nonInteraction': 'false'
+        }];
+    </script>
+@endif
 <!-- Google Tag Manager -->
 <script >(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
