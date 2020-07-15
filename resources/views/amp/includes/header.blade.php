@@ -95,9 +95,6 @@
                 </li>
             @endforeach
 
-            <li class="ampstart-nav-item login">
-                <a data-scroll-nav="0" class="nav-link sectionborder" href="#" data-toggle="modal" data-target="#loginModals">LOGIN</a>
-            </li>
             <li class="ampstart-nav-item ctabg ">
                 <a class="nav-link" style="text-transform:uppercase" target="_blank" href="https://newsstand.standardmedia.co.ke">E-Paper @Ksh.20 </a>
             </li>
