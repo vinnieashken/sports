@@ -64,7 +64,7 @@
 <!-- Start Navbar -->
 <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4 ">
     <a href="{{ url('/') }}" >
-        <amp-img src="https://www.standardmedia.co.ke/sports/assets/images/logo.png" width="170" height="62" layout="fixed" class="my0" alt="The Standard Sports">
+        <amp-img src="https://www.standardmedia.co.ke/sports/assets/images/logo.png" width="190" height="60" layout="fixed" class="my0" alt="The Standard Sports">
 
         </amp-img>
     </a>
