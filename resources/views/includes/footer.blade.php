@@ -59,6 +59,8 @@
 
 </div>
 
+@include('cookieConsent::index')
+
 <section id="footer" class="footer-area pt-75">
     <hr class="my-4">
     <div class="container ">
