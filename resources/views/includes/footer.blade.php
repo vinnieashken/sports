@@ -91,7 +91,7 @@
             <ul class="navbar-nav justify-content-center p-3">
                 <li class="nav-item from">
                     <a href="{{ url('/') }}" >
-                    Sports from <img data-src="{{ asset('assets/images/footerlogo.jpeg') }}"
+                    A product of <img data-src="{{ asset('assets/images/footerlogo.jpeg') }}"
                                        class="ml-2 w-25 lazy" alt="Standard Digital logo">
                     </a>
                 </li>
