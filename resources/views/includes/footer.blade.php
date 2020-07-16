@@ -60,7 +60,7 @@
 </div>
 
 <section>
-    <div class="">
+    <div class="justify-content-center">
         @include('cookieConsent::index')
     </div>
 </section>
