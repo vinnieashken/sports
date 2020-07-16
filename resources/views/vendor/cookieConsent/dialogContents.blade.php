@@ -1,11 +1,11 @@
-<div class="container">
-    <div class="js-cookie-consent cookie-consent">
+<div class="container fixed-bottom">
+    <div class="alert bg-black js-cookie-consent cookie-consent">
 
-        <span class="cookie-consent__message">
+        <div class="text-white cookie-consent__message">
             {!! trans('cookieConsent::texts.message') !!}
-        </span>
+        </div>
 
-        <button class="js-cookie-consent-agree cookie-consent__agree">
+        <button class="btn green js-cookie-consent-agree cookie-consent__agree">
             {{ trans('cookieConsent::texts.agree') }}
         </button>
 
