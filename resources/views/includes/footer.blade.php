@@ -59,7 +59,12 @@
 
 </div>
 
-@include('cookieConsent::index')
+<section>
+    <div class="">
+        @include('cookieConsent::index')
+    </div>
+</section>
+
 
 <section id="footer" class="footer-area pt-75">
     <hr class="my-4">
