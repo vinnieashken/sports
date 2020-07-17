@@ -116,6 +116,8 @@ class HomeController extends Controller
         if(is_null($article))
         {
             //return;
+            $url = 'https://standardmedia.co.ke/article/'.$id.'/'.$slug;
+            return redirect()->to($url);
         }
         $url = url('/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
 
@@ -133,6 +135,8 @@ class HomeController extends Controller
         if(is_null($article))
         {
             //return;
+            $url = 'https://standardmedia.co.ke/article/'.$id;
+            return redirect()->to($url);
         }
         $url = url('/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
 
@@ -151,6 +155,12 @@ class HomeController extends Controller
         $articles = new Articles();
         $videos = new Videos();
         $article = $articles->getArticle($id);
+        if(is_null($article))
+        {
+            //return;
+            $url = 'https://standardmedia.co.ke/article/'.$id.'/'.$slug;
+            return redirect()->to($url);
+        }
 //        if($agent->isPhone())
 //        {
 //            return redirect('/amp/'.strtolower(Str::slug($articles->getCategory($article->categoryid)->name)).'/'.$article->id.'/'.Str::slug($article->title));
