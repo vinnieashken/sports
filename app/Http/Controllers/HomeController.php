@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use App\Utils\Articles;
+use App\Utils\CookieTool;
 use App\Utils\Menu;
 use App\Utils\SlideShows;
 use App\Utils\TimeUtil;
@@ -187,6 +188,10 @@ class HomeController extends Controller
         $stories->latest = $articles->getLatest(5,0);
 
         $stories->mostread = $articles->getMostReadArticles(4);
+
+        $cookietool = new CookieTool();
+
+        $cookietool->track();
 
         return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }
