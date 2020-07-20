@@ -143,7 +143,7 @@ class HomeController extends Controller
         return redirect()->to($url);
     }
 
-    public function article($category_slug,$id,$slug)
+    public function article($category_slug,$id,$slug=" ")
     {
         if(!is_numeric($id))
             return redirect('/');
