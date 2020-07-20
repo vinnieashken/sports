@@ -198,7 +198,7 @@ class HomeController extends Controller
         {
             Session::flash('requirelogin', 'Login with your Standard account to continue reading more stories');
 
-            return redirect(URL::full());
+            //return redirect(URL::full());
         }
 
         return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
