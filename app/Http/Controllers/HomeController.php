@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Session;
 use Jenssegers\Agent\Agent;
 
 class HomeController extends Controller
@@ -195,7 +196,7 @@ class HomeController extends Controller
         $cookietool->track();
         if($cookietool->enforceLogin())
         {
-            $request->session()->flash('requirelogin', 'Login with your Standard account to continue reading more stories');
+            Session::flash('requirelogin', 'Login with your Standard account to continue reading more stories');
 
             return redirect(URL::full());
         }
