@@ -143,7 +143,7 @@ class HomeController extends Controller
         return redirect()->to($url);
     }
 
-    public function article($category_slug,$id,$slug="")
+    public function article($category_slug,$id,$slug=null)
     {
         if(!is_numeric($id))
             return redirect('/');
@@ -157,8 +157,11 @@ class HomeController extends Controller
         $article = $articles->getArticle($id);
         if(is_null($article))
         {
-            //return;
-            $url = 'https://standardmedia.co.ke/article/'.$id.'/'.$slug;
+            if(is_null($slug))
+                $url = 'https://standardmedia.co.ke/article/'.$id;
+            else
+                $url = 'https://standardmedia.co.ke/article/'.$id.'/'.$slug;
+
             return redirect()->to($url);
         }
 //        if($agent->isPhone())
