@@ -36,12 +36,12 @@ class CookieTool
         if(Auth::check())
             return false;
 
-       return $this->must_login > $this->story_no ? false: true ;
+       return $this->must_login > $this->story_no ? false : true ;
     }
 
     public function enforcePaywall()
     {
-       return $this->must_pay > $this->story_no ? false: true ;
+       return $this->must_pay > $this->story_no ? false : true ;
     }
 }
 
