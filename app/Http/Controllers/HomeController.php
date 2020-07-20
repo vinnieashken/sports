@@ -197,7 +197,7 @@ class HomeController extends Controller
         if($cookietool->enforceLogin())
         {
             Session::flash('loginerror', 'Login with your Standard account to continue reading more stories');
-            $article->story = substr($article->story,0,100);
+            $article->story = substr($article->story,0,300);
             //return redirect(URL::full());
         }
 
