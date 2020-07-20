@@ -198,7 +198,7 @@ class HomeController extends Controller
         {
             Session::flash('loginprompt', 'Login with your Standard account to continue reading more stories');
             $article->story = substr($article->story,0,900).' .... <a data-toggle="modal"
-                                   data-dismiss="modal" data-target="#loginModal" href="#">Login</a> to read the full story';
+                                   data-dismiss="modal" data-target="#loginModal" href="#">Login here</a> to read the full story';
             //return redirect(URL::full());
         }
 
