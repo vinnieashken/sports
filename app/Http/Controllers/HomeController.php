@@ -189,9 +189,9 @@ class HomeController extends Controller
 
         $stories->mostread = $articles->getMostReadArticles(4);
 
-        //$cookietool = new CookieTool();
+        $cookietool = new CookieTool();
 
-        //$cookietool->track();
+        $cookietool->track();
 
         return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }

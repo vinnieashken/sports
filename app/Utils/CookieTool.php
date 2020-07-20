@@ -23,7 +23,6 @@ class CookieTool
         $httponly =  true;
 
         $this->story_no = Cookie::get('story_no');
-        $this->must_login > $this->story_no ? $this->show_page() : $this->confirm_login();
         $this->story_no++;
         //Cookie::queue('story_no',$this->story_no, $this->expiry_period );
         Cookie::queue('story_no',$this->story_no, $this->expiry_period,$path,$domain,$secure,$httponly);
