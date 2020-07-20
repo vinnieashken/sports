@@ -285,4 +285,15 @@
         });
     </script>
 
+    @if(\Illuminate\Support\Facades\Session::has('loginprompt'))
+        <script>
+            $(document).ready(function () {
+                //alert('Hello');
+
+                $("#loginModal").modal('show');
+            });
+
+        </script>
+    @endif
+
 @endsection

@@ -167,7 +167,7 @@
                 </div>
                 <div class="form-title text-center">
                     <h4>Login</h4>
-                    <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('loginerror') }}</h5>
+                    <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('loginerror') ?? \Illuminate\Support\Facades\Session::get('loginprompt')  }}</h5>
                 </div>
 
                 <div class="d-flex flex-column text-center">
