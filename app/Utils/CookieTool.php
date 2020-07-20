@@ -2,6 +2,7 @@
 
 
 namespace App\Utils;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 
 class CookieTool
@@ -32,12 +33,15 @@ class CookieTool
 
     public function enforceLogin()
     {
-        $this->must_login > $this->story_no ? false: true ;
+        if(Auth::check())
+            return false;
+
+       return $this->must_login > $this->story_no ? false: true ;
     }
 
     public function enforcePaywall()
     {
-        $this->must_pay > $this->story_no ? false: true ;
+       return $this->must_pay > $this->story_no ? false: true ;
     }
 }
 

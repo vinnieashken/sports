@@ -14,6 +14,7 @@ use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
 use Jenssegers\Agent\Agent;
@@ -144,7 +145,7 @@ class HomeController extends Controller
         return redirect()->to($url);
     }
 
-    public function article($category_slug,$id,$slug=null)
+    public function article(Request $request,$category_slug,$id,$slug=null)
     {
         if(!is_numeric($id))
             return redirect('/');
@@ -192,6 +193,12 @@ class HomeController extends Controller
         $cookietool = new CookieTool();
 
         $cookietool->track();
+        if($cookietool->enforceLogin())
+        {
+            $request->session()->flash('requirelogin', 'Login with your Standard account to continue reading more stories');
+
+            return redirect(URL::full());
+        }
 
         return view('article',['timeutil'=> $timeutil,'videos' => $videos,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
     }

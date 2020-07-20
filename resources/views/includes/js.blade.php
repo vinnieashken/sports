@@ -166,7 +166,16 @@
 </body>
 
 
+@if(\Illuminate\Support\Facades\Session::has('requirelogin'))
+    <script>
+        $(document).ready(function () {
+            //alert('Hello');
 
+            $("#loginModal").modal('show');
+        });
+
+    </script>
+@endif
 
 
     @if(\Illuminate\Support\Facades\Session::has('loginerror'))
