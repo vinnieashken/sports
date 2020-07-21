@@ -12,6 +12,7 @@ use App\Utils\TimeUtil;
 use App\Utils\Videos;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
@@ -194,7 +195,7 @@ class HomeController extends Controller
         $cookietool = new CookieTool();
 
         $cookietool->track();
-        if($cookietool->isNearLast())
+        if($cookietool->isNearLast() && !Auth::check())
             Session::flash('notifylast',true);
 
         if($cookietool->enforceLogin())
