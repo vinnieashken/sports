@@ -302,6 +302,33 @@
     </div>
 </div>
 
+<div class="container ">
+    <div class="footer-widget  pb-120 mt-4">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="row">
+                <div class="col-12 d-inline-flex">
+                    <h4 class="mt-4"><strong>A Product of</strong></h4>
+                    <img class="auth-img lazy"
+                         data-src="https://www.standardmedia.co.ke/assets/images/logo1.png"
+                         alt="Standard Digital Logo" style="width: 201px">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mx-auto col-md-5">
+                <div class="footer-logo text-center mt-5">
+                    <h3>Get Our Newsletter</h3>
+                    <p class="mt-10 mb-4 text-center">Subscribe to our newsletter and stay updated on the latest
+                        developments
+                        and special offers!</p>
+                    <input type="text" class="w-75" placeholder="Enter your email">
+                    <i class=" fa fas fa-angle-right newslettericon ml-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
     <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 fixed-bottom" role="alert">
         <span class="alert-inner--icon"><i class="fas fa-check"></i></span>
