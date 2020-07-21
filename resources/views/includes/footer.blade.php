@@ -33,8 +33,8 @@
     }
     @media (min-width: 576px) {
         .full-width-dialog{
-            max-width: 100% !important;
-            margin: 0;
+            /*max-width: 100% !important;*/
+            /*margin: 0;*/
         }
 
     }
@@ -205,13 +205,17 @@
 <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
 
 <div class="modal fade modals overlay align-content-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
+     aria-hidden="true" {{ \Illuminate\Support\Facades\Session::get('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' }}>
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header border-bottom-0">
+                @if(\Illuminate\Support\Facades\Session::get('loginprompt'))
+                    <p></p>
+                @else
                 <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
                 </button>
+                @endif
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
