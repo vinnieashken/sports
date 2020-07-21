@@ -385,9 +385,9 @@
 <!-- Modal -->
 
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
-    <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 fixed-bottom" role="alert">
+    <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 justify-content-center fixed-bottom" role="alert">
         <span class="alert-inner--icon"><i class="fa fa-check"></i></span>
-        <span class="alert-inner--text text-white"><strong>&nbsp;&nbsp; Hi!</strong>
+        <span class="alert-inner--text text-white text-center"><strong>&nbsp;&nbsp; Hi!</strong>
           This is your Last free article.Kindly Login or register to continue reading more free articles &nbsp;&nbsp;
         </span>
         <button type="button" class="btn  btn-danger" data-toggle="modal" data-target="#modal_5">
