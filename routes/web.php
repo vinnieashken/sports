@@ -36,7 +36,7 @@ Route::post('/register','RevenueController@register');
 Route::post('/reset','RevenueController@resetPassword');
 Route::get('/logout','RevenueController@logout');
 Route::post('/subscribe','RevenueController@subscribe');
-Route::get('/auth/check','RevenueController@checkAccount');
+Route::get('/check','RevenueController@checkAccount');
 
 
 Route::get('/user','RevenueController@getUser');
