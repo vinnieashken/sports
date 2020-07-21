@@ -55,6 +55,18 @@
                 padding:15px;
             }
         }
+        @media (max-width: 480px){
+            .feedback-form-btn {
+                position: absolute;
+                left: -50px;
+                color: #fff;
+                transform: rotate(90deg);
+                top: 40%;
+                border-radius: 0;
+                padding: 5px;
+                font-size: 15px;
+            }
+        }
     </style>
 
 </div>
