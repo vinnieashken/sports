@@ -43,6 +43,11 @@ class CookieTool
     {
        return $this->must_pay > $this->story_no ? false : true ;
     }
+
+    public function isNearLast()
+    {
+        return $this->story_no + 1 == $this->must_login ? true : false;
+    }
 }
 
 

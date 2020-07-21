@@ -176,7 +176,7 @@
                         <input type="hidden" name="url" value="{{ URL::full() }}">
                         <div class="form-group my-2">
                             <input type="email" required class="form-control" name="email" id="email1"
-                                   placeholder="Your email address...">
+                                   placeholder="Your email address..." value="{{ \Illuminate\Support\Facades\Session::get('email') }}">
                         </div>
                         <div class="form-group my-2">
                             <input type="password" required class="form-control" name="password" id="password1"
@@ -231,7 +231,7 @@
 
                         <div class="form-group my-2">
                             <input type="email" required class="form-control" name="email" id="email"
-                                   placeholder="Enter your email address...">
+                                   placeholder="Enter your email address..." value="{{ \Illuminate\Support\Facades\Session::get('email') }}">
                         </div>
 
                         <div class="form-group my-2">

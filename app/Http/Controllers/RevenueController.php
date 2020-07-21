@@ -245,15 +245,13 @@ class RevenueController extends Controller
 
         if((int)$response->getStatusCode() >= 400 )
         {
-            return ['message'=>' bad login'];
+            $request->session()->flash('registrationerror', 'Your email is not registered.Fill in the form to create an account');
+            return redirect('/');
         }
 
-        if(property_exists($objbody ,'message'))
-        {
-
-        }
-
-        return ['okay' => $objbody ];
+        $request->session()->flash('loginprompt', 'Enter your password to continue');
+        $request->session()->flash('email', $email);
+        return redirect('/');
 
     }
 

@@ -194,6 +194,9 @@ class HomeController extends Controller
         $cookietool = new CookieTool();
 
         $cookietool->track();
+        if($cookietool->isNearLast())
+            Session::flash('notifylast',true);
+
         if($cookietool->enforceLogin())
         {
             //Session::flash('loginprompt', 'Login with your Standard account to continue reading more stories');
