@@ -195,8 +195,8 @@ class HomeController extends Controller
         $cookietool = new CookieTool();
 
         $cookietool->track();
-//        if($cookietool->isNearLast() && !Auth::check())
-//            Session::flash('notifylast',true);
+        if($cookietool->isNearLast() && !Auth::check())
+            Session::flash('notifylast',true);
 
         if($cookietool->enforceLogin())
         {
