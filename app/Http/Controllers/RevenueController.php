@@ -220,6 +220,42 @@ class RevenueController extends Controller
         return redirect(URL::previous());
     }
 
+    public function checkAccount(Request $request)
+    {
+        $email = $request->email;
+
+        $params = ["body"=>json_encode(['email'=> $email, ])];
+
+        //return $params;
+
+        $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
+        try {
+
+            $response = $client->request('POST', $this->api . 'check/email', $params);
+
+        }catch (Exception $e)
+        {
+
+        }
+
+        $headers = $response->getHeaders();
+        $body = $response->getBody()->getContents();
+        $objbody = json_decode($body);
+
+        if((int)$response->getStatusCode() >= 400 )
+        {
+            return ['message'=>' bad login'];
+        }
+
+        if(property_exists($objbody ,'message'))
+        {
+
+        }
+
+        return $objbody;
+
+    }
+
     public function getUser()
     {
         //return Auth::user() ?? 'not logged in';
