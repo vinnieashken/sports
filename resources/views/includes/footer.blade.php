@@ -205,7 +205,7 @@
 <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
 
 <div class="modal fade modals overlay align-content-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true" {!!  \Illuminate\Support\Facades\Session::get('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' !!}>
+     aria-hidden="true" {!!  \Illuminate\Support\Facades\Session::has('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' !!}>
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header border-bottom-0">
@@ -411,5 +411,14 @@
         </button>
     </div>
 @endif
+
+@if(\Illuminate\Support\Facades\Session::has('loginprompt'))
+    <style>
+        .modal-backdrop {
+            background-color: transparent !important;
+        }
+    </style>
+@endif
+
 
 
