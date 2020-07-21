@@ -39,45 +39,6 @@
 
     }
 
-    .auth-img {
-        max-width: 250px;
-    }
-
-        .form-control {
-            /* display: block; */
-            width: 30%;
-            margin: 6px;
-            height: calc(2.25rem + 2px);
-            padding: .375rem .75rem;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #495057;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 1px solid #d3d4d5;
-            border-radius: .25rem;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        }
-
-        .modals .btn-info {
-            float: left;
-            width: auto;
-            padding: 11px;
-            background: #ee2e24;
-            font-size: 17px;
-            border: none;
-            cursor: pointer;
-            padding: 11px 156px;
-            margin-left: 35%;
-            margin-bottom: 20px;
-        }
-
-        .feedbackmsg {
-            color: #000!important;
-            font-size: 20px!important;
-            padding: 20px!important;
-        }
 </style>
 
 <div id="feedback-form" class="feedback-form">
