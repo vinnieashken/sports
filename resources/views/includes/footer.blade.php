@@ -24,6 +24,13 @@
         font-family: Solido;
         color: white;
     }
+    .heading-notify{
+        margin-bottom: .5rem;
+        font-family: inherit;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #343a40 !important;
+    }
 </style>
 
 <div id="feedback-form" class="feedback-form">
@@ -355,7 +362,7 @@
                 <div class="py-3 text-center">
                     <!--                                      <i class="fas fa-exclamation-circle fa-4x"></i>-->
 
-                    <h4 class="heading h3 text-dark text-center  pb-5"> </br>To keep
+                    <h4 class="heading h3 text-dark text-center heading-notify pb-5"> </br>To keep
                         reading<span class="text-danger"> The Standard</span> articles
                         create<br>
                         your free account or log in.</h4>
