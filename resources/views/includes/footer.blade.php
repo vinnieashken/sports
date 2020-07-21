@@ -302,3 +302,20 @@
     </div>
 </div>
 
+@if(\Illuminate\Support\Facades\Session::has('notifylast'))
+    <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0" role="alert">
+        <span class="alert-inner--icon"><i class="fas fa-check"></i></span>
+        <span class="alert-inner--text text-white"><strong>Hi!</strong>
+                                            This is your Last free article. Stay on top of historic market
+                                            volatility. Try 3 months for Kshs 1000. Cancel anytime&nbsp;&nbsp;
+                                        </span>
+        <button type="button" class="btn  btn-danger" data-toggle="modal" data-target="#modal_5">
+            Continue
+        </button>
+        <button type="button" class="close text-danger" data-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+
