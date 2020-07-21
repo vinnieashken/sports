@@ -321,10 +321,10 @@
                         create<br>
                         your free account or log in.</h4>
                 </div>
-                <form class="form-light ">
+                <form class="form-light " method="GET" action="{{ url('/check') }}">
                     <div class="form-group-lg mb-4">
-                        <input type="email" class="form-control" id="input_email"
-                               placeholder="Your email">
+                        <input type="email" name="email" class="form-control" id="input_email"
+                               placeholder="Your email" required>
                     </div>
                     <a href="sign-up.html"> <button type="submit" class="btn btn-block btn-lg bg-danger text-white mt-4">
                             Continue
