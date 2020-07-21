@@ -303,7 +303,7 @@
 </div>
 
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
-    <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0" role="alert">
+    <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 fixed-bottom" role="alert">
         <span class="alert-inner--icon"><i class="fas fa-check"></i></span>
         <span class="alert-inner--text text-white"><strong>Hi!</strong>
                                             This is your Last free article. Stay on top of historic market
