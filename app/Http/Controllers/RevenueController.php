@@ -251,7 +251,7 @@ class RevenueController extends Controller
 
         $request->session()->flash('loginprompt', 'Enter your password to continue');
         $request->session()->flash('email', $email);
-        return redirect('/');
+        return redirect(URL::previous());
 
     }
 
