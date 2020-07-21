@@ -259,7 +259,7 @@
 </div>
 
 <div class="modal fade modals overlay align-content-center" id="regModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true" {!!  \Illuminate\Support\Facades\Session::has('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' !!}>
+     aria-hidden="true" >
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="background:#fff !important">
             <div class="modal-header border-bottom-0">
@@ -325,7 +325,7 @@
 </div>
 
 <div class="modal fade modals overlay align-content-center" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true" {!!  \Illuminate\Support\Facades\Session::has('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' !!}>
+     aria-hidden="true" >
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" style="background:#fff !important">
             <div class="modal-header border-bottom-0">
