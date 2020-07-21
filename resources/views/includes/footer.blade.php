@@ -259,13 +259,17 @@
 </div>
 
 <div class="modal fade modals overlay align-content-center" id="regModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
+     aria-hidden="true" {!!  \Illuminate\Support\Facades\Session::has('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' !!}>
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="background:#fff !important">
             <div class="modal-header border-bottom-0">
-                <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
-                </button>
+                @if(\Illuminate\Support\Facades\Session::get('loginprompt'))
+                    <p></p>
+                @else
+                    <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
+                    </button>
+                @endif
             </div>
             <div class="modal-body" style="z-index: 10000;">
                 <div class="text-center auth-logo mb-1">
@@ -321,13 +325,17 @@
 </div>
 
 <div class="modal fade modals overlay align-content-center" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
+     aria-hidden="true" {!!  \Illuminate\Support\Facades\Session::has('loginprompt') ? 'data-backdrop="static" data-keyboard="false"': '' !!}>
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" style="background:#fff !important">
             <div class="modal-header border-bottom-0">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
-                </button>
+                @if(\Illuminate\Support\Facades\Session::get('loginprompt'))
+                    <p></p>
+                @else
+                    <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
+                    </button>
+                @endif
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
