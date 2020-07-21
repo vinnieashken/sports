@@ -227,7 +227,7 @@ class RevenueController extends Controller
         $params = ["body"=>json_encode(['email'=> $email])];
         //$params = json_encode(['email'=> $email ]);
 
-        return $params;
+        //return $params;
 
         $client = new Client(['headers' => [ 'Content-Type' => 'application/json' ],'verify'=> base_path('/cacert.pem'),'http_errors'=>false]);
         try {
