@@ -1,4 +1,31 @@
 
+<style>
+    .alert-dark {
+        color: #fff;
+        background: #545a5f linear-gradient(180deg, #6e7377, #545a5f) repeat-x;
+        border-color: #545a5f;
+    }
+
+    .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle {
+        color: #fff;
+        background-color: #cc0029;
+        background-image: none;
+        border-color: #bf0026;
+    }
+
+    .btn-danger:hover {
+        color: #fff;
+        background: #d9002b linear-gradient(180deg, #df264b, #d9002b) repeat-x;
+        border-color: #cc0029;
+    }
+
+    i, span, a {
+        display: inline-block;
+        font-family: Solido;
+        color: white;
+    }
+</style>
+
 <div id="feedback-form" class="feedback-form">
 
     <a href="#" class="feedback-form-btn btn btn-danger btn-lg" id="OpenForm">Feedback</a>
@@ -365,4 +392,5 @@
         </button>
     </div>
 @endif
+
 
