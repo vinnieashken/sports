@@ -19,7 +19,7 @@
         border-color: #cc0029;
     }
 
-    i, span, a {
+    i, span {
         display: inline-block;
         font-family: Solido;
         color: white;
