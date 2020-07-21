@@ -31,6 +31,12 @@
         line-height: 1.5;
         color: #343a40 !important;
     }
+    @media (min-width: 576px) {
+        .full-width-dialog{
+            max-width: 100% !important;
+        }
+
+    }
 </style>
 
 <div id="feedback-form" class="feedback-form">
@@ -351,7 +357,7 @@
 <!-- Modal -->
 <div class="modal modal-white fade" id="modal_5" tabindex="-1" role="dialog"
      aria-labelledby="modal_5" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog full-width-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
