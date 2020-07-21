@@ -414,7 +414,7 @@
 
 @if(\Illuminate\Support\Facades\Session::has('loginprompt'))
     <style>
-        .modal-backdrop {
+        .overlay {
             background-color: transparent !important;
         }
     </style>
