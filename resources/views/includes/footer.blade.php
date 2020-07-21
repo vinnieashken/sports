@@ -350,7 +350,7 @@
         </button>
         <button type="button" class="close text-danger" data-dismiss="alert" aria-label="Close">
 
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">x</span>
         </button>
     </div>
 @endif
