@@ -246,6 +246,7 @@ class RevenueController extends Controller
         if((int)$response->getStatusCode() >= 400 )
         {
             $request->session()->flash('registrationerror', 'Your email is not registered.Fill in the form to create an account');
+            $request->session()->flash('email', $email);
             return redirect(URL::previous());
         }
 
