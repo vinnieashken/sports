@@ -1,43 +1,5 @@
 
 <style>
-    .alert-dark {
-        color: #fff;
-        background: #545a5f linear-gradient(180deg, #6e7377, #545a5f) repeat-x;
-        border-color: #545a5f;
-    }
-
-    .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle {
-        color: #fff;
-        background-color: #cc0029;
-        background-image: none;
-        border-color: #bf0026;
-    }
-
-    .btn-danger:hover {
-        color: #fff;
-        background: #d9002b linear-gradient(180deg, #df264b, #d9002b) repeat-x;
-        border-color: #cc0029;
-    }
-
-    i, span {
-        display: inline-block;
-        font-family: Solido;
-        color: white;
-    }
-    .heading-notify{
-        margin-bottom: .5rem;
-        font-family: inherit;
-        font-weight: 600;
-        line-height: 1.5;
-        color: #343a40 !important;
-    }
-    @media (min-width: 576px) {
-        .full-width-dialog{
-            /*max-width: 100% !important;*/
-            /*margin: 0;*/
-        }
-
-    }
 
 </style>
 
