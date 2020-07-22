@@ -777,6 +777,13 @@
 @endif
 
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
+    <style>
+        .alert-dark {
+            color: #fff;
+            background: #545a5f linear-gradient(180deg, #6e7377, #545a5f) repeat-x;
+            border-color: #545a5f;
+        }
+    </style>
     <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 justify-content-center fixed-bottom" role="alert">
         <span class="alert-inner--icon"><i class="fa fa-check"></i></span>
         <span class="alert-inner--text text-white "><strong>&nbsp;&nbsp; Hi!</strong>
