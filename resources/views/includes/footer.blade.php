@@ -530,6 +530,17 @@
     <h2>Modal Example</h2>
     <span style="font-size:30px;cursor:pointer" onclick="openLoginNav()">&#9776; open</span>
 
+    <script>
+        function openLoginNav() {
+            alert('hello');
+            document.getElementById("myNavLogin").style.height = "100%";
+        }
+
+        function closeLoginNav() {
+            document.getElementById("myNavLogin").style.height = "0%";
+        }
+    </script>
+
 @endif
 
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
