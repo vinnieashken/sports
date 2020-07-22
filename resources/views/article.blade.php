@@ -426,6 +426,7 @@
 
         $(document).ready(function () {
             //alert('hello');
+            console.log('executed');
             document.getElementById("myNavLogin").style.height = "100%";
         });
 
