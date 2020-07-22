@@ -273,6 +273,10 @@
             </div>
         </div>
     </section>
+    <section>
+        <h2>Modal Example</h2>
+        <span style="font-size:30px;cursor:pointer" onclick="openLoginNav()">&#9776; open</span>
+    </section>
 
 @endsection
 
@@ -281,13 +285,16 @@
 
     <script>
         function openLoginNav() {
-            document.getElementById("myNavLogin").style.height = "100%";
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeLoginNav() {
+            document.getElementById("myNav").style.height = "0%";
         }
 
         $(document).ready(function () {
             //alert('hello');
             console.log('executed');
-            document.getElementById("myNavLogin").style.height = "100%";
         });
 
     </script>

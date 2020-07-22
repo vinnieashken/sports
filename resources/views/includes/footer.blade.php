@@ -405,7 +405,7 @@
 <!-- Modal -->
 @if(\Illuminate\Support\Facades\Session::has('loginprompt'))
 
-<div id="myNavLogin" class="overlay">
+<div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
         <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Log in </h4>
