@@ -369,40 +369,63 @@
 </div>
 
 <!-- Modal -->
-<div class="modal modal-white fade" id="modal_5" tabindex="-1" role="dialog"
-     aria-labelledby="modal_5" aria-hidden="true">
-    <div class="modal-dialog full-width-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="py-3 text-center">
-                    <!--                                      <i class="fas fa-exclamation-circle fa-4x"></i>-->
+{{--<div class="modal modal-white fade" id="modal_5" tabindex="-1" role="dialog"--}}
+{{--     aria-labelledby="modal_5" aria-hidden="true">--}}
+{{--    <div class="modal-dialog full-width-dialog" role="document">--}}
+{{--        <div class="modal-content">--}}
+{{--            <div class="modal-header">--}}
+{{--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                    <span aria-hidden="true">&times;</span>--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--            <div class="modal-body">--}}
+{{--                <div class="py-3 text-center">--}}
+{{--                    <!--                                      <i class="fas fa-exclamation-circle fa-4x"></i>-->--}}
 
-                    <h4 class="heading h3 text-dark text-center heading-notify pb-5"> </br>To keep
-                        reading<span class="text-danger"> The Standard</span> articles
-                        create<br>
-                        your free account or log in.</h4>
-                </div>
-                <form class="form-light " method="GET" action="{{ url('/check') }}">
-                    <div class="form-group-lg mb-4">
-                        <input type="email" name="email" class="form-control" id="input_email"
-                               placeholder="Your email" required>
-                    </div>
-                    <a href="sign-up.html"> <button type="submit" class="btn btn-block btn-lg bg-danger text-white mt-4">
-                            Continue
-                        </button>
-                    </a>
+{{--                    <h4 class="heading h3 text-dark text-center heading-notify pb-5"> </br>To keep--}}
+{{--                        reading<span class="text-danger"> The Standard</span> articles--}}
+{{--                        create<br>--}}
+{{--                        your free account or log in.</h4>--}}
+{{--                </div>--}}
+{{--                <form class="form-light " method="GET" action="{{ url('/check') }}">--}}
+{{--                    <div class="form-group-lg mb-4">--}}
+{{--                        <input type="email" name="email" class="form-control" id="input_email"--}}
+{{--                               placeholder="Your email" required>--}}
+{{--                    </div>--}}
+{{--                    <a href="sign-up.html"> <button type="submit" class="btn btn-block btn-lg bg-danger text-white mt-4">--}}
+{{--                            Continue--}}
+{{--                        </button>--}}
+{{--                    </a>--}}
 
-                </form>
+{{--                </form>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+<!-- Modal -->
+@if(\Illuminate\Support\Facades\Session::has('loginprompt'))
+<div id="myNavLogin" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Log in </h4>
+
+        <form class="form-light">
+            <div class="form-group-lg mb-4">
+                <input type="email" class="form-controli" id="input_email" placeholder="Your email">
             </div>
-        </div>
+            <div class="form-group mb-2">
+                <input type="password" class="form-controli" id="input_password" placeholder="Password">
+            </div>
+
+
+            <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Log in</button>
+            <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
+            <div class=""><a href="create-account.html" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;<a href="#" class="text-danger font-weight-600 float-right" href="#">Forgot Password</a></div>
+
+        </form>
     </div>
 </div>
-<!-- Modal -->
+@endif
 
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
     <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 justify-content-center fixed-bottom" role="alert">
@@ -410,7 +433,7 @@
         <span class="alert-inner--text text-white "><strong>&nbsp;&nbsp; Hi!</strong>
           This is your Last free article.Kindly Login or register to continue reading more free articles &nbsp;&nbsp;
         </span>
-        <button type="button" class="btn  btn-danger" data-toggle="modal" data-target="#modal_5">
+        <button type="button" class="btn  btn-danger" data-toggle="modal" data-target="#myNavLogin">
             Continue
         </button>
         <button type="button" class="close text-danger" data-dismiss="alert" aria-label="Close">
