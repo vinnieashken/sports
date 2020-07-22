@@ -366,7 +366,169 @@
 </div>
 <!-- Modal -->
 @if(\Illuminate\Support\Facades\Session::has('loginprompt'))
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h4 {
+            display: block;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bolder;
+            font-size: 25px;
+        }
 
+        h1 {
+            display: block;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        .overlayn {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            background-color: rgb(255,255,255,0.9);
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+        .font-weight-300 {
+            font-weight: 300 !important;
+        }
+        .font-weight-600 {
+            font-weight: 600 !important;
+        }
+        .font-weight-400 {
+            font-weight: 400 !important;
+        }
+        .text-dark {
+            color: #343a40 !important;
+        }
+        .text-left {
+            text-align: left !important;
+        }
+        a.text-danger:hover, a.text-danger:focus {
+            color: #cc0029 !important;
+        }
+        .heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .overlay-contentn {
+            position: relative;
+            top: 15%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlayn a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlayn a:hover, .overlayn a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlayn .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+        .btno:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+        .bg-color {
+            background-color: #f03 !important;
+            color: white;
+        }
+        .btno {
+            display: inline-block;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: .0625rem solid transparent;
+            padding: .75rem 1.5rem;
+            font-size: .875rem;
+            line-height: 1.6;
+            border-radius: .375rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .btno-lg, .btno-group-lg  .btno {
+            padding: .5rem 7rem;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 1.09375rem;
+            line-height: 1.5;
+            border-radius: .375rem;
+        }
+        .form-controli {
+            display: initial;
+            padding: 0.75rem 8.5rem;
+            margin-top: 12px;
+            font-size: .875rem;
+            text-align: center;
+            line-height: 1.6;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: .0625rem solid #808386;
+            border-radius: .375rem;
+            box-shadow: none;
+            transition: all 0.2s ease-in-out;
+        }
+        .overlayn a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #0d0c0c;
+            display: inline-flex;
+        }
+        @media screen and (max-height: 450px) {
+            .overlayn {overflow-y: auto;}
+            .overlayn a {font-size: 20px}
+            .overlayn .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+    <div id="myNavLogin" class="overlayn">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>
+        <div class="overlay-contentn">
+            <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Log in </h4>
+
+            <form class="form-light">
+                <div class="form-group-lg mb-4">
+                    <input type="email" class="form-controli" id="input_email" placeholder="Your email">
+                </div>
+                <div class="form-group mb-2">
+                    <input type="password" class="form-controli" id="input_password" placeholder="Password">
+                </div>
+
+
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Log in</button>
+                <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
+                <div class=""><a href="create-account.html" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;<a href="#" class="text-danger font-weight-600 float-right" href="#">Forgot Password</a></div>
+
+            </form>
+        </div>
+    </div>
+
+    <h2>Modal Example</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openLoginNav()">&#9776; open</span>
 
 @endif
 

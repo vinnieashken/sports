@@ -291,7 +291,7 @@
             $(document).ready(function () {
                 //alert('Hello');
 
-                $("#loginModal").modal('show');
+                // $("#loginModal").modal('show');
             });
 
         </script>
