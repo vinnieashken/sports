@@ -200,7 +200,7 @@ class HomeController extends Controller
 
         if($cookietool->enforceLogin())
         {
-            Session::flash('loginprompt', 'Login with your Standard account to continue reading more stories');
+            //Session::flash('loginprompt', 'Login with your Standard account to continue reading more stories');
             //$article->story = substr($article->story,0,400).' .... <br /><p><a class="btn btn-success" data-toggle="modal" data-dismiss="modal" data-target="#loginModal" href="#">Login here</a> to read the full story</p>';
             //return redirect(URL::full());
         }
