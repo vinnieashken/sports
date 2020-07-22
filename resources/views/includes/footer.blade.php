@@ -507,6 +507,26 @@
             }
         }
     </style>
+
+    <div id="myNavEmail" class="overlayn">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h1 class="heading h1 text-dark pt-3 pb-2 text-center font-weight-600">Stay Ahead!<br/></h1>
+            <h4 class="heading h2 text-dark pt-3 pb-2 text-center font-weight-600">    Access premium content only available </br>to our subscribers.</h4>
+
+            <form class="form-light">
+                <div class="form-group-lg mb-4">
+                    <input type="email" class="form-controli" id="input_email" placeholder="Your email">
+                </div>
+
+
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white">Proceed</button>
+                <div class="text-center mt-4 text-dark font-weight-400">Support independent journalism </div>
+
+            </form>
+        </div>
+    </div>
+
     <div id="myNavLogin" class="overlayn">
         <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>
         <div class="overlay-contentn">
@@ -529,19 +549,58 @@
         </div>
     </div>
 
+    <div id="myNavRegister" class="overlayn">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Create An Account </h4>
+
+            <form class="form-light">
+                <div class="form-group-lg mb-4">
+                    <input type="text" class="form-controli" id="input_name" placeholder="Enter Your Full Name">
+                </div>
+
+                <div class="form-group-lg mb-4">
+                    <input type="email" class="form-controli" id="input_email" placeholder=" Enter Your email">
+                </div>
+
+                <div class="form-group-lg mb-4">
+                    <input type="text" class="form-controli" id="input_phone" placeholder="Enter Phone Number">
+                </div>
+
+                <div class="form-group mb-2">
+                    <input type="password" class="form-controli" id="input_password" placeholder="Password">
+                </div>
+
+
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Register</button>
+                <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
+                <div class="text-center mt-4 text-dark font-weight-600">I have an account <a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="myNavReset" class="overlayn">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Reset Password </h4>
+
+            <form class="form-light">
+                <div class="form-group-lg mb-4">
+                    <input type="email" class="form-controli" id="input_email" placeholder="Your email">
+                </div>
+
+
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Send Password Reset Link</button>
+                <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
+                <div class=""><a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
+
+            </form>
+        </div>
+    </div>
+
     <h2>Modal Example</h2>
     <span style="font-size:30px;cursor:pointer" onclick="openLoginNav()">&#9776; open</span>
-
-    <script>
-        function openLoginNav() {
-            //alert('hello');
-            document.getElementById("myNavLogin").style.height = "100%";
-        }
-
-        function closeLoginNav() {
-            document.getElementById("myNavLogin").style.height = "0%";
-        }
-    </script>
 
 @endif
 
