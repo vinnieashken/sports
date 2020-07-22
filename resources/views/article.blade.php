@@ -277,6 +277,40 @@
 @endsection
 
 @section('js')
+    <script>
+        function openLoginNav() {
+            //alert('hello');
+            document.getElementById("myNavLogin").style.height = "100%";
+        }
+
+        function closeLoginNav() {
+            document.getElementById("myNavLogin").style.height = "0%";
+        }
+        function openEmailNav() {
+            //alert('hello');
+            document.getElementById("myNavEmail").style.height = "100%";
+        }
+
+        function closeEmailNav() {
+            document.getElementById("myNavEmail").style.height = "0%";
+        }
+        function openRegisterNav() {
+            //alert('hello');
+            document.getElementById("myNavRegister").style.height = "100%";
+        }
+
+        function closeRegisterNav() {
+            document.getElementById("myNavRegister").style.height = "0%";
+        }
+        function openResetNav() {
+            //alert('hello');
+            document.getElementById("myNavReset").style.height = "100%";
+        }
+
+        function closeResetNav() {
+            document.getElementById("myNavReset").style.height = "0%";
+        }
+    </script>
 
     <script>
         $(document).on('click','.socialmedia-buttons a',function(e) {
@@ -292,6 +326,7 @@
                 //alert('Hello');
 
                 // $("#loginModal").modal('show');
+                openLoginNav();
             });
 
         </script>
