@@ -426,7 +426,7 @@
 
         $(document).ready(function () {
 
-            openLoginNav();
+            document.getElementById("myNavLogin").style.height = "100%";
         });
 
     </script>
