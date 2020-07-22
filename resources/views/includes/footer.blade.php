@@ -386,7 +386,7 @@
     </div>
 @endif
 
-@if(\Illuminate\Support\Facades\Session::has('loginprompt'))
+@if(\Illuminate\Support\Facades\Session::has('loginprompti'))
     <style>
         /*.overlay {*/
         /*    background-color: transparent !important;*/
