@@ -552,18 +552,18 @@
     <div id="myNavRegister" class="overlayn">
         <a href="javascript:void(0)" class="closebtn" onclick="closeRegisterNav()">&times;</a>
         <div class="overlay-contentn">
-            <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Create An Account </h4>
+            <h4 class="heading h2 text-dark pb-1 pt-2 text-center font-weight-600">Create An Account </h4>
 
             <form class="form-light">
-                <div class="form-group-lg mb-4">
+                <div class="form-group-lg mb-1">
                     <input type="text" class="form-controli" id="input_name" placeholder="Enter Your Full Name">
                 </div>
 
-                <div class="form-group-lg mb-4">
+                <div class="form-group-lg mb-1">
                     <input type="email" class="form-controli" id="input_email" placeholder=" Enter Your email">
                 </div>
 
-                <div class="form-group-lg mb-4">
+                <div class="form-group-lg mb-1">
                     <input type="text" class="form-controli" id="input_phone" placeholder="Enter Phone Number">
                 </div>
 
@@ -572,7 +572,7 @@
                 </div>
 
 
-                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Register</button>
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white">Register</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
                 <div class="text-center mt-4 text-dark font-weight-600">I have an account <a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
 
