@@ -509,7 +509,7 @@
     </style>
 
     <div id="myNavEmail" class="overlayn">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeEmailNav()">&times;</a>
         <div class="overlay-content">
             <h1 class="heading h1 text-dark pt-3 pb-2 text-center font-weight-600">Stay Ahead!<br/></h1>
             <h4 class="heading h2 text-dark pt-3 pb-2 text-center font-weight-600">    Access premium content only available </br>to our subscribers.</h4>
@@ -550,7 +550,7 @@
     </div>
 
     <div id="myNavRegister" class="overlayn">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeRegisterNav()">&times;</a>
         <div class="overlay-content">
             <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Create An Account </h4>
 
@@ -581,7 +581,7 @@
     </div>
 
     <div id="myNavReset" class="overlayn">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeResetNav()">&times;</a>
         <div class="overlay-content">
             <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Reset Password </h4>
 
