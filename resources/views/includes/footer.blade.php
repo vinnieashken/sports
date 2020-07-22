@@ -514,12 +514,10 @@
             <h1 class="heading h1 text-dark pt-3 pb-2 text-center font-weight-600">Stay Ahead!<br/></h1>
             <h4 class="heading h2 text-dark pt-3 pb-2 text-center font-weight-600">    Access premium content only available </br>to our subscribers.</h4>
 
-            <form class="form-light">
+            <form class="form-light" method="GET" action="{{ url('/check') }}">
                 <div class="form-group-lg mb-4">
-                    <input type="email" class="form-controli" id="input_email" placeholder="Your email">
+                    <input type="email" name="email" class="form-controli" id="input_email" placeholder="Your email" required>
                 </div>
-
-
                 <button type="submit" class="btno btno-block btno-lg bg-color text-white">Proceed</button>
                 <div class="text-center mt-4 text-dark font-weight-400">Support independent journalism </div>
 
@@ -532,12 +530,12 @@
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pt-3 pb-1 text-center font-weight-600">Log in </h4>
 
-            <form class="form-light">
+            <form class="form-light" method="post" action="{{ url('/login') }}">
                 <div class="form-group-lg mb-2">
-                    <input type="email" class="form-controli" id="input_email" placeholder="Your email">
+                    <input type="email" name="email" class="form-controli" id="input_email" placeholder="Your email" value="{{ \Illuminate\Support\Facades\Session::get('email') }}" required>
                 </div>
                 <div class="form-group mb-2">
-                    <input type="password" class="form-controli" id="input_password" placeholder="Password">
+                    <input type="password" name="password" class="form-controli" id="input_password" placeholder="Password" required>
                 </div>
 
 
@@ -554,21 +552,23 @@
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pb-1 text-center font-weight-600">Create An Account </h4>
 
-            <form class="form-light">
+            <form class="form-light" method="post" action="{{ url('/register') }}">
                 <div class="form-group-lg mb-1">
-                    <input type="text" class="form-controli" id="input_name" placeholder="Enter Your Full Name">
+                    <input type="text" name="name" class="form-controli" id="input_name" placeholder="Enter Your Full Name" required>
                 </div>
 
                 <div class="form-group-lg mb-1">
-                    <input type="email" class="form-controli" id="input_email" placeholder=" Enter Your email">
+                    <input type="email" name="email" class="form-controli" id="input_email" placeholder=" Enter Your email"
+                           value="{{ \Illuminate\Support\Facades\Session::get('email') }}"
+                            required>
                 </div>
 
                 <div class="form-group-lg mb-1">
-                    <input type="text" class="form-controli" id="input_phone" placeholder="Enter Phone Number">
+                    <input type="password" name="password" class="form-controli" id="input_phone" placeholder="Enter password" required>
                 </div>
 
                 <div class="form-group mb-2">
-                    <input type="password" class="form-controli" id="input_password" placeholder="Password">
+                    <input type="password" name="password_confirmation" class="form-controli" id="input_password" placeholder="Confirm Password" required>
                 </div>
 
 
@@ -587,7 +587,7 @@
 
             <form class="form-light">
                 <div class="form-group-lg mb-4">
-                    <input type="email" class="form-controli" id="input_email" placeholder="Your email">
+                    <input type="email" name="email" class="form-controli" id="input_email" placeholder="Your email" required>
                 </div>
 
 
@@ -600,7 +600,7 @@
     </div>
 
     <h2>Modal Example</h2>
-    <span style="font-size:30px;cursor:pointer" onclick="openRegisterNav()">&#9776; open</span>
+    <span style="font-size:30px;cursor:pointer" onclick="openLoginNav()">&#9776; open</span>
 
 @endif
 
