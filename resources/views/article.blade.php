@@ -427,7 +427,7 @@
 
     <script>
         function openLoginNav() {
-            console.log('cliked well');
+            alert('hi')
             document.getElementById("myNav").style.height = "100%";
         }
 
