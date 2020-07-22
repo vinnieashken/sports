@@ -425,7 +425,7 @@
         }
 
         $(document).ready(function () {
-            alert('hello');
+            //alert('hello');
             document.getElementById("myNavLogin").style.height = "100%";
         });
 
