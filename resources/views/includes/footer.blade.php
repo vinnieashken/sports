@@ -574,7 +574,7 @@
 
                 <button type="submit" class="btno btno-block btno-lg bg-color text-white">Register</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
-                <div class="text-center mt-4 text-dark font-weight-600">I have an account <a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
+                <div class="text-center mt-1 text-dark font-weight-600">I have an account <a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
 
             </form>
         </div>
