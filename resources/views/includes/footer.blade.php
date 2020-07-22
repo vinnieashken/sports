@@ -512,7 +512,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeEmailNav()">&times;</a>
         <div class="overlay-contentn">
             <h1 class="heading h1 text-dark pt-3 pb-2 text-center font-weight-600">Stay Ahead!<br/></h1>
-            <h4 class="heading h2 text-dark pt-3 pb-2 text-center font-weight-600">    Access premium content only available </br>to our subscribers.</h4>
+            <h4 class="heading h2 text-dark pt-3 pb-2 text-center font-weight-600">Access premium content only available </br>to our subscribers.</h4>
 
             <form class="form-light" method="GET" action="{{ url('/check') }}">
                 <div class="form-group-lg mb-4">
@@ -543,7 +543,10 @@
 
                 <button type="submit" class="btno btno-block btno-lg bg-color text-white">Log in</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
-                <div class=""><a href="create-account.html" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;<a href="#" class="text-danger font-weight-600" href="#">Forgot Password</a></div>
+                <div class="">
+                    <a href="javascript:void(0)" onclick="openRegisterNav()" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="text-danger font-weight-600" href="javascript:void(0)" onclick="openResetNav()">Forgot Password</a>
+                </div>
 
             </form>
         </div>
@@ -578,7 +581,9 @@
 
                 <button type="submit" class="btno btno-block btno-lg bg-color text-white">Register</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
-                <div class="text-center mt-1 text-dark font-weight-600">I have an account <a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
+                <div class="text-center mt-1 text-dark font-weight-600">I have an account
+                    <a href="javascript:void(0)" onclick="openLoginNav()" class="text-danger font-weight-600">Log in</a>
+                </div>
 
             </form>
         </div>
@@ -599,7 +604,7 @@
 
                 <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Send Password Reset Link</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
-                <div class=""><a href="create-account.html" class="text-danger font-weight-600">Log in</a></div>
+                <div class=""><a href="javascript:void(0)" onclick="openLoginNav()" class="text-danger font-weight-600">Log in</a></div>
 
             </form>
         </div>
@@ -616,7 +621,7 @@
         <span class="alert-inner--text text-white "><strong>&nbsp;&nbsp; Hi!</strong>
           This is your Last free article.Kindly Login or register to continue reading more free articles &nbsp;&nbsp;
         </span>
-        <button type="button" class="btn  btn-danger" data-toggle="modal" data-target="#myNavLogin">
+        <button type="button" class="btn  btn-danger" href="javascript:void(0)" onclick="openEmailNav()">
             Continue
         </button>
         <button type="button" class="close text-danger" data-dismiss="alert" aria-label="Close">
