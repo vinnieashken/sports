@@ -532,6 +532,7 @@
 
             <form class="form-light" method="post" action="{{ url('/login') }}">
                 {{ csrf_field() }}
+                <input type="hidden" name="url" value="{{ URL::full() }}">
                 <div class="form-group-lg mb-2">
                     <input type="email" name="email" class="form-controli" id="input_email" placeholder="Your email" value="{{ \Illuminate\Support\Facades\Session::get('email') }}" required>
                 </div>
@@ -555,6 +556,7 @@
 
             <form class="form-light" method="post" action="{{ url('/register') }}">
                 {{ csrf_field() }}
+                <input type="hidden" name="url" value="{{ URL::full() }}">
                 <div class="form-group-lg mb-1">
                     <input type="text" name="name" class="form-controli" id="input_name" placeholder="Enter Your Full Name" required>
                 </div>
