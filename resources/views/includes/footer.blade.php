@@ -552,7 +552,7 @@
     <div id="myNavRegister" class="overlayn">
         <a href="javascript:void(0)" class="closebtn" onclick="closeRegisterNav()">&times;</a>
         <div class="overlay-contentn">
-            <h4 class="heading h2 text-dark pb-1 pt-2 text-center font-weight-600">Create An Account </h4>
+            <h4 class="heading h2 text-dark pb-1 text-center font-weight-600">Create An Account </h4>
 
             <form class="form-light">
                 <div class="form-group-lg mb-1">
