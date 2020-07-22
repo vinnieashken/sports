@@ -510,10 +510,10 @@
     <div id="myNavLogin" class="overlayn">
         <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>
         <div class="overlay-contentn">
-            <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Log in </h4>
+            <h4 class="heading h2 text-dark pt-3 pb-1 text-center font-weight-600">Log in </h4>
 
             <form class="form-light">
-                <div class="form-group-lg mb-4">
+                <div class="form-group-lg mb-2">
                     <input type="email" class="form-controli" id="input_email" placeholder="Your email">
                 </div>
                 <div class="form-group mb-2">
@@ -521,7 +521,7 @@
                 </div>
 
 
-                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Log in</button>
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white">Log in</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
                 <div class=""><a href="create-account.html" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;<a href="#" class="text-danger font-weight-600 float-right" href="#">Forgot Password</a></div>
 
