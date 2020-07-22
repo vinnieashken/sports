@@ -523,7 +523,7 @@
 
                 <button type="submit" class="btno btno-block btno-lg bg-color text-white">Log in</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
-                <div class=""><a href="create-account.html" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;<a href="#" class="text-danger font-weight-600 float-right" href="#">Forgot Password</a></div>
+                <div class=""><a href="create-account.html" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;<a href="#" class="text-danger font-weight-600" href="#">Forgot Password</a></div>
 
             </form>
         </div>
