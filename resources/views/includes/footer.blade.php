@@ -531,6 +531,7 @@
             <h4 class="heading h2 text-dark pt-3 pb-1 text-center font-weight-600">Log in </h4>
 
             <form class="form-light" method="post" action="{{ url('/login') }}">
+                {{ csrf_field() }}
                 <div class="form-group-lg mb-2">
                     <input type="email" name="email" class="form-controli" id="input_email" placeholder="Your email" value="{{ \Illuminate\Support\Facades\Session::get('email') }}" required>
                 </div>
@@ -553,6 +554,7 @@
             <h4 class="heading h2 text-dark pb-1 text-center font-weight-600">Create An Account </h4>
 
             <form class="form-light" method="post" action="{{ url('/register') }}">
+                {{ csrf_field() }}
                 <div class="form-group-lg mb-1">
                     <input type="text" name="name" class="form-controli" id="input_name" placeholder="Enter Your Full Name" required>
                 </div>
@@ -585,7 +587,9 @@
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Reset Password </h4>
 
-            <form class="form-light">
+            <form class="form-light" method="post" action="{{ url('/reset') }}">
+                {{ csrf_field() }}
+                <input type="hidden" name="url" value="{{ URL::full() }}">
                 <div class="form-group-lg mb-4">
                     <input type="email" name="email" class="form-controli" id="input_email" placeholder="Your email" required>
                 </div>
