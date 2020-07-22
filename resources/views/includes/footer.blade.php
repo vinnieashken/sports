@@ -687,7 +687,7 @@
     </div>
 
     <div id="myNavLogin" class="overlayn">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>
+{{--        <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>--}}
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pt-3 pb-1 text-center font-weight-600">Log in </h4>
             <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('artloginerror') ?? \Illuminate\Support\Facades\Session::get('loginprompt')  }}</h5>
