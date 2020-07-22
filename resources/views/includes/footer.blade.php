@@ -600,7 +600,7 @@
     </div>
 
     <h2>Modal Example</h2>
-    <span style="font-size:30px;cursor:pointer" onclick="openLoginNav()">&#9776; open</span>
+    <span style="font-size:30px;cursor:pointer" onclick="openEmailNav()">&#9776; open</span>
 
 @endif
 
