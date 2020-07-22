@@ -690,7 +690,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pt-3 pb-1 text-center font-weight-600">Log in </h4>
-
+            <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('artloginerror') ?? \Illuminate\Support\Facades\Session::get('loginprompt')  }}</h5>
             <form class="form-light" method="post" action="{{ url('/login') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="url" value="{{ URL::full() }}">
@@ -717,7 +717,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeRegisterNav()">&times;</a>
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pb-1 text-center font-weight-600">Create An Account </h4>
-
+            <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('artregistrationerror')  }}</h5>
             <form class="form-light" method="post" action="{{ url('/register') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="url" value="{{ URL::full() }}">
@@ -754,7 +754,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeResetNav()">&times;</a>
         <div class="overlay-contentn">
             <h4 class="heading h2 text-dark pt-3 pb-5 text-center font-weight-600">Reset Password </h4>
-
+            <h5 class="feedbackmsg mt-2" style="color: red"> {{ \Illuminate\Support\Facades\Session::get('artresetmsg')  }}</h5>
             <form class="form-light" method="post" action="{{ url('/reset') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="url" value="{{ URL::full() }}">

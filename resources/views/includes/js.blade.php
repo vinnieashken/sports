@@ -167,7 +167,7 @@
 
 
 
-    @if(\Illuminate\Support\Facades\Session::has('loginerror'))
+    @if(\Illuminate\Support\Facades\Session::has('loginerror') && !\Illuminate\Support\Facades\Session::has('loginprompt'))
         <script>
             $(document).ready(function () {
                 //alert('Hello');
@@ -177,7 +177,7 @@
 
         </script>
     @endif
-    @if(\Illuminate\Support\Facades\Session::has('registrationerror'))
+    @if(\Illuminate\Support\Facades\Session::has('registrationerror') && !\Illuminate\Support\Facades\Session::has('loginprompt'))
         <script>
             $(document).ready(function () {
                 //alert('Hello');
@@ -188,7 +188,7 @@
         </script>
     @endif
 
-    @if(\Illuminate\Support\Facades\Session::has('resetmsg'))
+    @if(\Illuminate\Support\Facades\Session::has('resetmsg') && !\Illuminate\Support\Facades\Session::has('loginprompt'))
     <script>
         $(document).ready(function () {
             //alert('Hello');
@@ -198,4 +198,26 @@
 
     </script>
 @endif
+@if(\Illuminate\Support\Facades\Session::has('artloginnerror'))
+    <script>
+        $(document).ready(function () {
+            openLoginNav();
+        });
+    </script>
+@endif
+@if(\Illuminate\Support\Facades\Session::has('artregistrationerror'))
+    <script>
+        $(document).ready(function () {
+            openRegisterNav();
+        });
+    </script>
+@endif
+@if(\Illuminate\Support\Facades\Session::has('artresetmsg'))
+    <script>
+        $(document).ready(function () {
+            openResetNav();
+        });
+    </script>
+@endif
+
 

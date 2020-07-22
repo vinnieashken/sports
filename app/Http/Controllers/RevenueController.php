@@ -51,7 +51,7 @@ class RevenueController extends Controller
         if(property_exists($objbody ,'message'))
         {
             $request->session()->flash('loginerror', $objbody->message);
-
+            $request->session()->flash('artloginerror', $objbody->message);
             return redirect($url);
         }
 
@@ -167,6 +167,7 @@ class RevenueController extends Controller
         if(property_exists($objbody ,'message'))
         {
             $request->session()->flash('resetmsg', $objbody->message);
+            $request->session()->flash('artresetmsg', $objbody->message);
 
             return redirect($redirect_url);
         }
@@ -245,7 +246,8 @@ class RevenueController extends Controller
 
         if((int)$response->getStatusCode() >= 400 )
         {
-            $request->session()->flash('registrationerror', 'Your email is not registered.Fill in the form to create an account');
+            //$request->session()->flash('registrationerror', 'Your email is not registered.Fill in the form to create an account');
+            $request->session()->flash('artregistrationerror', 'Your email is not registered.Fill in the form to create an account');
             $request->session()->flash('email', $email);
             return redirect(URL::previous());
         }
