@@ -475,7 +475,9 @@
         }
         .form-controli {
             display: initial;
-            padding: 0.75rem 8.5rem;
+            padding: 0.75rem 0.5rem;
+            max-width: 375px;
+            width: 75%;
             margin-top: 12px;
             font-size: .875rem;
             text-align: center;
