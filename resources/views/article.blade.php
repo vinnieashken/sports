@@ -320,7 +320,7 @@
         });
     </script>
 
-    @if(\Illuminate\Support\Facades\Session::has('loginprompt'))
+    @if(\Illuminate\Support\Facades\Session::has('loginprompt') && !\Illuminate\Support\Facades\Session::has('artregistrationerror'))
         <script>
             $(document).ready(function () {
                 //alert('Hello');
