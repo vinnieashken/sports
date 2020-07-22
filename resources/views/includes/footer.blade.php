@@ -532,7 +532,7 @@
 
     <script>
         function openLoginNav() {
-            alert('hello');
+            //alert('hello');
             document.getElementById("myNavLogin").style.height = "100%";
         }
 
