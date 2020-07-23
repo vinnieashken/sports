@@ -186,9 +186,9 @@ class RevenueController extends Controller
     {
         Auth::logout();
         $authSync = new AuthSync();
-        $authSync->forgetUser();
+        $cookie = $authSync->forgetUser();
 
-        return redirect(URL::previous());
+        return redirect(URL::previous())->withCookie($cookie);
     }
 
     public function subscribe(Request $request)
