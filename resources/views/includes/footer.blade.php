@@ -553,7 +553,7 @@
             z-index: 999;
             top: 0;
             left: 0;
-            background-color: rgb(255,255,255,0.98);
+            background-color: rgb(255,255,255,0.91);
             overflow-y: hidden;
             transition: 0.5s;
         }
