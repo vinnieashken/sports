@@ -372,7 +372,7 @@
             font-family: 'Montserrat', sans-serif;
         }
         header{
-            z-index: 1000;
+            z-index: 1000 !important;
         }
         h4 {
             display: block;
@@ -532,7 +532,7 @@
 @if(\Illuminate\Support\Facades\Session::has('loginprompt'))
     <style>
         header{
-            z-index: 1000;
+            z-index: 1000 !important;
         }
         body {
             font-family: 'Montserrat', sans-serif;
