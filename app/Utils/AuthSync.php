@@ -31,7 +31,7 @@ class AuthSync
 
     public function forgetUser()
     {
-        return  Cookie::unqueue('SG_share_UD');
+        return  Cookie::forget('SG_share_UD');
     }
 
 
