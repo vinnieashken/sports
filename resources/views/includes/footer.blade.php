@@ -162,7 +162,7 @@
     </footer>
 </section>
 <section>
-    {{ \Illuminate\Support\Facades\Cookie::get('story_no') }}
+    {{ \Illuminate\Support\Facades\Cookie::get('sports_session') }}
 </section>
 
 
