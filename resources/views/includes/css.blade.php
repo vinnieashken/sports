@@ -1,6 +1,6 @@
 
 
-<link rel="shortcut icon" href="https://www.standardmedia.co.ke/images/std.png" type="image/png">
+<link rel="shortcut icon" href="https://www.standardmedia.co.ke/assets/images/favicon-32x32.png" type="image/png">
 
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
 

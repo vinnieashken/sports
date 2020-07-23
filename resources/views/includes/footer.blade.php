@@ -163,7 +163,6 @@
 </section>
 
 
-
 <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
 
 <div class="modal fade modals overlay align-content-center" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -329,42 +328,6 @@
         </div>
     </div>
 </div>
-
-<!-- Modal -->
-<div class="modal modal-white fade" id="modal_5" tabindex="-1" role="dialog"
-     aria-labelledby="modal_5" aria-hidden="true">
-    <div class="modal-dialog full-width-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="py-3 text-center">
-                    <!--                                      <i class="fas fa-exclamation-circle fa-4x"></i>-->
-
-                    <h4 class="heading h3 text-dark text-center heading-notify pb-5"> </br>To keep
-                        reading<span class="text-danger"> The Standard</span> articles
-                        create<br>
-                        your free account or log in.</h4>
-                </div>
-                <form class="form-light " method="GET" action="{{ url('/check') }}">
-                    <div class="form-group-lg mb-4">
-                        <input type="email" name="email" class="form-control" id="input_email"
-                               placeholder="Your email" required>
-                    </div>
-                    <a href="sign-up.html"> <button type="submit" class="btn btn-block btn-lg bg-danger text-white mt-4">
-                            Continue
-                        </button>
-                    </a>
-
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
 
 @if(\Illuminate\Support\Facades\Session::has('notifylast'))
     <style>
@@ -792,8 +755,8 @@
     </style>
     <div class="alert alert-dark alert-dismissible fade show bottom-0 position-sticky rounded-0 justify-content-center fixed-bottom" role="alert">
         <span class="alert-inner--icon"><i class="fa fa-check"></i></span>
-        <span class="alert-inner--text text-white "><strong>&nbsp;&nbsp; Hi!</strong>
-          This is your Last free article.Kindly Login or register to access premium content only available to our subscribers. &nbsp;&nbsp;
+        <span class="alert-inner--text text-white ">
+          This is your last free article. Kindly login or register to access premium content only available to our subscribers. &nbsp;&nbsp;
         </span>
         <button type="button" class="btn  btn-danger" href="javascript:void(0)" onclick="openEmailNav()">
             Continue
