@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\User;
 use App\Utils\Articles;
+use App\Utils\AuthSync;
 use App\Utils\CookieTool;
 use App\Utils\Menu;
 use App\Utils\SlideShows;
@@ -24,9 +26,22 @@ use Jenssegers\Agent\Agent;
 class HomeController extends Controller
 {
     //
+
+    public $authSync;
     public function __construct()
     {
         //\Illuminate\Support\Facades\Auth::logout();
+        $this->authSync = new AuthSync();
+        $user = $this->authSync->RetrieveUser();
+        if(!is_null($user) && !Auth::check())
+        {
+            $auser = new User();
+            $auser->id =  $user->id;
+            $auser->email = $user->email;
+            $auser->name = $user->name;
+
+            Auth::login($auser);
+        }
     }
 
     public function index()

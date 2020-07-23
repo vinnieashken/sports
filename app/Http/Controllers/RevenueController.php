@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Utils\Articles;
+use App\Utils\AuthSync;
 use Exception;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\URL;
 
 class RevenueController extends Controller
@@ -66,6 +68,10 @@ class RevenueController extends Controller
 
         Auth::setUser($user);
         Auth::login($user);
+
+        $authSync = new AuthSync();
+        $authSync->ShareUser($user);
+
         $request->session()->flash('loginnotify', true);
         return redirect($url);
     }
@@ -179,6 +185,8 @@ class RevenueController extends Controller
     public function logout()
     {
         Auth::logout();
+        $authSync = new AuthSync();
+        $authSync->forgetUser();
 
         return redirect(URL::previous());
     }
