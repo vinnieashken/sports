@@ -26,7 +26,7 @@ class AuthSync
     public function RetrieveUser()
     {
         $user = Cookie::get('SG_share_UD');
-        return is_null($user ? null: json_decode($user));
+        return is_null($user) ? null: json_decode($user);
     }
 
     public function forgetUser()

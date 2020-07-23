@@ -36,11 +36,11 @@ class HomeController extends Controller
         if(!is_null($user) && !Auth::check())
         {
             $auser = new User();
-//            $auser->id =  $user->id;
-//            $auser->email = $user->email;
-//            $auser->name = $user->name;
-//
-//            Auth::login($auser);
+            $auser->id =  $user->id;
+            $auser->email = $user->email;
+            $auser->name = $user->name;
+
+            Auth::login($auser);
         }
     }
 
