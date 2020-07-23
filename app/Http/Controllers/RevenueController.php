@@ -69,9 +69,6 @@ class RevenueController extends Controller
         Auth::setUser($user);
         Auth::login($user);
 
-        $authSync = new AuthSync();
-        $authSync->ShareUser($user);
-
         $request->session()->flash('loginnotify', true);
         return redirect($url);
     }
@@ -185,10 +182,8 @@ class RevenueController extends Controller
     public function logout()
     {
         Auth::logout();
-        $authSync = new AuthSync();
-        $cookie = $authSync->forgetUser();
 
-        return redirect(URL::previous())->withCookie($cookie);
+        return redirect(URL::previous());
     }
 
     public function subscribe(Request $request)
