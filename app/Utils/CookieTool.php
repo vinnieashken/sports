@@ -36,7 +36,19 @@ class CookieTool
         if(Auth::check())
             return false;
 
-       return $this->must_login > $this->story_no ? false : true ;
+       //return $this->must_login > $this->story_no ? false : true ;
+        $story_no_insider = Cookie::get('story_no_insider');
+        $this->story_no = Cookie::get('story_no');
+
+        $total = ( ( is_null($this->story_no) ? 0 : $this->story_no) + ( is_null($story_no_insider) ? 0 : $story_no_insider));
+
+        //CookieTool::debug_to_console( 'total',$total);
+
+        $result = $this->must_login > $total ? false : true;
+
+        //CookieTool::debug_to_console( 'enforce',$res == true ? 'true': 'false');
+
+        return $result ;
     }
 
     public function enforcePaywall()
