@@ -169,13 +169,11 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header border-bottom-0">
-                @if(\Illuminate\Support\Facades\Session::get('loginprompt'))
-                    <p></p>
-                @else
+
                 <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
                 </button>
-                @endif
+
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
@@ -223,13 +221,10 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="background:#fff !important">
             <div class="modal-header border-bottom-0">
-                @if(\Illuminate\Support\Facades\Session::get('loginprompt'))
-                    <p></p>
-                @else
+
                     <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
                     </button>
-                @endif
             </div>
             <div class="modal-body" style="z-index: 10000;">
                 <div class="text-center auth-logo mb-1">
@@ -291,13 +286,10 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" style="background:#fff !important">
             <div class="modal-header border-bottom-0">
-                @if(\Illuminate\Support\Facades\Session::get('loginprompt'))
-                    <p></p>
-                @else
+
                     <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="fa fa-close text-dark"></i></span>
                     </button>
-                @endif
             </div>
             <div class="modal-body">
                 <div class="text-center auth-logo mb-1">
