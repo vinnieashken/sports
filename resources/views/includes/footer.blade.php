@@ -161,10 +161,6 @@
         </nav>
     </footer>
 </section>
-<section>
-    {{ \Illuminate\Support\Facades\Cookie::get('standardmedia_session') }}
-</section>
-
 
 <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
 
