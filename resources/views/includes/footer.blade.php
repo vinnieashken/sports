@@ -263,6 +263,7 @@
 
                         <div class="form-group my-2">
                             <input type="password" required class="form-control" name="password" id="password"
+                                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[\W]).{8,}$" title="password must be atleast 8 characters long and contain atleast an uppercase Letter, number and a special symbol"
                                    placeholder="Enter your password...">
                         </div>
 
@@ -700,7 +701,9 @@
                 </div>
 
                 <div class="form-group-lg mb-1">
-                    <input type="password" name="password" class="form-controli" id="input_phone" placeholder="Enter password" required>
+                    <input type="password" name="password" class="form-controli" id="input_phone"
+                           pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[\W]).{8,}$" title="password must be atleast 8 characters long and contain atleast an uppercase Letter, number and a special symbol"
+                           placeholder="Enter password" required>
                 </div>
 
                 <div class="form-group mb-2">
