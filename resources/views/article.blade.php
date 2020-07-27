@@ -141,12 +141,12 @@
                                         <a href="whatsapp://send?text={{ $article->title.' – '.( url()->current()) }}&utm-source=whatsapp&utm-medium=share&utm-campaign={{ $article->title }}" class="btn btn-whatsapp btn_whatsapp rounded-0 text-white d-block d-md-none" >
                                             <span class="fa fa-whatsapp"></span>
                                         </a>
-{{--                                        <a href="" class="btn btn-linkedin btn_linkedin rounded-0 text-white">--}}
-{{--                                            <span  class="fa fa-linkedin"></span>--}}
-{{--                                        </a>--}}
-{{--                                        <a href="" class="btn btn-email btn_email rounded-0 text-white">--}}
-{{--                                            <span  class="fa fa-envelope"></span>--}}
-{{--                                        </a>--}}
+                                        <a href="" class="btn btn-linkedin btn_linkedin rounded-0 text-white">
+                                            <span  class="fa fa-linkedin"></span>
+                                        </a>
+                                        <a href="" class="btn btn-email btn_email rounded-0 text-white">
+                                            <span  class="fa fa-envelope"></span>
+                                        </a>
 
                                     </div>
                                 </div>
