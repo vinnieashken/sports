@@ -198,7 +198,7 @@
                             <input type="password" required class="form-control" name="password" id="password1"
                                    placeholder="Your password...">
                         </div>
-                        <button type="submit" class="btn btn-info btn-block btn-round">Login</button>
+                        <button type="submit" class="btn btn-info btn-block btn-round btn_login">Login</button>
                     </form>
                 </div>
             </div>
@@ -267,7 +267,7 @@
                             <input type="password" required class="form-control" name="password_confirmation"
                                    id="password_confirmation" placeholder="Confirm your password...">
                         </div>
-                        <button type="submit" class="btn btn-info btn-block btn-round">Register</button>
+                        <button type="submit" class="btn btn-info btn-block btn-round btn_register">Register</button>
                     </form>
                 </div>
             </div>
@@ -309,7 +309,7 @@
                             <input type="email" required class="form-control" name="email" id="email1"
                                    placeholder="Your email address...">
                         </div>
-                        <button type="submit" class="btn btn-info btn-block btn-round">Send Password Reset Link</button>
+                        <button type="submit" class="btn btn-info btn-block btn-round btn_forgotpw">Send Password Reset Link</button>
                     </form>
                 </div>
             </div>
@@ -664,7 +664,7 @@
                 </div>
 
 
-                <button type="submit" class="btno btno-block btno-lg bg-color text-white">Log in</button>
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white btn_login">Log in</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
                 <div class="">
                     <a href="javascript:void(0)" onclick="openRegisterNav()" class="text-danger font-weight-600">Create an account</a> &nbsp;&nbsp;&nbsp;
@@ -705,7 +705,7 @@
                 </div>
 
 
-                <button type="submit" class="btno btno-block btno-lg bg-color text-white">Register</button>
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white btn_register">Register</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
                 <div class="text-center mt-1 text-dark font-weight-600">I have an account
                     <a href="javascript:void(0)" onclick="closeRegisterNav()" class="text-danger font-weight-600">Log in</a>
@@ -728,7 +728,7 @@
                 </div>
 
 
-                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4">Send Password Reset Link</button>
+                <button type="submit" class="btno btno-block btno-lg bg-color text-white mt-4 btn_forgotpw">Send Password Reset Link</button>
                 <h5 class="text-center text-dark font-weight-400">Support independent journalism </h5>
                 <div class=""><a href="javascript:void(0)" onclick="closeResetNav()" class="text-danger font-weight-600">Log in</a></div>
 
