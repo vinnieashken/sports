@@ -315,7 +315,7 @@ class Articles
             $story
         );
 
-        $data = str_replace(
+        $data = preg_replace(
             '/<iframe .*? src="([^"]*)" .*?></iframe>/',
             '<amp-iframe width="200" height="100" sandbox="allow-scripts allow-same-origin" layout="responsive"  frameborder="0" src="$1"></amp-iframe>',
             $data
