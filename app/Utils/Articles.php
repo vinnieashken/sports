@@ -315,6 +315,8 @@ class Articles
             $story
         );
 
+        $data = str_replace('iframe', 'amp-iframe', $data);
+
         $adbegin ='<p class="card-text"> <a href="';
         $middle = '"> SEE ALSO: ';
         $adend = ' </a>  </p>';
