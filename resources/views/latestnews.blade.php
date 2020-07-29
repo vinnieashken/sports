@@ -269,9 +269,9 @@
             $('#btn-more').on('click',function () {
 
                 var offset = $('#offset').val();
-                var category = $('#category').val();
+                //var category = $('#category').val();
                 var contextPath = '{{ url('/') }}';
-                var url = contextPath + "/author/"+category+"/more/"+offset;
+                var url = contextPath + "/latestmore/"+offset;
                 //alert(offset+" "+url);
 
                 $.ajax({
@@ -305,9 +305,9 @@
         $('#btn-more-m').on('click',function () {
 
             var offset = $('#offsetm').val();
-            var category = $('#category').val();
+            //var category = $('#category').val();
             var contextPath = '{{ url('/') }}';
-            var url = contextPath + "/author/"+category+"/more/"+offset;
+            var url = contextPath + "/latestmore/"+offset;
             //alert(offset+" "+url);
 
             $.ajax({
