@@ -157,7 +157,7 @@
     <section class="opinions">
         <div class="container">
             <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">
-              <a href="{{ url('/latest') }}">LATEST </a>
+              <a href="{{ url('/latest') }}" style="color: #ee2e24!important;">LATEST </a>
             </h4>
             <div class="section group">
 
