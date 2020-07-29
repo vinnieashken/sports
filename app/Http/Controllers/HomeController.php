@@ -423,6 +423,17 @@ class HomeController extends Controller
         return view('latestnews',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
     }
 
+    public function latestmore($offset)
+    {
+        $articles = new Articles();
+        $size = 8;
+        $items = $articles->getLatest($size,$offset)->toArray();
+
+        $newoffset = $offset + $size;
+
+        return view('includes.more_author',['articles'=> $articles,'items'=>$items,'offset'=>$newoffset]);
+    }
+
     public function test()
     {
 
