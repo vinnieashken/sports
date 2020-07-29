@@ -32,7 +32,7 @@ Route::get('/{category_slug}/{id}/{slug}','HomeController@article');
 Route::get('/slideshow/pictures/{id}/{slug}','HomeController@pictures');
 
 Route::get('/latest','HomeController@latest');
-Route::get('/latest/more/{offset}','HomeController@latestmore');
+Route::get('/latestmore/{offset}','HomeController@latestmore');
 
 Route::post('/login','RevenueController@login');
 Route::post('/register','RevenueController@register');
