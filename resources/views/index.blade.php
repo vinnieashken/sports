@@ -156,7 +156,9 @@
 
     <section class="opinions">
         <div class="container">
-            <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">LATEST </h4>
+            <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">
+              <a href="{{ url('/latest') }}">LATEST </a>
+            </h4>
             <div class="section group">
 
                 @foreach($stories->latest as $article)
