@@ -339,7 +339,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">WOMEN IN SPORTS</h4>
+                    <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">
+                        <a href="https://www.standardmedia.co.ke/sports/category/57/volleyball-and-handball">WOMEN IN SPORTS</a>
+                    </h4>
                     <div class="card-deck p-0">
                         @foreach($stories->volley as $article)
 
@@ -365,7 +367,9 @@
                         @endforeach
 
                     </div>
-                    <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">UNIQUE SPORTS</h4>
+                    <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">
+                        <a href="https://www.standardmedia.co.ke/sports/category/379/sports"></a> UNIQUE SPORTS
+                    </h4>
                     <div class="card-deck p-0">
                         @foreach($stories->unique as $article)
 
@@ -419,7 +423,9 @@
     </section>
     <section class="opinions">
         <div class="container">
-            <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">OPINIONS</h4>
+            <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">
+               <a href="https://www.standardmedia.co.ke/sports/category/180/gossip-rumours">OPINIONS</a>
+            </h4>
             <div class="section group">
 
                 @foreach($stories->opinion as $article)
