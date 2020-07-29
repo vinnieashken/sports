@@ -23,6 +23,9 @@ Route::get('/article/{id}','HomeController@oldarticleslugless');
 Route::get('/author/{slug}','HomeController@author');
 Route::get('/author/{slug}/more/{offset}','HomeController@authormore');
 
+Route::get('/latest','HomeController@latest');
+Route::get('/latestmore/{offset}','HomeController@latestmore');
+
 Route::get('/videos','HomeController@videos');
 Route::get('/video/{id}/{slug}','HomeController@video');
 Route::get('/videos/more/{offset}','HomeController@videosmore');
@@ -31,8 +34,7 @@ Route::get('/{category_slug}/{id}','HomeController@article');
 Route::get('/{category_slug}/{id}/{slug}','HomeController@article');
 Route::get('/slideshow/pictures/{id}/{slug}','HomeController@pictures');
 
-Route::get('/latest','HomeController@latest');
-Route::get('/latestmore/{offset}','HomeController@latestmore');
+
 
 Route::post('/login','RevenueController@login');
 Route::post('/register','RevenueController@register');
