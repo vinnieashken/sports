@@ -397,6 +397,32 @@ class HomeController extends Controller
             ->header('Content-Type', 'text/xml');
     }
 
+    public function latest()
+    {
+        $menu = new Menu();
+        $categories = $menu->getCategories();
+        $articles = new Articles();
+        $videos = new Videos();
+        $stories = new \stdClass();
+        $stories->top = $articles->getLatest(8,0)->toArray();
+        $stories->bottom = $articles->getLatest(4,8)->toArray();;
+
+        //dump($stories->bottom);
+        //return;
+
+        $stories->sidevideos = $videos->getFromCategory('sports',0,3);
+        $stories->latest = $articles->getLatest(5,0);
+
+        $stories->mostread = $articles->getMostReadArticles(4);
+        $stories->opinion = $articles->getFromCategory('gossip & rumours',0,4);
+
+        //dump($stories->top);
+        //return;
+        $offset = 12;
+
+        return view('latestnews',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
+    }
+
     public function test()
     {
 

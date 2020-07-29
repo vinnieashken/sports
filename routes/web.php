@@ -31,6 +31,8 @@ Route::get('/{category_slug}/{id}','HomeController@article');
 Route::get('/{category_slug}/{id}/{slug}','HomeController@article');
 Route::get('/slideshow/pictures/{id}/{slug}','HomeController@pictures');
 
+Route::get('/latest','HomeController@latest');
+
 Route::post('/login','RevenueController@login');
 Route::post('/register','RevenueController@register');
 Route::post('/reset','RevenueController@resetPassword');
