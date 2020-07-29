@@ -368,7 +368,7 @@
 
                     </div>
                     <h4 class="section-heading my-2 mx-0 mt-md-0 w-100">
-                        <a href="https://www.standardmedia.co.ke/sports/category/379/sports"></a> UNIQUE SPORTS
+                        <a href="https://www.standardmedia.co.ke/sports/category/379/sports" style="color: #ee2e24!important;">UNIQUE SPORTS</a>
                     </h4>
                     <div class="card-deck p-0">
                         @foreach($stories->unique as $article)
