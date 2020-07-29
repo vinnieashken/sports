@@ -772,5 +772,48 @@
     </style>
 @endif
 
+@if((new \Jenssegers\Agent\Agent())->isMobile())
+    <style>
+        body{
+            margin: 0px;
+        }
+        .stick_img{
+            position: fixed;
+            background: #fff;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            border-top: 1px solid #f0f0f0;
+            padding: 1px 40px;
+        }
+        .close_btn{
+            cursor: pointer;
+            position: absolute;
+            background: #fff;
+            color: #000;
+            right: 0px;
+            text-align: center;
+            bottom: 50px;
+            width: 24px;
+            height: 24px;
+            border-top:1px solid #f0f0f0;
+            border-left: 1px solid #f0f0f0;
+            border-right: 1px solid #f0f0f0;
+            border-radius: 2px;
+        }
+    </style>
+    <div class="stick_img">
+        <!-- /24409412/home_mobile_sticky_ad_320x50 -->
+        <div id='div-gpt-ad-1595943588925-0' style='width: 320px; height: 50px;'>
+            <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1595943588925-0'); });
+            </script>
+        </div>
+        <span class="close_btn">X</span>
+    </div>
+@endif
+
+
+
 
 

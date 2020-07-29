@@ -71,6 +71,7 @@
 
         //googletag.defineSlot('/24409412/profitButton', [1, 1], 'div-gpt-ad-1594193265072-0').addService(googletag.pubads());
         googletag.defineOutOfPageSlot('/24409412/GameYetu_OutOfPage', 'div-gpt-ad-1594269348673-0').addService(googletag.pubads());
+        googletag.defineSlot('/24409412/home_mobile_sticky_ad_320x50', [320, 50], 'div-gpt-ad-1595943588925-0').addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
         googletag.pubads().collapseEmptyDivs();
         googletag.enableServices();

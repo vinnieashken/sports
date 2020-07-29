@@ -219,5 +219,14 @@
         });
     </script>
 @endif
+@if((new \Jenssegers\Agent\Agent())->isMobile())
+    <script>
+        $(document).ready(function(){
+            $(".close_btn").click(function(){
+                $(".stick_img").hide();
+            });
+        });
+    </script>
+@endif
 
 
