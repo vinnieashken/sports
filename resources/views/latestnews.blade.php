@@ -1,7 +1,7 @@
 @extends('includes.layout')
 
 @section('title')
-    {{ '' }}
+    {{ 'Latest News' }}
 @endsection
 
 @section('description')
