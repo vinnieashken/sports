@@ -813,7 +813,34 @@
     </div>
 @endif
 
-
+<style>
+    body{
+        margin: 0px;
+    }
+    .stick_img{
+        position: fixed;
+        background: #fff;
+        bottom: 0px;
+        width: 100%;
+        height: 50px;
+        border-top: 1px solid #f0f0f0;
+    }
+    .close_btn{
+        cursor: pointer;
+        position: absolute;
+        background: #fff;
+        color: #000;
+        right: 0px;
+        text-align: center;
+        bottom: 50px;
+        width: 24px;
+        height: 24px;
+        border-top:1px solid #f0f0f0;
+        border-left: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+        border-radius: 2px;
+    }
+</style>
 
 
 
