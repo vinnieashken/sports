@@ -11,7 +11,7 @@ class CookieTool
     public function __construct()
     {
         //put this code just below the article, not at the footer
-        $this->must_login =  1000; // get api for this
+        $this->must_login =  15; // get api for this
         $this->must_pay = 20; // get api for this
         $this->expiry_period = 60*24*30; //30 days;
     }
