@@ -457,7 +457,7 @@ class Articles
 
     public function getMostReadArticles($size)
     {
-        $ids = DB::table('io_cache')->orderBy('publishdate','DESC')->limit($size)->get(['articleid'])->pluck('articleid')->toArray();
+        $ids = DB::table('io_cache')->orderBy('id','DESC')->limit($size)->get(['articleid'])->pluck('articleid')->toArray();
         $result = [];
         foreach ( $ids as $id)
         {

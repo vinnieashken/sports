@@ -480,7 +480,7 @@ class HomeController extends Controller
             ],
             'options' => [
                 'period' => [
-                    'name' => 'hour'
+                    'name' => 'today'
                 ],
                 'per_page' => 2300,
             ]
