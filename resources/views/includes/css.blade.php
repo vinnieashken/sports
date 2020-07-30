@@ -10,17 +10,20 @@
 
 {{--<link rel="stylesheet" href="{{ asset('assets/css/slick.css')}}">--}}
 
-<link rel="stylesheet" href="{{ asset('assets/css/LineIcons.css')}}">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="{{ asset('assets/css/default.css')}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/LineIcons.css')}}">--}}
+{{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">--}}
+{{--<link rel="stylesheet" href="{{ asset('assets/css/default.css')}}">--}}
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.min.css?'.date('ymdhis'))}}">
+{{--<link rel="stylesheet" href="{{ asset('assets/css/responsive.css?'.date('ymdhis'))}}">--}}
 
-<link rel="stylesheet" href="{{ asset('assets/css/responsive.css?'.date('ymdhis'))}}">
+{{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"--}}
+{{--      integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous"/>--}}
+<link rel="preload" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous"/>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" /></noscript>
 
 @yield('initialscripts')
 
