@@ -32,7 +32,7 @@ CSS INDEX
 1.COMMON css
 ===========================*/
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap");
 
 @font-face {
     font-family: solido;
@@ -3560,11 +3560,13 @@ img.hover-shadow {
 @font-face {
     font-family: Periodico;
     src: url(font/Periodico.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Caput;
     src: url(../font/Caput.otf);
+    font-display: swap;
 }
 
 .lower {
@@ -4355,10 +4357,12 @@ img.hover-shadow {
 @font-face {
     font-family: Periodico;
     src: url(font/Periodico.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: Caput;
     src: url(font/Caput.otf);
+    font-display: swap;
 }
 .lower{
     margin: auto 0 !important;
@@ -5485,11 +5489,13 @@ iframe{
     @font-face {
         font-family: Periodico;
         src: url(font/Periodico.ttf);
+        font-display: swap;
     }
 
     @font-face {
         font-family: Caput;
         src: url(font/Caput.otf);
+        font-display: swap;
     }
 
     .lower {
@@ -6357,6 +6363,7 @@ iframe{
     @font-face {
         font-family: Caput;
         src: url(font/Caput.otf);
+        font-display: swap;
     }
 
     .lower {
