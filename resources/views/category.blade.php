@@ -30,7 +30,7 @@
 </style>
 
 @section('content')
-    <section id="standard" class="standard-area homept mt-md-2 mt-lg-3 first">
+    <section id="standard" class="standard-area pt-5 homept mt-md-2 mt-lg-3 first">
         <div class="container mx-auto mt-lg-0 mt-md-5">
             <div class="row my-2">
                 <div class="col-md-12 col-sm-12 mt-md-5">
