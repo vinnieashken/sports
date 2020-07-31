@@ -81,7 +81,7 @@
 
 
 
-    <section id="standard" class="standard-area pt-100 mt-md-3 mt-lg-3 first">
+    <section id="standard" class="standard-area mt-md-3 mt-lg-3 first">
         <div class="container mx-auto mt-lg-0 mt-md-5">
 
             <div class="row">
