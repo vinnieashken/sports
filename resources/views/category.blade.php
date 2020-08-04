@@ -331,6 +331,9 @@
                         $('#offset').val(new_offset);
                         //$('')
                         //alert(new_offset);
+                        $('html, body').animate({
+                            scrollTop: $("#new_offset").offset().top
+                        }, 1000);
                         $('#new_offset').remove();
                     },
                     error:function (jqXHR, exception) {
