@@ -235,7 +235,7 @@ class HomeController extends Controller
         //dump($stories->bottom);
         //return;
 
-        $stories->sidevideos = $videos->getFromCategory('sports',0,3);
+        $stories->sidevideos = $videos->getFromCategory('sports',0,4);
         $stories->latest = $articles->getLatest(5,0);
 
         $stories->mostread = $articles->getMostReadArticles(4);
@@ -410,7 +410,7 @@ class HomeController extends Controller
         //dump($stories->bottom);
         //return;
 
-        $stories->sidevideos = $videos->getFromCategory('sports',0,4);
+        $stories->sidevideos = $videos->getFromCategory('sports',0,3);
         $stories->latest = $articles->getLatest(5,0);
 
         $stories->mostread = $articles->getMostReadArticles(4);
