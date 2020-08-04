@@ -260,6 +260,10 @@
                         var new_offset = result.match(regex2);
                         $('#offset').val(new_offset);
                         //alert(new_offset);
+                        $('html, body').animate({
+                            scrollTop: $("div.addition").offset().top
+                        }, 1000);
+                        $('div.addition').removeClass('addition');
                         $('#new_offset').remove();
                     },
                     error:function (jqXHR, exception) {

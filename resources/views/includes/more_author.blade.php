@@ -1,4 +1,5 @@
 
+<div class="addition">
 @for($i=0; $i < count($items); $i++)
     <div class="card-deck categ">
 
@@ -51,6 +52,6 @@
     </div>
 
 @endfor
-
+</div>
 <input type="hidden" id="new_offset" name="newoffset" value="{{ $offset }}">
 
