@@ -230,7 +230,7 @@ class HomeController extends Controller
         $videos = new Videos();
         $stories = new \stdClass();
         $stories->top = $articles->getLatestFromCategory($id,0,8)->toArray();
-        $stories->bottom = $articles->getLatestFromCategory($id,8,4)->toArray();
+        $stories->bottom = $articles->getLatestFromCategory($id,8,6)->toArray();
 
         //dump($stories->bottom);
         //return;
@@ -246,7 +246,7 @@ class HomeController extends Controller
 
         //dump($stories->top);
         //return;
-        $offset = 12;
+        $offset = 14;
 
         return view('category',['videos' => $videos,'articles'=> $articles,'categories'=>$categories,'stories'=>$stories,'offset'=>$offset]);
     }

@@ -893,6 +893,17 @@
     .whitecards .card-body {
         background: #fff;
         height: 188px;
+    }.newslettericon {
+         color: #000;
+         border: 2px solid #000;
+         padding: 4px 11px 6px !important;
+     }
+    #myOverlay {
+        display: block;
+        width: 430px;
+        height: 250px;
+        max-width: 100%;
+        box-shadow: 10px 0px 10px #e5e5e570;
     }
 </style>
 
