@@ -899,7 +899,6 @@
          padding: 4px 11px 6px !important;
      }
     #myOverlay {
-        display: block;
         width: 430px;
         height: 250px;
         max-width: 100%;
