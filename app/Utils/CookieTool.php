@@ -23,7 +23,14 @@ class CookieTool
         $secure = true;
         $httponly =  true;
 
-        $this->story_no = Cookie::get('story_no');
+        try{
+            $this->story_no = Cookie::get('story_no');
+        }
+        catch (\Exception $exception)
+        {
+            redirect('/');
+        }
+
         $this->story_no++;
         //Cookie::queue('story_no',$this->story_no, $this->expiry_period );
         Cookie::queue('story_no',$this->story_no, $this->expiry_period,$path,$domain,$secure,$httponly);
@@ -37,8 +44,16 @@ class CookieTool
             return false;
 
        //return $this->must_login > $this->story_no ? false : true ;
-        $story_no_insider = Cookie::get('story_no_insider');
-        $this->story_no = Cookie::get('story_no');
+
+        try{
+            $story_no_insider = Cookie::get('story_no_insider');
+            $this->story_no = Cookie::get('story_no');
+        }
+        catch (\Exception $exception)
+        {
+            redirect('/');
+        }
+
 
         $total = ( ( is_null($this->story_no) ? 0 : $this->story_no) + ( is_null($story_no_insider) ? 0 : $story_no_insider));
 
