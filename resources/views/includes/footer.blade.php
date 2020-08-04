@@ -93,8 +93,8 @@
                             {{ csrf_field() }}
                         <input type="email" class="w-75" name="email" placeholder="Enter your email" required>
 
-                                <button class="btn p-0" type="submit">
-                                    <i class="fa fa-chevron-right newslettericon ml-2"></i>
+                                <button class="btn newslettericon  ml-2 p-0" type="submit">
+                                    <i class="fa fa-chevron-right"></i>
                                 </button>
                         </form>
                     </div>
@@ -106,8 +106,8 @@
         <nav class="text-center bg-success">
             <ul class="navbar-nav justify-content-center p-3">
                 <li class="nav-item from">
-                    <a href="{{ url('/') }}" >
-                    A product of<img data-src="{{ asset('assets/images/footerlogo.jpeg') }}"
+                    A product of
+                        <a href="https://www.standardmedia.co.ke/" > <img data-src="{{ asset('assets/images/footerlogo.jpeg') }}"
                                        class="ml-2 w-25 lazy" alt="Standard Digital logo">
                     </a>
                 </li>
@@ -889,6 +889,10 @@
     .sidenav::-webkit-scrollbar-thumb {
         background: rgb(117, 117, 117);
         border-radius: 10px;
+    }
+    .whitecards .card-body {
+        background: #fff;
+        height: 188px;
     }
 </style>
 

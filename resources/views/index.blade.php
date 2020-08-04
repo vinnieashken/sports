@@ -139,7 +139,7 @@
                 </div>
                 <!---- advert 2 ---->
                 <div class="col-12 col-md-4 mb-md-4">
-                    <div class="text-center mb-2 mt-4">
+                    <div class="text-center mb-2 mt-4 mt-md-0">
                         <div id='div-gpt-ad-1485837036191-0' style='width:100%;margin:auto;' class="mx-auto">
                             <script>
                                 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485837036191-0'); });
