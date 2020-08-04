@@ -31,7 +31,6 @@
         <a href="https://www.vybezradio.co.ke">Vybez Radio</a>
         <a class="navheading">Digital News</a>
         <a href="https://www.standardmedia.co.ke/stories/public/category/7/opinion">Opinions</a>
-        <a href="https://www.standardmedia.co.ke/ureport">U-Report</a>
         <a href="https://newsstand.standardmedia.co.ke/">E-Paper</a>
         <a href="https://www.standardmedia.co.ke/videos/">Videos</a>
         <a class="navheading">Lifestyle & Entertainment</a>
