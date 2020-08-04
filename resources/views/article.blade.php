@@ -123,7 +123,7 @@
                                     <small class="text-muted">Last updated {{ $timeutil->ago(date_create($article->publishdate)) }} | By <a href="{{ url('/author/'.Str::slug($article->author )) }}" >{{ $article->author }}</a></small>
                                 </p>
                             </div>
-                            <div class="d-flex justify-content-between my-2">
+                            <div class="d-flex justify-content-between my-2 px-3">
                                 <div class="mb-2">
                                     <div class="socialmedia-buttons btn-group">
                                         <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="btn btn-facebook btn_facebook rounded-0 text-white">
@@ -153,7 +153,7 @@
                             </div>
 {{--                            <img class="card-img-bottom" src="https://cdn.standardmedia.co.ke{{ $article->thumbURL }}" alt="{{ $article->title }}">--}}
 
-                            <div class="card-body">
+                            <div class="card-body pt-0">
 
                                 <div>
                                     {!! $articles->renderInAds($article->story,$stories->related,2) !!}
