@@ -334,7 +334,7 @@
                         $('html, body').animate({
                             scrollTop: $("div.addition").offset().top
                         }, 1000);
-
+                        $('div.addition').removeClass('addition');
                         $('#new_offset').remove();
                     },
                     error:function (jqXHR, exception) {
