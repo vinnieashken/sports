@@ -229,8 +229,8 @@ class HomeController extends Controller
         $articles = new Articles();
         $videos = new Videos();
         $stories = new \stdClass();
-        $stories->top = $articles->getLatestFromCategory($id,0,8)->toArray();
-        $stories->bottom = $articles->getLatestFromCategory($id,8,6)->toArray();
+        $stories->top = $articles->getLatestFromCategory($id,0,10)->toArray();
+        $stories->bottom = $articles->getLatestFromCategory($id,10,4)->toArray();
 
         //dump($stories->bottom);
         //return;
