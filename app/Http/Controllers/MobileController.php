@@ -13,6 +13,7 @@ class MobileController extends Controller
     //
     public function __construct()
     {
+
     }
 
     public function article($categoryslug,$id,$slug)

@@ -840,6 +840,56 @@
         border-right: 1px solid #f0f0f0;
         border-radius: 2px;
     }
+    .opinions .card-body {
+        background: #fff;
+        height: 110px;
+    }
+
+    .single-standard .standard-content .content .title a:hover {
+        padding-left: 0;
+        font-size: 18px!important;
+        font-family: Solido;
+        line-height: 36px;
+        -webkit-transition: all .4s ease-out 0s;
+        -moz-transition: all .4s ease-out 0s;
+        -ms-transition: all .4s ease-out 0s;
+        -o-transition: all .4s ease-out 0s;
+        transition: all .4s ease-out 0s;
+    }
+
+    .categ .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+        height: 250px;
+        object-fit: cover;
+        width: max-content;
+    }
+
+    .catertitle {
+        top: 230px;
+    }
+
+    .sidenav {
+        box-shadow: inset 2px 0 15px 2px rgb(0 0 0);
+    }
+    /* width */
+
+    .sidenav::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+
+    .sidenav::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    /* Handle */
+
+    .sidenav::-webkit-scrollbar-thumb {
+        background: rgb(117, 117, 117);
+        border-radius: 10px;
+    }
 </style>
 
 
