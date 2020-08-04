@@ -7,7 +7,7 @@
 
         @foreach($stories->sidevideos as $video)
             <a href="{{ url('/video/'.$video->id.'/'.Str::slug($video->title)) }}">
-                <div class="media my-2 mt-3">
+                <div class="media my-2">
                     <div class="single-standard">
                         <i class="fa fa-play vidasmall"></i>
                         <img src="{{ asset('assets/images/pic.jpg') }}"
