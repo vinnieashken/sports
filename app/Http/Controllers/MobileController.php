@@ -51,7 +51,6 @@ class MobileController extends Controller
         $cookie = Cookie::get('entertainment_story_no');
         $data = [
             'entertainment_story_no'=> $cookie,
-            'type' => typeOf($cookie)
         ];
 
         dump($data);
