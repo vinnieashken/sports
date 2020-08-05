@@ -7,6 +7,7 @@ use App\Utils\Menu;
 use App\Utils\TimeUtil;
 use App\Utils\Videos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class MobileController extends Controller
 {
@@ -43,5 +44,16 @@ class MobileController extends Controller
         $stories->latest = $articles->getLatest(5,0);
 
         return view('amp.article',['timeutil'=> $timeutil,'article'=>$article,'articles'=> $articles,'categories'=>$categories,'stories' => $stories]);
+    }
+
+    public function getCookie(Request $request)
+    {
+        $cookie = Cookie::get('entertainment_story_no');
+        $data = [
+            'entertainment_story_no'=> $cookie,
+            'type' => typeOf($cookie)
+        ];
+
+        dump($data);
     }
 }

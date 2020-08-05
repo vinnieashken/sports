@@ -55,3 +55,5 @@ Route::get('/googlenews','HomeController@googlenews');
 Route::get('/amp/{category_slug}/{id}/{slug}','MobileController@article');
 
 Route::get('/test','HomeController@test');
+
+Route::get('/cookie','MobileController@getCookie');
