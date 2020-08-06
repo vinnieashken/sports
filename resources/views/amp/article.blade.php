@@ -14,7 +14,7 @@
    "@context": "http://schema.org",
    "@type": "NewsArticle",
    "url": "{{ \Illuminate\Support\Facades\URL::full() }}",
-   "headline": "{{ substr($article->long_title,0,110) }}",
+   "headline": "{{ substr($article->title,0,110) }}",
    "mainEntityOfPage": "{{ \Illuminate\Support\Facades\URL::full() }}",
    "image":{"@type":"ImageObject","url":"https://cdn.standardmedia.co.ke{{ $article->thumbURL }}","height":500,"width":800},
    "articleSection":"News",
@@ -25,7 +25,7 @@
       "name":"Standard Sports",
       "logo":{"@type":"ImageObject","url":"{{ url('/assets/images/logo.png') }}","height":64,"width":376}
    },
-   "datePublished":"{{ $article->publishday }}",
+   "datePublished":"{{ $article->publishdate }}",
    "dateModified":"{{ $article->updateddate }}"
 }
 </script>
