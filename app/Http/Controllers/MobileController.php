@@ -57,7 +57,8 @@ class MobileController extends Controller
         $categories = $menu->getCategories();
         $articles = new Articles();
         $article = $articles->getArticle($id);
-        $url = '/amp/'.Str::slug($articles->getCategory($id)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-');
+
+        $url = '/amp/'.Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-');
 
         return redirect($url);
     }
