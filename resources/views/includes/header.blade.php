@@ -35,7 +35,7 @@
         <a href="https://www.standardmedia.co.ke/videos/">Videos</a>
         <a class="navheading">Lifestyle & Entertainment</a>
         <a href="https://thenairobian.ke/">Nairobian</a>
-        <a href="https://www.sde.ke/">SDE</a>
+        <a href="https://www.standardmedia.co.ke/entertainment">Entertainment</a>
         <a href="https://www.standardmedia.co.ke/evewoman/">Eve Woman</a>
         <a href="https://www.travelog.ke/">Travelog</a>
         <a class="navheading">Enterprise</a>
