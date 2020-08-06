@@ -44,6 +44,7 @@
         <a href="https://newsstand.standardmedia.co.ke/">E-Paper</a>
         <a class="navheading">The Standard Group</a>
         <a href="https://www.standardmedia.co.ke/corporate">Corporate</a>
+        <a href="https://www.standardmedia.co.ke/rss/sports.php">RSS</a>
     </div>
     <!--sidenav phone ipad & tablet-->
     <div id="mySidenavMob" class="sidenav sidenavMob">
