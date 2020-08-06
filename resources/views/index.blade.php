@@ -69,7 +69,7 @@
                         <div class="col-lg-5 col-md-5 col-sm-12">
 
                             @foreach($stories->top_side1 as $article)
-                            <div class="card minicard">
+                            <div class="card minicard mb-3">
 
                                 <a href="{{ url(Str::slug($articles->getCategory($article->categoryid)->name,'-').'/'.$article->id.'/'.Str::slug($article->title,'-')) }}" >
                                 <div class="row no-gutters">
