@@ -52,6 +52,7 @@ Route::get('/search','HomeController@search');
 Route::get('/sitemap','HomeController@sitemap');
 Route::get('/googlenews','HomeController@googlenews');
 
+Route::get('/amp/article/{id}/{slug}','MobileController@article');
 Route::get('/amp/{category_slug}/{id}/{slug}','MobileController@article');
 
 Route::get('/test','HomeController@test');
